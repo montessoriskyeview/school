@@ -1,4 +1,5 @@
 import { Box, Link, SxProps, Theme, Typography } from "@mui/material";
+import { ScrollingText } from "./animation/ScrollingText";
 
 export const Content = () => {
     return (
@@ -7,15 +8,16 @@ export const Content = () => {
                 paddingX: 5,
             }}
         >
-            <BigText
-                text="Next-gen montessori education"
-                sx={{
-                    paddingTop: 10,
-                }}
-            />
-            <BigText
-                text="Montessori: education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect."
-            />
+            <ScrollingText>
+                <Typography>
+                    Next-gen montessori education
+                </Typography>
+            </ScrollingText>
+            <ScrollingText>
+                <Typography>
+                    Montessori: education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect.
+                </Typography>
+            </ScrollingText>
             <Link
                 variant="h1"
                 sx={{
@@ -37,7 +39,7 @@ interface BigTextProps {
 const BigText = ({ text, sx }: BigTextProps) => {
     return (
         <Typography
-            variant="h1"
+            variant="h2"
             sx={{
                 paddingBottom: 50,
                 ...sx,
