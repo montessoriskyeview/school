@@ -28,7 +28,7 @@ export const Content = () => {
                     cursor: "pointer",
                     paddingBottom: 10,
                 }}
-                href="#"
+                href="https://google.com"
             >
                 Register today
             </Link>
