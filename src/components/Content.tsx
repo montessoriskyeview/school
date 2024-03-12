@@ -22,16 +22,24 @@ export const Content = () => {
                     Montessori: education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect.
                 </Typography>
             </ScrollingText>
-            <Link
-                variant="h4"
+            <Box
                 sx={{
-                    cursor: "pointer",
-                    paddingBottom: 10,
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center"
                 }}
-                href="https://google.com"
             >
-                Register today
-            </Link>
+                <Link
+                    variant="h4"
+                    sx={{
+                        cursor: "pointer",
+                        paddingBottom: 10,
+                    }}
+                    href="https://google.com"
+                >
+                    Register today
+                </Link>
+            </Box>
         </Box>
     );
 }
