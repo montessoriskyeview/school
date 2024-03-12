@@ -1,11 +1,12 @@
-div {
+.box {
+    padding: 160px 20px;
     display: grid;
     gap: 250px;
     background-color: transparent;
     top: 0;
     left: 0;
     @media only screen and (max-width: 600px) {
-        padding: 300px 20px;
+        padding: 100px 0px;
     }
 }
 
@@ -16,13 +17,14 @@ div {
     justify-content: center;
     min-height: 100vh; /* Set minimum height for full viewport */
   }
-  
-
 
 .info-text {
-    margin-bottom: 40px; /* Add spacing between information sections */
-  }
-  
-  .info-text h2 {
-    margin-bottom: 10px; /* Add spacing between title and text */
-  }
+    background-color: #00000077;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    @media only screen and (max-width: 600px) {
+        padding: 10px;
+        margin: 10px;
+    }
+}

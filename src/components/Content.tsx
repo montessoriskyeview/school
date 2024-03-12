@@ -17,80 +17,16 @@ export const Content = () => {
             <div className={"box"}>
                 <InfoText
                     title="Empowering Minds. Embracing Innovation"
-                    text="Next-gen montessori education. Privatizing education for the betterment of society, starting with our children."
+                    text="Next-gen montessori education. Improving education for the betterment of society, starting with our children."
                 />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-
                 <InfoText
                     title="Grow with Us: A Montessori Adventure."
                     text="We recognize failure as times greatest teacher, and this is an adventure. We help children recognize failure as one of the most important ways to grow."
                 />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <InfoText
                     title="Montessori:"
                     text="Education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect."
                 />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <Link
                     variant="h4"
                     sx={{
@@ -110,21 +46,15 @@ export const Content = () => {
 
 const InfoText = ({ text, title }: { text: string; title: string }) => {
     return (
-        <div>
-            <Typography
+        <div className="info-text">
+            <Typography variant="h2"
                 sx={{
-                    backgroundColor: "#00000077",
-                    padding: "20px",
-                    margin: "50px",
-                    borderRadius: 10,
-                }}
-            >
-                <Typography variant="h2">
-                    {title}
-                </Typography>
-                <Typography variant="body2">
-                    {text}
-                </Typography>
+                    paddingBottom: "10px"
+                }}>
+                {title}
+            </Typography>
+            <Typography variant="body1">
+                {text}
             </Typography>
         </div>
     )
