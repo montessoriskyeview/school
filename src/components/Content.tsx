@@ -43,7 +43,7 @@ export const Content = () => {
 
                 <InfoText
                     title="Grow with Us: A Montessori Adventure."
-                    text="We recognize failure as times greatest teacher. Allowing children to fail is an adventure, and we recognize it as the only way to grow. We help children recognize this as one of the most crucial ways to grow."
+                    text="We recognize failure as times greatest teacher, and this is an adventure. We help children recognize failure as one of the most important ways to grow."
                 />
                 <br />
                 <br />
@@ -129,94 +129,3 @@ const InfoText = ({ text, title }: { text: string; title: string }) => {
         </div>
     )
 }
-
-/**
- *   <Canvas gl={{ antialias: false }}>
-        <Scene />
-      </Canvas>
- */
-
-/**
- 
-
-export const Content = () => {
-return (
-  <Box
-      sx={{
-          paddingX: 5,
-      }}
-  >
-      <ScrollingText>
-          <Typography
-              sx={{ position: "absolute" }}
-          >
-              Next-gen montessori education
-          </Typography>
-      </ScrollingText>
-      <ScrollingText>
-          <Typography
-              sx={{ position: "absolute" }}
-          >
-              Montessori: education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect.
-          </Typography>
-      </ScrollingText>
-      <Box
-          sx={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center"
-          }}
-      >
-          <Link
-              variant="h4"
-              sx={{
-                  cursor: "pointer",
-                  paddingBottom: 10,
-              }}
-              href="https://google.com"
-          >
-              Register today
-          </Link>
-      </Box>
-  </Box>
-);
-}
-
- * 
- */
-
-/**
- * 
- 
- {/* <div style={{
-                padding: "300px 50px",
-                display: "grid",
-                gap: "250px",
-            }}> 
-                {/* <InfoText
-                    title="Empowering Minds. Embracing Innovation"
-                    text="Next-gen montessori education. Privatizing education for the betterment of society, starting with our children."
-                />
-                <InfoText
-                    title="Grow with Us: A Montessori Adventure."
-                    text="We recognize failure as times greatest teacher. Allowing children to fail is an adventure, and we recognize it as the only way to grow. We help children recognize this as one of the most crucial ways to grow."
-                /> 
-    {/* <InfoText
-                    title="Montessori:"
-                    text="Education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect."
-                />
-                <Link
-                    variant="h4"
-                    sx={{
-                        cursor: "pointer",
-                        paddingBottom: 10,
-                    }}
-                    href="https://google.com"
-                >
-                    Register today
-                </Link>
-            </div> 
-
-
- * 
- */

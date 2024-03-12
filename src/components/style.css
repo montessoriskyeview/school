@@ -8,3 +8,21 @@ div {
         padding: 300px 20px;
     }
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Set minimum height for full viewport */
+  }
+  
+
+
+.info-text {
+    margin-bottom: 40px; /* Add spacing between information sections */
+  }
+  
+  .info-text h2 {
+    margin-bottom: 10px; /* Add spacing between title and text */
+  }
