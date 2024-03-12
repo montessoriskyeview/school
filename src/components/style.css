@@ -1,0 +1,10 @@
+div {
+    display: grid;
+    gap: 250px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    @media only screen and (max-width: 600px) {
+        padding: 300px 20px;
+    }
+}
