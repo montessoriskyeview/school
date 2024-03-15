@@ -2,7 +2,7 @@ import "./styles.css";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 import { useTransform, useScroll, useTime } from "framer-motion";
-import { degreesToRadians, progress, mix } from "popmotion";
+import { degreesToRadians, progress } from "popmotion";
 import { Icosahedron, Star } from "./Shapes";
 
 export function Scene({ numStars = 20 }) {
@@ -30,7 +30,7 @@ export function Scene({ numStars = 20 }) {
   
     const stars = [];
     for (let i = 0; i < numStars; i++) {
-      stars.push(<Star p={progress(0, numStars, i)} />);
+      stars.push(<Star p={progress(0, numStars, i)} key={i} />);
     }
   
     return (

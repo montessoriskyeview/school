@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { CssBaseline, ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 import { Content } from './components/Content';

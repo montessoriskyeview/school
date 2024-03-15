@@ -49,11 +49,17 @@ const InfoText = ({ text, title }: { text: string; title: string }) => {
         <div className="info-text">
             <Typography variant="h2"
                 sx={{
-                    paddingBottom: "10px"
+                    paddingBottom: "10px",
+                    color: "white",
                 }}>
                 {title}
             </Typography>
-            <Typography variant="body1">
+            <Typography
+                variant="body1"
+                sx={{
+                    color: "white",
+                }}
+            >
                 {text}
             </Typography>
         </div>
