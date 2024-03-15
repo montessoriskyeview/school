@@ -1,7 +1,11 @@
-import { Link, Typography } from "@mui/material";
+import { Box, BoxProps, Button, IconButton, Link, Menu, MenuItem, Snackbar, Tooltip, Typography, useTheme } from "@mui/material";
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./home/Scene";
 import "./style.css";
+import React from "react";
+
+import LinkIcon from '@mui/icons-material/Link';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export const Content = () => {
     return (
@@ -15,9 +19,8 @@ export const Content = () => {
                 <Scene />
             </Canvas>
             <div className={"box"}>
-                <InfoText
+                <MapInfo
                     title="Locaitons"
-                    text="Coming soon!"
                 />
                 <InfoText
                     title="Montessori method"
@@ -64,9 +67,21 @@ export const Content = () => {
     )
 }
 
+/**
+ *  background-color: #00000077;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 600px) {
+        padding: 10px;
+        margin: 10px;
+    }
+ */
 const InfoText = ({ text, title }: { text: string; title: string }) => {
+    const theme = useTheme();
     return (
-        <div className="info-text">
+        <ContentContainer>
             <Typography variant="h2"
                 sx={{
                     paddingBottom: "10px",
@@ -82,6 +97,114 @@ const InfoText = ({ text, title }: { text: string; title: string }) => {
             >
                 {text}
             </Typography>
-        </div>
+        </ContentContainer>
+    )
+}
+
+
+const MapInfo = ({ title }: { title: string }) => {
+    const defaultProps = {
+        center: {
+            lat: 36.30678501949814,
+            lng: -115.33099115396986
+        },
+        zoom: 11
+    };
+
+
+    const [open, setOpen] = React.useState(false);
+
+    const link = `https://maps.google.com/?q=${defaultProps.center.lat},${defaultProps.center.lng}&z=${defaultProps.zoom}`
+
+    const onClickCopy = () => {
+        setOpen(true);
+        navigator.clipboard.writeText(link);
+    }
+
+    const onClickLink = () => {
+        window.open(link, "_blank");
+    }
+
+
+    const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    return (
+        <ContentContainer
+            sx={{
+                alignContent: "center"
+            }}
+        >
+            <Typography variant="h2"
+                sx={{
+                    paddingBottom: "10px",
+                    color: "white",
+                }}>
+                {title}
+            </Typography>
+            <Box component="div"
+                sx={{
+                    width: "50%",
+                    alignSelf: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                }}
+            >
+                <Tooltip
+                    title="Open in new tab"
+                >
+                    <Button
+                        onClick={onClickLink}
+                    >
+                        <OpenInNewIcon />
+                    </Button>
+                </Tooltip>
+                <Tooltip title="Copy link">
+                    <Button
+                        onClick={onClickCopy}
+                    >
+                        <LinkIcon />
+                    </Button>
+                </Tooltip>
+            </Box>
+            <Snackbar
+                open={open}
+                autoHideDuration={5000}
+                onClose={handleClose}
+                message="Copied!"
+            />
+        </ContentContainer >
+    )
+}
+
+const ContentContainer = ({ children, ...rest }: { children: JSX.Element | JSX.Element[] } & BoxProps) => {
+    const theme = useTheme();
+    return (
+        <Box
+            {...rest}
+            sx={{
+                backgroundColor: "#00000077",
+                borderRadius: "10px",
+                [theme.breakpoints.down('md')]: {
+                    padding: "10px",
+                    margin: "10px",
+                },
+                [theme.breakpoints.up('md')]: {
+                    padding: "20px",
+                    margin: "50px",
+                },
+                display: "flex",
+                flexDirection: "column",
+                ...rest.sx,
+            }}
+            component={"div"}
+        >
+            {children}
+        </Box>
     )
 }
