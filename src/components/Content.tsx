@@ -16,6 +16,26 @@ export const Content = () => {
             </Canvas>
             <div className={"box"}>
                 <InfoText
+                    title="Locaitons"
+                    text="Coming soon!"
+                />
+                <InfoText
+                    title="Montessori method"
+                    text="Coming soon!"
+                />
+                <InfoText
+                    title="Daily schedule"
+                    text="Coming soon!"
+                />
+                <InfoText
+                    title="Tuition"
+                    text="Coming soon!"
+                />
+                <InfoText
+                    title="Curriculum"
+                    text="Coming soon!"
+                />
+                <InfoText
                     title="Empowering Minds. Embracing Innovation"
                     text="Next-gen montessori education. Improving education for the betterment of society, starting with our children."
                 />
