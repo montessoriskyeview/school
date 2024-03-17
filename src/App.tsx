@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import { CssBaseline, ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
-import { Content } from './components/Content';
+
 import { AppBar } from './components/appBar/AppBar';
+import { AppRoutes } from './views/Routes';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -20,7 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppBar />
-      <Content />
+      <AppRoutes />
     </ThemeProvider>
   );
 }

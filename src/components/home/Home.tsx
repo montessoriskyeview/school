@@ -1,62 +1,12 @@
 import { Box, BoxProps, Button, Snackbar, Tooltip, Typography, useTheme } from "@mui/material";
-import { Canvas } from "@react-three/fiber";
-import { Scene } from "./home/Scene";
-import "./style.css";
+
+import "./homeStyle.css";
 import React from "react";
 
 import LinkIcon from '@mui/icons-material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-export const Content = () => {
-	return (
-		<>
-			<Canvas
-				style={{
-					zIndex: -1,
-					position: "fixed"
-				}}
-				gl={{ antialias: false }}>
-				<Scene />
-			</Canvas>
-			<div className={"box"}>
-				<MapInfo
-					title="Locaitons"
-				/>
-				<InfoText
-					title="Montessori method"
-					text="Coming soon!"
-				/>
-				<InfoText
-					title="Daily schedule"
-					text="Coming soon!"
-				/>
-				<InfoText
-					title="Tuition"
-					text="Coming soon!"
-				/>
-				<InfoText
-					title="Curriculum"
-					text="Coming soon!"
-				/>
-				<InfoText
-					title="Empowering Minds. Embracing Innovation"
-					text="Next-gen montessori education. Improving education for the betterment of society, starting with our children."
-				/>
-				<InfoText
-					title="Grow with Us: A Montessori Adventure."
-					text="We recognize failure as times greatest teacher, and this is an adventure. We help children recognize failure as one of the most important ways to grow."
-				/>
-				<InfoText
-					title="Montessori:"
-					text="Education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect."
-				/>
-
-			</div>
-		</>
-	)
-}
-
-const InfoText = ({ text, title }: { text: string; title: string }) => {
+export const InfoText = ({ text, title }: { text: string; title: string }) => {
 	return (
 		<ContentContainer>
 			<Typography variant="h2"
@@ -78,8 +28,7 @@ const InfoText = ({ text, title }: { text: string; title: string }) => {
 	)
 }
 
-
-const MapInfo = ({ title }: { title: string }) => {
+export const MapInfo = ({ title }: { title: string }) => {
 	const defaultProps = {
 		center: {
 			lat: 36.30678501949814,
@@ -159,7 +108,7 @@ const MapInfo = ({ title }: { title: string }) => {
 	)
 }
 
-const ContentContainer = ({ children, ...rest }: { children: JSX.Element | JSX.Element[] } & BoxProps) => {
+export const ContentContainer = ({ children, ...rest }: { children: JSX.Element | JSX.Element[] } & BoxProps) => {
 	const theme = useTheme();
 	return (
 		<Box

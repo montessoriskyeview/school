@@ -9,8 +9,11 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from "react-router-dom";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
+import { SvgIconTypeMap } from '@mui/material';
 
 export const DRAWER_WIDTH = 240;
 
@@ -21,6 +24,7 @@ interface DrawerContentProps {
 
 export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) => {
 	const theme = useTheme();
+	const navigate = useNavigate();
 	return (
 		<Drawer
 			sx={{
@@ -41,24 +45,15 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 			</DrawerHeader>
 			<Divider />
 			<List>
-				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+				{NAVBAR_ITEMS.map(({ text, link, Icon }) => (
 					<ListItem key={text} disablePadding>
-						<ListItemButton>
+						<ListItemButton
+							onClick={() => {
+								navigate(link);
+							}}
+						>
 							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItemButton>
-					</ListItem>
-				))}
-			</List>
-			<Divider />
-			<List>
-				{['All mail', 'Trash', 'Spam'].map((text, index) => (
-					<ListItem key={text} disablePadding>
-						<ListItemButton>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+								<Icon />
 							</ListItemIcon>
 							<ListItemText primary={text} />
 						</ListItemButton>
@@ -77,3 +72,24 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 	...theme.mixins.toolbar,
 	justifyContent: 'flex-end',
 }));
+
+interface NavbarItem {
+	text: string;
+	link: string;
+	Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
+		muiName: string;
+	}
+}
+
+const NAVBAR_ITEMS: NavbarItem[] = [
+	{
+		text: "Home",
+		link: "school",
+		Icon: HomeIcon,
+	},
+	{
+		text: "Location",
+		link: "location",
+		Icon: LocationOnIcon
+	},
+]
