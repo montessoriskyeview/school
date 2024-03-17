@@ -1,6 +1,5 @@
 import "./styles.css"
-import { Box } from "@mui/material";
-import { motion, useScroll } from "framer-motion"
+import { useScroll } from "framer-motion"
 import { useRef } from "react";
 
 interface ScrollingTextProps {
