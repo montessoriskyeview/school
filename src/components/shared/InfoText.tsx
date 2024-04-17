@@ -1,4 +1,4 @@
-import { SxProps, Theme, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { ContentContainer } from "./ContentContainer";
 
 export const InfoText = ({ text, title, style }: { text: string | JSX.Element; title: string, style?: React.CSSProperties }) => {
