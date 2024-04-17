@@ -17,7 +17,7 @@ export const Home = () => {
       </Canvas>
       <div className={"box"}>
         <MapInfo
-          title="Locaitons"
+          title="Locations"
         />
         <InfoText
           title="Montessori method"

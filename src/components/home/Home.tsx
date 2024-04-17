@@ -1,10 +1,11 @@
-import { Box, BoxProps, Button, Snackbar, Tooltip, Typography, useTheme } from "@mui/material";
+import { Box, Button, Snackbar, Tooltip, Typography } from "@mui/material";
 
 import "./homeStyle.css";
 import React from "react";
 
 import LinkIcon from '@mui/icons-material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { ContentContainer } from "../shared/ContentContainer";
 
 export const InfoText = ({ text, title }: { text: string; title: string }) => {
 	return (
@@ -31,10 +32,10 @@ export const InfoText = ({ text, title }: { text: string; title: string }) => {
 export const MapInfo = ({ title }: { title: string }) => {
 	const defaultProps = {
 		center: {
-			lat: 36.30678501949814,
-			lng: -115.33099115396986
+			lat: 36.2893875,
+			lng: -115.311701
 		},
-		zoom: 11
+		zoom: 15
 	};
 
 
@@ -105,32 +106,5 @@ export const MapInfo = ({ title }: { title: string }) => {
 				message="Copied!"
 			/>
 		</ContentContainer >
-	)
-}
-
-export const ContentContainer = ({ children, ...rest }: { children: JSX.Element | JSX.Element[] } & BoxProps) => {
-	const theme = useTheme();
-	return (
-		<Box
-			{...rest}
-			sx={{
-				backgroundColor: "#00000077",
-				borderRadius: "10px",
-				[theme.breakpoints.down('md')]: {
-					padding: "10px",
-					margin: "10px",
-				},
-				[theme.breakpoints.up('md')]: {
-					padding: "20px",
-					margin: "50px",
-				},
-				display: "flex",
-				flexDirection: "column",
-				...rest.sx,
-			}}
-			component={"div"}
-		>
-			{children}
-		</Box>
 	)
 }

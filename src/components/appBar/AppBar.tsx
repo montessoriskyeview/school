@@ -82,7 +82,7 @@ export const AppBar = () => {
 						sx={{
 							cursor: "pointer",
 						}}
-						href="https://google.com"
+						href="registration"
 					>
 						Register today
 					</Link>

@@ -12,6 +12,10 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import PaymentIcon from '@mui/icons-material/Payment';
+import RegistrationIcon from '@mui/icons-material/AppRegistration';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 
@@ -49,6 +53,7 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 					<ListItem key={text} disablePadding>
 						<ListItemButton
 							onClick={() => {
+								handleDrawerClose();
 								navigate(link);
 							}}
 						>
@@ -86,6 +91,26 @@ const NAVBAR_ITEMS: NavbarItem[] = [
 		text: "Home",
 		link: "school",
 		Icon: HomeIcon,
+	},
+	{
+		text: "Philosophy",
+		link: "philosophy",
+		Icon: LightbulbIcon
+	},
+	{
+		text: "Tuition",
+		link: "tuition",
+		Icon: PaymentIcon
+	},
+	{
+		text: "Schedule",
+		link: "schedule",
+		Icon: ScheduleIcon
+	},
+	{
+		text: "Registration",
+		link: "registration",
+		Icon: RegistrationIcon
 	},
 	{
 		text: "Location",
