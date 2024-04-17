@@ -1,8 +1,8 @@
 
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Theme, Typography } from "@mui/material";
 import { ContentContainer } from "./ContentContainer";
 
-export const ImageContainer = ({ src, alt, title, style, imgStyle }: { src: string; alt?: string; title?: string, style?: React.CSSProperties, imgStyle?: React.CSSProperties }) => {
+export const ImageContainer = ({ src, alt, title, style, imgStyle, imgSx }: { src: string; alt?: string; title?: string, style?: React.CSSProperties, imgStyle?: React.CSSProperties, imgSx?: SxProps<Theme> }) => {
   return (
     <ContentContainer style={style}>
       {title ?
@@ -17,6 +17,7 @@ export const ImageContainer = ({ src, alt, title, style, imgStyle }: { src: stri
       <Box
         component="img"
         style={imgStyle}
+        sx={imgSx}
         alt={alt}
         src={src}
       />

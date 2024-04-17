@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material"
+import { Box, Link, useTheme } from "@mui/material"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { ImageContainer } from "../components/shared/ImageContainer"
 import flyer from "../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png";
@@ -6,6 +6,7 @@ import { ListText } from "../components/shared/ListText";
 import { SUMMER_CAMP_LINK } from "../resources/links";
 
 export const Registration = () => {
+  const theme = useTheme();
   return (
     <CanvasView>
       <Box component={"div"}>
@@ -39,9 +40,15 @@ export const Registration = () => {
           }}
           src={flyer}
           alt="Registration image"
-          imgStyle={{
-            height: "700px",
-            width: "600px",
+          imgSx={{
+            [theme.breakpoints.down('md')]: {
+              height: "400px",
+              width: "350px",
+            },
+            [theme.breakpoints.up('md')]: {
+              height: "700px",
+              width: "600px",
+            },
           }}
         />
       </Box>
