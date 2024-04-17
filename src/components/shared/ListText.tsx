@@ -1,7 +1,7 @@
 import { List, ListItem, Typography } from "@mui/material"
 import { InfoText } from "./InfoText"
 
-export const ListText = ({ title, items }: { title: string, items: string[] }) => {
+export const ListText = ({ title, items, style }: { title: string, items: (string | JSX.Element)[], style?: React.CSSProperties }) => {
   return (
     <InfoText
       title={title}
@@ -9,13 +9,14 @@ export const ListText = ({ title, items }: { title: string, items: string[] }) =
         <List sx={{ listStyleType: 'disc', marginLeft: "40px" }}>
           {items.map(item =>
             <ListItem sx={{ display: 'list-item' }}>
-              <Typography>
+              {typeof item === "string" ? <Typography>
                 {item}
-              </Typography>
+              </Typography> : item }
             </ListItem>
           )}
         </List>
       }
+      style={style}
     />
   )
 }

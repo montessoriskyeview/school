@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { DrawerContent } from "./DrawerContent";
+import { SUMMER_CAMP_LINK } from "../../resources/links";
 
 const drawerWidth = 240;
 
@@ -82,7 +83,7 @@ export const AppBar = () => {
 						sx={{
 							cursor: "pointer",
 						}}
-						href="registration"
+						href={SUMMER_CAMP_LINK}
 					>
 						Register today
 					</Link>
