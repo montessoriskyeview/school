@@ -3,7 +3,7 @@ import { useThree, useFrame } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 import { useTransform, useScroll, useTime } from "framer-motion";
 import { degreesToRadians, progress } from "popmotion";
-import { Icosahedron, Star } from "./Shapes";
+import { Icosahedron, Star } from "../../home/Shapes";
 
 export function Scene({ numStars = 20 }) {
   const gl = useThree((state) => state.gl);

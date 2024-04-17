@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import { SxProps, Theme, Typography } from "@mui/material";
 import { ContentContainer } from "./ContentContainer";
 
-export const InfoText = ({ text, title }: { text: string | JSX.Element; title: string }) => {
+export const InfoText = ({ text, title, style }: { text: string | JSX.Element; title: string, style?: React.CSSProperties }) => {
   return (
-    <ContentContainer>
+    <ContentContainer style={style}>
       <Typography variant="h2"
         sx={{
           paddingBottom: "10px",

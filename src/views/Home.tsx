@@ -1,55 +1,20 @@
-import { Canvas } from "@react-three/fiber";
-import { MapInfo } from "../components/home/Home";
-import { Scene } from "../components/home/Scene";
-import { useTheme } from "@mui/material";
 import { InfoText } from "../components/shared/InfoText";
+import { CanvasView } from "../components/shared/Canvas/CanvasView";
 
 export const Home = () => {
-  const theme = useTheme();
   return (
-    <>
-      <Canvas
+    <CanvasView>
+      <InfoText
+        title="Montessori School of Skye View"
+        text="A Private Chez Nous School"
         style={{
-          zIndex: -1,
-          position: "fixed",
+          marginTop: "150px"
         }}
-        gl={{ antialias: false }}>
-        <Scene />
-      </Canvas>
-      <div className={"box"}>
-        <MapInfo
-          title="Locations"
-        />
-        <InfoText
-          title="Montessori method"
-          text="Coming soon!"
-        />
-        <InfoText
-          title="Daily schedule"
-          text="Coming soon!"
-        />
-        <InfoText
-          title="Tuition"
-          text="Coming soon!"
-        />
-        <InfoText
-          title="Curriculum"
-          text="Coming soon!"
-        />
-        <InfoText
-          title="Empowering Minds. Embracing Innovation"
-          text="Next-gen montessori education. Improving education for the betterment of society, starting with our children."
-        />
-        <InfoText
-          title="Grow with Us: A Montessori Adventure."
-          text="We recognize failure as times greatest teacher, and this is an adventure. We help children recognize failure as one of the most important ways to grow."
-        />
-        <InfoText
-          title="Montessori:"
-          text="Education philosophy and practice that fosters rigorous, self-motivated growth for children and adolescents in all areas of their development, with a goal of nurturing each child's natural desire for knowledge, understanding, and respect."
-        />
-
-      </div>
-    </>
+      />
+      <InfoText
+        title="About us"
+        text="Montessori Skye View is a new Montessori school dedicated to fostering a love of learning in children aged 3 and up. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning."
+      />
+    </CanvasView>
   )
 }
