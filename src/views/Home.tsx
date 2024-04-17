@@ -1,7 +1,8 @@
 import { Canvas } from "@react-three/fiber";
-import { InfoText, MapInfo } from "../components/home/Home";
+import { MapInfo } from "../components/home/Home";
 import { Scene } from "../components/home/Scene";
 import { useTheme } from "@mui/material";
+import { InfoText } from "../components/shared/InfoText";
 
 export const Home = () => {
   const theme = useTheme();

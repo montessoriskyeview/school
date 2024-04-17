@@ -7,28 +7,6 @@ import LinkIcon from '@mui/icons-material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ContentContainer } from "../shared/ContentContainer";
 
-export const InfoText = ({ text, title }: { text: string; title: string }) => {
-	return (
-		<ContentContainer>
-			<Typography variant="h2"
-				sx={{
-					paddingBottom: "10px",
-					color: "white",
-				}}>
-				{title}
-			</Typography>
-			<Typography
-				variant="body1"
-				sx={{
-					color: "white",
-				}}
-			>
-				{text}
-			</Typography>
-		</ContentContainer>
-	)
-}
-
 export const MapInfo = ({ title }: { title: string }) => {
 	const defaultProps = {
 		center: {
