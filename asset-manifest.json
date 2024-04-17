@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/school/static/css/main.d8f5bacc.css",
-    "main.js": "/school/static/js/main.a180668d.js",
+    "main.js": "/school/static/js/main.66a82682.js",
     "static/js/453.10c608cb.chunk.js": "/school/static/js/453.10c608cb.chunk.js",
     "static/media/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png": "/school/static/media/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.33bedae7e87c249be9d5.png",
     "static/media/roboto-latin-500-normal.woff2": "/school/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
@@ -62,11 +62,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/school/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/school/index.html",
     "main.d8f5bacc.css.map": "/school/static/css/main.d8f5bacc.css.map",
-    "main.a180668d.js.map": "/school/static/js/main.a180668d.js.map",
+    "main.66a82682.js.map": "/school/static/js/main.66a82682.js.map",
     "453.10c608cb.chunk.js.map": "/school/static/js/453.10c608cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8f5bacc.css",
-    "static/js/main.a180668d.js"
+    "static/js/main.66a82682.js"
   ]
 }
