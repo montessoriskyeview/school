@@ -1,4 +1,4 @@
-import { Route, Routes, createBrowserRouter } from "react-router-dom";
+import { Route, Routes, createBrowserRouter, useLocation } from "react-router-dom";
 import { Home } from "./Home";
 import { ErrorPage } from "./ErrorView";
 import { Location } from "./Location";
@@ -7,6 +7,7 @@ import { Schedule } from "./Schedule";
 import { Registration } from "./Registration";
 import { Philosophy } from "./Philosophy";
 import { Contact } from "./Contact";
+import { useEffect } from "react";
 
 export const AppRoutes = () => {
   return (
@@ -53,4 +54,15 @@ export const AppRoutes = () => {
       />
     </Routes>
   )
+}
+
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
