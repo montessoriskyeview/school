@@ -9,7 +9,7 @@ export const ContactInfo = () => {
     <ContentContainer>
       <>
         <Typography>
-          {"For questions or concerns, contact Hannah Olsen"}
+          {"For questions or concerns, contact Hannah Olsen (call/text/email)"}
         </Typography>
         <Typography>
           <a href={`tel:${PHONE}`}>{"(760) 534-0671"}</a>
