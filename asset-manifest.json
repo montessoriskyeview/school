@@ -1,8 +1,20 @@
 {
   "files": {
     "main.css": "/school/static/css/main.d8f5bacc.css",
-    "main.js": "/school/static/js/main.e4d458d9.js",
+    "main.js": "/school/static/js/main.c57392f1.js",
     "static/js/453.10c608cb.chunk.js": "/school/static/js/453.10c608cb.chunk.js",
+    "static/media/property11.png": "/school/static/media/property11.7dce4f3c7c1ef83cc147.png",
+    "static/media/property12.png": "/school/static/media/property12.92fd04f9cd78b32bc85d.png",
+    "static/media/property7.png": "/school/static/media/property7.36bfb2fd8a728a769b9e.png",
+    "static/media/property5.png": "/school/static/media/property5.1382a45fd31f91057399.png",
+    "static/media/property8.png": "/school/static/media/property8.fba80fdf20fcf4a5d7d0.png",
+    "static/media/property6.png": "/school/static/media/property6.912387208b4c22159316.png",
+    "static/media/property10.png": "/school/static/media/property10.bd7c8c5e0bdecb85970e.png",
+    "static/media/property2.png": "/school/static/media/property2.221f08352e4063157346.png",
+    "static/media/property1.png": "/school/static/media/property1.e093760ad047b7ebf9fc.png",
+    "static/media/property3.png": "/school/static/media/property3.938824a81375e081a6e8.png",
+    "static/media/property9.png": "/school/static/media/property9.46b217f178afd82a1a67.png",
+    "static/media/property4.png": "/school/static/media/property4.339868c3cbcacf53aa20.png",
     "static/media/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png": "/school/static/media/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.33bedae7e87c249be9d5.png",
     "static/media/roboto-latin-500-normal.woff2": "/school/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/school/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -62,11 +74,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/school/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/school/index.html",
     "main.d8f5bacc.css.map": "/school/static/css/main.d8f5bacc.css.map",
-    "main.e4d458d9.js.map": "/school/static/js/main.e4d458d9.js.map",
+    "main.c57392f1.js.map": "/school/static/js/main.c57392f1.js.map",
     "453.10c608cb.chunk.js.map": "/school/static/js/453.10c608cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8f5bacc.css",
-    "static/js/main.e4d458d9.js"
+    "static/js/main.c57392f1.js"
   ]
 }
