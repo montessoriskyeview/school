@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <CanvasView>
       <InfoText
-        title="Montessori School of Skye View"
+        title="Montessori School Skye View"
         text="A Private Chez Nous School"
         style={{
           marginTop: "150px"
