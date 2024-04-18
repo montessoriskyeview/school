@@ -6,6 +6,7 @@ import { Tuition } from "./Tuition";
 import { Schedule } from "./Schedule";
 import { Registration } from "./Registration";
 import { Philosophy } from "./Philosophy";
+import { Contact } from "./Contact";
 
 export const AppRoutes = () => {
   return (
@@ -43,6 +44,11 @@ export const AppRoutes = () => {
       <Route
         path="/registration"
         element={<Registration />}
+        errorElement={<ErrorPage />}
+      />
+       <Route
+        path="/contact"
+        element={<Contact />}
         errorElement={<ErrorPage />}
       />
     </Routes>

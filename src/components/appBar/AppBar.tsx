@@ -85,7 +85,7 @@ export const AppBar = () => {
 						}}
 						href={SUMMER_CAMP_LINK}
 					>
-						Register today
+						Summer camp - Register today
 					</Link>
 				</Box>
 				<DrawerContent

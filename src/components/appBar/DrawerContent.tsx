@@ -16,6 +16,7 @@ import ScheduleIcon from '@mui/icons-material/Schedule';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import PaymentIcon from '@mui/icons-material/Payment';
 import RegistrationIcon from '@mui/icons-material/AppRegistration';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 
@@ -116,5 +117,10 @@ const NAVBAR_ITEMS: NavbarItem[] = [
 		text: "Location",
 		link: "location",
 		Icon: LocationOnIcon
+	},
+	{
+		text: "Contact",
+		link: "contact",
+		Icon: PhoneIcon
 	},
 ]

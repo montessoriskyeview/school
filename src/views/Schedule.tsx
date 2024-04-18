@@ -1,5 +1,6 @@
 import { InfoText } from "../components/shared/InfoText"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
+import { ListText } from "../components/shared/ListText"
 
 export const Schedule = () => {
   return (
@@ -10,6 +11,13 @@ export const Schedule = () => {
         style={{
           marginTop: "150px"
         }}
+      />
+      <ListText
+        title="Calendar"
+        items={[
+          "Traditional school year: September 3rd - May 30",
+          "Summer camp: June - August",
+        ]}
       />
     </CanvasView>
   )

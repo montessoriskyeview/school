@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@mui/material";
 import { Scene } from "./Scene";
+import { ContactInfo } from "../ContactInfo";
 
 export const CanvasView = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -15,6 +16,7 @@ export const CanvasView = ({ children }: { children: React.ReactNode }) => {
       </Canvas>
       <Box component="div">
         {children}
+        <ContactInfo />
       </Box>
     </>
   )
