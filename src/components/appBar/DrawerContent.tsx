@@ -105,22 +105,22 @@ const NAVBAR_ITEMS: NavbarItem[] = [
 	},
 	{
 		text: "Schedule",
-		link: "schedule",
+		link: "/schedule",
 		Icon: ScheduleIcon
 	},
 	{
 		text: "Registration",
-		link: "registration",
+		link: "/registration",
 		Icon: RegistrationIcon
 	},
 	{
 		text: "Location",
-		link: "location",
+		link: "/location",
 		Icon: LocationOnIcon
 	},
 	{
 		text: "Contact",
-		link: "contact",
+		link: "/contact",
 		Icon: PhoneIcon
 	},
 ]

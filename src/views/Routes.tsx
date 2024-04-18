@@ -1,4 +1,4 @@
-import { Route, Routes, createBrowserRouter, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./Home";
 import { ErrorPage } from "./ErrorView";
 import { Location } from "./Location";
@@ -47,9 +47,15 @@ export const AppRoutes = () => {
         element={<Registration />}
         errorElement={<ErrorPage />}
       />
-       <Route
+      <Route
         path="/contact"
         element={<Contact />}
+        errorElement={<ErrorPage />}
+      />
+      {/* default redirect to home page */}
+      <Route
+        path="*"
+        element={<Navigate to="/" />}
         errorElement={<ErrorPage />}
       />
     </Routes>
