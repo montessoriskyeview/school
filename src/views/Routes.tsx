@@ -8,6 +8,7 @@ import { Registration } from "./Registration";
 import { Philosophy } from "./Philosophy";
 import { Contact } from "./Contact";
 import { useEffect } from "react";
+import { FaqView } from "./FAQ";
 
 export const AppRoutes = () => {
   return (
@@ -50,6 +51,11 @@ export const AppRoutes = () => {
       <Route
         path="/contact"
         element={<Contact />}
+        errorElement={<ErrorPage />}
+      />
+      <Route
+        path="/faq"
+        element={<FaqView />}
         errorElement={<ErrorPage />}
       />
       {/* default redirect to home page */}

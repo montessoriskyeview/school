@@ -14,7 +14,8 @@ export const CanvasView = ({ children }: { children: React.ReactNode }) => {
         gl={{ antialias: false }}>
         <Scene />
       </Canvas>
-      <Box component="div">
+      {/* Make room for the navbar */}
+      <Box component="div" sx={{paddingTop: "100px"}}>
         {children}
         <ContactInfo />
       </Box>

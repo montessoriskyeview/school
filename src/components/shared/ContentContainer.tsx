@@ -6,7 +6,7 @@ export const ContentContainer = ({ children, ...rest }: { children: JSX.Element 
     <Box
       {...rest}
       sx={{
-        backgroundColor: "#00000077",
+        backgroundColor: "#000000CC",
         borderRadius: "10px",
         [theme.breakpoints.down('md')]: {
           padding: "10px",

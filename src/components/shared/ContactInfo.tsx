@@ -18,7 +18,6 @@ export const ContactInfo = () => {
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </Typography>
       </>
-
     </ContentContainer >
   )
 }

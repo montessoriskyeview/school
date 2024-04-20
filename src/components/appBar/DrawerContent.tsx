@@ -17,6 +17,7 @@ import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import PaymentIcon from '@mui/icons-material/Payment';
 import RegistrationIcon from '@mui/icons-material/AppRegistration';
 import PhoneIcon from '@mui/icons-material/Phone';
+import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 
@@ -122,5 +123,10 @@ const NAVBAR_ITEMS: NavbarItem[] = [
 		text: "Contact",
 		link: "/contact",
 		Icon: PhoneIcon
+	},
+	{
+		text: "FAQ",
+		link: "/faq",
+		Icon: QuestionIcon
 	},
 ]

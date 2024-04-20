@@ -83,6 +83,8 @@ export const AppBar = () => {
 						sx={{
 							cursor: "pointer",
 						}}
+						rel="noopener noreferrer"
+						target="_blank"
 						href={SUMMER_CAMP_LINK}
 					>
 						Summer camp - Register today

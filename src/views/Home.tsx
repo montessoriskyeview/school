@@ -7,9 +7,7 @@ export const Home = () => {
       <InfoText
         title="Montessori School Skye View"
         text="A Private Chez Nous School"
-        style={{
-          marginTop: "150px"
-        }}
+        titleVariant="h3"
       />
       <InfoText
         title="About us"

@@ -27,9 +27,6 @@ export const Registration = () => {
               </Link>
             ]
           }
-          style={{
-            marginTop: "150px"
-          }}
         />
         <ImageContainer
           style={{

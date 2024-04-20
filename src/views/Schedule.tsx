@@ -8,9 +8,6 @@ export const Schedule = () => {
       <InfoText
         title="Schedule"
         text="We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day school day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm."
-        style={{
-          marginTop: "150px"
-        }}
       />
       <ListText
         title="Calendar"
