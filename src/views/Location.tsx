@@ -14,6 +14,7 @@ import property11 from "../resources/images/location/property11.png"
 import property12 from "../resources/images/location/property12.png"
 import { CanvasView } from "../components/shared/Canvas/CanvasView";
 import { InfoText } from "../components/shared/InfoText";
+import { CollapseContainer } from "../components/shared/CollapseContainer";
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
@@ -27,35 +28,45 @@ export const Location = () => {
   return (
     <CanvasView>
       <Box component={"div"}>
-        <ContentContainer>
-          <div style={{ width: "100%" }}><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=7060%20N%20Eula%20St+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
-        </ContentContainer>
-        <InfoText 
+        <InfoText
           title="Location"
           text="Montessori Skye View is located on N. Eula St., just east of Hualapai and between Dorrell Ln. and Elkhorn Rd. Our campus has a gate around it, so please arrive during designated hours."
         />
-        <ContentContainer
-          sx={{
-            alignItems: "center"
-          }}
-        >
-          <ImageList
-            sx={{ width: 500 }}
-            variant="quilted"
-            cols={4}
-            rowHeight={121}
-          >
-            {itemData.map((item) => (
-              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                <img
-                  {...srcset(item.img, 121, item.rows, item.cols)}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </ContentContainer>
+        <CollapseContainer
+          title="Map"
+          content={
+            <div style={{ width: "100%" }}><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=7060%20N%20Eula%20St+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
+          }
+        />
+        <CollapseContainer
+          title="Photos"
+          content={
+            <Box
+              component="div"
+              sx={{
+                alignItems: "center"
+              }}
+            >
+              <ImageList
+                sx={{ width: 500 }}
+                variant="quilted"
+                cols={4}
+                rowHeight={121}
+              >
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                    <img
+                      {...srcset(item.img, 121, item.rows, item.cols)}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </Box>
+          }
+        />
+
       </Box>
     </CanvasView>
   )

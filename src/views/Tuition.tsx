@@ -28,8 +28,8 @@ export const Tuition = () => {
         title="Deposits"
         content={<ListText
           items={[
-            "$400 Deposit and Registration Fee before July 1st",
-            "$500 Deposit and Registration Fee after July 1st",
+            "$400 Deposit Fee (includes registration) before July 1st",
+            "$500 Deposit Fee (includes registration) after July 1st",
           ]}
         />}
 
