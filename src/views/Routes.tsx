@@ -24,44 +24,44 @@ export const AppRoutes = () => {
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/location"
+        path="/school/location"
         element={<Location />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/tuition"
+        path="/school/tuition"
         element={<Tuition />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/schedule"
+        path="/school/schedule"
         element={<Schedule />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/philosophy"
+        path="/school/philosophy"
         element={<Philosophy />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/registration"
+        path="/school/registration"
         element={<Registration />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/contact"
+        path="/school/contact"
         element={<Contact />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/faq"
+        path="/school/faq"
         element={<FaqView />}
         errorElement={<ErrorPage />}
       />
       {/* default redirect to home page */}
       <Route
         path="*"
-        element={<Navigate to="/" />}
+        element={<Navigate to="/school" />}
         errorElement={<ErrorPage />}
       />
     </Routes>
