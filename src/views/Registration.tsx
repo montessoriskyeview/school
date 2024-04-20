@@ -3,7 +3,7 @@ import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { ImageContainer } from "../components/shared/ImageContainer"
 import flyer from "../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png";
 import { ListText } from "../components/shared/ListText";
-import { SUMMER_CAMP_LINK } from "../resources/links";
+import { SUMMER_CAMP_LINK, FALL_2024_LINK } from "../resources/links";
 import { CollapseContainer } from "../components/shared/CollapseContainer";
 
 export const Registration = () => {
@@ -54,6 +54,28 @@ export const Registration = () => {
                 }}
               />
             </>
+          }
+        />
+        <CollapseContainer
+          title="Fall 2024"
+          content={
+
+            <ListText
+              items={[
+                "Starting September 3rd",
+                "$400 Deposit Fee (includes registration) before July 1st",
+                "$500 Deposit Fee (includes registration) after July 1st",
+                <Link
+                  variant="body1"
+                  sx={{
+                    cursor: "pointer",
+                  }}
+                  href={FALL_2024_LINK}
+                >
+                  Register here
+                </Link>
+              ]}
+            />
           }
         />
       </Box>
