@@ -1,5 +1,4 @@
 import { Box, ImageList, ImageListItem } from "@mui/material"
-import { ContentContainer } from "../components/shared/ContentContainer";
 import property1 from "../resources/images/location/property1.png"
 import property2 from "../resources/images/location/property2.png"
 import property3 from "../resources/images/location/property3.png"

@@ -5,12 +5,16 @@ import flyer from "../resources/images/Colorful Playful Simple Illustrated Kids 
 import { SchoolList } from "../components/shared/ListText";
 import { SUMMER_CAMP_LINK, FALL_2024_LINK } from "../resources/links";
 import { CollapseContainer } from "../components/shared/CollapseContainer";
+import { InfoText } from "../components/shared/InfoText";
 
 export const Registration = () => {
   const theme = useTheme();
   return (
     <CanvasView>
       <Box component={"div"}>
+        <InfoText
+          text={"Reservations and payments are currently accepted through the individual forms found in the sections below"}
+        />
         <CollapseContainer
           title="Current registration - Summer camp"
           content={
@@ -24,6 +28,7 @@ export const Registration = () => {
                       variant="body1"
                       sx={{
                         cursor: "pointer",
+                        color: "#09559f"
                       }}
                       href={SUMMER_CAMP_LINK}
                     >
@@ -69,6 +74,7 @@ export const Registration = () => {
                   variant="body1"
                   sx={{
                     cursor: "pointer",
+                    color: "#09559f",
                   }}
                   href={FALL_2024_LINK}
                 >

@@ -1,7 +1,6 @@
-import { Box } from "@mui/material"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { CollapseContainer } from "../components/shared/CollapseContainer"
-import { ListText, SchoolList } from "../components/shared/ListText"
+import { SchoolList } from "../components/shared/ListText"
 
 export const FaqView = () => {
   return (
