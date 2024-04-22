@@ -76,7 +76,7 @@ export const AppBar = () => {
 					}}
 				>
 					<Typography variant="h6" noWrap component="div">
-						Montessori Northwest
+						Montessori Skye View
 					</Typography>
 					<Link
 						variant="body1"
