@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material"
 import { ContentContainer } from "./ContentContainer"
+import { Typography } from "./Typography"
 
 const PHONE = "7605340671"
 const EMAIL = "NWLVMontessori@gmail.com"

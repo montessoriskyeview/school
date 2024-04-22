@@ -1,4 +1,4 @@
-import { Box, Button, Snackbar, Tooltip, Typography } from "@mui/material";
+import { Box, Button, Snackbar, Tooltip } from "@mui/material";
 
 import "./homeStyle.css";
 import React from "react";
@@ -6,6 +6,7 @@ import React from "react";
 import LinkIcon from '@mui/icons-material/Link';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ContentContainer } from "../shared/ContentContainer";
+import { Typography } from "../shared/Typography";
 
 export const MapInfo = ({ title }: { title: string }) => {
 	const defaultProps = {

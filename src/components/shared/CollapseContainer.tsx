@@ -1,8 +1,9 @@
-import { Box, Button, Collapse, Typography } from "@mui/material";
+import { Box, Button, Collapse } from "@mui/material";
 import { ContentContainer } from "./ContentContainer"
 import { useState } from "react";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Typography } from "./Typography";
 
 export const CollapseContainer = ({ title, content }: { title: string; content: string | JSX.Element }) => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,7 @@ export const CollapseContainer = ({ title, content }: { title: string; content: 
         </Button>
       </Box>
       <Collapse in={open}>
-        <Box component="div" sx={{paddingTop: "10px"}}>
+        <Box component="div" sx={{ paddingTop: "10px" }}>
           {content}
         </Box>
       </Collapse>

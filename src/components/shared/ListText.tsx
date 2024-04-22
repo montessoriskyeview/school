@@ -1,5 +1,6 @@
-import { List, ListItem, Typography } from "@mui/material"
+import { List, ListItem } from "@mui/material"
 import { InfoText } from "./InfoText"
+import { Typography } from "./Typography"
 
 export interface ListProps { title?: string, items: (string | JSX.Element)[], style?: React.CSSProperties };
 

@@ -1,6 +1,7 @@
 
-import { Box, SxProps, Theme, Typography } from "@mui/material";
+import { Box, SxProps, Theme } from "@mui/material";
 import { ContentContainer } from "./ContentContainer";
+import { Typography } from "./Typography";
 
 export const ImageContainer = ({ src, alt, title, style, imgStyle, imgSx }: { src: string; alt?: string; title?: string, style?: React.CSSProperties, imgStyle?: React.CSSProperties, imgSx?: SxProps<Theme> }) => {
   return (

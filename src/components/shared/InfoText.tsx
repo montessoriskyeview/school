@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
 import { ContentContainer } from "./ContentContainer";
+import { Typography } from "./Typography";
 
 export const InfoText = ({ text, title, style, titleVariant = "h5" }: { text: string | JSX.Element; title?: string, style?: React.CSSProperties, titleVariant?: any; }) => {
   return (
@@ -9,7 +9,6 @@ export const InfoText = ({ text, title, style, titleVariant = "h5" }: { text: st
           sx={{
             paddingBottom: "10px",
             color: "white",
-            fontFamily: "Light",
           }}>
           {title}
         </Typography> : null}
