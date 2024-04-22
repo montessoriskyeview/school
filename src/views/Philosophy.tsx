@@ -1,5 +1,4 @@
-import { InfoText } from "../components/shared/InfoText"
-import { ListText } from "../components/shared/ListText"
+import { SchoolList } from "../components/shared/ListText"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { CollapseContainer } from "../components/shared/CollapseContainer"
 
@@ -13,7 +12,7 @@ export const Philosophy = () => {
       />
       <CollapseContainer
         title="The Montessori Difference"
-        content={<ListText
+        content={<SchoolList
           items={[
             "Student-Centered Learning: Our curriculum is tailored to meet the individual needs and interests of each child.",
             "Hands-on Activities: Children learn by doing, exploring a variety of materials and activities that spark curiosity and creativity.",

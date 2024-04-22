@@ -9,6 +9,7 @@ export const InfoText = ({ text, title, style, titleVariant = "h5" }: { text: st
           sx={{
             paddingBottom: "10px",
             color: "white",
+            fontFamily: "Light",
           }}>
           {title}
         </Typography> : null}

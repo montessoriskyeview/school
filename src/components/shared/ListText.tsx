@@ -1,7 +1,9 @@
 import { List, ListItem, Typography } from "@mui/material"
 import { InfoText } from "./InfoText"
 
-export const ListText = ({ title, items, style }: { title?: string, items: (string | JSX.Element)[], style?: React.CSSProperties }) => {
+export interface ListProps { title?: string, items: (string | JSX.Element)[], style?: React.CSSProperties };
+
+export const ListText = ({ title, items, style }: ListProps) => {
   return (
     <InfoText
       title={title}
@@ -9,7 +11,11 @@ export const ListText = ({ title, items, style }: { title?: string, items: (stri
         <List sx={{ listStyleType: 'disc', marginLeft: "40px" }}>
           {items.map((item, i) =>
             <ListItem key={i} sx={{ display: 'list-item' }}>
-              {typeof item === "string" ? <Typography>
+              {typeof item === "string" ? <Typography
+                sx={{
+                  color: "white"
+                }}
+              >
                 {item}
               </Typography> : item}
             </ListItem>
@@ -18,5 +24,23 @@ export const ListText = ({ title, items, style }: { title?: string, items: (stri
       }
       style={style}
     />
+  )
+}
+
+export const SchoolList = ({ items }: Omit<ListProps, "title" | "style">) => {
+  return (
+    <List sx={{ listStyleType: 'disc', marginLeft: "40px" }}>
+      {items.map((item, i) =>
+        <ListItem key={i} sx={{ display: 'list-item' }}>
+          {typeof item === "string" ? <Typography
+            sx={{
+              color: "white"
+            }}
+          >
+            {item}
+          </Typography> : item}
+        </ListItem>
+      )}
+    </List>
   )
 }

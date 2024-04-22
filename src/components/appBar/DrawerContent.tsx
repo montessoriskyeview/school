@@ -63,7 +63,7 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 							<ListItemIcon>
 								<Icon />
 							</ListItemIcon>
-							<ListItemText primary={text} />
+							<ListItemText primary={text} sx={{color: "black"}} />
 						</ListItemButton>
 					</ListItem>
 				))}
