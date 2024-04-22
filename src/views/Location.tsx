@@ -1,5 +1,4 @@
 import { Box, ImageList, ImageListItem } from "@mui/material"
-import { ContentContainer } from "../components/shared/ContentContainer";
 import property1 from "../resources/images/location/property1.png"
 import property2 from "../resources/images/location/property2.png"
 import property3 from "../resources/images/location/property3.png"
@@ -44,12 +43,12 @@ export const Location = () => {
             <Box
               component="div"
               sx={{
-                alignItems: "center"
+                display: "flex",
+                justifyContent: "center"
               }}
             >
               <ImageList
-                sx={{ width: 500 }}
-                variant="quilted"
+                sx={{ width: 500}}
                 cols={4}
                 rowHeight={121}
               >
@@ -57,7 +56,7 @@ export const Location = () => {
                   <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                     <img
                       {...srcset(item.img, 121, item.rows, item.cols)}
-                      alt={item.title}
+                      alt={"School photo"}
                       loading="lazy"
                     />
                   </ImageListItem>
@@ -75,60 +74,47 @@ export const Location = () => {
 const itemData = [
   {
     img: property1,
-    title: 'Breakfast',
     rows: 2,
     cols: 2,
   },
   {
     img: property2,
-    title: 'Burger',
   },
   {
     img: property3,
-    title: 'Camera',
   },
   {
     img: property4,
-    title: 'Coffee',
     cols: 2,
   },
   {
     img: property5,
-    title: 'Hats',
     cols: 2,
   },
   {
     img: property6,
-    title: 'Honey',
-    author: '@arwinneil',
     rows: 2,
     cols: 2,
   },
   {
     img: property7,
-    title: 'Basketball',
   },
   {
     img: property8,
-    title: 'Fern',
   },
   {
     img: property9,
-    title: 'Mushrooms',
     rows: 2,
     cols: 2,
   },
   {
     img: property10,
-    title: 'Tomato basil',
   },
   {
     img: property11,
-    title: 'Sea star',
   },
   {
     img: property12,
-    title: 'Bike',
     cols: 2,
   },
 ];

@@ -6,6 +6,9 @@ import { CollapseContainer } from "../components/shared/CollapseContainer"
 export const Tuition = () => {
   return (
     <CanvasView>
+      <InfoText 
+        text={"Payment is currently accepted through the forms in the registration page (from the menu)"}
+      />
       <CollapseContainer
         title="Part-time Core Day Only"
         content={<SchoolList

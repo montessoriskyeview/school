@@ -82,6 +82,8 @@ export const AppBar = () => {
 						variant="body1"
 						sx={{
 							cursor: "pointer",
+							color: "#04325f",
+							textDecoration: "underline",
 						}}
 						rel="noopener noreferrer"
 						target="_blank"
