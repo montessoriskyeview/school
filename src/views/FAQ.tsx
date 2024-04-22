@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { CollapseContainer } from "../components/shared/CollapseContainer"
-import { ListText } from "../components/shared/ListText"
+import { ListText, SchoolList } from "../components/shared/ListText"
 
 export const FaqView = () => {
   return (
@@ -9,15 +9,13 @@ export const FaqView = () => {
       <CollapseContainer
         title="Dress code"
         content={
-          <Box component="div">
-            <ListText
-              items={[
-                "Appropriate attire for movement: Clothes should allow for participation in physical activities without restrictions.",
-                "Safe footwear: Shoes should be secure and appropriate for the environment (no flip flops, high heels, etc.).",
-                "Minimize distractions: Avoid clothing with offensive language, symbols, or overly revealing clothing.",
-              ]}
-            />
-          </Box>
+          <SchoolList
+            items={[
+              "Appropriate attire for movement: Clothes should allow for participation in physical activities without restrictions.",
+              "Safe footwear: Shoes should be secure and appropriate for the environment (no flip flops, high heels, etc.).",
+              "Minimize distractions: Avoid clothing with offensive language, symbols, or overly revealing clothing.",
+            ]}
+          />
         }
       />
       <CollapseContainer
