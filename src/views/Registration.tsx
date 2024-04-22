@@ -2,7 +2,7 @@ import { Box, Link, useTheme } from "@mui/material"
 import { CanvasView } from "../components/shared/Canvas/CanvasView"
 import { ImageContainer } from "../components/shared/ImageContainer"
 import flyer from "../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png";
-import { ListText } from "../components/shared/ListText";
+import { SchoolList } from "../components/shared/ListText";
 import { SUMMER_CAMP_LINK, FALL_2024_LINK } from "../resources/links";
 import { CollapseContainer } from "../components/shared/CollapseContainer";
 
@@ -15,7 +15,7 @@ export const Registration = () => {
           title="Current registration - Summer camp"
           content={
             <>
-              <ListText
+              <SchoolList
                 items={
                   [
                     "Unleash your child's inner explorer at our action-packed summer camp! Make new friends, discover new talents, and create lasting memories through exciting activities and outdoor adventures. Arts and crafts supplies, sports games, musical workshops, snacks, and water activities all included with weekly fees. Classes are held from M-TR, 9:00 am - 1:00 pm. Please pack a lunch and water bottle for your child.",
@@ -59,8 +59,7 @@ export const Registration = () => {
         <CollapseContainer
           title="Fall 2024"
           content={
-
-            <ListText
+            <SchoolList
               items={[
                 "Starting September 3rd",
                 "$400 Deposit Fee (includes registration) before July 1st",
