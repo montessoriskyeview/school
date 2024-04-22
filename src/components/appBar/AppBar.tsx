@@ -33,7 +33,7 @@ export const StyledAppBar = styled(MuiAppBar, {
 
 export const AppBar = () => {
 	const theme = useTheme();
-	const [drawerOpen, setDrawerOpen] = useState(false)
+	const [drawerOpen, setDrawerOpen] = useState(false);
 
 	const handleDrawerOpen = () => {
 		setDrawerOpen(true);

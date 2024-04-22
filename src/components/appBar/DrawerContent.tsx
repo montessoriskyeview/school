@@ -10,7 +10,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
-import { useNavigate } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
@@ -20,6 +19,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
+import { Page, useRoutes } from '../../views/Routes';
 
 export const DRAWER_WIDTH = 240;
 
@@ -30,7 +30,7 @@ interface DrawerContentProps {
 
 export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) => {
 	const theme = useTheme();
-	const navigate = useNavigate();
+	const { setPage } = useRoutes();
 	return (
 		<Drawer
 			sx={{
@@ -56,7 +56,8 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 						<ListItemButton
 							onClick={() => {
 								handleDrawerClose();
-								navigate(`school/${link}`);
+								setPage(link);
+								window.scrollTo(0, 0);
 							}}
 						>
 							<ListItemIcon>
@@ -82,7 +83,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 interface NavbarItem {
 	text: string;
-	link: string;
+	link: Page;
 	Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
 		muiName: string;
 	}
@@ -91,42 +92,42 @@ interface NavbarItem {
 const NAVBAR_ITEMS: NavbarItem[] = [
 	{
 		text: "Home",
-		link: "school",
+		link: Page.HOME,
 		Icon: HomeIcon,
 	},
 	{
 		text: "Philosophy",
-		link: "philosophy",
+		link: Page.PHILOSOPHY,
 		Icon: LightbulbIcon
 	},
 	{
 		text: "Tuition",
-		link: "tuition",
+		link: Page.TUITION,
 		Icon: PaymentIcon
 	},
 	{
 		text: "Schedule",
-		link: "schedule",
+		link: Page.SCHEDULE,
 		Icon: ScheduleIcon
 	},
 	{
 		text: "Registration",
-		link: "registration",
+		link: Page.REGISTRATION,
 		Icon: RegistrationIcon
 	},
 	{
 		text: "Location",
-		link: "location",
+		link: Page.LOCATION,
 		Icon: LocationOnIcon
 	},
 	{
 		text: "Contact",
-		link: "contact",
+		link: Page.CONTACT,
 		Icon: PhoneIcon
 	},
 	{
 		text: "FAQ",
-		link: "faq",
+		link: Page.FAQ,
 		Icon: QuestionIcon
 	},
 ]

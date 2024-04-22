@@ -3,7 +3,7 @@ import './App.css';
 import { CssBaseline, ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 
 import { AppBar } from './components/appBar/AppBar';
-import { AppRoutes } from './views/Routes';
+import { AppRoutes, RouteProvider } from './views/Routes';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -20,8 +20,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar />
-      <AppRoutes />
+      <RouteProvider>
+        <AppBar />
+        <AppRoutes />
+      </RouteProvider>
     </ThemeProvider>
   );
 }

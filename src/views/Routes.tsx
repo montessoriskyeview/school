@@ -7,74 +7,71 @@ import { Schedule } from "./Schedule";
 import { Registration } from "./Registration";
 import { Philosophy } from "./Philosophy";
 import { Contact } from "./Contact";
-import { useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { FaqView } from "./FAQ";
 
-export const AppRoutes = () => {
+export enum Page {
+  HOME,
+  LOCATION,
+  TUITION,
+  SCHEDULE,
+  PHILOSOPHY,
+  REGISTRATION,
+  CONTACT,
+  FAQ,
+}
+
+interface RouteContextData {
+  page: Page;
+  setPage: (page: Page) => void;
+}
+
+const RouteContext = createContext<RouteContextData | undefined>(undefined);
+
+export const useRoutes = () => {
+  const context = useContext(RouteContext);
+
+  if (!context) {
+    throw new Error("RouteContext not set up properly")
+  }
+
+  return context;
+}
+
+export const RouteProvider = ({ children }: { children: React.ReactNode }) => {
+  const [page, setPage] = useState<Page>(Page.HOME);
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<Home />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school"
-        element={<Home />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/location"
-        element={<Location />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/tuition"
-        element={<Tuition />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/schedule"
-        element={<Schedule />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/philosophy"
-        element={<Philosophy />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/registration"
-        element={<Registration />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/contact"
-        element={<Contact />}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path="/school/faq"
-        element={<FaqView />}
-        errorElement={<ErrorPage />}
-      />
-      {/* default redirect to home page */}
-      <Route
-        path="*"
-        element={<Navigate to="/school" />}
-        errorElement={<ErrorPage />}
-      />
-    </Routes>
+    <RouteContext.Provider
+      value={{
+        page,
+        setPage,
+      }}
+    >
+      {children}
+    </RouteContext.Provider>
   )
 }
 
+export const AppRoutes = () => {
+  const { page } = useRoutes();
 
-export function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
+  switch (page) {
+    case Page.LOCATION:
+      return <Location />
+    case Page.CONTACT:
+      return <Contact />
+    case Page.FAQ:
+      return <FaqView />
+    case Page.TUITION:
+      return <Tuition />
+    case Page.PHILOSOPHY:
+      return <Philosophy />
+    case Page.REGISTRATION:
+      return <Registration />
+    case Page.SCHEDULE:
+      return <Schedule />
+    case Page.HOME:
+    default:
+      return <Home />
+  }
 }

@@ -65,6 +65,7 @@ export const Registration = () => {
                 "Starting September 3rd",
                 "$400 Deposit Fee (includes registration) before July 1st",
                 "$500 Deposit Fee (includes registration) after July 1st",
+                "Current limit: 45 total students",
                 <Link
                   variant="body1"
                   sx={{
