@@ -15,14 +15,14 @@ export const CollapseContainer = ({ title, content }: { title: string; content: 
   return (
     <ContentContainer>
       <Box component="div" sx={{ width: "100%" }}>
-        <Button variant="text" sx={{ width: "100%", justifyContent: "left", gap: 3, textTransform: "none", textAlign: "left" }} onClick={handleClick}>
-          {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          <Typography sx={{ color: "white" }}>{title}</Typography>
+        <Button variant="text" sx={{ width: "100%", justifyContent: "left", gap: 3, textTransform: "none", textAlign: "left",  }} onClick={handleClick}>
+          {open ? <ExpandLessIcon sx={{fill: "white", stroke: "white"}} /> : <ExpandMoreIcon sx={{fill: "white", stroke: "white"}}/>}
+          <Typography sx={{ color: "white", fontSize: 24, }}>{title}</Typography>
         </Button>
       </Box>
       <Collapse in={open}>
         <Box component="div" sx={{ paddingTop: "10px" }}>
-          {content}
+           {typeof content === "string" ? <Typography>{content}</Typography> : content}
         </Box>
       </Collapse>
     </ContentContainer>
