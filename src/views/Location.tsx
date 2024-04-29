@@ -20,6 +20,7 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
     srcSet: `${image}?w=${size * cols}&h=${size * rows
       }&fit=crop&auto=format&dpr=2 2x`,
+    alt: "school photos"
   };
 }
 
@@ -34,7 +35,7 @@ export const Location = () => {
         <CollapseContainer
           title="Map"
           content={
-            <div style={{ width: "100%" }}><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=7060%20N%20Eula%20St+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
+            <div style={{ width: "100%" }}><iframe title="googlemapseula" width="100%" height="600" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=7060%20N%20Eula%20St+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
           }
         />
         <CollapseContainer
@@ -56,7 +57,6 @@ export const Location = () => {
                   <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                     <img
                       {...srcset(item.img, 121, item.rows, item.cols)}
-                      alt={"School photo"}
                       loading="lazy"
                     />
                   </ImageListItem>
