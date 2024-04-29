@@ -1,13 +1,11 @@
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./Home";
-import { ErrorPage } from "./ErrorView";
 import { Location } from "./Location";
 import { Tuition } from "./Tuition";
 import { Schedule } from "./Schedule";
 import { Registration } from "./Registration";
 import { Philosophy } from "./Philosophy";
 import { Contact } from "./Contact";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { FaqView } from "./FAQ";
 
 export enum Page {
