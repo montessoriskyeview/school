@@ -1,12 +1,12 @@
-import { SchoolList } from "../components/shared/ListText"
-import { InfoText } from "../components/shared/InfoText"
-import { CanvasView } from "../components/shared/Canvas/CanvasView"
-import { CollapseContainer } from "../components/shared/CollapseContainer"
+import {SchoolList} from "../components/shared/ListText"
+import {InfoText} from "../components/shared/InfoText"
+import {CanvasView} from "../components/shared/Canvas/CanvasView"
+import {CollapseContainer} from "../components/shared/CollapseContainer"
 
 export const Tuition = () => {
   return (
     <CanvasView>
-      <InfoText 
+      <InfoText
         text={"Payment is currently accepted through the forms in the registration page (from the menu)"}
       />
       <CollapseContainer
@@ -15,6 +15,7 @@ export const Tuition = () => {
           items={[
             "$6,750 Paid in Full",
             "Or $612.50 monthly paid over 12 months",
+            "Monday through Thursday - 9am to 1pm",
           ]}
         />}
       />
@@ -24,6 +25,7 @@ export const Tuition = () => {
           items={[
             "$9,900 paid in full",
             "Or $875 monthly paid over 12 months",
+            "Monday through Friday - 8am to 4pm"
           ]}
         />}
       />
