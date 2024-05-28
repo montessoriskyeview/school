@@ -1,12 +1,12 @@
-import { Home } from "./Home";
-import { Location } from "./Location";
-import { Tuition } from "./Tuition";
-import { Schedule } from "./Schedule";
-import { Registration } from "./Registration";
-import { Philosophy } from "./Philosophy";
-import { Contact } from "./Contact";
-import { createContext, useContext, useState } from "react";
-import { FaqView } from "./FAQ";
+import {Home} from "./Home";
+import {Location} from "./Location";
+import {Tuition} from "./Tuition";
+import {Schedule} from "./Schedule";
+import {Registration} from "./Registration";
+import {Philosophy} from "./Philosophy";
+import {Contact} from "./Contact";
+import {createContext, useContext, useState} from "react";
+import {FaqView} from "./FAQ";
 
 export enum Page {
   HOME,
@@ -36,7 +36,7 @@ export const useRoutes = () => {
   return context;
 }
 
-export const RouteProvider = ({ children }: { children: React.ReactNode }) => {
+export const RouteProvider = ({children}: {children: React.ReactNode}) => {
   const [page, setPage] = useState<Page>(Page.HOME);
   return (
     <RouteContext.Provider
@@ -51,7 +51,7 @@ export const RouteProvider = ({ children }: { children: React.ReactNode }) => {
 }
 
 export const AppRoutes = () => {
-  const { page } = useRoutes();
+  const {page} = useRoutes();
 
   switch (page) {
     case Page.LOCATION:

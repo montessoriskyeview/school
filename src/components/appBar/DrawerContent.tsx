@@ -1,4 +1,4 @@
-import { styled, useTheme } from '@mui/material/styles';
+import {styled, useTheme} from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -17,9 +17,9 @@ import PaymentIcon from '@mui/icons-material/Payment';
 import RegistrationIcon from '@mui/icons-material/AppRegistration';
 import PhoneIcon from '@mui/icons-material/Phone';
 import QuestionIcon from '@mui/icons-material/QuestionAnswer';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
-import { SvgIconTypeMap } from '@mui/material';
-import { Page, useRoutes } from '../../views/Routes';
+import {OverridableComponent} from '@mui/material/OverridableComponent';
+import {SvgIconTypeMap} from '@mui/material';
+import {Page, useRoutes} from '../../views/Routes';
 
 export const DRAWER_WIDTH = 240;
 
@@ -28,9 +28,9 @@ interface DrawerContentProps {
 	handleDrawerClose: () => void;
 }
 
-export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) => {
+export const DrawerContent = ({open, handleDrawerClose}: DrawerContentProps) => {
 	const theme = useTheme();
-	const { setPage } = useRoutes();
+	const {setPage} = useRoutes();
 	return (
 		<Drawer
 			sx={{
@@ -51,7 +51,7 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 			</DrawerHeader>
 			<Divider />
 			<List>
-				{NAVBAR_ITEMS.map(({ text, link, Icon }) => (
+				{NAVBAR_ITEMS.map(({text, link, Icon}) => (
 					<ListItem key={text} disablePadding>
 						<ListItemButton
 							onClick={() => {
@@ -63,7 +63,7 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 							<ListItemIcon>
 								<Icon />
 							</ListItemIcon>
-							<ListItemText primary={text} sx={{color: "black"}} primaryTypographyProps={{fontFamily: "Medium"}}/>
+							<ListItemText primary={text} sx={{color: "black"}} />
 						</ListItemButton>
 					</ListItem>
 				))}
@@ -72,7 +72,7 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
 	)
 }
 
-const DrawerHeader = styled('div')(({ theme }) => ({
+const DrawerHeader = styled('div')(({theme}) => ({
 	display: 'flex',
 	alignItems: 'center',
 	padding: theme.spacing(0, 1),
