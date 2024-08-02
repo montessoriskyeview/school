@@ -1,11 +1,11 @@
-import { Box, Link, useTheme } from "@mui/material"
-import { CanvasView } from "../components/shared/Canvas/CanvasView"
-import { ImageContainer } from "../components/shared/ImageContainer"
-import flyer from "../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png";
-import { SchoolList } from "../components/shared/ListText";
-import { SUMMER_CAMP_LINK, FALL_2024_LINK } from "../resources/links";
-import { CollapseContainer } from "../components/shared/CollapseContainer";
-import { InfoText } from "../components/shared/InfoText";
+import { Box, Link, useTheme } from '@mui/material';
+import { CanvasView } from '../components/shared/Canvas/CanvasView';
+import { ImageContainer } from '../components/shared/ImageContainer';
+import flyer from '../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png';
+import { SchoolList } from '../components/shared/ListText';
+import { SUMMER_CAMP_LINK, FALL_2024_LINK } from '../resources/links';
+import { CollapseContainer } from '../components/shared/CollapseContainer';
+import { InfoText } from '../components/shared/InfoText';
 
 export const Registration = () => {
   const theme = useTheme();
@@ -18,7 +18,30 @@ export const Registration = () => {
           }
         />
         <CollapseContainer
-          title='Current registration - Summer camp'
+          title='Fall 2024'
+          content={
+            <SchoolList
+              items={[
+                'Starting September 3rd',
+                '$400 Deposit Fee (includes registration) before August 31st',
+                '$500 Deposit Fee (includes registration) after August 31st',
+                'Current limit: 45 total students',
+                <Link
+                  variant='body1'
+                  sx={{
+                    cursor: 'pointer',
+                    color: '#09559f'
+                  }}
+                  href={FALL_2024_LINK}
+                >
+                  Register here
+                </Link>
+              ]}
+            />
+          }
+        />
+        <CollapseContainer
+          title='Summer camp'
           content={
             <>
               <SchoolList
@@ -61,30 +84,7 @@ export const Registration = () => {
             </>
           }
         />
-        <CollapseContainer
-          title='Fall 2024'
-          content={
-            <SchoolList
-              items={[
-                'Starting September 3rd',
-                '$400 Deposit Fee (includes registration) before August 31st',
-                '$500 Deposit Fee (includes registration) after August 31st',
-                'Current limit: 45 total students',
-                <Link
-                  variant='body1'
-                  sx={{
-                    cursor: 'pointer',
-                    color: '#09559f'
-                  }}
-                  href={FALL_2024_LINK}
-                >
-                  Register here
-                </Link>
-              ]}
-            />
-          }
-        />
       </Box>
     </CanvasView>
   );
-}
+};
