@@ -87,7 +87,7 @@ export const AppBar = () => {
             target='_blank'
             href={FALL_2024_LINK}
           >
-            Fall sign up - Register today
+            Fall semester - Register today
           </Link>
         </Box>
         <DrawerContent
