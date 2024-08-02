@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { DrawerContent } from "./DrawerContent";
-import { SUMMER_CAMP_LINK } from "../../resources/links";
+import { FALL_2024_LINK, SUMMER_CAMP_LINK } from '../../resources/links';
 
 const drawerWidth = 240;
 
@@ -44,59 +44,57 @@ export const AppBar = () => {
 	};
 
 	return (
-		<StyledAppBar
-			open={drawerOpen}
-		>
-			<Toolbar>
-				<IconButton
-					color="inherit"
-					aria-label="open drawer"
-					onClick={handleDrawerOpen}
-					edge="start"
-					sx={{ mr: 2, ...(drawerOpen && { display: 'none' }) }}
-				>
-					<MenuIcon />
-				</IconButton>
-				<Box
-					component={"div"}
-					sx={{
-						display: "flex",
-						[theme.breakpoints.up("md")]: {
-							width: "500px",
-							flexDirection: "row",
-							alignItems: "center",
-							justifyContent: "space-around",
-						},
-						[theme.breakpoints.down("md")]: {
-							width: "300px",
-							flexDirection: "column",
-							alignItems: "start",
-							justifyContent: "center",
-						},
-					}}
-				>
-					<Typography variant="h6" noWrap component="div">
-						Montessori Skye View
-					</Typography>
-					<Link
-						variant="body1"
-						sx={{
-							cursor: "pointer",
-							color: "#04325f",
-							textDecoration: "underline",
-						}}
-						rel="noopener noreferrer"
-						target="_blank"
-						href={SUMMER_CAMP_LINK}
-					>
-						Summer camp - Register today
-					</Link>
-				</Box>
-				<DrawerContent
-					open={drawerOpen}
-					handleDrawerClose={handleDrawerClose}
-				/>
-			</Toolbar>
-		</StyledAppBar>
-	)
+    <StyledAppBar open={drawerOpen}>
+      <Toolbar>
+        <IconButton
+          color='inherit'
+          aria-label='open drawer'
+          onClick={handleDrawerOpen}
+          edge='start'
+          sx={{ mr: 2, ...(drawerOpen && { display: 'none' }) }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Box
+          component={'div'}
+          sx={{
+            display: 'flex',
+            [theme.breakpoints.up('md')]: {
+              width: '500px',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-around'
+            },
+            [theme.breakpoints.down('md')]: {
+              width: '300px',
+              flexDirection: 'column',
+              alignItems: 'start',
+              justifyContent: 'center'
+            }
+          }}
+        >
+          <Typography variant='h6' noWrap component='div'>
+            Montessori Skye View
+          </Typography>
+          <Link
+            variant='body1'
+            sx={{
+              cursor: 'pointer',
+              color: '#04325f',
+              textDecoration: 'underline'
+            }}
+            rel='noopener noreferrer'
+            target='_blank'
+            href={FALL_2024_LINK}
+          >
+            Fall sign up - Register today
+          </Link>
+        </Box>
+        <DrawerContent
+          open={drawerOpen}
+          handleDrawerClose={handleDrawerClose}
+        />
+      </Toolbar>
+    </StyledAppBar>
+  );
 }
