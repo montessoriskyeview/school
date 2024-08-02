@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import { DrawerContent } from "./DrawerContent";
-import { FALL_2024_LINK, SUMMER_CAMP_LINK } from '../../resources/links';
+import { FALL_2024_LINK } from '../../resources/links';
 
 const drawerWidth = 240;
 
