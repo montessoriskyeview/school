@@ -29,8 +29,7 @@ export const Registration = () => {
                 <Link
                   variant='body1'
                   sx={{
-                    cursor: 'pointer',
-                    color: '#09559f'
+                    cursor: 'pointer'
                   }}
                   href={FALL_2024_LINK}
                 >
@@ -51,8 +50,7 @@ export const Registration = () => {
                   <Link
                     variant='body1'
                     sx={{
-                      cursor: 'pointer',
-                      color: '#09559f'
+                      cursor: 'pointer'
                     }}
                     href={SUMMER_CAMP_LINK}
                   >

@@ -1,9 +1,8 @@
-import { Box, Button, Collapse } from "@mui/material";
-import { ContentContainer } from "./ContentContainer"
-import { useState } from "react";
+import { Box, Button, Collapse } from '@mui/material';
+import { ContentContainer } from './ContentContainer';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Typography } from "./Typography";
+import { Typography } from './Typography';
 
 export const CollapseContainer = ({
   title,
@@ -25,23 +24,21 @@ export const CollapseContainer = ({
             textAlign: 'left'
           }}
         >
-          {true ? (
+          {/* {true ? (
             <ExpandLessIcon sx={{ fill: 'white', stroke: 'white' }} />
           ) : (
             <ExpandMoreIcon sx={{ fill: 'white', stroke: 'white' }} />
-          )}
+          )} */}
           <Typography sx={{ color: 'white', fontSize: 24 }}>{title}</Typography>
         </Button>
       </Box>
-      <Collapse in={true}>
-        <Box component='div' sx={{ paddingTop: '10px' }}>
-          {typeof content === 'string' ? (
-            <Typography>{content}</Typography>
-          ) : (
-            content
-          )}
-        </Box>
-      </Collapse>
+      <Box component='div' sx={{ paddingTop: '10px' }}>
+        {typeof content === 'string' ? (
+          <Typography>{content}</Typography>
+        ) : (
+          content
+        )}
+      </Box>
     </ContentContainer>
   );
 };
