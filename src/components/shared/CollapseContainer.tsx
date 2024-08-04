@@ -1,7 +1,5 @@
-import { Box, Button, Collapse } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { ContentContainer } from './ContentContainer';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography } from './Typography';
 
 export const CollapseContainer = ({
