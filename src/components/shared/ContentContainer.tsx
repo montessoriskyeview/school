@@ -6,23 +6,22 @@ export const ContentContainer = ({ children, ...rest }: { children: JSX.Element 
     <Box
       {...rest}
       sx={{
-        backgroundColor: "#00000077",
-        borderRadius: "10px",
+        borderRadius: '10px',
         [theme.breakpoints.down('md')]: {
-          padding: "10px",
-          margin: "10px",
+          padding: '10px',
+          margin: '10px'
         },
         [theme.breakpoints.up('md')]: {
-          padding: "20px",
-          margin: "50px",
+          padding: '20px',
+          margin: '50px'
         },
-        display: "flex",
-        flexDirection: "column",
-        ...rest.sx,
+        display: 'flex',
+        flexDirection: 'column',
+        ...rest.sx
       }}
-      component={"div"}
+      component={'div'}
     >
       {children}
     </Box>
-  )
+  );
 }

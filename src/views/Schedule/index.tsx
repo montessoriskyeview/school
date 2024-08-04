@@ -4,7 +4,7 @@ import {ListText} from "../../components/shared/ListText"
 import {DailyScheduleProps, SCHEDULE_ITEMS} from './items'
 import {NestedListItem} from '../../components/shared/NestedListItem'
 import {CollapseContainer} from '../../components/shared/CollapseContainer'
-import {Typography} from '@mui/material'
+import { Typography } from '../../components/shared/Typography';
 
 export const Schedule = () => {
   return (

@@ -6,19 +6,19 @@ import { ContactInfo } from "../ContactInfo";
 export const CanvasView = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Canvas
+      {/* <Canvas
         style={{
           zIndex: -1,
           position: "fixed",
         }}
         gl={{ antialias: false }}>
         <Scene />
-      </Canvas>
+      </Canvas> */}
       {/* Make room for the navbar */}
-      <Box component="div" sx={{paddingTop: "100px"}}>
+      <Box component='div' sx={{ paddingTop: '100px' }}>
         {children}
         <ContactInfo />
       </Box>
     </>
-  )
+  );
 }
