@@ -8,9 +8,7 @@ export const ContactInfo = () => {
   return (
     <ContentContainer>
       <>
-        <Typography>
-          {'For questions or concerns, contact Hannah Olsen (call/text/email)'}
-        </Typography>
+        <Typography>{'Contact information (call/text/email)'}</Typography>
         <Typography>
           <a href={`tel:${PHONE}`} style={{ color: 'white' }}>
             {'(760) 534-0671'}
