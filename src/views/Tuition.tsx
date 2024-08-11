@@ -16,9 +16,10 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$6,750 Paid in Full',
-              'Or $587.50 monthly paid over 12 months',
-              'Monday through Thursday - 9am to 1pm'
+              '$587.50 monthly for 12 months',
+              'OR',
+              '$6,750 paid in full (save $300)',
+              'Hours: Monday through Thursday - 9am to 1pm'
             ]}
           />
         }
@@ -28,9 +29,10 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$9,900 paid in full',
-              'Or $850 monthly paid over 12 months',
-              'Monday through Friday - 8am to 4pm'
+              '$850 monthly for 12 months',
+              'OR',
+              '$9,900 paid in full (save $300)',
+              'Hours: Monday through Friday - 8am to 4pm'
             ]}
           />
         }
