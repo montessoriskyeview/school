@@ -1,9 +1,7 @@
 import { Box, Link, useTheme } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
-import { ImageContainer } from '../components/shared/ImageContainer';
-import flyer from '../resources/images/Colorful Playful Simple Illustrated Kids Summer Camp Flyer.png';
 import { SchoolList } from '../components/shared/ListText';
-import { SUMMER_CAMP_LINK, FALL_2024_LINK } from '../resources/links';
+import { FALL_2024_LINK } from '../resources/links';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { InfoText } from '../components/shared/InfoText';
 
