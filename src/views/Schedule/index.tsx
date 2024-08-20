@@ -10,38 +10,38 @@ export const Schedule = () => {
   return (
     <CanvasView>
       <InfoText
-        title="Schedule"
-        text="We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day school day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm."
+        title='Schedule'
+        text='We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day school day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm.'
       />
       <CollapseContainer
-        title="Daily Schedule"
+        title='Daily Schedule'
         content={
           <>
-            <DailySchedule
-              items={SCHEDULE_ITEMS}
-            />
+            <DailySchedule items={SCHEDULE_ITEMS} />
             <Typography>
-              {"This is a flexible framework, and the specific activities can be tailored to different age groups and learning objectives."}
+              {
+                'This is a flexible framework, and the specific activities can be tailored to different age groups and learning objectives.'
+              }
             </Typography>
           </>
         }
       />
-      <ListText
+      {/* <ListText
         title="Calendar"
         items={[
           "Traditional school year: September 3rd - May 30",
           "Summer camp: June - August",
         ]}
-      />
+      /> */}
       <ListText
-        title="Weekly schedule"
+        title='Weekly schedule'
         items={[
-          "Full time: Monday through Friday - 8am to 4pm",
-          "Part time: Monday through Thursday - 9am to 1pm",
+          'Full time: Monday through Friday - 8am to 4pm',
+          'Part time: Monday through Thursday - 9am to 1pm'
         ]}
       />
     </CanvasView>
-  )
+  );
 }
 
 const DailySchedule = ({items}: DailyScheduleProps) => {

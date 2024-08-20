@@ -38,7 +38,7 @@ export const Registration = () => {
             />
           }
         />
-        <CollapseContainer
+        {/* <CollapseContainer
           title='Summer camp'
           content={
             <>
@@ -80,7 +80,7 @@ export const Registration = () => {
               />
             </>
           }
-        />
+        /> */}
       </Box>
     </CanvasView>
   );
