@@ -1,4 +1,4 @@
-import { Box, Link, useTheme } from '@mui/material';
+import { Box, Link } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { SchoolList } from '../components/shared/ListText';
 import { FALL_2024_LINK } from '../resources/links';
@@ -6,7 +6,6 @@ import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { InfoText } from '../components/shared/InfoText';
 
 export const Registration = () => {
-  const theme = useTheme();
   return (
     <CanvasView>
       <Box component={'div'}>
