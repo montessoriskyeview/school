@@ -1,6 +1,7 @@
-import { CanvasView } from "../components/shared/Canvas/CanvasView"
-import { CollapseContainer } from "../components/shared/CollapseContainer"
-import { SchoolList } from "../components/shared/ListText"
+import { CanvasView } from '../components/shared/Canvas/CanvasView';
+import { CollapseContainer } from '../components/shared/CollapseContainer';
+import { SchoolList } from '../components/shared/ListText';
+import { Typography } from '../components/shared/Typography';
 
 export const FaqView = () => {
   return (
@@ -47,6 +48,29 @@ export const FaqView = () => {
           'The Montessori method focuses on teaching children consequences for their actions and emphasizes a strong, clear boundary along with guidance and responsibility for their actions. Parents are notified of unacceptable behavior, and repeated issues may lead to removal from the program.'
         }
       />
+      <CollapseContainer
+        title='What if we need to withdraw? What is your refund policy?'
+        content={
+          <>
+            <Typography>
+              If a student's enrollment is terminated for any reason, the
+              following refund policy will apply:
+            </Typography>
+            <SchoolList
+              items={[
+                "Tuition will be refunded on a prorated basis for the month in which the school receives official notice of the student's withdrawal or cancellation, regardless of the number of days the student attended classes during that month.",
+                "All refund requests must be submitted in writing to the school administration within 30 days of the student's last day of attendance.",
+                'Refunds may be subject to processing fees or other applicable deductions.',
+                'The school reserves the right to make exceptions to this policy in certain circumstances, such as in cases of extended illness or family emergencies.'
+              ]}
+            />
+            <Typography>
+              Please contact the school administration for any questions
+              regarding this policy or the enrollment process.
+            </Typography>
+          </>
+        }
+      />
     </CanvasView>
   );
-}
+};
