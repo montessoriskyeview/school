@@ -39,7 +39,7 @@ export const FaqView = () => {
       <CollapseContainer
         title='How does this compare to homeschooling or the Clark County School District?'
         content={
-          'We are a microschool. A microschool is the reimagining of the one-room schoolhouse, where class sizes are around 15 students of varying ages, and the schedule and curriculum are tailored to fit the needs of each class. Many describe microschools as a "mid-point" between traditional schooling and homeschooling. According to the state of Nevada, our students are homeschooled. We provide you with the proper documentation to file with the state to declare your child "homeschooled". We provide teachers to help facilitate your children in their learning.'
+          'We are a microschool. A microschool is the reimagining of the one-room schoolhouse, where class sizes are around 15 students of varying ages, and the schedule and curriculum are tailored to fit the needs of each class. Many describe microschools as a "mid-point" between traditional schooling and homeschooling. According to the state of Nevada, our students are homeschooled. We provide you with the proper documentation to file with the state to declare your child "homeschooled". We facilitate your children in their learning.'
         }
       />
       <CollapseContainer
