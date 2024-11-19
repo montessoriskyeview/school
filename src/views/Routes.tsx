@@ -1,12 +1,12 @@
 import {Home} from "./Home";
-// import {Location} from "./Location";
-// import {Tuition} from "./Tuition";
-// import {Schedule} from "./Schedule";
-// import {Registration} from "./Registration";
-// import {Philosophy} from "./Philosophy";
-// import {Contact} from "./Contact";
+import { Location } from './Location';
+import { Tuition } from './Tuition';
+import { Schedule } from './Schedule';
+import { Registration } from './Registration';
+import { Philosophy } from './Philosophy';
+import { Contact } from './Contact';
 import {createContext, useContext, useState} from "react";
-// import {FaqView} from "./FAQ";
+import { FaqView } from './FAQ';
 
 export enum Page {
   HOME,
@@ -54,21 +54,21 @@ export const AppRoutes = () => {
   const {page} = useRoutes();
 
   switch (page) {
-    // case Page.LOCATION:
-    //   return <Location />
-    // case Page.CONTACT:
-    //   return <Contact />
-    // case Page.FAQ:
-    //   return <FaqView />
-    // case Page.TUITION:
-    //   return <Tuition />
-    // case Page.PHILOSOPHY:
-    //   return <Philosophy />
-    // case Page.REGISTRATION:
-    //   return <Registration />
-    // case Page.SCHEDULE:
-    //   return <Schedule />
-    // case Page.HOME:
+    case Page.LOCATION:
+      return <Location />;
+    case Page.CONTACT:
+      return <Contact />;
+    case Page.FAQ:
+      return <FaqView />;
+    case Page.TUITION:
+      return <Tuition />;
+    case Page.PHILOSOPHY:
+      return <Philosophy />;
+    case Page.REGISTRATION:
+      return <Registration />;
+    case Page.SCHEDULE:
+      return <Schedule />;
+    case Page.HOME:
     default:
       return <Home />;
   }
