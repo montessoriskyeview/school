@@ -20,8 +20,8 @@ export const Registration = () => {
             <SchoolList
               items={[
                 'Starting September 3rd',
-                '$400 Registration Fee before August 31st',
-                '$500 Registration Fee after August 31st',
+                '$400 Registration Fee',
+                'Sibling discount and military discount available',
                 <Link
                   variant='body1'
                   sx={{

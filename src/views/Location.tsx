@@ -34,7 +34,7 @@ export const Location = () => {
       <Box component={'div'}>
         <InfoText
           title='Location'
-          text='Montessori Skye View is located on N. Eula St., just east of Hualapai and between Dorrell Ln. and Elkhorn Rd. Our campus has a gate around it, so please arrive during designated hours.'
+          text='Montessori Skye View is located on N. Eula St., just east of Hualapai and between Dorrell Ln. and Elkhorn Rd. Our campus is fully gated so please arrange a visit prior to arrival.'
         />
         <CollapseContainer
           title='Map'

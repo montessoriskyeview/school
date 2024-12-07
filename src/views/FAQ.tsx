@@ -32,9 +32,7 @@ export const FaqView = () => {
       />
       <CollapseContainer
         title='What kind of curriculum is available?'
-        content={
-          'We provide quality grade-level curriculum for your child, taught by their teacher in the classroom.'
-        }
+        content={`We offer quality curriculum that meets Nevada state standards for each student's grade level, taught by their instructor in the classroom.`}
       />
       <CollapseContainer
         title='How does this compare to homeschooling or the Clark County School District?'

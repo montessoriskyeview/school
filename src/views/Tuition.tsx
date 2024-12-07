@@ -16,10 +16,10 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$587.50 monthly for 12 months',
+              '$6,750 per school year',
               'OR',
-              '$6,750 paid in full (save $300)',
-              'Hours: Monday through Thursday - 9am to 1pm'
+              '$750 paid monthly for September through May',
+              'Year round financing is available at $587.50 per month from September through August'
             ]}
           />
         }
@@ -29,10 +29,10 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$850 monthly for 12 months',
+              '$8,500 per school year',
               'OR',
-              '$9,900 paid in full (save $300)',
-              'Hours: Monday through Friday - 8am to 4pm'
+              '$1,100 paid monthly for September through May',
+              'Year round financing is available at $850 per month from September through August'
             ]}
           />
         }
@@ -62,7 +62,6 @@ export const Tuition = () => {
           />
         }
       />
-      <InfoText title='School Calendar Year' text='September 3rd - May 30' />
     </CanvasView>
   );
 };

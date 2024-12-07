@@ -1,9 +1,14 @@
 import {InfoText} from "../../components/shared/InfoText"
 import {CanvasView} from "../../components/shared/Canvas/CanvasView"
-import {ListText} from "../../components/shared/ListText"
-import {DailyScheduleProps, SCHEDULE_ITEMS} from './items'
-import {NestedListItem} from '../../components/shared/NestedListItem'
-import {CollapseContainer} from '../../components/shared/CollapseContainer'
+import { ListText } from '../../components/shared/ListText';
+import {
+  DailyScheduleProps,
+  YearlyScheduleProps,
+  SCHEDULE_ITEMS,
+  YEARLY_SCHEDULE_ITEMS
+} from './items';
+import { NestedListItem } from '../../components/shared/NestedListItem';
+import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { Typography } from '../../components/shared/Typography';
 
 export const Schedule = () => {
@@ -12,6 +17,10 @@ export const Schedule = () => {
       <InfoText
         title='Schedule'
         text='We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day school day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm.'
+      />
+      <CollapseContainer
+        title='2024-2025 School Year'
+        content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
       />
       <CollapseContainer
         title='Daily Schedule'
@@ -42,12 +51,12 @@ export const Schedule = () => {
       />
     </CanvasView>
   );
-}
+};
 
-const DailySchedule = ({items}: DailyScheduleProps) => {
+const DailySchedule = ({ items }: DailyScheduleProps) => {
   return (
     <>
-      {items.map((i) => (
+      {items.map(i => (
         <NestedListItem
           key={i.title}
           title={`${i.startTime} - ${i.endTime}`}
@@ -55,6 +64,20 @@ const DailySchedule = ({items}: DailyScheduleProps) => {
         />
       ))}
     </>
-  )
-}
+  );
+};
+
+const YearlySchedule = ({ items }: YearlyScheduleProps) => {
+  return (
+    <>
+      {items.map(i => (
+        <NestedListItem
+          key={i.startDate + i.endDate}
+          title={`${i.startDate}${i.endDate ? ` - ${i.endDate}` : ''}`}
+          description={[i.detail]}
+        />
+      ))}
+    </>
+  );
+};
 
