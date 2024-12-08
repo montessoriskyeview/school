@@ -1,12 +1,14 @@
-import {Home} from "./Home";
+import { Home } from './Home';
 import { Location } from './Location';
 import { Tuition } from './Tuition';
 import { Schedule } from './Schedule';
 import { Registration } from './Registration';
 import { Philosophy } from './Philosophy';
 import { Contact } from './Contact';
-import {createContext, useContext, useState} from "react";
+import { createContext, useContext, useState } from 'react';
 import { FaqView } from './FAQ';
+import { Box, Button, Chip, Link, Stack } from '@mui/material';
+import { NAVBAR_ITEMS } from '../components/appBar/DrawerContent';
 
 export enum Page {
   HOME,
@@ -16,7 +18,7 @@ export enum Page {
   PHILOSOPHY,
   REGISTRATION,
   CONTACT,
-  FAQ,
+  FAQ
 }
 
 interface RouteContextData {
@@ -30,28 +32,28 @@ export const useRoutes = () => {
   const context = useContext(RouteContext);
 
   if (!context) {
-    throw new Error("RouteContext not set up properly")
+    throw new Error('RouteContext not set up properly');
   }
 
   return context;
-}
+};
 
-export const RouteProvider = ({children}: {children: React.ReactNode}) => {
+export const RouteProvider = ({ children }: { children: React.ReactNode }) => {
   const [page, setPage] = useState<Page>(Page.HOME);
   return (
     <RouteContext.Provider
       value={{
         page,
-        setPage,
+        setPage
       }}
     >
       {children}
     </RouteContext.Provider>
-  )
-}
+  );
+};
 
 export const AppRoutes = () => {
-  const {page} = useRoutes();
+  const { page } = useRoutes();
 
   switch (page) {
     case Page.LOCATION:
@@ -72,4 +74,24 @@ export const AppRoutes = () => {
     default:
       return <Home />;
   }
-}
+};
+export const RouteChips = () => {
+  const { setPage } = useRoutes();
+  return (
+    <Box
+      component='div'
+      sx={{
+        justifyContent: 'center',
+        display: 'flex'
+      }}
+    >
+      <Stack direction='row' spacing={1} sx={{ flexWrap: 'wrap' }}>
+        {NAVBAR_ITEMS.filter(item => item.link !== Page.HOME).map(item => (
+          <Button onClick={() => setPage(item.link)}>
+            <Chip label={item.text} color='primary' sx={{ margin: 0.5 }} />
+          </Button>
+        ))}
+      </Stack>
+    </Box>
+  );
+};
