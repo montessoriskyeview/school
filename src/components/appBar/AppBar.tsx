@@ -76,7 +76,7 @@ export const AppBar = () => {
           <Typography variant='h6' noWrap component='div'>
             Montessori Skye View
           </Typography>
-          <Link
+          {/* <Link
             variant='body1'
             sx={{
               cursor: 'pointer',
@@ -88,7 +88,7 @@ export const AppBar = () => {
             href={FALL_2024_LINK}
           >
             Fall semester - Register today
-          </Link>
+          </Link> */}
         </Box>
         <DrawerContent
           open={drawerOpen}
