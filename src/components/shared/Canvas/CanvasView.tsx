@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
 import property from '../../../resources/images/location/property1.png';
-import { RouteChips } from '../../../views/Routes';
 
 export const CanvasView = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -7,7 +7,7 @@ import { Philosophy } from './Philosophy';
 import { Contact } from './Contact';
 import { createContext, useContext, useState } from 'react';
 import { FaqView } from './FAQ';
-import { Box, Button, Chip, Link, Stack } from '@mui/material';
+import { Box, Button, Chip, Stack } from '@mui/material';
 import { NAVBAR_ITEMS } from '../components/appBar/DrawerContent';
 
 export enum Page {
