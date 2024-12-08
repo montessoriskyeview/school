@@ -1,8 +1,15 @@
 import { Box } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
 import property from '../../../resources/images/location/property1.png';
+import { RouteChips } from '../../../views/Routes';
 
-export const CanvasView = ({ children }: { children: React.ReactNode }) => {
+export const CanvasView = ({
+  children,
+  hideRouteChips
+}: {
+  children: React.ReactNode;
+  hideRouteChips?: boolean;
+}) => {
   return (
     <Box
       component='div'
@@ -50,6 +57,7 @@ export const CanvasView = ({ children }: { children: React.ReactNode }) => {
           paddingY: '100px' // Adjust padding as needed
         }}
       >
+        {!hideRouteChips && <RouteChips />}
         {children}
         <ContactInfo />
       </Box>

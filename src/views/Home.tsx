@@ -4,7 +4,7 @@ import { RouteChips } from './Routes';
 
 export const Home = () => {
   return (
-    <CanvasView>
+    <CanvasView hideRouteChips>
       <InfoText
         title='Montessori School Skye View'
         text='A Private Chez Nous School'
