@@ -29,7 +29,7 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$8,500 per school year',
+              '$9,900 per school year',
               'OR',
               '$1,100 paid monthly for September through May',
               'Year round financing is available at $850 per month from September through August'
@@ -60,6 +60,14 @@ export const Tuition = () => {
               'Supplies'
             ]}
           />
+        }
+      />
+      <InfoText
+        text={
+          <em>
+            Please note that processing fees are not included in the total cost
+            and range from 1% to 5% depending on your selected payment method.
+          </em>
         }
       />
     </CanvasView>
