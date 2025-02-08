@@ -1,4 +1,4 @@
-import { Box, styled, useTheme } from '@mui/material';
+import { Box, styled, useTheme, Link } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '../shared/Typography';
@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { DrawerContent } from './DrawerContent';
-// import { FALL_2024_LINK } from '../../resources/links';
+import { FALL_2025_LINK } from '../../resources/links';
 
 const drawerWidth = 240;
 
@@ -76,7 +76,7 @@ export const AppBar = () => {
           <Typography variant='h6' noWrap component='div'>
             Montessori Skye View
           </Typography>
-          {/* <Link
+          <Link
             variant='body1'
             sx={{
               cursor: 'pointer',
@@ -85,10 +85,10 @@ export const AppBar = () => {
             }}
             rel='noopener noreferrer'
             target='_blank'
-            href={FALL_2024_LINK}
+            href={FALL_2025_LINK}
           >
-            Fall semester - Register today
-          </Link> */}
+            Fall registration
+          </Link>
         </Box>
         <DrawerContent
           open={drawerOpen}
