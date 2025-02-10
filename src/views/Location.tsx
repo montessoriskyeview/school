@@ -1,4 +1,4 @@
-import { Box, ImageList, ImageListItem } from '@mui/material';
+import { Box } from '@mui/material';
 import property1 from '../resources/images/location/property1.png';
 import property2 from '../resources/images/location/property2.png';
 import property3 from '../resources/images/location/property3.jpg';
@@ -18,23 +18,48 @@ import property16 from '../resources/images/location/property16.jpg';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { InfoText } from '../components/shared/InfoText';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
+import { Carousel } from '../components/shared/Carousel';
 
-function srcset(image: string, size: number, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`
-  };
-}
+const slides = [
+  { src: property1, className: 'carousel-slide' },
+  { src: property2, className: 'carousel-slide' },
+  { src: property3, className: 'carousel-slide' },
+  { src: property4, className: 'carousel-slide' },
+  { src: property5, className: 'carousel-slide' },
+  { src: property6, className: 'carousel-slide' },
+  { src: property7, className: 'carousel-slide' },
+  { src: property8, className: 'carousel-slide' },
+  { src: property9, className: 'carousel-slide' },
+  { src: property10, className: 'carousel-slide' },
+  { src: property11, className: 'carousel-slide' },
+  { src: property12, className: 'carousel-slide' },
+  { src: property13, className: 'carousel-slide' },
+  { src: property14, className: 'carousel-slide' },
+  { src: property15, className: 'carousel-slide' },
+  { src: property16, className: 'carousel-slide' }
+];
 
 export const Location = () => {
   return (
     <CanvasView>
       <Box component={'div'}>
+        <CollapseContainer
+          title='Photos'
+          content={
+            <Box
+              component='div'
+              sx={{
+                display: 'flex',
+                justifyContent: 'center'
+              }}
+            >
+              <Carousel slides={slides} />
+            </Box>
+          }
+        />
         <InfoText
           title='Location'
-          text='Montessori Skye View is located on N. Eula St., just east of Hualapai and between Dorrell Ln. and Elkhorn Rd. Our campus is fully gated so please arrange a visit prior to arrival.'
+          text='Montessori Skye View is located on N. Eula St., just east of Hualapai and between Dorrell Ln. and Elkhorn Rd. Our campus is fully gated so please arrange a visit prior to arrival. Use the contact information below to schedule a visit.'
         />
         <CollapseContainer
           title='Map'
@@ -51,95 +76,7 @@ export const Location = () => {
             </div>
           }
         />
-        <CollapseContainer
-          title='Photos'
-          content={
-            <Box
-              component='div'
-              sx={{
-                display: 'flex',
-                justifyContent: 'center'
-              }}
-            >
-              <ImageList sx={{ width: 500 }} cols={4} rowHeight={121}>
-                {itemData.map((item, i) => (
-                  <ImageListItem
-                    key={item.img}
-                    cols={item.cols || 1}
-                    rows={item.rows || 1}
-                  >
-                    <img
-                      {...srcset(item.img, 121, item.rows, item.cols)}
-                      loading='lazy'
-                      alt={'school photos-' + i}
-                    />
-                  </ImageListItem>
-                ))}
-              </ImageList>
-            </Box>
-          }
-        />
       </Box>
     </CanvasView>
   );
 };
-
-const itemData = [
-  {
-    img: property1,
-    rows: 2,
-    cols: 2
-  },
-  {
-    img: property2
-  },
-  {
-    img: property3
-  },
-  {
-    img: property4,
-    cols: 2
-  },
-  {
-    img: property5,
-    cols: 2
-  },
-  {
-    img: property6,
-    rows: 2,
-    cols: 2
-  },
-  {
-    img: property7
-  },
-  {
-    img: property8
-  },
-  {
-    img: property9,
-    rows: 2,
-    cols: 2
-  },
-  {
-    img: property10
-  },
-  {
-    img: property11
-  },
-  {
-    img: property12,
-    cols: 2
-  },
-  {
-    img: property13
-  },
-  {
-    img: property14
-  },
-  {
-    img: property15
-  },
-  {
-    img: property16
-  }
-];

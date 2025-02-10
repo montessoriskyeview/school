@@ -87,7 +87,7 @@ export const RouteChips = () => {
     >
       <Stack direction='row' spacing={1} sx={{ flexWrap: 'wrap' }}>
         {NAVBAR_ITEMS.filter(item => item.link !== Page.HOME).map(item => (
-          <Button onClick={() => setPage(item.link)}>
+          <Button onClick={() => setPage(item.link)} key={item.link}>
             <Chip label={item.text} color='primary' sx={{ margin: 0.5 }} />
           </Button>
         ))}
