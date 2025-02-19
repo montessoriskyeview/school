@@ -97,7 +97,7 @@ export const AppBar = () => {
               target='_blank'
               href={FALL_2025_LINK}
             >
-              Fall registration
+              2025 Fall registration
             </Link>
             <Link
               variant='body1'
@@ -110,7 +110,7 @@ export const AppBar = () => {
               target='_blank'
               href={SUMMER_CAMP_LINK}
             >
-              Summer camp
+              2025 Summer camp
             </Link>
           </Box>
         </Box>
