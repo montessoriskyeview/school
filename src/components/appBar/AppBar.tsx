@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { DrawerContent } from './DrawerContent';
-import { FALL_2025_LINK } from '../../resources/links';
+import { FALL_2025_LINK, SUMMER_CAMP_LINK } from '../../resources/links';
 
 const drawerWidth = 240;
 
@@ -76,19 +76,43 @@ export const AppBar = () => {
           <Typography variant='h6' noWrap component='div'>
             Montessori Skye View
           </Typography>
-          <Link
-            variant='body1'
+          <Box
             sx={{
-              cursor: 'pointer',
-              color: '#04325f',
-              textDecoration: 'underline'
+              display: 'flex',
+              gap: 5,
+              paddingBottom: 1,
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
-            rel='noopener noreferrer'
-            target='_blank'
-            href={FALL_2025_LINK}
+            component='div'
           >
-            Fall registration
-          </Link>
+            <Link
+              variant='body1'
+              sx={{
+                cursor: 'pointer',
+                color: '#04325f',
+                textDecoration: 'underline'
+              }}
+              rel='noopener noreferrer'
+              target='_blank'
+              href={FALL_2025_LINK}
+            >
+              Fall registration
+            </Link>
+            <Link
+              variant='body1'
+              sx={{
+                cursor: 'pointer',
+                color: '#04325f',
+                textDecoration: 'underline'
+              }}
+              rel='noopener noreferrer'
+              target='_blank'
+              href={SUMMER_CAMP_LINK}
+            >
+              Summer camp
+            </Link>
+          </Box>
         </Box>
         <DrawerContent
           open={drawerOpen}
