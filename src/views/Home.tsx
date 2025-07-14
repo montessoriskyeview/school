@@ -7,8 +7,8 @@ export const Home = () => {
   return (
     <CanvasView>
       <InfoText
-        title="Welcome to Montessori School Skye View"
-        text="A Private Chez Nous School"
+        title="Welcome to Montessori Learning Center Skye View"
+        text="A Private Chez Nous Learning Center"
         titleVariant="h1"
         spacing="lg"
         containerVariant="hero"
@@ -50,8 +50,8 @@ export const Home = () => {
       </ContentContainer>
 
       <InfoText
-        title="About Our School"
-        text="Montessori Skye View is a new Montessori school dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning."
+        title="About Our Learning Center"
+        text="Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning."
         spacing="lg"
         titleVariant="h2"
       />

@@ -58,7 +58,7 @@ export const FaqView = () => {
       <CollapseContainer
         title="🍎 Is lunch provided or should my child bring their own?"
         content={
-          "Students can bring a healthy lunch from home or choose our nutritious school meal option for $3 per day. This fee will be conveniently added to your monthly school fee statement. We understand that forgetting a lunch happens, and our program ensures your child has a healthy option available each day they're at school. Lunch options include ham, cheese and crackers or a peanut butter and jelly sandwich along with fresh fruit (apple, banana, orange) and vegetables (carrot sticks, cucumber)."
+          "Students can bring a healthy lunch from home or choose our nutritious learning center meal option for $3 per day. This fee will be conveniently added to your monthly learning center fee statement. We understand that forgetting a lunch happens, and our program ensures your child has a healthy option available each day they're at the learning center. Lunch options include ham, cheese and crackers or a peanut butter and jelly sandwich along with fresh fruit (apple, banana, orange) and vegetables (carrot sticks, cucumber)."
         }
         spacing="lg"
       />
@@ -77,7 +77,7 @@ export const FaqView = () => {
       <CollapseContainer
         title="🏫 How does this compare to homeschooling or the Clark County School District?"
         content={
-          'We are a microschool. A microschool is the reimagining of the one-room schoolhouse, where class sizes are around 15 students of varying ages, and the schedule and curriculum are tailored to fit the needs of each class. Many describe microschools as a "mid-point" between traditional schooling and homeschooling. According to the state of Nevada, our students are homeschooled. We provide you with the proper documentation to file with the state to declare your child "homeschooled". We facilitate your children in their learning.'
+          'We are a learning center that operates as a microschool. A microschool is the reimagining of the one-room schoolhouse, where class sizes are around 15 students of varying ages, and the schedule and curriculum are tailored to fit the needs of each class. Many describe microschools as a "mid-point" between traditional schooling and homeschooling. According to the state of Nevada, our students are homeschooled. We provide you with the proper documentation to file with the state to declare your child "homeschooled". We facilitate your children in their learning as a supplement to your homeschooling journey.'
         }
         spacing="lg"
       />
@@ -98,15 +98,15 @@ export const FaqView = () => {
             </Typography>
             <SchoolList
               items={[
-                "Tuition will be refunded on a prorated basis for the month in which the school receives official notice of the student's withdrawal or cancellation, regardless of the number of days the student attended classes during that month.",
-                "All refund requests must be submitted in writing to the school administration within 30 days of the student's last day of attendance.",
+                "Tuition will be refunded on a prorated basis for the month in which the learning center receives official notice of the student's withdrawal or cancellation, regardless of the number of days the student attended classes during that month.",
+                "All refund requests must be submitted in writing to the learning center administration within 30 days of the student's last day of attendance.",
                 'Refunds may be subject to processing fees or other applicable deductions.',
-                'The school reserves the right to make exceptions to this policy in certain circumstances, such as in cases of extended illness or family emergencies.',
+                'The learning center reserves the right to make exceptions to this policy in certain circumstances, such as in cases of extended illness or family emergencies.',
               ]}
             />
             <Typography>
-              Please contact the school administration for any questions
-              regarding this policy or the enrollment process.
+              Please contact the learning center administration for any
+              questions regarding this policy or the enrollment process.
             </Typography>
           </>
         }

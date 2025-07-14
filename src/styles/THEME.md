@@ -1,4 +1,4 @@
-# Skyeview Montessori School Theme Guide
+# Skyeview Montessori Learning Center Theme Guide
 
 ## Color Palette
 

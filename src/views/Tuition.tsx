@@ -49,7 +49,7 @@ export const Tuition = () => {
         content={
           <SchoolList
             items={[
-              '$6,750 per school year',
+              '$6,750 per learning year',
               'OR',
               '$750 paid monthly for September through May',
               'Year round financing is available at $587.50 per month from September through August',
@@ -59,11 +59,11 @@ export const Tuition = () => {
         spacing="lg"
       />
       <CollapseContainer
-        title="☀️ Full-time School Day"
+        title="☀️ Full-time Learning Day"
         content={
           <SchoolList
             items={[
-              '$9,900 per school year',
+              '$9,900 per learning year',
               'OR',
               '$1,100 paid monthly for September through May',
               'Year round financing is available at $850 per month from September through August',
@@ -90,7 +90,7 @@ export const Tuition = () => {
           <SchoolList
             items={[
               'Comprehensive Montessori curriculum',
-              'Fall and Spring school pictures',
+              'Fall and Spring learning center pictures',
               'Monthly "Fun for Everyone" activities',
               'Healthy snacks and refreshments',
               'All educational supplies and materials',

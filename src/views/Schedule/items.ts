@@ -101,61 +101,61 @@ export const YEARLY_SCHEDULE_ITEMS: YearlyScheduleItem[] = [
   {
     startDate: 'September 3',
     endDate: undefined,
-    detail: 'First day of school'
+    detail: 'First day of learning center',
   },
   {
     startDate: 'October 25',
     endDate: undefined,
-    detail: 'Nevada Day, no school'
+    detail: 'Nevada Day, no learning center',
   },
   {
     startDate: 'November 5',
     endDate: undefined,
-    detail: 'Election Day, no school'
+    detail: 'Election Day, no learning center',
   },
   {
     startDate: 'November 11',
     endDate: undefined,
-    detail: 'Veterans Day, no school'
+    detail: 'Veterans Day, no learning center',
   },
   {
     startDate: 'November 28',
     endDate: 'November 29',
-    detail: 'Thanksgiving, no school'
+    detail: 'Thanksgiving, no learning center',
   },
   {
     startDate: 'December 23',
     endDate: 'January 3',
-    detail: 'Winter Break, no school'
+    detail: 'Winter Break, no learning center',
   },
   {
     startDate: 'January 20',
     endDate: undefined,
-    detail: 'MLK Day, no school'
+    detail: 'MLK Day, no learning center',
   },
   {
     startDate: 'February 17',
     endDate: undefined,
-    detail: "Presidents' Day, no school"
+    detail: "Presidents' Day, no learning center",
   },
   {
     startDate: 'March 17',
     endDate: 'March 21',
-    detail: 'Spring Break, no school'
+    detail: 'Spring Break, no learning center',
   },
   {
     startDate: 'April 18',
     endDate: undefined,
-    detail: 'Easter holiday, no school'
+    detail: 'Easter holiday, no learning center',
   },
   {
     startDate: 'May 26',
     endDate: undefined,
-    detail: 'Memorial Day, no school'
+    detail: 'Memorial Day, no learning center',
   },
   {
     startDate: 'May 30',
     endDate: undefined,
-    detail: 'Last day of school before summer'
-  }
+    detail: 'Last day of learning center before summer',
+  },
 ];

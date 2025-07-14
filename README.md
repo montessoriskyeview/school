@@ -1,7 +1,7 @@
-# Skyeview Montessori School Website
+# Skyeview Montessori Learning Center Website
 
-## About Our School
-Skyeview Montessori School is a vibrant educational community serving children from ages 3 through 5th grade in Las Vegas. Our unique approach combines traditional Montessori principles with an emphasis on outdoor learning and child-led activities.
+## About Our Learning Center
+Skyeview Montessori Learning Center is a vibrant educational community serving children from ages 3 through 5th grade in Las Vegas. Our unique approach combines traditional Montessori principles with an emphasis on outdoor learning and child-led activities. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling.
 
 ### Key Features
 - **Child-Centered Learning**: Activities and curriculum guided by children's interests
@@ -9,12 +9,13 @@ Skyeview Montessori School is a vibrant educational community serving children f
 - **Superior Staff Ratio**: Best child-to-teacher ratio in the Las Vegas area
 - **Age Range**: Serving children from 3 years through 5th grade
 - **Montessori Method**: Hands-on learning and individualized attention
+- **Homeschool Support**: We provide documentation and support for homeschooling families
 
 ## Website Development Guidelines
 
 ### Project Structure
 ```
-school/
+learning-center/
 ├── src/
 │   ├── components/
 │   ├── pages/
