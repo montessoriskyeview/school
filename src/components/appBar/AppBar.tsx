@@ -43,14 +43,21 @@ export const AppBar = () => {
     setDrawerOpen(false);
   };
 
+  const trackFallRegistrationConversion = () => {
+    // @ts-ignore - gtag is globally available
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
+    });
+  };
+
   return (
     <StyledAppBar open={drawerOpen}>
       <Toolbar>
         <IconButton
-          color='inherit'
-          aria-label='open drawer'
+          color="inherit"
+          aria-label="open drawer"
           onClick={handleDrawerOpen}
-          edge='start'
+          edge="start"
           sx={{ mr: 2, ...(drawerOpen && { display: 'none' }) }}
         >
           <MenuIcon />
@@ -63,17 +70,17 @@ export const AppBar = () => {
               width: '500px',
               flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'space-around'
+              justifyContent: 'space-around',
             },
             [theme.breakpoints.down('md')]: {
               width: '300px',
               flexDirection: 'column',
               alignItems: 'start',
-              justifyContent: 'center'
-            }
+              justifyContent: 'center',
+            },
           }}
         >
-          <Typography variant='h6' noWrap component='div'>
+          <Typography variant="h6" noWrap component="div">
             Montessori Skye View
           </Typography>
           <Box
@@ -82,32 +89,33 @@ export const AppBar = () => {
               gap: 5,
               paddingBottom: 1,
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
-            component='div'
+            component="div"
           >
             <Link
-              variant='body1'
+              variant="body1"
               sx={{
                 cursor: 'pointer',
                 color: '#04325f',
-                textDecoration: 'underline'
+                textDecoration: 'underline',
               }}
-              rel='noopener noreferrer'
-              target='_blank'
+              rel="noopener noreferrer"
+              target="_blank"
               href={FALL_2025_LINK}
+              onClick={trackFallRegistrationConversion}
             >
               2025 Fall registration
             </Link>
             <Link
-              variant='body1'
+              variant="body1"
               sx={{
                 cursor: 'pointer',
                 color: '#04325f',
-                textDecoration: 'underline'
+                textDecoration: 'underline',
               }}
-              rel='noopener noreferrer'
-              target='_blank'
+              rel="noopener noreferrer"
+              target="_blank"
               href={SUMMER_CAMP_LINK}
             >
               2025 Summer camp
