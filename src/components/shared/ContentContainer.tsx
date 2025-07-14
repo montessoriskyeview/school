@@ -47,7 +47,7 @@ const StyledContainer = styled(Box)<ContentContainerProps>`
   margin: ${props => {
     switch (props.spacing) {
       case 'sm':
-        return 'var(--spacing-lg)';
+        return 'var(--spacing-xl)';
       case 'lg':
         return 'var(--spacing-3xl)';
       default:
@@ -57,6 +57,7 @@ const StyledContainer = styled(Box)<ContentContainerProps>`
 
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-lg);
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -84,7 +85,7 @@ const StyledContainer = styled(Box)<ContentContainerProps>`
     margin: ${props => {
       switch (props.spacing) {
         case 'sm':
-          return 'var(--spacing-md)';
+          return 'var(--spacing-lg)';
         case 'lg':
           return 'var(--spacing-xl)';
         default:

@@ -24,12 +24,13 @@ const StyledButton = styled(Button)`
   gap: var(--spacing-md);
   text-transform: none;
   text-align: left;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
   background-color: #ffffff;
   border: 2px solid #e5e7eb;
   color: #1f2937;
+  margin-bottom: var(--spacing-md);
 
   &:hover {
     background-color: #f3f4f6;
@@ -48,9 +49,10 @@ const StyledContent = styled(Box)<{ isExpanded: boolean }>`
   max-height: ${props => (props.isExpanded ? '1000px' : '0')};
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-  padding-top: ${props => (props.isExpanded ? 'var(--spacing-lg)' : '0')};
-  padding-left: var(--spacing-md);
-  padding-right: var(--spacing-md);
+  padding-top: ${props => (props.isExpanded ? 'var(--spacing-xl)' : '0')};
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+  padding-bottom: ${props => (props.isExpanded ? 'var(--spacing-lg)' : '0')};
 `;
 
 export const CollapseContainer = ({
@@ -86,6 +88,7 @@ export const CollapseContainer = ({
               fontSize: 'var(--text-xl)',
               fontWeight: 600,
               color: '#1F2937',
+              margin: 0,
             }}
           >
             {title}
@@ -101,6 +104,7 @@ export const CollapseContainer = ({
               fontSize: 'var(--text-lg)',
               lineHeight: 'var(--leading-loose)',
               color: '#374151',
+              margin: 0,
             }}
           >
             {content}

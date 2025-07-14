@@ -68,8 +68,18 @@ const StyledTypography = styled(MuiTypography)<CustomTypographyProps>`
     props.variant?.startsWith('h')
       ? 'var(--leading-tight)'
       : 'var(--leading-normal)'};
-  margin-bottom: ${props =>
-    props.variant?.startsWith('h') ? 'var(--spacing-lg)' : 'var(--spacing-md)'};
+  margin-bottom: ${props => {
+    if (props.variant?.startsWith('h')) {
+      switch (props.variant) {
+        case 'h1':
+        case 'h2':
+          return 'var(--spacing-xl)';
+        default:
+          return 'var(--spacing-lg)';
+      }
+    }
+    return 'var(--spacing-lg)';
+  }};
   text-shadow: ${props =>
     props.color === 'white' ? '0 1px 2px rgba(0, 0, 0, 0.1)' : 'none'};
   font-weight: ${props => (props.variant?.startsWith('h') ? '700' : '400')};

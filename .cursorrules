@@ -28,6 +28,28 @@
 - Use semantic HTML elements
 - Ensure accessibility compliance
 
+## Apple-Inspired Spacing Philosophy
+### Vertical Spacing Principles
+- **Generous Whitespace**: Always err on the side of too much space rather than too little
+- **Component Isolation**: Each component should feel like it has room to breathe
+- **Visual Hierarchy**: Use spacing to create clear content sections
+- **Relaxed Feeling**: Users should feel comfortable and not rushed
+
+### Spacing Standards
+- **Minimum Component Padding**: 48px (3rem) vertical padding for all content containers
+- **Section Spacing**: 64px (4rem) between major sections
+- **Element Spacing**: 24px (1.5rem) between related elements
+- **Text Spacing**: 32px (2rem) between paragraphs and text blocks
+- **Button Padding**: 16px vertical, 32px horizontal minimum
+- **Card Spacing**: 32px internal padding, 48px external margins
+
+### Implementation Rules
+- Never use padding less than 24px (1.5rem) for content areas
+- Always add extra spacing around interactive elements
+- Use consistent spacing multiples (24px, 32px, 48px, 64px)
+- Test on mobile to ensure spacing doesn't feel cramped
+- Prioritize vertical breathing room over horizontal space efficiency
+
 ## Code Style
 - Use TypeScript for all components
 - Use functional components with hooks

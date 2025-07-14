@@ -33,7 +33,7 @@ export const InfoText = ({
           variant={titleVariant}
           color={containerVariant === 'hero' ? 'white' : 'text'}
           sx={{
-            marginBottom: 'var(--spacing-md)',
+            marginBottom: 'var(--spacing-xl)',
             fontWeight: 600,
           }}
         >
@@ -44,6 +44,10 @@ export const InfoText = ({
         <Typography
           variant={textVariant}
           color={containerVariant === 'hero' ? 'white' : 'text'}
+          sx={{
+            lineHeight: 'var(--leading-loose)',
+            fontSize: 'var(--text-lg)',
+          }}
         >
           {text}
         </Typography>

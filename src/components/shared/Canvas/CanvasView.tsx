@@ -74,13 +74,12 @@ export const CanvasView = ({
         sx={{
           position: 'relative',
           zIndex: 1,
-          py: { xs: 4, md: 6 },
-          px: { xs: 2, md: 4 },
-          mt: { xs: 10, md: 12 },
+          py: { xs: 6, md: 8 }, // Increased padding
+          px: { xs: 3, md: 5 }, // Increased padding
+          mt: { xs: 12, md: 14 }, // Increased top margin
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
-          gap: 'var(--spacing-xl)',
           '& > *': {
             maxWidth: '800px',
             mx: 'auto',
@@ -94,11 +93,22 @@ export const CanvasView = ({
         }}
       >
         {!hideRouteChips && (
-          <div style={{ marginBottom: 'var(--spacing-md)' }}>
+          <div style={{ marginBottom: 'var(--spacing-2xl)' }}>
             <RouteChips />
           </div>
         )}
-        {children}
+
+        {/* Children with proper spacing */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'var(--spacing-3xl)', // Generous spacing between children
+            width: '100%',
+          }}
+        >
+          {children}
+        </div>
       </Container>
 
       {/* Footer Container */}
@@ -110,7 +120,7 @@ export const CanvasView = ({
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
-          padding: { xs: 2, md: 4 },
+          padding: { xs: 3, md: 5 }, // Increased padding
           marginTop: 'auto',
         }}
       >
