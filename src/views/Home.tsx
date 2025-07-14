@@ -1,12 +1,11 @@
 import { InfoText } from '../components/shared/InfoText';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
-import { RouteChips } from './Routes';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 
 export const Home = () => {
   return (
-    <CanvasView hideRouteChips>
+    <CanvasView>
       <InfoText
         title="Welcome to Montessori School Skye View"
         text="A Private Chez Nous School"
