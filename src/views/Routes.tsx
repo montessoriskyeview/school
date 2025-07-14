@@ -5,20 +5,20 @@ import { Schedule } from './Schedule';
 import { Registration } from './Registration';
 import { Philosophy } from './Philosophy';
 import { Contact } from './Contact';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { FaqView } from './FAQ';
 import { Box, Button, Chip, Stack } from '@mui/material';
 import { NAVBAR_ITEMS } from '../components/appBar/DrawerContent';
 
 export enum Page {
-  HOME,
-  LOCATION,
-  TUITION,
-  SCHEDULE,
-  PHILOSOPHY,
-  REGISTRATION,
-  CONTACT,
-  FAQ
+  HOME = 'home',
+  LOCATION = 'location',
+  TUITION = 'tuition',
+  SCHEDULE = 'schedule',
+  PHILOSOPHY = 'philosophy',
+  REGISTRATION = 'registration',
+  CONTACT = 'contact',
+  FAQ = 'faq',
 }
 
 interface RouteContextData {
@@ -38,13 +38,48 @@ export const useRoutes = () => {
   return context;
 };
 
+const getPageFromUrl = (): Page => {
+  const params = new URLSearchParams(window.location.search);
+  const page = params.get('page')?.toLowerCase();
+
+  // Check if the page parameter matches any enum value
+  return Object.values(Page).includes(page as Page)
+    ? (page as Page)
+    : Page.HOME;
+};
+
+const updateUrlWithPage = (page: Page) => {
+  const url = new URL(window.location.href);
+  if (page === Page.HOME) {
+    url.searchParams.delete('page');
+  } else {
+    url.searchParams.set('page', page);
+  }
+  window.history.pushState({}, '', url);
+};
+
 export const RouteProvider = ({ children }: { children: React.ReactNode }) => {
-  const [page, setPage] = useState<Page>(Page.HOME);
+  const [page, setPage] = useState<Page>(getPageFromUrl());
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setPage(getPageFromUrl());
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleSetPage = (newPage: Page) => {
+    setPage(newPage);
+    updateUrlWithPage(newPage);
+  };
+
   return (
     <RouteContext.Provider
       value={{
         page,
-        setPage
+        setPage: handleSetPage,
       }}
     >
       {children}
