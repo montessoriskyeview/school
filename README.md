@@ -1,47 +1,77 @@
+# Skyeview Montessori School Website
 
+## About Our School
+Skyeview Montessori School is a vibrant educational community serving children from ages 3 through 5th grade in Las Vegas. Our unique approach combines traditional Montessori principles with an emphasis on outdoor learning and child-led activities.
 
-# Deployed with netlify
+### Key Features
+- **Child-Centered Learning**: Activities and curriculum guided by children's interests
+- **Outdoor Focus**: Beautiful campus designed for nature-based learning experiences
+- **Superior Staff Ratio**: Best child-to-teacher ratio in the Las Vegas area
+- **Age Range**: Serving children from 3 years through 5th grade
+- **Montessori Method**: Hands-on learning and individualized attention
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/306f8ff3-3db8-4eec-b575-75ff17a216a2/deploy-status)](https://app.netlify.com/sites/montessoriskyeview/deploys)
+## Website Development Guidelines
 
-## Available Scripts
+### Project Structure
+```
+school/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── assets/
+```
 
-In the project directory, you can run:
+### Style Guide
 
-### `npm start`
+#### Colors
+Primary Colors:
+- Sage Green: `#7FA86F` - Representing nature and growth
+- Sky Blue: `#A4C6E5` - Representing openness and possibility
+- Warm Sand: `#E6D5AC` - Representing earth and groundedness
 
-Runs the app in the development mode.\
+Accent Colors:
+- Sunshine Yellow: `#FFD662` - For highlights and calls-to-action
+- Soft Coral: `#FF9B9B` - For warmth and energy
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Typography
+- Headers: Montserrat
+- Body Text: Open Sans
+- Font Sizes:
+  - H1: 2.5rem
+  - H2: 2rem
+  - H3: 1.75rem
+  - Body: 1rem
+  - Small: 0.875rem
 
-### `npm test`
+#### Design Principles
+1. **Child-Friendly**: Use rounded corners, soft shadows, and playful elements
+2. **Natural Elements**: Incorporate organic shapes and nature-inspired graphics
+3. **Accessibility**: Ensure high contrast and readable text sizes
+4. **White Space**: Maintain generous spacing for clarity and visual comfort
+5. **Responsive Design**: Optimize for all device sizes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
 
-### `npm run build`
+### Deployment
+- Production build: `npm run build`
+- Preview build: `npm run preview`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Content Guidelines
+- Keep language warm and approachable
+- Focus on the child's experience and growth
+- Highlight outdoor and hands-on learning opportunities
+- Showcase the beautiful campus and learning environments
+- Emphasize the strong community aspect
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Maintenance
+- Regular content updates for events and news
+- Seasonal photography updates
+- Monthly review of contact information
+- Regular security updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
+For website maintenance and updates, contact the development team at [contact information]

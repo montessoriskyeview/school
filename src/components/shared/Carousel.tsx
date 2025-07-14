@@ -1,16 +1,115 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
+import { Box, IconButton, Typography } from '@mui/material';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 interface Slide {
   src: string;
+  alt?: string;
+  title?: string;
+  description?: string;
   className?: string;
 }
 
 export interface CarouselProps {
   slides: Slide[];
+  height?: 'sm' | 'md' | 'lg';
+  autoPlay?: boolean;
+  interval?: number;
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+const CarouselContainer = styled(Box)<{ height?: string }>`
+  position: relative;
+  width: 100%;
+  height: ${props => {
+    switch (props.height) {
+      case 'sm':
+        return '300px';
+      case 'lg':
+        return '700px';
+      default:
+        return '500px';
+    }
+  }};
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+`;
+
+const CarouselContent = styled(Box)`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`;
+
+const CarouselSlide = styled('img')<{ active: boolean; offset: number }>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: ${props => (props.active ? 1 : 0)};
+  transform: translateX(${props => props.offset * 100}%);
+  transition: all 0.5s ease-in-out;
+`;
+
+const NavigationControls = styled(Box)`
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.3);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+`;
+
+const CarouselButton = styled(IconButton)`
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-sm);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+`;
+
+const SlideInfo = styled(Box)`
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  left: var(--spacing-lg);
+  right: var(--spacing-lg);
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+`;
+
+export const Carousel: React.FC<CarouselProps> = ({
+  slides,
+  height = 'md',
+  autoPlay = true,
+  interval = 5000,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  React.useEffect(() => {
+    if (autoPlay) {
+      const timer = setInterval(() => {
+        setCurrentIndex(prevIndex =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        );
+      }, interval);
+
+      return () => clearInterval(timer);
+    }
+  }, [autoPlay, interval, slides.length]);
 
   const nextSlide = () => {
     setCurrentIndex(prevIndex =>
@@ -25,135 +124,49 @@ export const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   };
 
   return (
-    <div className='carousel-container'>
-      <CarouselContent slides={slides} currentIndex={currentIndex} />
-      <BottomNavigation
-        currentIndex={currentIndex}
-        slides={slides}
-        prevSlide={prevSlide}
-        nextSlide={nextSlide}
-      />
-      <CarouselStyle />
-    </div>
-  );
-};
-
-export interface CarouselContentProps {
-  slides: Slide[];
-  currentIndex: number;
-}
-
-const CarouselContent = ({ slides, currentIndex }: CarouselContentProps) => {
-  return (
-    <div className='carousel-content'>
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide.src}
-          alt={`Slide ${index + 1}`}
-          className={`carousel-slide ${slide.className || ''}`}
-          style={{
-            opacity: index === currentIndex ? 1 : 0,
-            transform: `translateX(${(index - currentIndex) * 100}%)`
-          }}
-        />
-      ))}
-    </div>
-  );
-};
-
-interface BottomNavigationProps {
-  currentIndex: number;
-  slides: Slide[];
-  prevSlide: () => void;
-  nextSlide: () => void;
-}
-
-const BottomNavigation = ({
-  currentIndex,
-  slides,
-  prevSlide,
-  nextSlide
-}: BottomNavigationProps) => {
-  return (
-    <div className='navigation-controls'>
-      <button className='carousel-button prev' onClick={prevSlide}>
-        ❮
-      </button>
-      <div className='carousel-counter'>
-        {currentIndex + 1}/{slides.length}
-      </div>
-      <button className='carousel-button next' onClick={nextSlide}>
-        ❯
-      </button>
-    </div>
-  );
-};
-
-const CarouselStyle = () => {
-  return (
-    <style>{`
-      .carousel-container {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        max-width: 800px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-
-      .carousel-content {
-        position: relative;
-        height: 100%;
-        width: 100%;
-      }
-
-      .carousel-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.5s ease-in-out;
-      }
-
-      .navigation-controls {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 8px 16px;
-        border-radius: 20px;
-      }
-
-      .carousel-button {
-        position: static;
-        transform: none;
-        padding: 8px 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        transition: background 0.3s ease;
-      }
-
-      .carousel-button:hover {
-        background: rgba(255, 255, 255, 0.4);
-      }
-
-      .carousel-counter {
-        color: white;
-        font-size: 14px;
-        min-width: 45px;
-        text-align: center;
-      }
-    `}</style>
+    <CarouselContainer height={height}>
+      <CarouselContent>
+        {slides.map((slide, index) => (
+          <React.Fragment key={index}>
+            <CarouselSlide
+              src={slide.src}
+              alt={slide.alt || `Slide ${index + 1}`}
+              className={slide.className}
+              active={index === currentIndex}
+              offset={index - currentIndex}
+            />
+            {index === currentIndex && (slide.title || slide.description) && (
+              <SlideInfo>
+                {slide.title && (
+                  <Typography
+                    variant="h4"
+                    sx={{ marginBottom: 'var(--spacing-sm)' }}
+                  >
+                    {slide.title}
+                  </Typography>
+                )}
+                {slide.description && (
+                  <Typography variant="body1">{slide.description}</Typography>
+                )}
+              </SlideInfo>
+            )}
+          </React.Fragment>
+        ))}
+      </CarouselContent>
+      <NavigationControls>
+        <CarouselButton onClick={prevSlide} aria-label="Previous slide">
+          <ChevronLeftIcon />
+        </CarouselButton>
+        <Typography
+          variant="body2"
+          sx={{ color: 'var(--white)', minWidth: '45px', textAlign: 'center' }}
+        >
+          {currentIndex + 1}/{slides.length}
+        </Typography>
+        <CarouselButton onClick={nextSlide} aria-label="Next slide">
+          <ChevronRightIcon />
+        </CarouselButton>
+      </NavigationControls>
+    </CarouselContainer>
   );
 };

@@ -1,4 +1,5 @@
 import { List, ListItem } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { InfoText } from './InfoText';
 import { Typography } from './Typography';
 
@@ -6,58 +7,120 @@ export interface ListProps {
   title?: string;
   items: (string | JSX.Element)[];
   style?: React.CSSProperties;
+  variant?: 'default' | 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  spacing?: 'sm' | 'md' | 'lg';
 }
 
-export const ListText = ({ title, items, style }: ListProps) => {
+const StyledList = styled(List)<{ spacing?: string }>`
+  list-style-type: disc;
+  margin-left: ${props => {
+    switch (props.spacing) {
+      case 'sm':
+        return 'var(--spacing-lg)';
+      case 'lg':
+        return 'var(--spacing-2xl)';
+      default:
+        return 'var(--spacing-xl)';
+    }
+  }};
+  padding: ${props => {
+    switch (props.spacing) {
+      case 'sm':
+        return 'var(--spacing-sm)';
+      case 'lg':
+        return 'var(--spacing-lg)';
+      default:
+        return 'var(--spacing-md)';
+    }
+  }};
+`;
+
+const StyledListItem = styled(ListItem)<{ size?: string }>`
+  display: list-item;
+  padding: ${props => {
+    switch (props.size) {
+      case 'sm':
+        return 'var(--spacing-xs) 0';
+      case 'lg':
+        return 'var(--spacing-md) 0';
+      default:
+        return 'var(--spacing-sm) 0';
+    }
+  }};
+`;
+
+export const ListText = ({
+  title,
+  items,
+  style,
+  variant = 'default',
+  size = 'md',
+  spacing = 'md',
+}: ListProps) => {
   return (
     <InfoText
       title={title}
       text={
-        <List sx={{ listStyleType: 'disc', marginLeft: '40px' }}>
+        <StyledList spacing={spacing}>
           {items.map((item, i) => (
-            <ListItem key={i} sx={{ display: 'list-item' }}>
+            <StyledListItem key={i} size={size}>
               {typeof item === 'string' ? (
                 <Typography
-                  sx={{
-                    color: 'white'
-                  }}
+                  color={variant === 'default' ? 'text' : variant}
+                  variant="body1"
                 >
                   {item}
                 </Typography>
               ) : (
                 item
               )}
-            </ListItem>
+            </StyledListItem>
           ))}
-        </List>
+        </StyledList>
       }
       style={style}
     />
   );
 };
 
-export const SchoolList = ({ items }: Omit<ListProps, 'title' | 'style'>) => {
+export const SchoolList = ({
+  items,
+  variant = 'default',
+  size = 'md',
+  spacing = 'md',
+}: Omit<ListProps, 'title' | 'style'>) => {
   return (
-    <List sx={{ listStyleType: 'disc', marginLeft: '40px' }}>
+    <StyledList spacing={spacing}>
       {items.map((item, i) =>
         item === 'OR' ? (
-          <Typography>{item}</Typography>
+          <Typography
+            key={i}
+            variant="body1"
+            color={variant === 'default' ? 'text' : variant}
+            sx={{
+              textAlign: 'center',
+              padding: 'var(--spacing-sm) 0',
+              fontWeight: 600,
+            }}
+          >
+            {item}
+          </Typography>
         ) : (
-          <ListItem key={i} sx={{ display: 'list-item' }}>
+          <StyledListItem key={i} size={size}>
             {typeof item === 'string' ? (
               <Typography
-                sx={{
-                  color: 'white'
-                }}
+                variant="body1"
+                color={variant === 'default' ? 'text' : variant}
               >
                 {item}
               </Typography>
             ) : (
               item
             )}
-          </ListItem>
+          </StyledListItem>
         )
       )}
-    </List>
+    </StyledList>
   );
 };

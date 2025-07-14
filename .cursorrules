@@ -1,0 +1,164 @@
+# Cursor Rules for Skyeview Montessori School Website
+
+## File Organization
+- Components should be organized by feature/page
+- Shared components go in src/components/shared
+- Styles should be co-located with their components
+- Assets should be organized by type (images, icons, etc.)
+
+## Naming Conventions
+- Components: PascalCase (e.g., FeatureCard.tsx)
+- Files: kebab-case (e.g., feature-card.css)
+- CSS classes: kebab-case (e.g., feature-card)
+- CSS variables: kebab-case (e.g., --primary-green)
+- TypeScript interfaces: PascalCase with I prefix (e.g., IFeatureCard)
+- TypeScript types: PascalCase (e.g., FeatureCardProps)
+
+## Component Structure
+- One component per file
+- CSS modules or styled-components for component styling
+- Props interface/type at the top of the file
+- Export component as default
+- Keep components focused and small
+
+## Styling Guidelines
+- Use theme variables from theme.css
+- Mobile-first responsive design
+- Maintain consistent spacing using theme variables
+- Use semantic HTML elements
+- Ensure accessibility compliance
+
+## Code Style
+- Use TypeScript for all components
+- Use functional components with hooks
+- Destructure props
+- Use meaningful variable names
+- Add JSDoc comments for complex functions
+
+## Import Order
+1. React and framework imports
+2. Third-party libraries
+3. Local components
+4. Local utilities/helpers
+5. Types/interfaces
+6. Assets
+7. Styles
+
+## Best Practices
+- Keep components pure when possible
+- Use proper HTML semantics
+- Implement proper keyboard navigation
+- Add alt text to images
+- Use aria labels where needed
+- Test for accessibility
+- Optimize images before import
+
+## Git Commit Guidelines
+- Use conventional commits
+- Keep commits focused and atomic
+- Write meaningful commit messages
+- Reference issues where applicable
+
+## Performance
+- Lazy load images
+- Code split where appropriate
+- Minimize bundle size
+- Use proper caching strategies
+- Optimize for Core Web Vitals
+
+## Testing
+- Write unit tests for components
+- Test accessibility
+- Test responsive design
+- Test cross-browser compatibility
+
+## Documentation
+- Document complex components
+- Add README for major features
+- Include setup instructions
+- Document API integrations
+- Keep documentation up to date
+
+## Accessibility Standards (WCAG 2.1 AA)
+
+### Color Contrast Requirements
+- Normal text: Minimum 4.5:1 contrast ratio
+- Large text (18pt+ or 14pt+ bold): Minimum 3:1 contrast ratio
+- UI components and graphics: Minimum 3:1 contrast ratio
+- Always test contrast with actual colors, not just CSS variables
+
+### Text and Typography
+- Minimum font size: 16px (1rem) for body text
+- Use relative units (rem, em) for font sizes
+- Line height: Minimum 1.5 for body text
+- Avoid justified text alignment
+- Ensure sufficient spacing between lines and paragraphs
+
+### Interactive Elements
+- Minimum touch target size: 44px × 44px
+- Provide clear focus indicators
+- Ensure keyboard navigation works for all interactive elements
+- Add hover and focus states for all clickable elements
+- Use semantic HTML elements (button, link, etc.)
+
+### Images and Media
+- Provide meaningful alt text for all images
+- Use aria-label for decorative images that should be ignored by screen readers
+- Ensure video content has captions or transcripts
+- Provide text alternatives for non-text content
+
+### Forms and Inputs
+- Associate labels with form controls
+- Provide clear error messages
+- Use proper input types and attributes
+- Ensure form validation is accessible
+- Group related form elements
+
+### Navigation and Structure
+- Use semantic HTML elements (nav, main, section, article, etc.)
+- Provide skip links for main content
+- Use proper heading hierarchy (h1, h2, h3, etc.)
+- Ensure logical tab order
+- Provide breadcrumbs for complex sites
+
+### Screen Reader Support
+- Use proper ARIA labels and roles
+- Ensure all interactive elements are keyboard accessible
+- Provide descriptive link text
+- Use landmarks and regions appropriately
+- Test with actual screen readers
+
+### Motion and Animation
+- Respect prefers-reduced-motion media query
+- Provide pause/stop controls for auto-playing content
+- Ensure animations don't cause seizures (no flashing)
+- Keep animations subtle and purposeful
+
+### Testing and Validation
+- Use automated accessibility testing tools (axe-core, Lighthouse)
+- Test with keyboard navigation only
+- Test with screen readers (NVDA, JAWS, VoiceOver)
+- Test with high contrast mode
+- Test with zoom levels up to 200%
+- Validate HTML for semantic correctness
+
+### Color and Visual Design
+- Don't rely solely on color to convey information
+- Provide additional visual cues (icons, patterns, text)
+- Ensure sufficient color contrast in all states
+- Test in grayscale to ensure information is still conveyed
+- Consider colorblind users in design decisions
+
+### Mobile Accessibility
+- Ensure touch targets are large enough
+- Provide sufficient spacing between interactive elements
+- Test with different screen sizes and orientations
+- Ensure pinch-to-zoom works properly
+- Test with mobile screen readers
+
+### Performance and Accessibility
+- Optimize for fast loading times
+- Ensure content is available even if JavaScript fails
+- Provide fallbacks for non-supported features
+- Test with slow internet connections
+- Ensure progressive enhancement 

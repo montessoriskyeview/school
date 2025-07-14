@@ -63,35 +63,41 @@ export const AppBar = () => {
           <MenuIcon />
         </IconButton>
         <Box
-          component={'div'}
+          component="div"
           sx={{
             display: 'flex',
-            [theme.breakpoints.up('md')]: {
-              width: '500px',
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-around',
-            },
-            [theme.breakpoints.down('md')]: {
-              width: '300px',
-              flexDirection: 'column',
-              alignItems: 'start',
-              justifyContent: 'center',
-            },
+            alignItems: 'center',
+            width: '100%',
+            justifyContent: 'space-between',
+            minHeight: { xs: 56, md: 64 },
+            px: { xs: 1, md: 2 },
+            flexDirection: { xs: 'column', md: 'row' },
+            gap: { xs: 1, md: 0 },
           }}
         >
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
+              flexGrow: 1,
+              fontWeight: 700,
+              color: '#04325f',
+              textAlign: { xs: 'center', md: 'left' },
+              mb: { xs: 1, md: 0 },
+            }}
+          >
             Montessori Skye View
           </Typography>
           <Box
+            component="div"
             sx={{
               display: 'flex',
-              gap: 5,
-              paddingBottom: 1,
+              gap: 3,
               alignItems: 'center',
-              justifyContent: 'center',
+              justifyContent: { xs: 'center', md: 'flex-end' },
+              width: { xs: '100%', md: 'auto' },
             }}
-            component="div"
           >
             <Link
               variant="body1"
@@ -99,6 +105,18 @@ export const AppBar = () => {
                 cursor: 'pointer',
                 color: '#04325f',
                 textDecoration: 'underline',
+                fontWeight: 600,
+                fontSize: '1rem',
+                px: 1,
+                py: 0.5,
+                borderRadius: 'var(--radius-sm)',
+                transition: 'background 0.2s, color 0.2s',
+                '&:hover, &:focus': {
+                  background: 'var(--primary-green, #7ed957)',
+                  color: '#fff',
+                  outline: '2px solid var(--primary-green, #7ed957)',
+                  textDecoration: 'none',
+                },
               }}
               rel="noopener noreferrer"
               target="_blank"
@@ -113,6 +131,18 @@ export const AppBar = () => {
                 cursor: 'pointer',
                 color: '#04325f',
                 textDecoration: 'underline',
+                fontWeight: 600,
+                fontSize: '1rem',
+                px: 1,
+                py: 0.5,
+                borderRadius: 'var(--radius-sm)',
+                transition: 'background 0.2s, color 0.2s',
+                '&:hover, &:focus': {
+                  background: 'var(--primary-green, #7ed957)',
+                  color: '#fff',
+                  outline: '2px solid var(--primary-green, #7ed957)',
+                  textDecoration: 'none',
+                },
               }}
               rel="noopener noreferrer"
               target="_blank"
