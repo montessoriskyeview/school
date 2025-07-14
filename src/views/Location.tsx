@@ -16,7 +16,6 @@ import property14 from '../resources/images/location/property14.jpg';
 import property15 from '../resources/images/location/property15.jpg';
 import property16 from '../resources/images/location/property16.jpg';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
-import { InfoText } from '../components/shared/InfoText';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { Carousel } from '../components/shared/Carousel';
 import { ContentContainer } from '../components/shared/ContentContainer';

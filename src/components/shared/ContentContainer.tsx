@@ -1,4 +1,4 @@
-import { Box, useTheme, BoxProps } from "@mui/material";
+import { Box, BoxProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 interface ContentContainerProps extends BoxProps {

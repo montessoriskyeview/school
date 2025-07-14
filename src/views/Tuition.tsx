@@ -1,5 +1,4 @@
 import { SchoolList } from '../components/shared/ListText';
-import { InfoText } from '../components/shared/InfoText';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { ContentContainer } from '../components/shared/ContentContainer';

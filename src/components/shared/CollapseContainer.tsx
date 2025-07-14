@@ -1,4 +1,4 @@
-import { Box, Button, BoxProps } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 import { ContentContainer } from './ContentContainer';
