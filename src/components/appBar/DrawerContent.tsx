@@ -131,7 +131,7 @@ export const DrawerContent = ({
               <ListItemIcon aria-hidden="true">
                 <Icon />
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ color: 'black' }} />
+              <ListItemText primary={text} sx={{ color: 'var(--text-dark)' }} />
             </ListItemButton>
           </ListItem>
         ))}

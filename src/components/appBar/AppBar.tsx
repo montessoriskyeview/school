@@ -17,6 +17,9 @@ interface AppBarProps extends MuiAppBarProps {
 export const StyledAppBar = styled(MuiAppBar, {
   shouldForwardProp: prop => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
+  backgroundColor: 'var(--white)', // Ensure white background for proper contrast
+  color: 'var(--text-dark)', // Use theme text color
+  boxShadow: 'var(--shadow-sm)', // Add subtle shadow
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -86,7 +89,14 @@ export const AppBar = () => {
           aria-haspopup="true"
           onClick={handleDrawerOpen}
           edge="start"
-          sx={{ mr: 2, ...(drawerOpen && { display: 'none' }) }}
+          sx={{
+            mr: 2,
+            ...(drawerOpen && { display: 'none' }),
+            color: 'var(--text-dark)', // Ensure proper contrast for icon
+            '&:hover': {
+              backgroundColor: 'var(--light-gray)',
+            },
+          }}
         >
           <MenuIcon />
         </IconButton>
@@ -107,10 +117,10 @@ export const AppBar = () => {
             variant="h6"
             noWrap
             component="h1"
+            color="text" // Use theme text color for proper contrast
             sx={{
               flexGrow: 1,
               fontWeight: 700,
-              color: '#04325f',
               textAlign: { xs: 'center', md: 'left' },
               mb: { xs: 1, md: 0 },
             }}

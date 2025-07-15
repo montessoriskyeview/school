@@ -35,19 +35,19 @@ export const EnrollmentButton = ({
     borderRadius: 'var(--radius-sm)',
     transition: 'background 0.2s, color 0.2s',
     '&:hover, &:focus': {
-      background: 'var(--primary-green, #7ed957)',
-      color: '#fff',
-      outline: '2px solid var(--primary-green, #7ed957)',
+      background: 'var(--primary-green)',
+      color: 'var(--white)',
+      outline: '2px solid var(--primary-green)',
       textDecoration: 'none',
     },
   };
 
   const variantStyles = {
     primary: {
-      color: '#04325f',
+      color: 'var(--text-dark)', // Use theme text color for proper contrast
     },
     secondary: {
-      color: '#FFFFFF',
+      color: 'var(--white)',
       marginBottom: 'var(--spacing-lg)',
       fontSize: 'var(--text-lg)',
     },
