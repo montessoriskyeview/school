@@ -1,4 +1,4 @@
-import { Box, styled, Link } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '../shared/Typography';
@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { DrawerContent } from './DrawerContent';
-import { FALL_2025_LINK, SUMMER_CAMP_LINK } from '../../resources/links';
+import { EnrollmentButtons } from '../shared/EnrollmentButtons';
 
 const drawerWidth = 240;
 
@@ -40,13 +40,6 @@ export const AppBar = () => {
 
   const handleDrawerClose = () => {
     setDrawerOpen(false);
-  };
-
-  const trackFallRegistrationConversion = () => {
-    // @ts-ignore - gtag is globally available
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
-    });
   };
 
   return (
@@ -88,68 +81,10 @@ export const AppBar = () => {
           >
             Montessori Skye View
           </Typography>
-          <Box
-            component="div"
-            sx={{
-              display: 'flex',
-              gap: 3,
-              alignItems: 'center',
-              justifyContent: { xs: 'center', md: 'flex-end' },
-              width: { xs: '100%', md: 'auto' },
-            }}
-          >
-            <Link
-              variant="body1"
-              sx={{
-                cursor: 'pointer',
-                color: '#04325f',
-                textDecoration: 'underline',
-                fontWeight: 600,
-                fontSize: '1rem',
-                px: 1,
-                py: 0.5,
-                borderRadius: 'var(--radius-sm)',
-                transition: 'background 0.2s, color 0.2s',
-                '&:hover, &:focus': {
-                  background: 'var(--primary-green, #7ed957)',
-                  color: '#fff',
-                  outline: '2px solid var(--primary-green, #7ed957)',
-                  textDecoration: 'none',
-                },
-              }}
-              rel="noopener noreferrer"
-              target="_blank"
-              href={FALL_2025_LINK}
-              onClick={trackFallRegistrationConversion}
-            >
-              2025 Fall registration
-            </Link>
-            <Link
-              variant="body1"
-              sx={{
-                cursor: 'pointer',
-                color: '#04325f',
-                textDecoration: 'underline',
-                fontWeight: 600,
-                fontSize: '1rem',
-                px: 1,
-                py: 0.5,
-                borderRadius: 'var(--radius-sm)',
-                transition: 'background 0.2s, color 0.2s',
-                '&:hover, &:focus': {
-                  background: 'var(--primary-green, #7ed957)',
-                  color: '#fff',
-                  outline: '2px solid var(--primary-green, #7ed957)',
-                  textDecoration: 'none',
-                },
-              }}
-              rel="noopener noreferrer"
-              target="_blank"
-              href={SUMMER_CAMP_LINK}
-            >
-              2025 Summer camp
-            </Link>
-          </Box>
+          <EnrollmentButtons
+            variant="primary"
+            maxButtons={2} // Limit to 2 buttons in the app bar
+          />
         </Box>
         <DrawerContent
           open={drawerOpen}

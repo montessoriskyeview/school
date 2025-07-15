@@ -1,17 +1,9 @@
-import { Link } from '@mui/material';
-import { FALL_2025_LINK } from '../../resources/links';
 import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
+import { EnrollmentButtons } from './EnrollmentButtons';
 
 const PHONE = '7027219488';
 const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
-
-const trackFallRegistrationConversion = () => {
-  // @ts-ignore - gtag is globally available
-  window.gtag('event', 'conversion', {
-    send_to: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
-  });
-};
 
 export const ContactInfo = () => {
   return (
@@ -31,33 +23,13 @@ export const ContactInfo = () => {
         justifySelf: 'center',
       }}
     >
-      <Link
-        variant="body1"
+      <EnrollmentButtons
+        variant="secondary"
         sx={{
-          cursor: 'pointer',
-          color: '#white',
-          textDecoration: 'underline',
-          fontWeight: 600,
-          px: 1,
-          py: 0.5,
-          borderRadius: 'var(--radius-sm)',
-          transition: 'background 0.2s, color 0.2s',
-          marginBottom: 'var(--spacing-lg)',
-          fontSize: 'var(--text-lg)',
-          '&:hover, &:focus': {
-            background: 'var(--primary-green, #7ed957)',
-            color: '#fff',
-            outline: '2px solid var(--primary-green, #7ed957)',
-            textDecoration: 'none',
-          },
+          flexDirection: 'column',
+          gap: 2,
         }}
-        rel="noopener noreferrer"
-        target="_blank"
-        href={FALL_2025_LINK}
-        onClick={trackFallRegistrationConversion}
-      >
-        2025 Fall registration
-      </Link>
+      />
       <Typography
         variant="h4"
         sx={{
