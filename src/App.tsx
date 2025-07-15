@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
 import { Home } from './views/Home';
@@ -13,6 +13,49 @@ import { Philosophy } from './views/Philosophy';
 import { Contact } from './views/Contact';
 import { Accessibility } from './views/Accessibility';
 import { FaqView } from './views/FAQ';
+import { SEO, SEOConfigs } from './components/shared/SEO';
+
+// Component to handle SEO updates based on current route
+const SEOUpdater: React.FC = () => {
+  const location = useLocation();
+
+  const path = location.pathname;
+  let seoConfig;
+
+  switch (path) {
+    case '/':
+      seoConfig = SEOConfigs.home;
+      break;
+    case '/location':
+      seoConfig = SEOConfigs.location;
+      break;
+    case '/tuition':
+      seoConfig = SEOConfigs.tuition;
+      break;
+    case '/schedule':
+      seoConfig = SEOConfigs.schedule;
+      break;
+    case '/registration':
+      seoConfig = SEOConfigs.registration;
+      break;
+    case '/philosophy':
+      seoConfig = SEOConfigs.philosophy;
+      break;
+    case '/contact':
+      seoConfig = SEOConfigs.contact;
+      break;
+    case '/faq':
+      seoConfig = SEOConfigs.faq;
+      break;
+    case '/accessibility':
+      seoConfig = SEOConfigs.accessibility;
+      break;
+    default:
+      seoConfig = SEOConfigs.home;
+  }
+
+  return <SEO {...seoConfig} />;
+};
 
 function App() {
   const theme = React.useMemo(
@@ -161,6 +204,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
+          <SEOUpdater />
           <AppBar />
           <main id="main-content" role="main">
             <Routes>
