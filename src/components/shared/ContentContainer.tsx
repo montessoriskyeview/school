@@ -11,7 +11,7 @@ const StyledContainer = styled(Box)<ContentContainerProps>`
   border-radius: ${props => {
     switch (props.variant) {
       case 'hero':
-        return '0 0 var(--radius-lg) var(--radius-lg)';
+        return 'var(--radius-lg)';
       case 'card':
         return 'var(--radius-md)';
       default:

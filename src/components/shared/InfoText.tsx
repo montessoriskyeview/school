@@ -18,7 +18,6 @@ export const InfoText = ({
   style,
   titleVariant = 'h5',
   textVariant = 'body1',
-  variant = 'default',
   spacing = 'md',
   containerVariant = 'default',
 }: InfoTextProps) => {
