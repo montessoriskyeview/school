@@ -476,7 +476,7 @@ export const Accessibility = () => {
             fontStyle: 'italic',
           }}
         >
-          Last updated: December 2024
+          Last updated: July 2025
         </Typography>
       </ContentContainer>
     </CanvasView>

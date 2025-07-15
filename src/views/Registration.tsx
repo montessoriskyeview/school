@@ -47,7 +47,7 @@ export const Registration = () => {
       </ContentContainer>
 
       <CollapseContainer
-        title="🍂 Fall 2024 Enrollment"
+        title="🍂 Fall 2025 Enrollment"
         content={
           <SchoolList
             items={[

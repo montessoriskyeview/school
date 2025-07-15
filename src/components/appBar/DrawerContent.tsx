@@ -19,8 +19,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
-import { Page, useRoutes } from '../../views/Routes';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 export const DRAWER_WIDTH = 240;
 
@@ -34,7 +34,6 @@ export const DrawerContent = ({
   handleDrawerClose,
 }: DrawerContentProps) => {
   const theme = useTheme();
-  const { setPage } = useRoutes();
   const drawerRef = useRef<HTMLDivElement>(null);
   const firstMenuItemRef = useRef<HTMLLIElement>(null);
 
@@ -117,7 +116,7 @@ export const DrawerContent = ({
       </DrawerHeader>
       <Divider />
       <List role="menu">
-        {NAVBAR_ITEMS.map(({ text, link, Icon }, index) => (
+        {NAVBAR_ITEMS.map(({ text, Icon, path }, index) => (
           <ListItem
             key={text}
             disablePadding
@@ -125,19 +124,9 @@ export const DrawerContent = ({
           >
             <ListItemButton
               role="menuitem"
-              onClick={() => {
-                handleDrawerClose();
-                setPage(link);
-                window.scrollTo(0, 0);
-              }}
-              onKeyDown={(event: React.KeyboardEvent) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault();
-                  handleDrawerClose();
-                  setPage(link);
-                  window.scrollTo(0, 0);
-                }
-              }}
+              component={Link}
+              to={path}
+              onClick={handleDrawerClose}
             >
               <ListItemIcon aria-hidden="true">
                 <Icon />
@@ -157,12 +146,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-end'
+  justifyContent: 'flex-end',
 }));
 
 interface NavbarItem {
   text: string;
-  link: Page;
+  path: string;
   Icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
     muiName: string;
   };
@@ -171,42 +160,47 @@ interface NavbarItem {
 export const NAVBAR_ITEMS: NavbarItem[] = [
   {
     text: 'Home',
-    link: Page.HOME,
-    Icon: HomeIcon
+    path: '/',
+    Icon: HomeIcon,
   },
   {
     text: 'Tuition',
-    link: Page.TUITION,
-    Icon: PaymentIcon
+    path: '/tuition',
+    Icon: PaymentIcon,
   },
   {
     text: 'Schedule',
-    link: Page.SCHEDULE,
-    Icon: ScheduleIcon
+    path: '/schedule',
+    Icon: ScheduleIcon,
   },
   {
     text: 'Registration',
-    link: Page.REGISTRATION,
-    Icon: RegistrationIcon
+    path: '/registration',
+    Icon: RegistrationIcon,
   },
   {
     text: 'Location',
-    link: Page.LOCATION,
-    Icon: LocationOnIcon
+    path: '/location',
+    Icon: LocationOnIcon,
   },
   {
     text: 'Contact',
-    link: Page.CONTACT,
-    Icon: PhoneIcon
+    path: '/contact',
+    Icon: PhoneIcon,
   },
   {
     text: 'FAQ',
-    link: Page.FAQ,
-    Icon: QuestionIcon
+    path: '/faq',
+    Icon: QuestionIcon,
   },
   {
     text: 'Philosophy',
-    link: Page.PHILOSOPHY,
-    Icon: LightbulbIcon
-  }
+    path: '/philosophy',
+    Icon: LightbulbIcon,
+  },
+  {
+    text: 'Accessibility',
+    path: '/accessibility',
+    Icon: LightbulbIcon,
+  },
 ];

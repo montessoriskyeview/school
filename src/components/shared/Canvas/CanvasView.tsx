@@ -1,7 +1,7 @@
 import { Box, Container } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
+import { QuickNavigation } from '../QuickNavigation';
 import property from '../../../resources/images/location/property1.png';
-import { RouteChips } from '../../../views/Routes';
 
 export const CanvasView = ({
   children,
@@ -92,11 +92,7 @@ export const CanvasView = ({
           },
         }}
       >
-        {!hideRouteChips && (
-          <div style={{ marginBottom: 'var(--spacing-2xl)' }}>
-            <RouteChips />
-          </div>
-        )}
+        {!hideRouteChips && <QuickNavigation />}
 
         {/* Children with proper spacing */}
         <div
