@@ -208,4 +208,13 @@ export const SEOConfigs = {
       'accessibility, inclusive design, WCAG compliance, Montessori accessibility, Las Vegas Montessori accessibility',
     url: '/accessibility',
   },
+  review: {
+    title:
+      'Share Your Experience | Skyeview Montessori Learning Center Reviews',
+    description:
+      'Share your experience with our Montessori learning center. Your feedback helps other families discover quality Montessori education in Las Vegas.',
+    keywords:
+      'Montessori reviews Las Vegas, Skyeview Montessori feedback, parent testimonials, Montessori learning center reviews, Las Vegas Montessori experience',
+    url: '/review',
+  },
 };

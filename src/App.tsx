@@ -13,6 +13,7 @@ import { Philosophy } from './views/Philosophy';
 import { Contact } from './views/Contact';
 import { Accessibility } from './views/Accessibility';
 import { FaqView } from './views/FAQ';
+import { Review } from './views/Review';
 import { SEO, SEOConfigs } from './components/shared/SEO';
 
 // Component to handle SEO updates based on current route
@@ -49,6 +50,9 @@ const SEOUpdater: React.FC = () => {
       break;
     case '/accessibility':
       seoConfig = SEOConfigs.accessibility;
+      break;
+    case '/review':
+      seoConfig = SEOConfigs.review;
       break;
     default:
       seoConfig = SEOConfigs.home;
@@ -217,6 +221,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FaqView />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/review" element={<Review />} />
             </Routes>
           </main>
         </BrowserRouter>

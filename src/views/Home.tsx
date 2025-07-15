@@ -6,14 +6,16 @@ import { Typography } from '../components/shared/Typography';
 export const Home = () => {
   return (
     <CanvasView>
+      {/* Main H1 - Primary keyword focus */}
       <InfoText
-        title="Welcome to Montessori Learning Center Skye View"
-        text="A Private Chez Nous Learning Center"
+        title="Skyeview Montessori Learning Center | Child-Centered Education Las Vegas"
+        text="A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada."
         titleVariant="h1"
         spacing="lg"
         containerVariant="hero"
       />
 
+      {/* H2 Section - Secondary keywords */}
       <ContentContainer
         variant="card"
         spacing="lg"
@@ -27,6 +29,7 @@ export const Home = () => {
       >
         <Typography
           variant="h2"
+          component="h2"
           sx={{
             color: 'var(--text-dark)',
             marginBottom: 'var(--spacing-xl)',
@@ -49,13 +52,15 @@ export const Home = () => {
         </Typography>
       </ContentContainer>
 
+      {/* H2 Section - About Montessori education */}
       <InfoText
-        title="About Our Learning Center"
+        title="About Our Montessori Learning Center"
         text="Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning."
         spacing="lg"
         titleVariant="h2"
       />
 
+      {/* H3 Section - Our approach */}
       <ContentContainer
         variant="card"
         spacing="lg"
@@ -69,13 +74,14 @@ export const Home = () => {
       >
         <Typography
           variant="h3"
+          component="h3"
           sx={{
             color: 'var(--text-dark)',
             marginBottom: 'var(--spacing-xl)',
             fontWeight: 700,
           }}
         >
-          🌱 Our Approach
+          🌱 Our Montessori Approach
         </Typography>
         <Typography
           variant="body1"
@@ -93,6 +99,7 @@ export const Home = () => {
         </Typography>
       </ContentContainer>
 
+      {/* H3 Section - What makes us special */}
       <ContentContainer
         variant="card"
         spacing="lg"
@@ -106,13 +113,14 @@ export const Home = () => {
       >
         <Typography
           variant="h3"
+          component="h3"
           sx={{
             color: 'var(--text-dark)',
             marginBottom: 'var(--spacing-xl)',
             fontWeight: 700,
           }}
         >
-          🎨 What Makes Us Special
+          🎨 What Makes Our Montessori Learning Center Special
         </Typography>
         <div
           role="list"
@@ -213,8 +221,9 @@ export const Home = () => {
         </div>
       </ContentContainer>
 
+      {/* H2 Section - Call to action */}
       <InfoText
-        title="Ready to Begin Your Child's Journey?"
+        title="Ready to Begin Your Child's Montessori Journey?"
         text="We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!"
         spacing="lg"
         titleVariant="h2"
