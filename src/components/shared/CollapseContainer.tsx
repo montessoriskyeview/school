@@ -1,6 +1,6 @@
 import { Box, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -63,22 +63,42 @@ export const CollapseContainer = ({
   defaultExpanded = false,
 }: CollapseContainerProps) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  const [uniqueId] = useState(
+    () => `collapse-${Math.random().toString(36).substr(2, 9)}`
+  );
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleToggle();
+    }
+  };
 
   return (
     <ContentContainer variant="card" spacing={spacing}>
       <StyledBox component="div">
         <StyledButton
-          onClick={() => setIsExpanded(!isExpanded)}
+          ref={buttonRef}
+          onClick={handleToggle}
+          onKeyDown={handleKeyDown}
           aria-expanded={isExpanded}
-          aria-controls="collapse-content"
+          aria-controls={uniqueId}
+          aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${title}`}
         >
           {isExpanded ? (
             <ExpandLessIcon
               sx={{ color: '#1F2937', fontSize: 'var(--text-xl)' }}
+              aria-hidden="true"
             />
           ) : (
             <ExpandMoreIcon
               sx={{ color: '#1F2937', fontSize: 'var(--text-xl)' }}
+              aria-hidden="true"
             />
           )}
           <Typography
@@ -95,7 +115,12 @@ export const CollapseContainer = ({
           </Typography>
         </StyledButton>
       </StyledBox>
-      <StyledContent id="collapse-content" isExpanded={isExpanded}>
+      <StyledContent
+        id={uniqueId}
+        isExpanded={isExpanded}
+        role="region"
+        aria-labelledby={`${uniqueId}-button`}
+      >
         {typeof content === 'string' ? (
           <Typography
             variant="body1"

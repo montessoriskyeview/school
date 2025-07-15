@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '../shared/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { DrawerContent } from './DrawerContent';
 import { EnrollmentButtons } from '../shared/EnrollmentButtons';
 
@@ -33,6 +33,7 @@ export const StyledAppBar = styled(MuiAppBar, {
 
 export const AppBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
@@ -40,14 +41,49 @@ export const AppBar = () => {
 
   const handleDrawerClose = () => {
     setDrawerOpen(false);
+    // Return focus to menu button when drawer closes
+    setTimeout(() => {
+      menuButtonRef.current?.focus();
+    }, 100);
   };
 
+  // Handle escape key to close drawer
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && drawerOpen) {
+        handleDrawerClose();
+      }
+    };
+
+    if (drawerOpen) {
+      document.addEventListener('keydown', handleEscapeKey);
+      // Prevent body scroll when drawer is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [drawerOpen]);
+
   return (
-    <StyledAppBar open={drawerOpen}>
+    <StyledAppBar
+      open={drawerOpen}
+      component="header"
+      role="banner"
+      aria-label="Main navigation"
+    >
       <Toolbar>
         <IconButton
+          ref={menuButtonRef}
           color="inherit"
-          aria-label="open drawer"
+          aria-label="Open navigation menu"
+          aria-expanded={drawerOpen}
+          aria-controls="navigation-drawer"
+          aria-haspopup="true"
           onClick={handleDrawerOpen}
           edge="start"
           sx={{ mr: 2, ...(drawerOpen && { display: 'none' }) }}
@@ -70,7 +106,7 @@ export const AppBar = () => {
           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component="h1"
             sx={{
               flexGrow: 1,
               fontWeight: 700,

@@ -26,7 +26,7 @@ export const Home = () => {
         }}
       >
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
             color: 'var(--text-dark)',
             marginBottom: 'var(--spacing-xl)',
@@ -115,6 +115,7 @@ export const Home = () => {
           🎨 What Makes Us Special
         </Typography>
         <div
+          role="list"
           style={{
             display: 'grid',
             gap: 'var(--spacing-lg)',
@@ -122,13 +123,16 @@ export const Home = () => {
           }}
         >
           <div
+            role="listitem"
             style={{
               display: 'flex',
               alignItems: 'center',
               gap: 'var(--spacing-md)',
             }}
           >
-            <span style={{ fontSize: '2rem' }}>🎯</span>
+            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+              🎯
+            </span>
             <Typography
               variant="body1"
               sx={{
@@ -141,13 +145,16 @@ export const Home = () => {
             </Typography>
           </div>
           <div
+            role="listitem"
             style={{
               display: 'flex',
               alignItems: 'center',
               gap: 'var(--spacing-md)',
             }}
           >
-            <span style={{ fontSize: '2rem' }}>🤝</span>
+            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+              🤝
+            </span>
             <Typography
               variant="body1"
               sx={{
@@ -160,13 +167,16 @@ export const Home = () => {
             </Typography>
           </div>
           <div
+            role="listitem"
             style={{
               display: 'flex',
               alignItems: 'center',
               gap: 'var(--spacing-md)',
             }}
           >
-            <span style={{ fontSize: '2rem' }}>🌿</span>
+            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+              🌿
+            </span>
             <Typography
               variant="body1"
               sx={{
@@ -179,13 +189,16 @@ export const Home = () => {
             </Typography>
           </div>
           <div
+            role="listitem"
             style={{
               display: 'flex',
               alignItems: 'center',
               gap: 'var(--spacing-md)',
             }}
           >
-            <span style={{ fontSize: '2rem' }}>💝</span>
+            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+              💝
+            </span>
             <Typography
               variant="body1"
               sx={{

@@ -69,6 +69,10 @@ function App() {
                 textTransform: 'none',
                 fontFamily: '"Quicksand", sans-serif',
                 fontWeight: 600,
+                '&:focus': {
+                  outline: '2px solid #4BB4DE',
+                  outlineOffset: '2px',
+                },
               },
             },
           },
@@ -79,19 +83,61 @@ function App() {
               },
             },
           },
+          MuiLink: {
+            styleOverrides: {
+              root: {
+                '&:focus': {
+                  outline: '2px solid #4BB4DE',
+                  outlineOffset: '2px',
+                },
+              },
+            },
+          },
         },
       }),
     []
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouteProvider>
-        <AppBar />
-        <AppRoutes />
-      </RouteProvider>
-    </ThemeProvider>
+    <div lang="en">
+      {/* Skip to main content link for screen readers */}
+      <a
+        href="#main-content"
+        style={{
+          position: 'absolute',
+          left: '-10000px',
+          top: 'auto',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden',
+          zIndex: 9999,
+        }}
+        onFocus={e => {
+          e.target.style.left = 'auto';
+          e.target.style.top = 'auto';
+          e.target.style.width = 'auto';
+          e.target.style.height = 'auto';
+        }}
+        onBlur={e => {
+          e.target.style.left = '-10000px';
+          e.target.style.top = 'auto';
+          e.target.style.width = '1px';
+          e.target.style.height = '1px';
+        }}
+      >
+        Skip to main content
+      </a>
+
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <RouteProvider>
+          <AppBar />
+          <main id="main-content" role="main">
+            <AppRoutes />
+          </main>
+        </RouteProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

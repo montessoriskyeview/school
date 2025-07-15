@@ -5,6 +5,7 @@ import { Schedule } from './Schedule';
 import { Registration } from './Registration';
 import { Philosophy } from './Philosophy';
 import { Contact } from './Contact';
+import { Accessibility } from './Accessibility';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { FaqView } from './FAQ';
 import { Box, Button, Chip, Stack } from '@mui/material';
@@ -19,6 +20,7 @@ export enum Page {
   REGISTRATION = 'registration',
   CONTACT = 'contact',
   FAQ = 'faq',
+  ACCESSIBILITY = 'accessibility',
 }
 
 interface RouteContextData {
@@ -105,6 +107,8 @@ export const AppRoutes = () => {
       return <Registration />;
     case Page.SCHEDULE:
       return <Schedule />;
+    case Page.ACCESSIBILITY:
+      return <Accessibility />;
     case Page.HOME:
     default:
       return <Home />;

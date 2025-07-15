@@ -20,6 +20,7 @@ import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 import { Page, useRoutes } from '../../views/Routes';
+import { useEffect, useRef } from 'react';
 
 export const DRAWER_WIDTH = 240;
 
@@ -28,24 +29,85 @@ interface DrawerContentProps {
   handleDrawerClose: () => void;
 }
 
-export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) => {
+export const DrawerContent = ({
+  open,
+  handleDrawerClose,
+}: DrawerContentProps) => {
   const theme = useTheme();
   const { setPage } = useRoutes();
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const firstMenuItemRef = useRef<HTMLLIElement>(null);
+
+  // Focus management for drawer
+  useEffect(() => {
+    if (open) {
+      // Focus first menu item when drawer opens
+      setTimeout(() => {
+        firstMenuItemRef.current?.focus();
+      }, 100);
+    }
+  }, [open]);
+
+  // Focus trapping within drawer
+  useEffect(() => {
+    if (!open) return;
+
+    const handleTabKey = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') return;
+
+      const focusableElements = drawerRef.current?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusableElements || focusableElements.length === 0) return;
+
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[
+        focusableElements.length - 1
+      ] as HTMLElement;
+
+      if (event.shiftKey) {
+        if (document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTabKey);
+    return () => document.removeEventListener('keydown', handleTabKey);
+  }, [open]);
+
   return (
     <Drawer
+      ref={drawerRef}
+      id="navigation-drawer"
       sx={{
         width: DRAWER_WIDTH,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
           width: DRAWER_WIDTH,
-          boxSizing: 'border-box'
-        }
+          boxSizing: 'border-box',
+        },
       }}
-      anchor='left'
+      anchor="left"
       open={open}
+      role="navigation"
+      aria-label="Main navigation menu"
+      ModalProps={{
+        keepMounted: true, // Better mobile performance
+      }}
     >
       <DrawerHeader>
-        <IconButton onClick={handleDrawerClose}>
+        <IconButton
+          onClick={handleDrawerClose}
+          aria-label="Close navigation menu"
+        >
           {theme.direction === 'ltr' ? (
             <ChevronLeftIcon />
           ) : (
@@ -54,17 +116,30 @@ export const DrawerContent = ({ open, handleDrawerClose }: DrawerContentProps) =
         </IconButton>
       </DrawerHeader>
       <Divider />
-      <List>
-        {NAVBAR_ITEMS.map(({ text, link, Icon }) => (
-          <ListItem key={text} disablePadding>
+      <List role="menu">
+        {NAVBAR_ITEMS.map(({ text, link, Icon }, index) => (
+          <ListItem
+            key={text}
+            disablePadding
+            ref={index === 0 ? firstMenuItemRef : undefined}
+          >
             <ListItemButton
+              role="menuitem"
               onClick={() => {
                 handleDrawerClose();
                 setPage(link);
                 window.scrollTo(0, 0);
               }}
+              onKeyDown={(event: React.KeyboardEvent) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  handleDrawerClose();
+                  setPage(link);
+                  window.scrollTo(0, 0);
+                }
+              }}
             >
-              <ListItemIcon>
+              <ListItemIcon aria-hidden="true">
                 <Icon />
               </ListItemIcon>
               <ListItemText primary={text} sx={{ color: 'black' }} />
