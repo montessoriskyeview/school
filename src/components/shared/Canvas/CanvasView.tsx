@@ -76,7 +76,7 @@ export const CanvasView = ({
           position: 'relative',
           zIndex: 1,
           py: { xs: 4, md: 8 }, // Reduced padding for mobile
-          px: { xs: 0.5, md: 5 }, // Reduced horizontal padding for mobile
+          px: { xs: 0, md: 5 }, // Reduced horizontal padding for mobile
           mt: { xs: 10, md: 14 }, // Reduced top margin for mobile
           flex: 1,
           display: 'flex',
