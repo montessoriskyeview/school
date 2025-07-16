@@ -10,9 +10,7 @@ import { EnrollmentButtons } from './EnrollmentButtons';
 import { useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-
-const PHONE = '7027219488';
-const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
+import { createEmailLink, createPhoneLink } from './contactUtils';
 
 export const MobileHeroCTA = () => {
   const [expanded, setExpanded] = useState(false);
@@ -165,7 +163,7 @@ export const MobileHeroCTA = () => {
             <Button
               variant="outlined"
               color="primary"
-              href={`tel:${PHONE}`}
+              href={createPhoneLink()}
               sx={{
                 minWidth: 0,
                 px: 2,
@@ -183,7 +181,7 @@ export const MobileHeroCTA = () => {
             <Button
               variant="outlined"
               color="primary"
-              href={`mailto:${EMAIL}`}
+              href={createEmailLink()}
               sx={{
                 minWidth: 0,
                 px: 2,

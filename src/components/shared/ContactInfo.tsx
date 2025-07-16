@@ -1,9 +1,7 @@
 import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
 import { EnrollmentButtons } from './EnrollmentButtons';
-
-const PHONE = '7027219488';
-const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
+import { EMAIL, createEmailLink, createPhoneLink } from './contactUtils';
 
 export const ContactInfo = () => {
   return (
@@ -60,7 +58,7 @@ export const ContactInfo = () => {
         }}
       >
         <a
-          href={`tel:${PHONE}`}
+          href={createPhoneLink()}
           style={{
             color: '#FFFFFF',
             textDecoration: 'none',
@@ -92,7 +90,7 @@ export const ContactInfo = () => {
         }}
       >
         <a
-          href={`mailto:${EMAIL}?subject=Inquiry from Skyeview Montessori Website&body=Hello,%0D%0A%0D%0AI'm interested in learning more about Skyeview Montessori Learning Center.%0D%0A%0D%0APlease provide me with information about:%0D%0A- Tour availability%0D%0A- Enrollment availability%0D%0A- Program details%0D%0A- Tuition information%0D%0A- Any other relevant information%0D%0A%0D%0AThank you!`}
+          href={createEmailLink()}
           style={{
             color: '#FFFFFF',
             textDecoration: 'none',
