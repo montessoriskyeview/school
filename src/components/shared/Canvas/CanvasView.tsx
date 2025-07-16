@@ -1,6 +1,7 @@
 import { Box, Container } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
 import { QuickNavigation } from '../QuickNavigation';
+import { MobileHeroCTA } from '../MobileHeroCTA';
 import property from '../../../resources/images/location/property1.png';
 
 export const CanvasView = ({
@@ -74,9 +75,9 @@ export const CanvasView = ({
         sx={{
           position: 'relative',
           zIndex: 1,
-          py: { xs: 6, md: 8 }, // Increased padding
-          px: { xs: 3, md: 5 }, // Increased padding
-          mt: { xs: 12, md: 14 }, // Increased top margin
+          py: { xs: 4, md: 8 }, // Reduced padding for mobile
+          px: { xs: 0.5, md: 5 }, // Reduced horizontal padding for mobile
+          mt: { xs: 10, md: 14 }, // Reduced top margin for mobile
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -93,6 +94,9 @@ export const CanvasView = ({
         }}
       >
         {!hideRouteChips && <QuickNavigation />}
+
+        {/* Mobile Hero CTA - only visible on mobile */}
+        <MobileHeroCTA />
 
         {/* Children with proper spacing */}
         <div

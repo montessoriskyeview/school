@@ -122,15 +122,26 @@ export const AppBar = () => {
               flexGrow: 1,
               fontWeight: 700,
               textAlign: { xs: 'center', md: 'left' },
-              mb: { xs: 1, md: 0 },
+              mb: { xs: 0, md: 0 }, // Remove bottom margin on mobile
+              display: 'flex',
+              alignItems: 'center', // Center vertically
+              justifyContent: { xs: 'center', md: 'flex-start' },
+              minHeight: { xs: 56, md: 'auto' }, // Match toolbar height on mobile
             }}
           >
             Montessori Skye View
           </Typography>
-          <EnrollmentButtons
-            variant="primary"
-            maxButtons={2} // Limit to 2 buttons in the app bar
-          />
+          <Box
+            component="div"
+            sx={{
+              display: { xs: 'none', md: 'block' }, // Hide on mobile, show on desktop
+            }}
+          >
+            <EnrollmentButtons
+              variant="primary"
+              maxButtons={2} // Limit to 2 buttons in the app bar
+            />
+          </Box>
         </Box>
         <DrawerContent
           open={drawerOpen}

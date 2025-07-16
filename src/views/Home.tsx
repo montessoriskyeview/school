@@ -32,9 +32,9 @@ export const Home = () => {
           component="h2"
           sx={{
             color: 'var(--text-dark)',
-            marginBottom: 'var(--spacing-xl)',
+            marginBottom: 'var(--spacing-lg)', // Reduced from spacing-xl
             fontWeight: 700,
-            fontSize: 'var(--text-3xl)',
+            fontSize: { xs: 'var(--text-2xl)', md: 'var(--text-3xl)' }, // Responsive font size
           }}
         >
           🌟 Where Learning Comes Alive! 🌟
@@ -43,7 +43,7 @@ export const Home = () => {
           variant="body1"
           sx={{
             color: 'var(--text-dark)',
-            fontSize: 'var(--text-xl)',
+            fontSize: { xs: 'var(--text-base)', md: 'var(--text-xl)' }, // Responsive font size
             lineHeight: 'var(--leading-loose)',
             fontWeight: 500,
           }}
@@ -77,8 +77,9 @@ export const Home = () => {
           component="h3"
           sx={{
             color: 'var(--text-dark)',
-            marginBottom: 'var(--spacing-xl)',
+            marginBottom: 'var(--spacing-lg)', // Reduced from spacing-xl
             fontWeight: 700,
+            fontSize: { xs: 'var(--text-xl)', md: 'var(--text-3xl)' }, // Responsive font size
           }}
         >
           🌱 Our Montessori Approach
@@ -87,7 +88,7 @@ export const Home = () => {
           variant="body1"
           sx={{
             color: 'var(--text-dark)',
-            fontSize: 'var(--text-lg)',
+            fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
             lineHeight: 'var(--leading-loose)',
             fontWeight: 500,
           }}
@@ -116,8 +117,9 @@ export const Home = () => {
           component="h3"
           sx={{
             color: 'var(--text-dark)',
-            marginBottom: 'var(--spacing-xl)',
+            marginBottom: 'var(--spacing-lg)', // Reduced from spacing-xl
             fontWeight: 700,
+            fontSize: { xs: 'var(--text-xl)', md: 'var(--text-3xl)' }, // Responsive font size
           }}
         >
           🎨 What Makes Our Montessori Learning Center Special
@@ -126,7 +128,7 @@ export const Home = () => {
           role="list"
           style={{
             display: 'grid',
-            gap: 'var(--spacing-lg)',
+            gap: 'var(--spacing-md)', // Reduced from spacing-lg
             textAlign: 'left',
           }}
         >
@@ -135,17 +137,19 @@ export const Home = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'var(--spacing-md)',
+              gap: 'var(--spacing-sm)', // Reduced from spacing-md
             }}
           >
-            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+            <span style={{ fontSize: '1.5rem' }} aria-hidden="true">
+              {' '}
+              {/* Reduced from 2rem */}
               🎯
             </span>
             <Typography
               variant="body1"
               sx={{
                 color: 'var(--text-dark)',
-                fontSize: 'var(--text-lg)',
+                fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
                 fontWeight: 500,
               }}
             >
@@ -157,17 +161,19 @@ export const Home = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'var(--spacing-md)',
+              gap: 'var(--spacing-sm)', // Reduced from spacing-md
             }}
           >
-            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+            <span style={{ fontSize: '1.5rem' }} aria-hidden="true">
+              {' '}
+              {/* Reduced from 2rem */}
               🤝
             </span>
             <Typography
               variant="body1"
               sx={{
                 color: 'var(--text-dark)',
-                fontSize: 'var(--text-lg)',
+                fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
                 fontWeight: 500,
               }}
             >
@@ -179,17 +185,19 @@ export const Home = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'var(--spacing-md)',
+              gap: 'var(--spacing-sm)', // Reduced from spacing-md
             }}
           >
-            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+            <span style={{ fontSize: '1.5rem' }} aria-hidden="true">
+              {' '}
+              {/* Reduced from 2rem */}
               🌿
             </span>
             <Typography
               variant="body1"
               sx={{
                 color: 'var(--text-dark)',
-                fontSize: 'var(--text-lg)',
+                fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
                 fontWeight: 500,
               }}
             >
@@ -201,17 +209,19 @@ export const Home = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'var(--spacing-md)',
+              gap: 'var(--spacing-sm)', // Reduced from spacing-md
             }}
           >
-            <span style={{ fontSize: '2rem' }} aria-hidden="true">
+            <span style={{ fontSize: '1.5rem' }} aria-hidden="true">
+              {' '}
+              {/* Reduced from 2rem */}
               💝
             </span>
             <Typography
               variant="body1"
               sx={{
                 color: 'var(--text-dark)',
-                fontSize: 'var(--text-lg)',
+                fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
                 fontWeight: 500,
               }}
             >

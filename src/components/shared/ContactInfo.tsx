@@ -15,7 +15,7 @@ export const ContactInfo = () => {
         color: '#FFFFFF',
         borderRadius: 'var(--radius-lg)',
         boxShadow: 'var(--shadow-lg)',
-        padding: 'var(--spacing-2xl)',
+        padding: 'var(--spacing-xl)', // Reduced from spacing-2xl
         textAlign: 'center',
         width: '100%',
         border: '2px solid var(--primary-blue)',
@@ -34,9 +34,9 @@ export const ContactInfo = () => {
         variant="h4"
         sx={{
           color: '#FFFFFF',
-          marginBottom: 'var(--spacing-xl)',
+          marginBottom: 'var(--spacing-lg)', // Reduced from spacing-xl
           fontWeight: 600,
-          fontSize: 'var(--text-xl)',
+          fontSize: { xs: 'var(--text-lg)', md: 'var(--text-xl)' }, // Responsive font size
         }}
       >
         Contact Information
@@ -44,8 +44,8 @@ export const ContactInfo = () => {
       <Typography
         variant="body1"
         sx={{
-          marginBottom: 'var(--spacing-lg)',
-          fontSize: 'var(--text-lg)',
+          marginBottom: 'var(--spacing-md)', // Reduced from spacing-lg
+          fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
           fontWeight: 500,
           color: '#FFFFFF',
         }}
@@ -55,8 +55,8 @@ export const ContactInfo = () => {
       <Typography
         variant="body1"
         sx={{
-          marginBottom: 'var(--spacing-lg)',
-          fontSize: 'var(--text-lg)',
+          marginBottom: 'var(--spacing-md)', // Reduced from spacing-lg
+          fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
         }}
       >
         <a
@@ -65,7 +65,7 @@ export const ContactInfo = () => {
             color: '#FFFFFF',
             textDecoration: 'none',
             fontWeight: 600,
-            fontSize: 'var(--text-xl)',
+            fontSize: 'var(--text-lg)', // Reduced from text-xl
             transition: 'all 0.3s ease',
             padding: 'var(--spacing-sm) var(--spacing-md)',
             borderRadius: 'var(--radius-sm)',
@@ -88,7 +88,7 @@ export const ContactInfo = () => {
       <Typography
         variant="body1"
         sx={{
-          fontSize: 'var(--text-lg)',
+          fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' }, // Responsive font size
         }}
       >
         <a
@@ -97,7 +97,7 @@ export const ContactInfo = () => {
             color: '#FFFFFF',
             textDecoration: 'none',
             fontWeight: 600,
-            fontSize: 'var(--text-lg)',
+            fontSize: 'var(--text-base)', // Reduced from text-lg
             transition: 'all 0.3s ease',
             padding: 'var(--spacing-sm) var(--spacing-md)',
             borderRadius: 'var(--radius-sm)',

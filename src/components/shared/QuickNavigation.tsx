@@ -51,7 +51,7 @@ export const QuickNavigation = () => {
       component="div"
       sx={{
         justifyContent: 'center',
-        display: 'flex',
+        display: { xs: 'none', md: 'flex' }, // Hide on mobile, show on desktop
         marginBottom: 'var(--spacing-2xl)',
       }}
     >
