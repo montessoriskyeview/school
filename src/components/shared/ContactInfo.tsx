@@ -92,7 +92,7 @@ export const ContactInfo = () => {
         }}
       >
         <a
-          href={`mailto:${EMAIL}`}
+          href={`mailto:${EMAIL}?subject=Inquiry from Skyeview Montessori Website&body=Hello,%0D%0A%0D%0AI'm interested in learning more about Skyeview Montessori Learning Center.%0D%0A%0D%0APlease provide me with information about:%0D%0A- Tour availability%0D%0A- Enrollment availability%0D%0A- Program details%0D%0A- Tuition information%0D%0A- Any other relevant information%0D%0A%0D%0AThank you!`}
           style={{
             color: '#FFFFFF',
             textDecoration: 'none',
