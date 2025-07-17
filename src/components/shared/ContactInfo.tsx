@@ -13,12 +13,13 @@ export const ContactInfo = () => {
         color: '#FFFFFF',
         borderRadius: 'var(--radius-lg)',
         boxShadow: 'var(--shadow-lg)',
-        padding: 'var(--spacing-xl)', // Reduced from spacing-2xl
+        // padding: 'var(--spacing-xl)', // Reduced from spacing-2xl
         textAlign: 'center',
         width: '100%',
         border: '2px solid var(--primary-blue)',
         alignSelf: 'center',
         justifySelf: 'center',
+        alignItems: 'center',
       }}
     >
       <EnrollmentButtons
