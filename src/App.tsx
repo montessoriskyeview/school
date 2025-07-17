@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AppBar } from './components/appBar/AppBar';
 import { SEO, SEOConfigs } from './components/shared/SEO';
 import { ErrorPage } from './views/ErrorView';
+import { useQueryParams } from './hooks/useQueryParams';
 
 // Lazy load components for better performance during peak hours
 const Home = React.lazy(() =>
@@ -82,6 +83,12 @@ const LoadingSpinner = () => (
     />
   </Box>
 );
+
+// Component to handle query parameter navigation
+const QueryParamHandler: React.FC = () => {
+  useQueryParams(); // This will handle the query parameter navigation
+  return null;
+};
 
 // Component to handle SEO updates based on current route
 const SEOUpdater: React.FC = () => {
@@ -275,6 +282,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
+          <QueryParamHandler />
           <SEOUpdater />
           <AppBar />
           <main id="main-content" role="main">

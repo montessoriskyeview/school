@@ -3,12 +3,14 @@ import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 import { Box } from '../components/shared/Box';
+import { QueryParamDemo } from '../components/shared/QueryParamDemo';
 import IMG_6887 from '../resources/images/location/IMG_6887.webp';
 
 export const Home = () => {
   return (
     <CanvasView>
       {/* Query Parameter Demo - Temporary for testing */}
+      <QueryParamDemo />
 
       {/* Main H1 - Primary keyword focus */}
       <InfoText
