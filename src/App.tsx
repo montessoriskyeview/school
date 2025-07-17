@@ -1,20 +1,76 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import {
+  CssBaseline,
+  ThemeProvider,
+  createTheme,
+  CircularProgress,
+  Box,
+} from '@mui/material';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
-import { Home } from './views/Home';
-import { Location } from './views/Location';
-import { Tuition } from './views/Tuition';
-import { Schedule } from './views/Schedule';
-import { Registration } from './views/Registration';
-import { Philosophy } from './views/Philosophy';
-import { Contact } from './views/Contact';
-import { Accessibility } from './views/Accessibility';
-import { FaqView } from './views/FAQ';
-import { Review } from './views/Review';
 import { SEO, SEOConfigs } from './components/shared/SEO';
+
+// Lazy load components for better performance during peak hours
+const Home = React.lazy(() =>
+  import('./views/Home').then(module => ({ default: module.Home }))
+);
+const Location = React.lazy(() =>
+  import('./views/Location').then(module => ({ default: module.Location }))
+);
+const Tuition = React.lazy(() =>
+  import('./views/Tuition').then(module => ({ default: module.Tuition }))
+);
+const Schedule = React.lazy(() =>
+  import('./views/Schedule').then(module => ({ default: module.Schedule }))
+);
+const Registration = React.lazy(() =>
+  import('./views/Registration').then(module => ({
+    default: module.Registration,
+  }))
+);
+const Philosophy = React.lazy(() =>
+  import('./views/Philosophy').then(module => ({ default: module.Philosophy }))
+);
+const Contact = React.lazy(() =>
+  import('./views/Contact').then(module => ({ default: module.Contact }))
+);
+const Accessibility = React.lazy(() =>
+  import('./views/Accessibility').then(module => ({
+    default: module.Accessibility,
+  }))
+);
+const FaqView = React.lazy(() =>
+  import('./views/FAQ').then(module => ({ default: module.FaqView }))
+);
+const Review = React.lazy(() =>
+  import('./views/Review').then(module => ({ default: module.Review }))
+);
+
+// Loading component optimized for mobile users
+const LoadingSpinner = () => (
+  <Box
+    component="div"
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '60vh',
+      padding: '2m',
+    }}
+  >
+    <CircularProgress
+      size={48}
+      sx={{
+        color: '#2563EB',
+        '& .MuiCircularProgress-circle': {
+          strokeLinecap: 'round',
+        },
+      }}
+    />
+  </Box>
+);
 
 // Component to handle SEO updates based on current route
 const SEOUpdater: React.FC = () => {
@@ -211,18 +267,20 @@ function App() {
           <SEOUpdater />
           <AppBar />
           <main id="main-content" role="main">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/location" element={<Location />} />
-              <Route path="/tuition" element={<Tuition />} />
-              <Route path="/schedule" element={<Schedule />} />
-              <Route path="/registration" element={<Registration />} />
-              <Route path="/philosophy" element={<Philosophy />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/faq" element={<FaqView />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/review" element={<Review />} />
-            </Routes>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/location" element={<Location />} />
+                <Route path="/tuition" element={<Tuition />} />
+                <Route path="/schedule" element={<Schedule />} />
+                <Route path="/registration" element={<Registration />} />
+                <Route path="/philosophy" element={<Philosophy />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/faq" element={<FaqView />} />
+                <Route path="/accessibility" element={<Accessibility />} />
+                <Route path="/review" element={<Review />} />
+              </Routes>
+            </Suspense>
           </main>
         </BrowserRouter>
       </ThemeProvider>

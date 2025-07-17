@@ -2,6 +2,7 @@ import { Box, Container } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
 import { QuickNavigation } from '../QuickNavigation';
 import { MobileHeroCTA } from '../MobileHeroCTA';
+import { useState, useEffect } from 'react';
 import property from '../../../resources/images/location/property1.png';
 
 export const CanvasView = ({
@@ -11,6 +12,15 @@ export const CanvasView = ({
   children: React.ReactNode;
   hideRouteChips?: boolean;
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Preload background image for better performance
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setImageLoaded(true);
+    img.src = property;
+  }, []);
+
   return (
     <Box
       component="div"
@@ -46,11 +56,13 @@ export const CanvasView = ({
           },
         }}
         style={{
-          backgroundImage: `url(${property})`,
+          backgroundImage: imageLoaded ? `url(${property})` : 'none',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundAttachment: 'fixed',
+          transition: 'opacity 0.3s ease',
+          opacity: imageLoaded ? 1 : 0,
         }}
       >
         <Box
@@ -78,6 +90,7 @@ export const CanvasView = ({
           py: { xs: 4, md: 8 }, // Reduced padding for mobile
           px: { xs: 0, md: 5 }, // Reduced horizontal padding for mobile
           mt: { xs: 10, md: 14 }, // Reduced top margin for mobile
+          pb: { xs: 10, md: 8 }, // Extra bottom padding on mobile for sticky CTA
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -90,13 +103,11 @@ export const CanvasView = ({
           '& img': {
             maxWidth: '100%',
             height: 'auto',
+            loading: 'lazy', // Add lazy loading for images
           },
         }}
       >
         {!hideRouteChips && <QuickNavigation />}
-
-        {/* Mobile Hero CTA - only visible on mobile */}
-        <MobileHeroCTA />
 
         {/* Children with proper spacing */}
         <div
@@ -111,16 +122,20 @@ export const CanvasView = ({
         </div>
       </Container>
 
+      {/* Mobile Hero CTA - positioned independently outside main container */}
+      <MobileHeroCTA />
+
       {/* Footer Container */}
       <Box
         component="div"
         sx={{
           position: 'relative',
-          zIndex: 1,
+          zIndex: 0, // Changed from 1 to 0 to ensure it's below MobileHeroCTA
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
           padding: { xs: 3, md: 5 }, // Increased padding
+          paddingBottom: { xs: 12, md: 5 }, // Extra bottom padding on mobile for sticky CTA
           marginTop: 'auto',
         }}
       >

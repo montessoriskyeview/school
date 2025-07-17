@@ -24,13 +24,20 @@ export const MobileHeroCTA = () => {
       component="div"
       sx={{
         display: { xs: 'block', md: 'none' }, // Only show on mobile
+        position: 'fixed', // Changed from sticky to fixed
+        bottom: -2,
+        left: 0,
+        right: 0,
+        zIndex: 1400, // Higher than AppBar and most other components
+        width: '100%',
         backgroundColor: 'var(--white)',
-        borderRadius: 'var(--radius-lg)',
-        boxShadow: 'var(--shadow-lg)',
-        margin: '0',
+        borderRadius: { xs: 0, sm: 'var(--radius-lg) var(--radius-lg) 0 0' }, // No radius on very small screens
+        boxShadow: '0 -4px 20px rgba(0,0,0,0.15)', // Shadow pointing upward
         border: '2px solid var(--primary-blue)',
-        marginBottom: { xs: 3, md: 0 }, // Reduced bottom margin
-        overflow: 'hidden', // Ensure smooth collapse animation
+        borderBottom: 'none', // Remove bottom border since it's at screen edge
+        overflow: 'hidden',
+        // Add safe area padding for devices with notches/home indicators
+        paddingBottom: 'env(safe-area-inset-bottom)',
       }}
     >
       {/* Collapsible Header */}
@@ -44,6 +51,7 @@ export const MobileHeroCTA = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           cursor: 'pointer',
+          minHeight: 48, // Ensure touch target
           '&:hover': {
             backgroundColor: '#1D4ED8',
           },
@@ -100,21 +108,21 @@ export const MobileHeroCTA = () => {
           maxWidth="sm"
           sx={{
             textAlign: 'center',
-            py: { xs: 2, md: 0 }, // Reduced vertical padding
-            px: { xs: 2, md: 0 }, // Reduced horizontal padding
+            py: { xs: 2, md: 0 },
+            px: { xs: 2, md: 0 },
           }}
         >
           <Box
             component="div"
             sx={{
-              marginBottom: 'var(--spacing-lg)', // Reduced spacing
+              marginBottom: 'var(--spacing-lg)',
             }}
           >
             <p
               style={{
-                fontSize: 'var(--text-base)', // Reduced from text-lg
+                fontSize: 'var(--text-base)',
                 color: 'var(--text-secondary)',
-                margin: '0 0 var(--spacing-lg) 0', // Reduced margin
+                margin: '0 0 var(--spacing-lg) 0',
                 lineHeight: 1.5,
               }}
             >
@@ -126,11 +134,11 @@ export const MobileHeroCTA = () => {
             variant="primary"
             sx={{
               flexDirection: 'column',
-              gap: 2, // Reduced gap between buttons
+              gap: 2,
               '& .MuiLink-root': {
-                fontSize: 'var(--text-base)', // Reduced from text-lg
+                fontSize: 'var(--text-base)',
                 fontWeight: 700,
-                padding: 'var(--spacing-md) var(--spacing-lg)', // Reduced padding
+                padding: 'var(--spacing-md) var(--spacing-lg)',
                 borderRadius: 'var(--radius-full)',
                 backgroundColor: 'var(--primary-blue)',
                 color: 'var(--white)',
@@ -138,7 +146,7 @@ export const MobileHeroCTA = () => {
                 display: 'inline-block',
                 transition: 'all 0.3s ease',
                 boxShadow: 'var(--shadow-md)',
-                minHeight: '44px', // Reduced but still meets accessibility standards
+                minHeight: '44px',
                 '&:hover': {
                   backgroundColor: '#1D4ED8',
                   transform: 'translateY(-2px)',
@@ -173,10 +181,11 @@ export const MobileHeroCTA = () => {
                 textTransform: 'none',
                 fontWeight: 600,
                 lineHeight: 1.2,
+                minHeight: 44, // Ensure touch target
               }}
               aria-label="Call Montessori Skye View"
             >
-              Call
+              📞 Call
             </Button>
             <Button
               variant="outlined"
@@ -191,10 +200,11 @@ export const MobileHeroCTA = () => {
                 textTransform: 'none',
                 fontWeight: 600,
                 lineHeight: 1.2,
+                minHeight: 44, // Ensure touch target
               }}
               aria-label="Email Montessori Skye View"
             >
-              Email
+              ✉️ Email
             </Button>
           </Stack>
         </Container>
