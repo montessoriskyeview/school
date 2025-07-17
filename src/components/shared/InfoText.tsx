@@ -12,11 +12,33 @@ interface InfoTextProps {
   containerVariant?: 'default' | 'card' | 'hero';
 }
 
+interface InfoTextProps {
+  text: string | JSX.Element;
+  title?: string;
+  subTitle?: string;
+  style?: React.CSSProperties;
+  titleVariant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  subTitleVariant?:
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'subtitle1'
+    | 'subtitle2';
+  textVariant?: 'body1' | 'body2' | 'subtitle1' | 'subtitle2';
+  variant?: 'default' | 'primary' | 'secondary';
+  spacing?: 'sm' | 'md' | 'lg';
+  containerVariant?: 'default' | 'card' | 'hero';
+}
+
 export const InfoText = ({
   text,
   title,
+  subTitle,
   style,
   titleVariant = 'h5',
+  subTitleVariant = 'subtitle1',
   textVariant = 'body1',
   spacing = 'md',
   containerVariant = 'default',
@@ -32,11 +54,24 @@ export const InfoText = ({
           variant={titleVariant}
           color={containerVariant === 'hero' ? 'white' : 'text'}
           sx={{
-            marginBottom: 'var(--spacing-xl)',
+            marginBottom: subTitle ? 'var(--spacing-lg)' : 'var(--spacing-xl)',
             fontWeight: 600,
           }}
         >
           {title}
+        </Typography>
+      )}
+      {subTitle && (
+        <Typography
+          variant={subTitleVariant}
+          color={containerVariant === 'hero' ? 'white' : 'text'}
+          sx={{
+            marginBottom: 'var(--spacing-xl)',
+            fontWeight: 500,
+            opacity: 0.85,
+          }}
+        >
+          {subTitle}
         </Typography>
       )}
       {typeof text === 'string' ? (

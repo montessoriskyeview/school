@@ -8,7 +8,9 @@ export const Home = () => {
     <CanvasView>
       {/* Main H1 - Primary keyword focus */}
       <InfoText
-        title="Montessori Skye View Learning Center | Child-Centered Education Las Vegas"
+        title="Montessori Skye View Learning Center"
+        subTitle="Child-Centered Education Las Vegas"
+        subTitleVariant="h2"
         text="A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada."
         titleVariant="h1"
         spacing="lg"
