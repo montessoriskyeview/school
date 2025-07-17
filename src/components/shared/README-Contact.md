@@ -14,10 +14,10 @@ export const PHONE = '7027219488';
 export const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
 
 // Email Template Configuration
-export const EMAIL_SUBJECT = 'Inquiry from Skyeview Montessori Website';
+export const EMAIL_SUBJECT = 'Inquiry from Montessori Skye View Website';
 export const EMAIL_BODY = `Hello,
 
-I'm interested in learning more about Skyeview Montessori Learning Center.
+I'm interested in learning more about Montessori Skye View Learning Center.
 
 Please provide me with information about:
 - Tour availability
@@ -102,7 +102,7 @@ import { PHONE, EMAIL } from './contactUtils';
 
 The standardized email template provides:
 
-- **Clear Subject Line**: "Inquiry from Skyeview Montessori Website" helps staff identify source
+- **Clear Subject Line**: "Inquiry from Montessori Skye View Website" helps staff identify source
 - **Structured Request**: Pre-filled body includes all common inquiry points
 - **Professional Format**: Consistent formatting across all email inquiries
 - **User-Friendly**: Reduces friction for users who want to contact the school

@@ -36,7 +36,7 @@ export const Accessibility = () => {
             fontWeight: 500,
           }}
         >
-          Skyeview Montessori Learning Center is committed to ensuring digital
+          Montessori Skye View Learning Center is committed to ensuring digital
           accessibility for people with disabilities.
         </Typography>
       </ContentContainer>

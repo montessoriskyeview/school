@@ -143,7 +143,7 @@ export const Review = () => {
           Your review helps us continue providing exceptional Montessori
           education and assists other families in finding the right learning
           environment for their children. We appreciate you being part of the
-          Skyeview Montessori family!
+          Montessori Skye View family!
         </Typography>
       </ContentContainer>
     </CanvasView>

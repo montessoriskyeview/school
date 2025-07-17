@@ -15,13 +15,13 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Skyeview Montessori Learning Center | Child-Centered Education Las Vegas',
+  title = 'Montessori Skye View Learning Center | Child-Centered Education Las Vegas',
   description = 'Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas. Superior staff ratio, homeschool supplementation available.',
   keywords = 'Montessori education Las Vegas, child-centered learning, outdoor education, homeschool supplementation, Pre-K through 5th grade, Las Vegas learning center, Montessori school, child development, nature-based learning',
   image = '/og-image.png',
   url = 'https://gavinolsen.github.io/school/',
   type = 'website',
-  author = 'Skyeview Montessori Learning Center',
+  author = 'Montessori Skye View Learning Center',
   publishedTime,
   modifiedTime,
   section,
@@ -136,7 +136,7 @@ export const SEO: React.FC<SEOProps> = ({
 export const SEOConfigs = {
   home: {
     title:
-      'Skyeview Montessori Learning Center | Child-Centered Education Las Vegas',
+      'Montessori Skye View Learning Center | Child-Centered Education Las Vegas',
     description:
       'Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas. Superior staff ratio, homeschool supplementation available.',
     keywords:
@@ -145,7 +145,7 @@ export const SEOConfigs = {
   },
   location: {
     title:
-      'Our Campus Location | Skyeview Montessori Learning Center Las Vegas',
+      'Our Campus Location | Montessori Skye View Learning Center Las Vegas',
     description:
       'Visit our beautiful Skye Canyon campus in Las Vegas, designed specifically for Montessori learning with ample outdoor space for exploration and play.',
     keywords:
@@ -153,7 +153,7 @@ export const SEOConfigs = {
     url: '/location',
   },
   tuition: {
-    title: 'Tuition & Fees | Skyeview Montessori Learning Center Las Vegas',
+    title: 'Tuition & Fees | Montessori Skye View Learning Center Las Vegas',
     description:
       'Transparent tuition rates and flexible payment options for our Montessori learning center. Quality education at competitive prices in Las Vegas.',
     keywords:
@@ -161,7 +161,7 @@ export const SEOConfigs = {
     url: '/tuition',
   },
   schedule: {
-    title: 'Class Schedule & Programs | Skyeview Montessori Learning Center',
+    title: 'Class Schedule & Programs | Montessori Skye View Learning Center',
     description:
       'Flexible class schedules and programs designed for Pre-K through 5th grade. Morning and afternoon sessions available with extended care options.',
     keywords:
@@ -169,7 +169,7 @@ export const SEOConfigs = {
     url: '/schedule',
   },
   registration: {
-    title: 'Enrollment & Registration | Skyeview Montessori Learning Center',
+    title: 'Enrollment & Registration | Montessori Skye View Learning Center',
     description:
       "Start your child's Montessori journey today. Simple enrollment process for Pre-K through 5th grade. Limited spots available.",
     keywords:
@@ -185,7 +185,7 @@ export const SEOConfigs = {
     url: '/philosophy',
   },
   contact: {
-    title: 'Contact Us | Skyeview Montessori Learning Center Las Vegas',
+    title: 'Contact Us | Montessori Skye View Learning Center Las Vegas',
     description:
       'Get in touch with our Montessori learning center in Las Vegas. Schedule a tour, ask questions, or learn more about our programs.',
     keywords:
@@ -193,7 +193,7 @@ export const SEOConfigs = {
     url: '/contact',
   },
   faq: {
-    title: 'Frequently Asked Questions | Skyeview Montessori Learning Center',
+    title: 'Frequently Asked Questions | Montessori Skye View Learning Center',
     description:
       'Find answers to common questions about our Montessori learning center, programs, enrollment, and child-centered education approach.',
     keywords:
@@ -201,7 +201,7 @@ export const SEOConfigs = {
     url: '/faq',
   },
   accessibility: {
-    title: 'Accessibility Statement | Skyeview Montessori Learning Center',
+    title: 'Accessibility Statement | Montessori Skye View Learning Center',
     description:
       'Our commitment to accessibility and inclusive design. Learn about our efforts to make our website accessible to all users.',
     keywords:
@@ -210,11 +210,11 @@ export const SEOConfigs = {
   },
   review: {
     title:
-      'Share Your Experience | Skyeview Montessori Learning Center Reviews',
+      'Share Your Experience | Montessori Skye View Learning Center Reviews',
     description:
       'Share your experience with our Montessori learning center. Your feedback helps other families discover quality Montessori education in Las Vegas.',
     keywords:
-      'Montessori reviews Las Vegas, Skyeview Montessori feedback, parent testimonials, Montessori learning center reviews, Las Vegas Montessori experience',
+      'Montessori reviews Las Vegas, Montessori Skye View feedback, parent testimonials, Montessori learning center reviews, Las Vegas Montessori experience',
     url: '/review',
   },
 };

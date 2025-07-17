@@ -1,5 +1,5 @@
 /**
- * Contact utilities for Skyeview Montessori Learning Center
+ * Contact utilities for Montessori Skye View Learning Center
  *
  * This file contains shared contact information and utility functions
  * to ensure consistency across all components that handle contact interactions.
@@ -10,10 +10,10 @@ export const PHONE = '7027219488';
 export const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
 
 // Email Template Configuration
-export const EMAIL_SUBJECT = 'Inquiry from Skyeview Montessori Website';
+export const EMAIL_SUBJECT = 'Inquiry from Montessori Skye View Website';
 export const EMAIL_BODY = `Hello,
 
-I'm interested in learning more about Skyeview Montessori Learning Center.
+I'm interested in learning more about Montessori Skye View Learning Center.
 
 Please provide me with information about:
 - Tour availability

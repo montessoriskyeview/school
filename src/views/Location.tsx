@@ -25,7 +25,7 @@ const slides = [
   {
     src: property1,
     className: 'carousel-slide',
-    alt: 'Skyeview Montessori Learning Center campus exterior - beautiful outdoor learning environment in Las Vegas',
+    alt: 'Montessori Skye View Learning Center campus exterior - beautiful outdoor learning environment in Las Vegas',
     title: 'Montessori Campus Exterior',
     description:
       'Our beautiful Skye Canyon campus designed for Montessori education',

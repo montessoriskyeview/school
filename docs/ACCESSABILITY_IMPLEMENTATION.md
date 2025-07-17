@@ -1,4 +1,4 @@
-# Accessibility Implementation Summary - Skyeview Montessori Learning Center
+# Accessibility Implementation Summary - Montessori Skye View Learning Center
 
 ## 📊 Current Status Overview
 

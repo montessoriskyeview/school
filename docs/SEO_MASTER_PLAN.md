@@ -1,4 +1,4 @@
-# SEO Master Plan - Skyeview Montessori Learning Center Website
+# SEO Master Plan - Montessori Skye View Learning Center Website
 
 ## 📊 Current Status Overview
 

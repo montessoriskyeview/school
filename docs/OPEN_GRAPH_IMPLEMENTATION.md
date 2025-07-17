@@ -1,4 +1,4 @@
-# Open Graph Implementation - Skyeview Montessori Learning Center
+# Open Graph Implementation - Montessori Skye View Learning Center
 
 ## 📊 Implementation Status
 
@@ -37,23 +37,23 @@
 ### Static Metadata (public/index.html)
 ```html
 <!-- Primary Meta Tags -->
-<title>Skyeview Montessori Learning Center | Child-Centered Education Las Vegas</title>
+<title>Montessori Skye View Learning Center | Child-Centered Education Las Vegas</title>
 <meta name="description" content="Nurturing curious minds and joyful hearts..." />
 <meta name="keywords" content="Montessori education Las Vegas, child-centered learning..." />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gavinolsen.github.io/school/" />
-<meta property="og:title" content="Skyeview Montessori Learning Center..." />
+<meta property="og:title" content="Montessori Skye View Learning Center..." />
 <meta property="og:description" content="Nurturing curious minds..." />
 <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Skyeview Montessori Learning Center" />
+<meta property="og:site_name" content="Montessori Skye View Learning Center" />
 
 <!-- Twitter Cards -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Skyeview Montessori Learning Center..." />
+<meta property="twitter:title" content="Montessori Skye View Learning Center..." />
 <meta property="twitter:description" content="Nurturing curious minds..." />
 <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
 ```
@@ -63,13 +63,13 @@
 // Page-specific configurations
 export const SEOConfigs = {
   home: {
-    title: 'Skyeview Montessori Learning Center | Child-Centered Education Las Vegas',
+    title: 'Montessori Skye View Learning Center | Child-Centered Education Las Vegas',
     description: 'Nurturing curious minds and joyful hearts...',
     keywords: 'Montessori education Las Vegas, child-centered learning...',
     url: '/',
   },
   location: {
-    title: 'Our Campus Location | Skyeview Montessori Learning Center Las Vegas',
+    title: 'Our Campus Location | Montessori Skye View Learning Center Las Vegas',
     description: 'Visit our beautiful Skye Canyon campus...',
     keywords: 'Montessori campus Las Vegas, Skye Canyon location...',
     url: '/location',
@@ -83,7 +83,7 @@ export const SEOConfigs = {
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "name": "Skyeview Montessori Learning Center",
+  "name": "Montessori Skye View Learning Center",
   "description": "A child-centered Montessori learning center...",
   "url": "https://gavinolsen.github.io/school/",
   "logo": "%PUBLIC_URL%/og-image-icon.png",
@@ -154,7 +154,7 @@ export const SEOConfigs = {
 
 ### Facebook/LinkedIn Preview
 ```
-Title: Skyeview Montessori Learning Center | Child-Centered Education Las Vegas
+Title: Montessori Skye View Learning Center | Child-Centered Education Las Vegas
 Description: Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas.
 Image: [og-image.png - House with heart and stars on light blue background]
 URL: https://gavinolsen.github.io/school/
@@ -162,7 +162,7 @@ URL: https://gavinolsen.github.io/school/
 
 ### Twitter Preview
 ```
-Title: Skyeview Montessori Learning Center | Child-Centered Education Las Vegas
+Title: Montessori Skye View Learning Center | Child-Centered Education Las Vegas
 Description: Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas.
 Image: [og-image.png - Large image format]
 URL: https://gavinolsen.github.io/school/

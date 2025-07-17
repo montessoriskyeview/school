@@ -1,6 +1,6 @@
 reusable prompt
 ```
-Please help me maintain my Google Business Profile for Skyeview Montessori Learning Center (https://g.co/kgs/edpqY1T). 
+Please help me maintain my Google Business Profile for Montessori Skye View Learning Center (https://g.co/kgs/edpqY1T). 
 
 Current Status: [Update with current metrics - profile views, reviews, posts published]
 
@@ -14,17 +14,17 @@ Please:
 Use the templates and strategies from the optimization guide.
 ```
 
-# Google Business Profile Optimization Guide - Skyeview Montessori Learning Center
+# Google Business Profile Optimization Guide - Montessori Skye View Learning Center
 
 ## Overview
-This guide provides step-by-step instructions for optimizing your Google Business Profile to maximize local search visibility and attract more families to Skyeview Montessori Learning Center.
+This guide provides step-by-step instructions for optimizing your Google Business Profile to maximize local search visibility and attract more families to Montessori Skye View Learning Center.
 
 **Target Profile**: https://g.co/kgs/edpqY1T
 
 ## Phase 1: Complete Business Information (Day 1)
 
 ### 1.1 Business Name & Category
-- **Business Name**: Skyeview Montessori Learning Center
+- **Business Name**: Montessori Skye View Learning Center
 - **Primary Category**: Montessori School
 - **Secondary Categories**:
   - Child Care Service
@@ -53,7 +53,7 @@ Add these specific areas to maximize local reach:
 ### 1.4 Business Description
 **Primary Description** (750 characters max):
 ```
-Skyeview Montessori Learning Center provides child-centered education in Las Vegas, focusing on hands-on learning and natural development. Our Montessori-certified teachers guide children ages 2-6 through individualized learning experiences that foster independence, creativity, and a lifelong love of learning. We offer full-day programs, outdoor education, and a nurturing environment where every child thrives.
+Montessori Skye View Learning Center provides child-centered education in Las Vegas, focusing on hands-on learning and natural development. Our Montessori-certified teachers guide children ages 2-6 through individualized learning experiences that foster independence, creativity, and a lifelong love of learning. We offer full-day programs, outdoor education, and a nurturing environment where every child thrives.
 ```
 
 **Keywords to include naturally**:
@@ -141,7 +141,7 @@ Skyeview Montessori Learning Center provides child-centered education in Las Veg
 
 Did you know that [interesting fact about Montessori education]?
 
-At Skyeview Montessori Learning Center, we believe [core principle]. Our certified teachers guide children through [specific activity/learning method].
+At Montessori Skye View Learning Center, we believe [core principle]. Our certified teachers guide children through [specific activity/learning method].
 
 ✨ Benefits for your child:
 • [Benefit 1]
@@ -177,7 +177,7 @@ Stay tuned for more updates as we continue to enhance our Montessori learning en
 
 **Review request template**:
 ```
-"Thank you for choosing Skyeview Montessori! If you've been happy with your child's experience, we'd greatly appreciate a Google review. Your feedback helps other families find quality early childhood education in Las Vegas."
+"Thank you for choosing Montessori Skye View! If you've been happy with your child's experience, we'd greatly appreciate a Google review. Your feedback helps other families find quality early childhood education in Las Vegas."
 ```
 
 ### 4.2 Review Response Strategy
