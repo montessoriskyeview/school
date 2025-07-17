@@ -167,6 +167,11 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     Icon: HomeIcon,
   },
   {
+    text: 'Parents',
+    path: '/parents',
+    Icon: PeopleIcon,
+  },
+  {
     text: 'Tuition',
     path: '/tuition',
     Icon: PaymentIcon,
@@ -200,11 +205,6 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     text: 'Philosophy',
     path: '/philosophy',
     Icon: LightbulbIcon,
-  },
-  {
-    text: 'Parents',
-    path: '/parents',
-    Icon: PeopleIcon,
   },
   {
     text: 'Accessibility',

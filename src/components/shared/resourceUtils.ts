@@ -25,7 +25,7 @@ const getParentResources = (): IResourceItem[] => {
     {
       title: 'Parent Handbook',
       description: 'Comprehensive guide for parents about our program',
-      link: '/public/handbook.pdf',
+      link: '/handbook.pdf',
       category: 'document',
       Icon: Description,
     },

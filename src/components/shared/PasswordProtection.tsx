@@ -36,7 +36,8 @@ export const PasswordProtection: React.FC<IPasswordProtectionProps> = ({
       // In a real application, this would be an API call
       // For now, we'll check against the environment variable
       const correctPassword =
-        process.env.REACT_APP_MSV_STAFF_PASS || 'staff2024';
+        // eslint-disable-next-line no-restricted-globals -- use it now
+        process.env.MSV_STAFF_PASS || location.hostname === 'localhost';
 
       if (password === correctPassword) {
         setIsAuthenticated(true);
@@ -94,7 +95,7 @@ export const PasswordProtection: React.FC<IPasswordProtectionProps> = ({
   }
 
   return (
-    <CanvasView>
+    <CanvasView hideRouteChips>
       <ContentContainer
         variant="card"
         spacing="lg"

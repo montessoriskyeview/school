@@ -18,6 +18,13 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     priority: 'high',
   },
   {
+    text: 'Parents',
+    path: '/parents',
+    pageParam: 'parents',
+    color: 'default',
+    priority: 'high',
+  },
+  {
     text: 'Tuition',
     path: '/tuition',
     pageParam: 'tuition',
