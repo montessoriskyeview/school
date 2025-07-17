@@ -170,6 +170,7 @@ const BlogList: React.FC<IBlogListProps> = ({
           <PostCardMedia image={post.featuredImage} title={post.title} />
         ) : (
           <Box
+            component="div"
             sx={{
               height: '200px',
               backgroundColor: 'grey.200',
@@ -345,7 +346,7 @@ const BlogList: React.FC<IBlogListProps> = ({
       )}
 
       {!loading && filteredPosts.length === 0 && (
-        <Box sx={{ textAlign: 'center', py: 8 }}>
+        <Box component="div" sx={{ textAlign: 'center', py: 8 }}>
           <Typography variant="h6" color="text.secondary" sx={{ mb: 2 }}>
             No articles found
           </Typography>
