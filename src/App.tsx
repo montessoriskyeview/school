@@ -47,6 +47,16 @@ const FaqView = React.lazy(() =>
 const Review = React.lazy(() =>
   import('./views/Review').then(module => ({ default: module.Review }))
 );
+const BlogPage = React.lazy(() =>
+  import('./components/blog/BlogPage').then(module => ({
+    default: module.default,
+  }))
+);
+const BlogPostPage = React.lazy(() =>
+  import('./components/blog/BlogPostPage').then(module => ({
+    default: module.default,
+  }))
+);
 
 // Loading component optimized for mobile users
 const LoadingSpinner = () => (
@@ -279,6 +289,8 @@ function App() {
                 <Route path="/faq" element={<FaqView />} />
                 <Route path="/accessibility" element={<Accessibility />} />
                 <Route path="/review" element={<Review />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogPostPage />} />
               </Routes>
             </Suspense>
           </main>

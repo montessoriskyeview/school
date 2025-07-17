@@ -1,4 +1,6 @@
 import { Box } from '@mui/material';
+import IMG_6887 from '../resources/images/location/IMG_6887.webp';
+import IMG_4940 from '../resources/images/location/IMG_4940.webp';
 import property1 from '../resources/images/location/property1.png';
 import property2 from '../resources/images/location/property2.png';
 import property3 from '../resources/images/location/property3.jpg';
@@ -22,6 +24,22 @@ import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 
 const slides = [
+  {
+    src: IMG_6887,
+    className: 'carousel-slide',
+    alt: 'Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment',
+    title: 'Outdoor Learning in Action',
+    description:
+      'Children engaged in outdoor learning activities with their Montessori guide',
+  },
+  {
+    src: IMG_4940,
+    className: 'carousel-slide',
+    alt: 'Montessori learning center outdoor classroom - children exploring nature and learning in beautiful natural setting',
+    title: 'Natural Learning Environment',
+    description:
+      'Our beautiful outdoor learning spaces designed for Montessori education',
+  },
   {
     src: property1,
     className: 'carousel-slide',

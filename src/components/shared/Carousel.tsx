@@ -37,6 +37,19 @@ const CarouselContainer = styled(Box)<{ height?: string }>`
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+
+  @media (max-width: 768px) {
+    height: ${props => {
+      switch (props.height) {
+        case 'sm':
+          return '250px';
+        case 'lg':
+          return '400px';
+        default:
+          return '350px';
+      }
+    }};
+  }
 `;
 
 const CarouselContent = styled(Box)`
@@ -69,6 +82,13 @@ const NavigationControls = styled(Box)`
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-full);
   backdrop-filter: blur(4px);
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    bottom: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
 `;
 
 const CarouselButton = styled(IconButton)`
@@ -79,17 +99,31 @@ const CarouselButton = styled(IconButton)`
   &:hover {
     background: rgba(255, 255, 255, 0.4);
   }
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-xs);
+    min-width: 40px;
+    min-height: 40px;
+  }
 `;
 
-const SlideInfo = styled(Box)`
-  position: absolute;
-  bottom: var(--spacing-2xl);
-  left: var(--spacing-lg);
-  right: var(--spacing-lg);
-  color: var(--white);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-`;
+// const SlideInfo = styled(Box)`
+//   position: absolute;
+//   bottom: calc(
+//     var(--spacing-2xl) + 60px
+//   ); /* Account for navigation controls height */
+//   left: var(--spacing-lg);
+//   right: var(--spacing-lg);
+//   color: var(--white);
+//   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+//   z-index: 1;
+
+//   @media (max-width: 768px) {
+//     bottom: calc(var(--spacing-xl) + 50px); /* Smaller spacing on mobile */
+//     left: var(--spacing-md);
+//     right: var(--spacing-md);
+//   }
+// `;
 
 export const Carousel: React.FC<CarouselProps> = ({
   slides,
@@ -135,21 +169,6 @@ export const Carousel: React.FC<CarouselProps> = ({
               active={index === currentIndex}
               offset={index - currentIndex}
             />
-            {index === currentIndex && (slide.title || slide.description) && (
-              <SlideInfo>
-                {slide.title && (
-                  <Typography
-                    variant="h4"
-                    sx={{ marginBottom: 'var(--spacing-sm)' }}
-                  >
-                    {slide.title}
-                  </Typography>
-                )}
-                {slide.description && (
-                  <Typography variant="body1">{slide.description}</Typography>
-                )}
-              </SlideInfo>
-            )}
           </React.Fragment>
         ))}
       </CarouselContent>
@@ -159,7 +178,12 @@ export const Carousel: React.FC<CarouselProps> = ({
         </CarouselButton>
         <Typography
           variant="body2"
-          sx={{ color: 'var(--white)', minWidth: '45px', textAlign: 'center' }}
+          sx={{
+            color: 'var(--white)',
+            minWidth: '45px',
+            textAlign: 'center',
+            fontSize: { xs: 'var(--text-sm)', md: 'var(--text-base)' },
+          }}
         >
           {currentIndex + 1}/{slides.length}
         </Typography>

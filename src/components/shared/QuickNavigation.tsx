@@ -16,6 +16,12 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     priority: 'high',
   },
   {
+    text: 'Blog',
+    path: '/blog',
+    color: 'default',
+    priority: 'high',
+  },
+  {
     text: 'Tuition',
     path: '/tuition',
     color: 'default',

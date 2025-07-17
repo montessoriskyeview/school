@@ -18,6 +18,7 @@ import RegistrationIcon from '@mui/icons-material/AppRegistration';
 import PhoneIcon from '@mui/icons-material/Phone';
 import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import ArticleIcon from '@mui/icons-material/Article';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 import { useEffect, useRef } from 'react';
@@ -203,5 +204,10 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     text: 'Accessibility',
     path: '/accessibility',
     Icon: AccessibilityIcon,
+  },
+  {
+    text: 'Blog',
+    path: '/blog',
+    Icon: ArticleIcon,
   },
 ];

@@ -2,6 +2,8 @@ import { InfoText } from '../components/shared/InfoText';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
+import { Box } from '@mui/material';
+import IMG_6887 from '../resources/images/location/IMG_6887.webp';
 
 export const Home = () => {
   return (
@@ -16,6 +18,100 @@ export const Home = () => {
         spacing="lg"
         containerVariant="hero"
       />
+
+      {/* Featured Image Section - Outdoor Learning in Action */}
+      <ContentContainer
+        variant="card"
+        spacing="lg"
+        style={{
+          textAlign: 'center',
+          background: 'var(--white)',
+          color: 'var(--text-dark)',
+          border: '3px solid var(--primary-green)',
+          boxShadow: 'var(--shadow-lg)',
+          overflow: 'hidden',
+        }}
+      >
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{
+            color: 'var(--text-dark)',
+            marginBottom: 'var(--spacing-lg)',
+            fontWeight: 700,
+            fontSize: { xs: 'var(--text-2xl)', md: 'var(--text-3xl)' },
+          }}
+        >
+          🌿 Outdoor Learning in Action
+        </Typography>
+
+        <Box
+          component="div"
+          sx={{
+            position: 'relative',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            marginBottom: 'var(--spacing-lg)',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <img
+            src={IMG_6887}
+            alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+            style={{
+              width: '100%',
+              height: 'auto',
+              maxHeight: '500px',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+            loading="eager"
+          />
+        </Box>
+
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'var(--text-dark)',
+            fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' },
+            lineHeight: 'var(--leading-loose)',
+            fontWeight: 500,
+            fontStyle: 'italic',
+          }}
+        >
+          "In every walk with nature, one receives far more than he seeks." -
+          John Muir
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'var(--text-dark)',
+            fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' },
+            lineHeight: 'var(--leading-loose)',
+            fontWeight: 500,
+            marginTop: 'var(--spacing-md)',
+          }}
+        >
+          The Montessori Skye View Learning Center campus boasts the largest
+          outdoor learning space in the Las Vegas valley - on over an entire
+          acre of land in a suburban neighborhood!
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'var(--text-dark)',
+            fontSize: { xs: 'var(--text-base)', md: 'var(--text-lg)' },
+            lineHeight: 'var(--leading-loose)',
+            fontWeight: 500,
+            marginTop: 'var(--spacing-md)',
+          }}
+        >
+          Our students thrive in our beautiful outdoor learning environment,
+          where nature becomes the classroom and every day brings new
+          discoveries.
+        </Typography>
+      </ContentContainer>
 
       {/* H2 Section - Secondary keywords */}
       <ContentContainer

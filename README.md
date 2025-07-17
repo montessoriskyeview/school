@@ -11,6 +11,28 @@ Montessori Skye View Learning Center is a vibrant educational community serving 
 - **Montessori Method**: Hands-on learning and individualized attention
 - **Homeschool Support**: We provide documentation and support for homeschooling families
 
+## 🚀 New Blog Infrastructure & SEO Strategy
+
+### Blog Features
+- **SEO-Optimized Blog Posts**: Built-in SEO optimization for search engine visibility
+- **Responsive Design**: Beautiful, mobile-friendly blog layout
+- **Search & Filter**: Advanced search and category filtering
+- **Author Profiles**: Professional author information and bios
+- **Social Sharing**: Easy sharing across social media platforms
+- **Related Posts**: Intelligent content recommendations
+
+### SEO Strategy
+We've implemented a comprehensive SEO strategy to dominate local search rankings:
+
+- **Local SEO Focus**: Targeting "Montessori Las Vegas" and related keywords
+- **Content Authority**: Establishing expertise through valuable blog content
+- **Technical SEO**: Optimized for speed, mobile, and search engines
+- **Structured Data**: Rich snippets and schema markup
+- **Content Calendar**: Strategic content publishing schedule
+
+📖 **Read our complete SEO strategy**: [SEO_STRATEGY.md](./SEO_STRATEGY.md)
+📝 **Blog infrastructure guide**: [BLOG_INFRASTRUCTURE.md](./BLOG_INFRASTRUCTURE.md)
+
 ## Website Development Guidelines
 
 ### Project Structure
@@ -18,9 +40,24 @@ Montessori Skye View Learning Center is a vibrant educational community serving 
 learning-center/
 ├── src/
 │   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── assets/
+│   │   ├── blog/              # Blog components
+│   │   │   ├── BlogPost.tsx   # Individual blog post
+│   │   │   ├── BlogList.tsx   # Blog listing page
+│   │   │   ├── BlogPage.tsx   # Main blog page
+│   │   │   └── BlogPostPage.tsx # Individual post page
+│   │   ├── shared/            # Shared components
+│   │   ├── home/              # Home page components
+│   │   └── animation/         # Animation components
+│   ├── data/
+│   │   └── blogPosts.ts       # Blog post data
+│   ├── utils/
+│   │   └── seo.ts             # SEO utilities
+│   ├── styles/                # Global styles
+│   └── assets/                # Images and media
+├── public/
+│   └── images/
+│       ├── blog/              # Blog post images
+│       └── authors/           # Author profile images
 ```
 
 ### Style Guide
@@ -55,11 +92,19 @@ Accent Colors:
 ### Development Setup
 1. Clone the repository
 2. Install dependencies: `npm install`
-3. Run development server: `npm run dev`
+3. Run development server: `npm start`
+4. Build for production: `npm run build`
+
+### Blog Development
+1. **Add New Posts**: Edit `src/data/blogPosts.ts`
+2. **Customize Styling**: Modify blog components in `src/components/blog/`
+3. **SEO Optimization**: Use utilities in `src/utils/seo.ts`
+4. **Content Guidelines**: Follow the blog infrastructure guide
 
 ### Deployment
 - Production build: `npm run build`
-- Preview build: `npm run preview`
+- Deploy to Netlify: Automatic deployment from main branch
+- Preview build: `npm run build && serve -s build`
 
 ## Content Guidelines
 - Keep language warm and approachable
@@ -68,11 +113,47 @@ Accent Colors:
 - Showcase the beautiful campus and learning environments
 - Emphasize the strong community aspect
 
+## Blog Content Strategy
+- **Weekly Publishing**: 2-3 blog posts per week
+- **Content Categories**: Montessori Education, Parenting Resources, Outdoor Learning, Local Community
+- **SEO Focus**: Target local keywords and long-tail search terms
+- **Quality Standards**: Expert-level content with practical value
+- **Engagement**: Encourage comments, shares, and community interaction
+
+## SEO & Performance
+- **Page Speed**: Target 95+ PageSpeed scores
+- **Mobile Optimization**: Mobile-first responsive design
+- **Local SEO**: Google My Business and local citations
+- **Content Marketing**: Strategic blog content for organic growth
+- **Technical SEO**: Structured data, meta tags, and schema markup
+
 ## Maintenance
 - Regular content updates for events and news
 - Seasonal photography updates
 - Monthly review of contact information
 - Regular security updates
+- Weekly blog post publishing
+- Monthly SEO performance review
 
 ## Contact
 For website maintenance and updates, contact the development team at [contact information]
+
+---
+
+## 🎯 SEO Goals & Metrics
+
+### 6-Month Targets
+- [ ] 50+ blog posts published
+- [ ] 10,000+ monthly organic visitors
+- [ ] Top 3 ranking for "Montessori Las Vegas"
+- [ ] 100+ quality backlinks
+- [ ] 95+ PageSpeed score
+
+### 12-Month Targets
+- [ ] 100+ blog posts published
+- [ ] 25,000+ monthly organic visitors
+- [ ] #1 ranking for primary keywords
+- [ ] 200+ quality backlinks
+- [ ] 50+ customer reviews
+
+This website is designed to establish Montessori Skye View Learning Center as the definitive authority on Montessori education in Las Vegas, driving consistent organic traffic and generating qualified leads through valuable, educational content.
