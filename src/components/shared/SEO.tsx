@@ -217,4 +217,20 @@ export const SEOConfigs = {
       'Montessori reviews Las Vegas, Montessori Skye View feedback, parent testimonials, Montessori learning center reviews, Las Vegas Montessori experience',
     url: '/review',
   },
+  parents: {
+    title: 'Parent Resources | Montessori Skye View Learning Center',
+    description:
+      'Access important documents, forms, and resources for parents. Enrollment applications, handbooks, and communication guidelines.',
+    keywords:
+      'parent resources, Montessori parent documents, enrollment forms, parent handbook, Montessori parent information, Las Vegas Montessori resources',
+    url: '/parents',
+  },
+  staffResources: {
+    title: 'Staff Resources | Montessori Skye View Learning Center',
+    description:
+      'Confidential staff resources and materials. Access to curriculum guidelines, assessment forms, and professional development materials.',
+    keywords:
+      'staff resources, Montessori staff materials, curriculum guidelines, assessment forms, professional development, Montessori staff documents',
+    url: '/staff-resources',
+  },
 };

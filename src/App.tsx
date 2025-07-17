@@ -59,6 +59,14 @@ const BlogPostPage = React.lazy(() =>
     default: module.default,
   }))
 );
+const Parents = React.lazy(() =>
+  import('./views/Parents').then(module => ({ default: module.Parents }))
+);
+const StaffResources = React.lazy(() =>
+  import('./views/StaffResources').then(module => ({
+    default: module.StaffResources,
+  }))
+);
 
 // Loading component optimized for mobile users
 const LoadingSpinner = () => (
@@ -127,6 +135,12 @@ const SEOUpdater: React.FC = () => {
       break;
     case '/review':
       seoConfig = SEOConfigs.review;
+      break;
+    case '/parents':
+      seoConfig = SEOConfigs.parents;
+      break;
+    case '/staff-resources':
+      seoConfig = SEOConfigs.staffResources;
       break;
     default:
       seoConfig = SEOConfigs.home;
@@ -300,6 +314,8 @@ function App() {
                 <Route path="/review" element={<Review />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
+                <Route path="/parents" element={<Parents />} />
+                <Route path="/staff-resources" element={<StaffResources />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </Suspense>
