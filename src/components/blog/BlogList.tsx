@@ -320,7 +320,7 @@ const BlogList: React.FC<IBlogListProps> = ({
         </FormControl>
       </FiltersSection>
 
-      <Box sx={{ mb: 2 }}>
+      <Box component="div" sx={{ mb: 2 }}>
         <Typography variant="body2" color="text.secondary">
           Showing {filteredPosts.length} of {posts.length} articles
         </Typography>
