@@ -2,7 +2,7 @@ import { InfoText } from '../components/shared/InfoText';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
-import { Box } from '@mui/material';
+import { Box } from '../components/shared/Box';
 import IMG_6887 from '../resources/images/location/IMG_6887.webp';
 
 export const Home = () => {
@@ -46,7 +46,6 @@ export const Home = () => {
         </Typography>
 
         <Box
-          component="div"
           sx={{
             position: 'relative',
             borderRadius: '16px',

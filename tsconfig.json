@@ -18,7 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "exactOptionalPropertyTypes": false,
+    "noUncheckedIndexedAccess": false,
+    "maxNodeModuleJsDepth": 1
   },
   "include": [
     "src"

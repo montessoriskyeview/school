@@ -40,7 +40,7 @@ const BlogPostPage: React.FC = () => {
   }
 
   return (
-    <Box>
+    <Box component="div">
       <Container maxWidth="lg" sx={{ py: 2 }}>
         <Button
           variant="text"
