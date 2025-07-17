@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
 import { SEO, SEOConfigs } from './components/shared/SEO';
+import { ErrorPage } from './views/ErrorView';
 
 // Lazy load components for better performance during peak hours
 const Home = React.lazy(() =>
@@ -291,6 +292,7 @@ function App() {
                 <Route path="/review" element={<Review />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
+                <Route path="*" element={<ErrorPage />} />
               </Routes>
             </Suspense>
           </main>

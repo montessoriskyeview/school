@@ -8,6 +8,8 @@ import IMG_6887 from '../resources/images/location/IMG_6887.webp';
 export const Home = () => {
   return (
     <CanvasView>
+      {/* Query Parameter Demo - Temporary for testing */}
+
       {/* Main H1 - Primary keyword focus */}
       <InfoText
         title="Montessori Skye View Learning Center"

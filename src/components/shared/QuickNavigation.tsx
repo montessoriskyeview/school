@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 interface QuickNavItem {
   text: string;
   path: string;
+  pageParam: string;
   color?: 'primary' | 'secondary' | 'default';
   priority?: 'high' | 'medium' | 'low'; // Add priority for mobile optimization
 }
@@ -12,42 +13,49 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
   {
     text: 'Home',
     path: '/',
+    pageParam: 'home',
     color: 'default',
     priority: 'high',
   },
   {
     text: 'Tuition',
     path: '/tuition',
+    pageParam: 'tuition',
     color: 'default',
     priority: 'high',
   },
   {
     text: 'Schedule',
     path: '/schedule',
+    pageParam: 'schedule',
     color: 'default',
     priority: 'high',
   },
   {
     text: 'Registration',
     path: '/registration',
+    pageParam: 'registration',
     color: 'default',
     priority: 'high',
   },
   {
     text: 'Location',
     path: '/location',
+    pageParam: 'location',
     color: 'default',
     priority: 'medium',
   },
   {
     text: 'FAQ',
     path: '/faq',
+    pageParam: 'faq',
     color: 'default',
     priority: 'medium',
   },
   {
     text: 'Philosophy',
     path: '/philosophy',
+    pageParam: 'philosophy',
     color: 'default',
     priority: 'low',
   },
