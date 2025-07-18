@@ -13,7 +13,7 @@ export const ENROLLMENT_PERIODS: IEnrollmentPeriod[] = [
   {
     id: 'fall-2025',
     title: '2025 Fall registration',
-    href: 'https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform',
+    href: 'https://forms.gle/oLbEBeBKnYjJDNBt6',
     isActive: true,
   },
   {
