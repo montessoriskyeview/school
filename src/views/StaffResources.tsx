@@ -1,6 +1,6 @@
 import React from 'react';
-import { PasswordProtection } from '../components/shared/PasswordProtection';
+import { ResourcesView } from '../components/shared/ResourcesView';
 
 export const StaffResources = () => {
-  return <PasswordProtection />;
+  return <ResourcesView userType="staff" />;
 };
