@@ -75,9 +75,9 @@ const getStaffResources = (): IResourceCategories => {
   return {
     forms: [
       {
-        title: 'Student Assessment Form',
+        title: 'Monthly Student Assessment Form',
         description: 'Template for student progress assessments',
-        link: '/assessment-form.pdf',
+        link: 'https://forms.gle/m2rv6LXK5t2KpfDX8',
         Icon: Assignment,
         isHighlighted: true,
       },

@@ -17,26 +17,43 @@ export const MapInfo = ({ title }: { title: string }) => {
 		zoom: 15
 	};
 
-
 	const [open, setOpen] = React.useState(false);
 
-	const link = `https://maps.google.com/?q=${defaultProps.center.lat},${defaultProps.center.lng}&z=${defaultProps.zoom}`
+  const link = `https://maps.google.com/?q=${defaultProps.center.lat},${defaultProps.center.lng}&z=${defaultProps.zoom}`;
 
-	const onClickCopy = () => {
-		setOpen(true);
-		navigator.clipboard.writeText(link);
-	}
+  const onClickCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(link);
+      setOpen(true);
+    } catch (error) {
+      console.error('Failed to copy to clipboard:', error);
+      // Fallback: try to copy using document.execCommand
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = link;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setOpen(true);
+      } catch (fallbackError) {
+        console.error('Fallback copy also failed:', fallbackError);
+      }
+    }
+  };
 
-	const onClickLink = () => {
-		window.open(link, "_blank");
-	}
-
+  const onClickLink = () => {
+    try {
+      window.open(link, '_blank');
+    } catch (error) {
+      console.error('Failed to open link:', error);
+    }
+  };
 
 	const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
 		if (reason === 'clickaway') {
-			return;
-		}
-
+      return;
+    }
 		setOpen(false);
 	};
 

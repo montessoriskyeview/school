@@ -1,0 +1,2891 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snapshot matches mobile layout 1`] = `
+<div>
+  <div
+    lang="en"
+  >
+    <a
+      href="#main-content"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; z-index: 9999;"
+    >
+      Skip to main content
+    </a>
+    <header
+      aria-label="Main navigation"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
+      role="banner"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          aria-controls="navigation-drawer"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Open navigation menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1kfaiov"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
+          >
+            Montessori Skye View
+          </h1>
+          <div
+            class="MuiBox-root css-13tqxrv"
+          >
+            <div
+              class="MuiBox-root css-1g20b0n"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Fall registration
+              </a>
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Summer camp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      role="main"
+    >
+      <div
+        class="MuiBox-root css-wxmjxp"
+      >
+        <div
+          class="MuiBox-root css-1mwyucw"
+          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+        >
+          <div
+            class="MuiBox-root css-wsi8sc"
+          />
+        </div>
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+        >
+          <div
+            class="MuiBox-root css-xf2up9"
+          >
+            <div
+              class="MuiStack-root css-1fktiy7-MuiStack-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Home
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/parents"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Parents
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/tuition"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Tuition
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/schedule"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Schedule
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/registration"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Registration
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/faq"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    FAQ
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/philosophy"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Philosophy
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
+          >
+            <div
+              class="MuiBox-root css-1pevsff"
+              spacing="lg"
+              variant="hero"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
+              >
+                Montessori Skye View Learning Center
+              </h1>
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
+              >
+                Child-Centered Education Las Vegas
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
+              >
+                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg); overflow: hidden;"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌿 Outdoor Learning in Action
+              </h2>
+              <div
+                class="MuiBox-root css-1psfugq"
+              >
+                <img
+                  alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+                  loading="eager"
+                  src="test-file-stub"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
+              >
+                "In every walk with nature, one receives far more than he seeks." - John Muir
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌟 Where Learning Comes Alive! 🌟
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1mndvmc-MuiTypography-root"
+              >
+                Nurturing curious minds and joyful hearts in grades Pre-K through 5th
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                About Our Montessori Learning Center
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🌱 Our Montessori Approach
+              </h3>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
+              >
+                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🎨 What Makes Our Montessori Learning Center Special
+              </h3>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-md); text-align: left;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🎯
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Individualized learning plans for every child
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🤝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Mixed-age classrooms that foster community
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🌿
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Beautiful outdoor learning spaces
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    💝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Nurturing environment that celebrates each child
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                Ready to Begin Your Child's Montessori Journey?
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1jh62j7"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="Expand enrollment options"
+            class="MuiBox-root css-tpqms"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiBox-root css-axw7ok"
+            >
+              <span
+                style="font-weight: 600;"
+              >
+                📚 Ready to Enroll?
+              </span>
+            </div>
+            <button
+              aria-hidden="true"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-smsurf-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqulnu"
+        >
+          <div
+            class="MuiBox-root css-1dm44cd"
+          >
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              style="background-color: rgb(31, 41, 55); color: rgb(255, 255, 255); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; width: 100%; max-width: 600px; align-self: center; justify-self: center; align-items: center; justify-content: center; margin: 0px auto; position: relative; z-index: 0;"
+              variant="default"
+            >
+              <div
+                class="MuiBox-root css-n88plx"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Fall registration
+                </a>
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Summer camp
+                </a>
+              </div>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 css-z5nl2j-MuiTypography-root"
+              >
+                Contact Information
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1trh5xa-MuiTypography-root"
+              >
+                Call, text, or email us:
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
+              >
+                <a
+                  aria-label="Call us at (702)721-9488"
+                  href="tel:7027219488"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  📞 (702) 721-9488
+                </a>
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ildajy-MuiTypography-root"
+              >
+                <a
+                  aria-label="Email us at nwlvmontessori@gmail.com"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  ✉️ 
+                  nwlvmontessori@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App Component - Mobile Experience Mobile Viewport Variations renders correctly on Samsung Galaxy S20 1`] = `
+<div>
+  <div
+    lang="en"
+  >
+    <a
+      href="#main-content"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; z-index: 9999;"
+    >
+      Skip to main content
+    </a>
+    <header
+      aria-label="Main navigation"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
+      role="banner"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          aria-controls="navigation-drawer"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Open navigation menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1kfaiov"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
+          >
+            Montessori Skye View
+          </h1>
+          <div
+            class="MuiBox-root css-13tqxrv"
+          >
+            <div
+              class="MuiBox-root css-1g20b0n"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Fall registration
+              </a>
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Summer camp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      role="main"
+    >
+      <div
+        class="MuiBox-root css-wxmjxp"
+      >
+        <div
+          class="MuiBox-root css-1mwyucw"
+          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+        >
+          <div
+            class="MuiBox-root css-wsi8sc"
+          />
+        </div>
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+        >
+          <div
+            class="MuiBox-root css-xf2up9"
+          >
+            <div
+              class="MuiStack-root css-1fktiy7-MuiStack-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Home
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/parents"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Parents
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/tuition"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Tuition
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/schedule"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Schedule
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/registration"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Registration
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/faq"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    FAQ
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/philosophy"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Philosophy
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
+          >
+            <div
+              class="MuiBox-root css-1pevsff"
+              spacing="lg"
+              variant="hero"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
+              >
+                Montessori Skye View Learning Center
+              </h1>
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
+              >
+                Child-Centered Education Las Vegas
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
+              >
+                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg); overflow: hidden;"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌿 Outdoor Learning in Action
+              </h2>
+              <div
+                class="MuiBox-root css-1psfugq"
+              >
+                <img
+                  alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+                  loading="eager"
+                  src="test-file-stub"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
+              >
+                "In every walk with nature, one receives far more than he seeks." - John Muir
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌟 Where Learning Comes Alive! 🌟
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1mndvmc-MuiTypography-root"
+              >
+                Nurturing curious minds and joyful hearts in grades Pre-K through 5th
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                About Our Montessori Learning Center
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🌱 Our Montessori Approach
+              </h3>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
+              >
+                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🎨 What Makes Our Montessori Learning Center Special
+              </h3>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-md); text-align: left;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🎯
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Individualized learning plans for every child
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🤝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Mixed-age classrooms that foster community
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🌿
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Beautiful outdoor learning spaces
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    💝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Nurturing environment that celebrates each child
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                Ready to Begin Your Child's Montessori Journey?
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1jh62j7"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="Expand enrollment options"
+            class="MuiBox-root css-tpqms"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiBox-root css-axw7ok"
+            >
+              <span
+                style="font-weight: 600;"
+              >
+                📚 Ready to Enroll?
+              </span>
+            </div>
+            <button
+              aria-hidden="true"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-smsurf-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqulnu"
+        >
+          <div
+            class="MuiBox-root css-1dm44cd"
+          >
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              style="background-color: rgb(31, 41, 55); color: rgb(255, 255, 255); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; width: 100%; max-width: 600px; align-self: center; justify-self: center; align-items: center; justify-content: center; margin: 0px auto; position: relative; z-index: 0;"
+              variant="default"
+            >
+              <div
+                class="MuiBox-root css-n88plx"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Fall registration
+                </a>
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Summer camp
+                </a>
+              </div>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 css-z5nl2j-MuiTypography-root"
+              >
+                Contact Information
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1trh5xa-MuiTypography-root"
+              >
+                Call, text, or email us:
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
+              >
+                <a
+                  aria-label="Call us at (702)721-9488"
+                  href="tel:7027219488"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  📞 (702) 721-9488
+                </a>
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ildajy-MuiTypography-root"
+              >
+                <a
+                  aria-label="Email us at nwlvmontessori@gmail.com"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  ✉️ 
+                  nwlvmontessori@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App Component - Mobile Experience Mobile Viewport Variations renders correctly on iPad 1`] = `
+<div>
+  <div
+    lang="en"
+  >
+    <a
+      href="#main-content"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; z-index: 9999;"
+    >
+      Skip to main content
+    </a>
+    <header
+      aria-label="Main navigation"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
+      role="banner"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          aria-controls="navigation-drawer"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Open navigation menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1kfaiov"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
+          >
+            Montessori Skye View
+          </h1>
+          <div
+            class="MuiBox-root css-13tqxrv"
+          >
+            <div
+              class="MuiBox-root css-1g20b0n"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Fall registration
+              </a>
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Summer camp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      role="main"
+    >
+      <div
+        class="MuiBox-root css-wxmjxp"
+      >
+        <div
+          class="MuiBox-root css-1mwyucw"
+          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+        >
+          <div
+            class="MuiBox-root css-wsi8sc"
+          />
+        </div>
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+        >
+          <div
+            class="MuiBox-root css-xf2up9"
+          >
+            <div
+              class="MuiStack-root css-1fktiy7-MuiStack-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Home
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/parents"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Parents
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/tuition"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Tuition
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/schedule"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Schedule
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/registration"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Registration
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/faq"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    FAQ
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/philosophy"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Philosophy
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
+          >
+            <div
+              class="MuiBox-root css-1pevsff"
+              spacing="lg"
+              variant="hero"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
+              >
+                Montessori Skye View Learning Center
+              </h1>
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
+              >
+                Child-Centered Education Las Vegas
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
+              >
+                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg); overflow: hidden;"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌿 Outdoor Learning in Action
+              </h2>
+              <div
+                class="MuiBox-root css-1psfugq"
+              >
+                <img
+                  alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+                  loading="eager"
+                  src="test-file-stub"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
+              >
+                "In every walk with nature, one receives far more than he seeks." - John Muir
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌟 Where Learning Comes Alive! 🌟
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1mndvmc-MuiTypography-root"
+              >
+                Nurturing curious minds and joyful hearts in grades Pre-K through 5th
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                About Our Montessori Learning Center
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🌱 Our Montessori Approach
+              </h3>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
+              >
+                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🎨 What Makes Our Montessori Learning Center Special
+              </h3>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-md); text-align: left;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🎯
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Individualized learning plans for every child
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🤝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Mixed-age classrooms that foster community
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🌿
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Beautiful outdoor learning spaces
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    💝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Nurturing environment that celebrates each child
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                Ready to Begin Your Child's Montessori Journey?
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1jh62j7"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="Expand enrollment options"
+            class="MuiBox-root css-tpqms"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiBox-root css-axw7ok"
+            >
+              <span
+                style="font-weight: 600;"
+              >
+                📚 Ready to Enroll?
+              </span>
+            </div>
+            <button
+              aria-hidden="true"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-smsurf-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqulnu"
+        >
+          <div
+            class="MuiBox-root css-1dm44cd"
+          >
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              style="background-color: rgb(31, 41, 55); color: rgb(255, 255, 255); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; width: 100%; max-width: 600px; align-self: center; justify-self: center; align-items: center; justify-content: center; margin: 0px auto; position: relative; z-index: 0;"
+              variant="default"
+            >
+              <div
+                class="MuiBox-root css-n88plx"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Fall registration
+                </a>
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Summer camp
+                </a>
+              </div>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 css-z5nl2j-MuiTypography-root"
+              >
+                Contact Information
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1trh5xa-MuiTypography-root"
+              >
+                Call, text, or email us:
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
+              >
+                <a
+                  aria-label="Call us at (702)721-9488"
+                  href="tel:7027219488"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  📞 (702) 721-9488
+                </a>
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ildajy-MuiTypography-root"
+              >
+                <a
+                  aria-label="Email us at nwlvmontessori@gmail.com"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  ✉️ 
+                  nwlvmontessori@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App Component - Mobile Experience Mobile Viewport Variations renders correctly on iPhone 12 1`] = `
+<div>
+  <div
+    lang="en"
+  >
+    <a
+      href="#main-content"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; z-index: 9999;"
+    >
+      Skip to main content
+    </a>
+    <header
+      aria-label="Main navigation"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
+      role="banner"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          aria-controls="navigation-drawer"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Open navigation menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1kfaiov"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
+          >
+            Montessori Skye View
+          </h1>
+          <div
+            class="MuiBox-root css-13tqxrv"
+          >
+            <div
+              class="MuiBox-root css-1g20b0n"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Fall registration
+              </a>
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Summer camp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      role="main"
+    >
+      <div
+        class="MuiBox-root css-wxmjxp"
+      >
+        <div
+          class="MuiBox-root css-1mwyucw"
+          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+        >
+          <div
+            class="MuiBox-root css-wsi8sc"
+          />
+        </div>
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+        >
+          <div
+            class="MuiBox-root css-xf2up9"
+          >
+            <div
+              class="MuiStack-root css-1fktiy7-MuiStack-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Home
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/parents"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Parents
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/tuition"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Tuition
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/schedule"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Schedule
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/registration"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Registration
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/faq"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    FAQ
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/philosophy"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Philosophy
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
+          >
+            <div
+              class="MuiBox-root css-1pevsff"
+              spacing="lg"
+              variant="hero"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
+              >
+                Montessori Skye View Learning Center
+              </h1>
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
+              >
+                Child-Centered Education Las Vegas
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
+              >
+                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg); overflow: hidden;"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌿 Outdoor Learning in Action
+              </h2>
+              <div
+                class="MuiBox-root css-1psfugq"
+              >
+                <img
+                  alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+                  loading="eager"
+                  src="test-file-stub"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
+              >
+                "In every walk with nature, one receives far more than he seeks." - John Muir
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌟 Where Learning Comes Alive! 🌟
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1mndvmc-MuiTypography-root"
+              >
+                Nurturing curious minds and joyful hearts in grades Pre-K through 5th
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                About Our Montessori Learning Center
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🌱 Our Montessori Approach
+              </h3>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
+              >
+                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🎨 What Makes Our Montessori Learning Center Special
+              </h3>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-md); text-align: left;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🎯
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Individualized learning plans for every child
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🤝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Mixed-age classrooms that foster community
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🌿
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Beautiful outdoor learning spaces
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    💝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Nurturing environment that celebrates each child
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                Ready to Begin Your Child's Montessori Journey?
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1jh62j7"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="Expand enrollment options"
+            class="MuiBox-root css-tpqms"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiBox-root css-axw7ok"
+            >
+              <span
+                style="font-weight: 600;"
+              >
+                📚 Ready to Enroll?
+              </span>
+            </div>
+            <button
+              aria-hidden="true"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-smsurf-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqulnu"
+        >
+          <div
+            class="MuiBox-root css-1dm44cd"
+          >
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              style="background-color: rgb(31, 41, 55); color: rgb(255, 255, 255); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; width: 100%; max-width: 600px; align-self: center; justify-self: center; align-items: center; justify-content: center; margin: 0px auto; position: relative; z-index: 0;"
+              variant="default"
+            >
+              <div
+                class="MuiBox-root css-n88plx"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Fall registration
+                </a>
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Summer camp
+                </a>
+              </div>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 css-z5nl2j-MuiTypography-root"
+              >
+                Contact Information
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1trh5xa-MuiTypography-root"
+              >
+                Call, text, or email us:
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
+              >
+                <a
+                  aria-label="Call us at (702)721-9488"
+                  href="tel:7027219488"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  📞 (702) 721-9488
+                </a>
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ildajy-MuiTypography-root"
+              >
+                <a
+                  aria-label="Email us at nwlvmontessori@gmail.com"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  ✉️ 
+                  nwlvmontessori@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App Component - Mobile Experience Mobile Viewport Variations renders correctly on iPhone SE 1`] = `
+<div>
+  <div
+    lang="en"
+  >
+    <a
+      href="#main-content"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; z-index: 9999;"
+    >
+      Skip to main content
+    </a>
+    <header
+      aria-label="Main navigation"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
+      role="banner"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          aria-controls="navigation-drawer"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Open navigation menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1kfaiov"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
+          >
+            Montessori Skye View
+          </h1>
+          <div
+            class="MuiBox-root css-13tqxrv"
+          >
+            <div
+              class="MuiBox-root css-1g20b0n"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Fall registration
+              </a>
+              <a
+                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                2025 Summer camp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      role="main"
+    >
+      <div
+        class="MuiBox-root css-wxmjxp"
+      >
+        <div
+          class="MuiBox-root css-1mwyucw"
+          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+        >
+          <div
+            class="MuiBox-root css-wsi8sc"
+          />
+        </div>
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+        >
+          <div
+            class="MuiBox-root css-xf2up9"
+          >
+            <div
+              class="MuiStack-root css-1fktiy7-MuiStack-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Home
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/parents"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Parents
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/tuition"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Tuition
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/schedule"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Schedule
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/registration"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Registration
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/faq"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    FAQ
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/philosophy"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Philosophy
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
+          >
+            <div
+              class="MuiBox-root css-1pevsff"
+              spacing="lg"
+              variant="hero"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
+              >
+                Montessori Skye View Learning Center
+              </h1>
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
+              >
+                Child-Centered Education Las Vegas
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
+              >
+                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg); overflow: hidden;"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌿 Outdoor Learning in Action
+              </h2>
+              <div
+                class="MuiBox-root css-1psfugq"
+              >
+                <img
+                  alt="Children learning outdoors at Montessori Skye View Learning Center with teacher on sunny day - beautiful outdoor learning environment in Las Vegas"
+                  loading="eager"
+                  src="test-file-stub"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
+              >
+                "In every walk with nature, one receives far more than he seeks." - John Muir
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
+              >
+                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🌟 Where Learning Comes Alive! 🌟
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1mndvmc-MuiTypography-root"
+              >
+                Nurturing curious minds and joyful hearts in grades Pre-K through 5th
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                About Our Montessori Learning Center
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🌱 Our Montessori Approach
+              </h3>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
+              >
+                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+              </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
+              >
+                🎨 What Makes Our Montessori Learning Center Special
+              </h3>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-md); text-align: left;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🎯
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Individualized learning plans for every child
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🤝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Mixed-age classrooms that foster community
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    🌿
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Beautiful outdoor learning spaces
+                  </p>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 1.5rem;"
+                  >
+                     
+                    💝
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
+                  >
+                    Nurturing environment that celebrates each child
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              variant="default"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
+              >
+                Ready to Begin Your Child's Montessori Journey?
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
+              >
+                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1jh62j7"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="Expand enrollment options"
+            class="MuiBox-root css-tpqms"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiBox-root css-axw7ok"
+            >
+              <span
+                style="font-weight: 600;"
+              >
+                📚 Ready to Enroll?
+              </span>
+            </div>
+            <button
+              aria-hidden="true"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-smsurf-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqulnu"
+        >
+          <div
+            class="MuiBox-root css-1dm44cd"
+          >
+            <div
+              class="MuiBox-root css-1cufukc"
+              spacing="lg"
+              style="background-color: rgb(31, 41, 55); color: rgb(255, 255, 255); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; width: 100%; max-width: 600px; align-self: center; justify-self: center; align-items: center; justify-content: center; margin: 0px auto; position: relative; z-index: 0;"
+              variant="default"
+            >
+              <div
+                class="MuiBox-root css-n88plx"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Fall registration
+                </a>
+                <a
+                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  2025 Summer camp
+                </a>
+              </div>
+              <h4
+                class="MuiTypography-root MuiTypography-h4 css-z5nl2j-MuiTypography-root"
+              >
+                Contact Information
+              </h4>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1trh5xa-MuiTypography-root"
+              >
+                Call, text, or email us:
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
+              >
+                <a
+                  aria-label="Call us at (702)721-9488"
+                  href="tel:7027219488"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  📞 (702) 721-9488
+                </a>
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ildajy-MuiTypography-root"
+              >
+                <a
+                  aria-label="Email us at nwlvmontessori@gmail.com"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
+                >
+                  ✉️ 
+                  nwlvmontessori@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
