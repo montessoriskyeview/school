@@ -1,33 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CanvasView } from './Canvas/CanvasView';
 import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
-import { Box, Card, CardContent, Link, Chip } from '@mui/material';
+import {
+  Box,
+  Link,
+  Chip,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
+import { ExpandMore, Assignment, Description, Info } from '@mui/icons-material';
 import { getResourcesByType } from './resourceUtils';
+
 interface IResourcesViewProps {
   userType: 'parents' | 'staff';
 }
 
 const getCategoryColor = (category: string) => {
   switch (category) {
-    case 'form':
+    case 'forms':
       return '#2563EB'; // Blue
-    case 'document':
+    case 'documents':
       return '#059669'; // Green
-    case 'info':
+    case 'information':
       return '#7C3AED'; // Purple
     default:
       return '#374151'; // Gray
   }
 };
 
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case 'forms':
+      return <Assignment />;
+    case 'documents':
+      return <Description />;
+    case 'information':
+      return <Info />;
+    default:
+      return <Description />;
+  }
+};
+
 const getCategoryLabel = (category: string) => {
   switch (category) {
-    case 'form':
-      return 'Form';
-    case 'document':
-      return 'Document';
-    case 'info':
+    case 'forms':
+      return 'Forms';
+    case 'documents':
+      return 'Documents';
+    case 'information':
       return 'Information';
     default:
       return 'Other';
@@ -41,6 +67,241 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
     userType === 'parents'
       ? 'Important documents and forms for parents'
       : 'Essential resources for staff members';
+
+  const [expanded, setExpanded] = useState<string | false>('forms');
+
+  // Get all highlighted items from all categories
+  const highlightedItems = [
+    ...resources.forms.filter(item => item.isHighlighted),
+    ...resources.documents.filter(item => item.isHighlighted),
+    ...resources.information.filter(item => item.isHighlighted),
+  ];
+
+  const handleAccordionChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
+  const renderResourceList = (resourceList: any[], category: string) => (
+    <List sx={{ width: '100%' }}>
+      {resourceList.map((resource, index) => (
+        <ListItem
+          key={index}
+          sx={{
+            border: resource.isHighlighted
+              ? `2px solid ${getCategoryColor(category)}`
+              : '1px solid var(--light-gray)',
+            borderRadius: '8px',
+            marginBottom: 'var(--spacing-sm)',
+            backgroundColor: resource.isHighlighted
+              ? 'var(--light-gray)'
+              : 'var(--white)',
+            transition: 'all 0.2s ease',
+            position: 'relative',
+            '&:hover': {
+              borderColor: getCategoryColor(category),
+              boxShadow: resource.isHighlighted
+                ? 'var(--shadow-md)'
+                : 'var(--shadow-sm)',
+            },
+          }}
+        >
+          {resource.isHighlighted && (
+            <Box
+              component="div"
+              sx={{
+                position: 'absolute',
+                top: '-8px',
+                left: '16px',
+                backgroundColor: getCategoryColor(category),
+                color: 'white',
+                padding: '2px 8px',
+                borderRadius: '12px',
+                fontSize: 'var(--text-xs)',
+                fontWeight: 600,
+                zIndex: 1,
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              NEW
+            </Box>
+          )}
+          <ListItemIcon sx={{ color: getCategoryColor(category) }}>
+            <resource.Icon />
+          </ListItemIcon>
+          <ListItemText
+            primary={
+              <Typography
+                variant="h6"
+                sx={{
+                  color: 'var(--text-dark)',
+                  fontWeight: resource.isHighlighted ? 700 : 600,
+                  fontSize: 'var(--text-lg)',
+                }}
+              >
+                {resource.title}
+              </Typography>
+            }
+            secondary={
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'var(--text-secondary)',
+                  lineHeight: 'var(--leading-relaxed)',
+                  marginTop: 'var(--spacing-xs)',
+                }}
+              >
+                {resource.description}
+              </Typography>
+            }
+          />
+          <Link
+            href={resource.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: 'var(--text-sm)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 'var(--spacing-xs)',
+              padding: 'var(--spacing-sm) var(--spacing-md)',
+              borderRadius: '6px',
+              backgroundColor: resource.isHighlighted
+                ? getCategoryColor(category)
+                : 'var(--light-gray)',
+              color: resource.isHighlighted
+                ? 'white'
+                : getCategoryColor(category),
+              '&:hover': {
+                backgroundColor: getCategoryColor(category),
+                color: 'white',
+                textDecoration: 'none',
+                transform: resource.isHighlighted ? 'scale(1.05)' : 'none',
+              },
+              '&:focus': {
+                outline: `2px solid ${getCategoryColor(category)}`,
+                outlineOffset: '2px',
+                borderRadius: '6px',
+              },
+            }}
+          >
+            {resource.isHighlighted ? 'View Now →' : 'View →'}
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  const renderHighlightedList = (highlightedList: any[]) => (
+    <List sx={{ width: '100%' }}>
+      {highlightedList.map((resource, index) => {
+        // Determine category for color coding
+        const category = resources.forms.includes(resource)
+          ? 'forms'
+          : resources.documents.includes(resource)
+          ? 'documents'
+          : 'information';
+
+        return (
+          <ListItem
+            key={`highlighted-${index}`}
+            sx={{
+              border: `2px solid ${getCategoryColor(category)}`,
+              borderRadius: '8px',
+              marginBottom: 'var(--spacing-sm)',
+              backgroundColor: 'var(--light-gray)',
+              transition: 'all 0.2s ease',
+              position: 'relative',
+              '&:hover': {
+                borderColor: getCategoryColor(category),
+                boxShadow: 'var(--shadow-md)',
+              },
+            }}
+          >
+            <Box
+              component="div"
+              sx={{
+                position: 'absolute',
+                top: '-8px',
+                left: '16px',
+                backgroundColor: getCategoryColor(category),
+                color: 'white',
+                padding: '2px 8px',
+                borderRadius: '12px',
+                fontSize: 'var(--text-xs)',
+                fontWeight: 600,
+                zIndex: 1,
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              NEW
+            </Box>
+            <ListItemIcon sx={{ color: getCategoryColor(category) }}>
+              <resource.Icon />
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: 'var(--text-dark)',
+                    fontWeight: 700,
+                    fontSize: 'var(--text-lg)',
+                  }}
+                >
+                  {resource.title}
+                </Typography>
+              }
+              secondary={
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: 'var(--text-secondary)',
+                    lineHeight: 'var(--leading-relaxed)',
+                    marginTop: 'var(--spacing-xs)',
+                  }}
+                >
+                  {resource.description}
+                </Typography>
+              }
+            />
+            <Link
+              href={resource.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textDecoration: 'none',
+                fontWeight: 600,
+                fontSize: 'var(--text-sm)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 'var(--spacing-xs)',
+                padding: 'var(--spacing-sm) var(--spacing-md)',
+                borderRadius: '6px',
+                backgroundColor: getCategoryColor(category),
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: getCategoryColor(category),
+                  color: 'white',
+                  textDecoration: 'none',
+                  transform: 'scale(1.05)',
+                },
+                '&:focus': {
+                  outline: `2px solid ${getCategoryColor(category)}`,
+                  outlineOffset: '2px',
+                  borderRadius: '6px',
+                },
+              }}
+            >
+              View Now →
+            </Link>
+          </ListItem>
+        );
+      })}
+    </List>
+  );
 
   return (
     <CanvasView>
@@ -79,39 +340,83 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
         </Typography>
       </ContentContainer>
 
+      {/* Highlighted Items Section */}
+      {highlightedItems.length > 0 && (
+        <ContentContainer
+          variant="card"
+          spacing="lg"
+          style={{
+            background: 'var(--white)',
+            color: 'var(--text-dark)',
+            border: '3px solid var(--primary-blue)',
+            boxShadow: 'var(--shadow-lg)',
+          }}
+        >
+          <Typography
+            variant="h3"
+            sx={{
+              color: 'var(--text-dark)',
+              marginBottom: 'var(--spacing-lg)',
+              fontWeight: 700,
+              fontSize: 'var(--text-2xl)',
+              textAlign: 'center',
+            }}
+          >
+            ⭐ Featured Resources
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-secondary)',
+              fontSize: 'var(--text-lg)',
+              lineHeight: 'var(--leading-loose)',
+              textAlign: 'center',
+              marginBottom: 'var(--spacing-xl)',
+            }}
+          >
+            Important and recently updated resources
+          </Typography>
+          {renderHighlightedList(highlightedItems)}
+        </ContentContainer>
+      )}
+
       <Box
         component="div"
         sx={{
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: '1fr',
-            md: 'repeat(auto-fit, minmax(350px, 1fr))',
-          },
-          gap: 'var(--spacing-xl)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 'var(--spacing-lg)',
           width: '100%',
         }}
       >
-        {resources.map((resource, index) => (
-          <Card
-            key={index}
+        {/* Forms Section */}
+        {resources.forms.length > 0 && (
+          <Accordion
+            expanded={expanded === 'forms'}
+            onChange={handleAccordionChange('forms')}
             sx={{
-              background: 'var(--white)',
+              backgroundColor: 'var(--white)',
               border: '2px solid var(--light-gray)',
-              borderRadius: '16px',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                transform: 'translateY(-4px)',
-                boxShadow: 'var(--shadow-xl)',
-                borderColor: getCategoryColor(resource.category),
+              borderRadius: '12px',
+              boxShadow: 'var(--shadow-sm)',
+              '&:before': {
+                display: 'none',
+              },
+              '&.Mui-expanded': {
+                borderColor: getCategoryColor('forms'),
+                boxShadow: 'var(--shadow-md)',
               },
             }}
           >
-            <CardContent
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
               sx={{
-                padding: 'var(--spacing-xl)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 'var(--spacing-md)',
+                backgroundColor: 'var(--light-gray)',
+                borderRadius: '10px',
+                '& .MuiAccordionSummary-content': {
+                  alignItems: 'center',
+                  gap: 'var(--spacing-md)',
+                },
               }}
             >
               <Box
@@ -120,80 +425,200 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 'var(--spacing-md)',
-                  marginBottom: 'var(--spacing-sm)',
                 }}
               >
                 <Box
                   component="div"
                   sx={{
-                    color: getCategoryColor(resource.category),
+                    color: getCategoryColor('forms'),
                     display: 'flex',
                     alignItems: 'center',
                   }}
                 >
-                  <resource.Icon />
+                  {getCategoryIcon('forms')}
                 </Box>
                 <Chip
-                  label={getCategoryLabel(resource.category)}
+                  label={`${resources.forms.length} ${getCategoryLabel(
+                    'forms'
+                  )}`}
                   size="small"
                   sx={{
-                    backgroundColor: getCategoryColor(resource.category),
+                    backgroundColor: getCategoryColor('forms'),
                     color: 'white',
                     fontWeight: 600,
                   }}
                 />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: 'var(--text-dark)',
+                    fontWeight: 700,
+                    fontSize: 'var(--text-xl)',
+                  }}
+                >
+                  Forms & Applications
+                </Typography>
               </Box>
+            </AccordionSummary>
+            <AccordionDetails sx={{ padding: 'var(--spacing-xl)' }}>
+              {renderResourceList(resources.forms, 'forms')}
+            </AccordionDetails>
+          </Accordion>
+        )}
 
-              <Typography
-                variant="h6"
-                sx={{
-                  color: 'var(--text-dark)',
-                  fontWeight: 700,
-                  fontSize: 'var(--text-lg)',
-                  marginBottom: 'var(--spacing-sm)',
-                }}
-              >
-                {resource.title}
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  color: 'var(--text-secondary)',
-                  lineHeight: 'var(--leading-relaxed)',
-                  marginBottom: 'var(--spacing-md)',
-                }}
-              >
-                {resource.description}
-              </Typography>
-
-              <Link
-                href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  color: getCategoryColor(resource.category),
-                  textDecoration: 'none',
-                  fontWeight: 600,
-                  fontSize: 'var(--text-sm)',
-                  display: 'inline-flex',
+        {/* Documents Section */}
+        {resources.documents.length > 0 && (
+          <Accordion
+            expanded={expanded === 'documents'}
+            onChange={handleAccordionChange('documents')}
+            sx={{
+              backgroundColor: 'var(--white)',
+              border: '2px solid var(--light-gray)',
+              borderRadius: '12px',
+              boxShadow: 'var(--shadow-sm)',
+              '&:before': {
+                display: 'none',
+              },
+              '&.Mui-expanded': {
+                borderColor: getCategoryColor('documents'),
+                boxShadow: 'var(--shadow-md)',
+              },
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              sx={{
+                backgroundColor: 'var(--light-gray)',
+                borderRadius: '10px',
+                '& .MuiAccordionSummary-content': {
                   alignItems: 'center',
-                  gap: 'var(--spacing-xs)',
-                  '&:hover': {
-                    textDecoration: 'underline',
-                  },
-                  '&:focus': {
-                    outline: `2px solid ${getCategoryColor(resource.category)}`,
-                    outlineOffset: '2px',
-                    borderRadius: '4px',
-                  },
+                  gap: 'var(--spacing-md)',
+                },
+              }}
+            >
+              <Box
+                component="div"
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--spacing-md)',
                 }}
               >
-                View Document →
-              </Link>
-            </CardContent>
-          </Card>
-        ))}
+                <Box
+                  component="div"
+                  sx={{
+                    color: getCategoryColor('documents'),
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  {getCategoryIcon('documents')}
+                </Box>
+                <Chip
+                  label={`${resources.documents.length} ${getCategoryLabel(
+                    'documents'
+                  )}`}
+                  size="small"
+                  sx={{
+                    backgroundColor: getCategoryColor('documents'),
+                    color: 'white',
+                    fontWeight: 600,
+                  }}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: 'var(--text-dark)',
+                    fontWeight: 700,
+                    fontSize: 'var(--text-xl)',
+                  }}
+                >
+                  Documents & Handbooks
+                </Typography>
+              </Box>
+            </AccordionSummary>
+            <AccordionDetails sx={{ padding: 'var(--spacing-xl)' }}>
+              {renderResourceList(resources.documents, 'documents')}
+            </AccordionDetails>
+          </Accordion>
+        )}
+
+        {/* Information Section */}
+        {resources.information.length > 0 && (
+          <Accordion
+            expanded={expanded === 'information'}
+            onChange={handleAccordionChange('information')}
+            sx={{
+              backgroundColor: 'var(--white)',
+              border: '2px solid var(--light-gray)',
+              borderRadius: '12px',
+              boxShadow: 'var(--shadow-sm)',
+              '&:before': {
+                display: 'none',
+              },
+              '&.Mui-expanded': {
+                borderColor: getCategoryColor('information'),
+                boxShadow: 'var(--shadow-md)',
+              },
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              sx={{
+                backgroundColor: 'var(--light-gray)',
+                borderRadius: '10px',
+                '& .MuiAccordionSummary-content': {
+                  alignItems: 'center',
+                  gap: 'var(--spacing-md)',
+                },
+              }}
+            >
+              <Box
+                component="div"
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--spacing-md)',
+                }}
+              >
+                <Box
+                  component="div"
+                  sx={{
+                    color: getCategoryColor('information'),
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  {getCategoryIcon('information')}
+                </Box>
+                <Chip
+                  label={`${resources.information.length} ${getCategoryLabel(
+                    'information'
+                  )}`}
+                  size="small"
+                  sx={{
+                    backgroundColor: getCategoryColor('information'),
+                    color: 'white',
+                    fontWeight: 600,
+                  }}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: 'var(--text-dark)',
+                    fontWeight: 700,
+                    fontSize: 'var(--text-xl)',
+                  }}
+                >
+                  Information & Guidelines
+                </Typography>
+              </Box>
+            </AccordionSummary>
+            <AccordionDetails sx={{ padding: 'var(--spacing-xl)' }}>
+              {renderResourceList(resources.information, 'information')}
+            </AccordionDetails>
+          </Accordion>
+        )}
       </Box>
 
       <ContentContainer
