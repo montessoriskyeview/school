@@ -12,6 +12,7 @@ export const PAGE_ROUTES: Record<string, string> = {
   review: '/review',
   blog: '/blog',
   home: '/',
+  staff: '/staff-resources',
 };
 
 export const ROUTE_TO_PAGE: Record<string, string> = Object.entries(

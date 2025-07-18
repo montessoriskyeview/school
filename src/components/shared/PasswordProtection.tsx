@@ -19,9 +19,9 @@ export const PasswordProtection: React.FC<IPasswordProtectionProps> = ({
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Check if already authenticated (stored in sessionStorage)
+  // Check if already authenticated (stored in localStorage)
   useEffect(() => {
-    const authenticated = sessionStorage.getItem('msv_staff_authenticated');
+    const authenticated = localStorage.getItem('hasStaffAuthenticated');
     if (authenticated === 'true') {
       setIsAuthenticated(true);
     }
@@ -41,7 +41,7 @@ export const PasswordProtection: React.FC<IPasswordProtectionProps> = ({
 
       if (password === correctPassword) {
         setIsAuthenticated(true);
-        sessionStorage.setItem('msv_staff_authenticated', 'true');
+        localStorage.setItem('hasStaffAuthenticated', 'true');
       } else {
         setError('Incorrect password. Please try again.');
         setPassword('');
@@ -53,42 +53,9 @@ export const PasswordProtection: React.FC<IPasswordProtectionProps> = ({
     }
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    sessionStorage.removeItem('msv_staff_authenticated');
-    setPassword('');
-    setError('');
-  };
-
   if (isAuthenticated) {
     return (
       <Box component="div">
-        <Box
-          component="div"
-          sx={{
-            position: 'fixed',
-            top: '80px',
-            right: '20px',
-            zIndex: 1000,
-          }}
-        >
-          <Button
-            variant="outlined"
-            size="small"
-            onClick={handleLogout}
-            sx={{
-              backgroundColor: 'var(--white)',
-              borderColor: 'var(--primary-blue)',
-              color: 'var(--primary-blue)',
-              '&:hover': {
-                backgroundColor: 'var(--light-gray)',
-                borderColor: 'var(--primary-blue)',
-              },
-            }}
-          >
-            Logout Staff
-          </Button>
-        </Box>
         <ResourcesView userType="staff" />
       </Box>
     );
