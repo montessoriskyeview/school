@@ -1,24 +1,91 @@
 import * as React from 'react';
-import {List, ListItemText} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 interface NestedListItemProps {
   title: string;
   description: string | string[];
 }
 
-export const NestedListItem: React.FC<NestedListItemProps> = ({title, description}) => {
+export const NestedListItem: React.FC<NestedListItemProps> = ({
+  title,
+  description,
+}) => {
   return (
-    <List sx={{ listStyleType: 'disc', marginLeft: '40px' }}>
-      <ListItemText primary={title} sx={{ display: 'list-item' }} />
-      <List sx={{ listStyleType: 'disc', marginLeft: '40px' }}>
+    <Box
+      component="div"
+      sx={{
+        marginBottom: 'var(--spacing-md)',
+        paddingLeft: 'var(--spacing-lg)',
+        position: 'relative',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          left: 'var(--spacing-sm)',
+          top: '0.75rem',
+          width: '6px',
+          height: '6px',
+          borderRadius: '50%',
+          backgroundColor: 'var(--primary-green)',
+        },
+      }}
+    >
+      <Typography
+        variant="body1"
+        sx={{
+          fontWeight: 600,
+          color: 'var(--text-dark)',
+          marginBottom: 'var(--spacing-xs)',
+          lineHeight: 'var(--leading-relaxed)',
+        }}
+      >
+        {title}
+      </Typography>
+
+      <Box
+        component="div"
+        sx={{
+          paddingLeft: 'var(--spacing-md)',
+        }}
+      >
         {typeof description === 'string' ? (
-          <ListItemText primary={description} sx={{ display: 'list-item' }} />
+          <Typography
+            variant="body2"
+            sx={{
+              color: 'var(--text-secondary)',
+              lineHeight: 'var(--leading-relaxed)',
+              marginBottom: 'var(--spacing-xs)',
+            }}
+          >
+            {description}
+          </Typography>
         ) : (
-          description.map(d => (
-            <ListItemText primary={d} sx={{ display: 'list-item' }} key={d} />
+          description.map((item, index) => (
+            <Typography
+              key={index}
+              variant="body2"
+              sx={{
+                color: 'var(--text-secondary)',
+                lineHeight: 'var(--leading-relaxed)',
+                marginBottom: 'var(--spacing-xs)',
+                position: 'relative',
+                paddingLeft: 'var(--spacing-md)',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  left: 'var(--spacing-xs)',
+                  top: '0.5rem',
+                  width: '4px',
+                  height: '4px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--text-secondary)',
+                },
+              }}
+            >
+              {item}
+            </Typography>
           ))
         )}
-      </List>
-    </List>
+      </Box>
+    </Box>
   );
 };

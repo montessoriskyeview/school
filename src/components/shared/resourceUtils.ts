@@ -57,7 +57,7 @@ const getParentResources = (): IResourceCategories => {
       {
         title: 'School Calendar',
         description: 'Academic calendar with holidays and events',
-        link: 'https://calendar.google.com/calendar/u/0?cid=bndsdm1vbnRlc3NvcmlAZ21haWwuY29t',
+        link: '/schedule',
         Icon: School,
         isHighlighted: true,
       },
