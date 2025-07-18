@@ -30,16 +30,18 @@ const getParentResources = (): IResourceCategories => {
   return {
     forms: [
       {
-        title: 'Emergency Contact Form',
-        description: 'Update emergency contact information',
-        link: '/emergency-contact.pdf',
-        Icon: Assignment,
-      },
-      {
         title: 'Medical Release Form',
         description: 'Authorization for medical treatment if needed',
-        link: '/medical-release.pdf',
+        link: 'https://forms.gle/ffVZTu7zwUq5uwqn6',
         Icon: Assignment,
+        isHighlighted: true,
+      },
+      {
+        title: 'Monthly Parent Feedback Form',
+        description: 'Feedback form for parents',
+        link: 'https://forms.gle/AZMdY2XUUtUUnUQ79',
+        Icon: Assignment,
+        isHighlighted: true,
       },
     ],
     documents: [
@@ -50,24 +52,19 @@ const getParentResources = (): IResourceCategories => {
         Icon: Description,
         isHighlighted: true,
       },
-      {
-        title: 'Tuition Payment Schedule',
-        description: 'Monthly payment schedule and policies',
-        link: '/tuition-schedule.pdf',
-        Icon: Description,
-      },
-      {
-        title: 'School Calendar',
-        description: 'Academic calendar with holidays and events',
-        link: '/school-calendar.pdf',
-        Icon: School,
-      },
     ],
     information: [
       {
+        title: 'School Calendar',
+        description: 'Academic calendar with holidays and events',
+        link: 'https://calendar.google.com/calendar/u/0?cid=bndsdm1vbnRlc3NvcmlAZ21haWwuY29t',
+        Icon: School,
+        isHighlighted: true,
+      },
+      {
         title: 'Parent Communication Guidelines',
         description: 'How to stay connected with teachers and staff',
-        link: '/communication-guidelines.pdf',
+        link: 'https://docs.google.com/document/d/1JJFfZA7JXo1tRGHWm1H7A4HeN6uyK_pPcBuv5yvxgGQ/edit?usp=sharing',
         Icon: Info,
       },
     ],
