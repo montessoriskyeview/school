@@ -4,18 +4,15 @@ import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
 import {
   Box,
-  Link,
   Chip,
   Accordion,
   AccordionSummary,
   AccordionDetails,
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
 } from '@mui/material';
 import { ExpandMore, Assignment, Description, Info } from '@mui/icons-material';
 import { getResourcesByType } from './resourceUtils';
+import { ResourceListItem } from './ResourceListItem';
 
 interface IResourcesViewProps {
   userType: 'parents' | 'staff';
@@ -85,111 +82,13 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
   const renderResourceList = (resourceList: any[], category: string) => (
     <List sx={{ width: '100%' }}>
       {resourceList.map((resource, index) => (
-        <ListItem
+        <ResourceListItem
           key={index}
-          sx={{
-            border: resource.isHighlighted
-              ? `2px solid ${getCategoryColor(category)}`
-              : '1px solid var(--light-gray)',
-            borderRadius: '8px',
-            marginBottom: 'var(--spacing-sm)',
-            backgroundColor: resource.isHighlighted
-              ? 'var(--light-gray)'
-              : 'var(--white)',
-            transition: 'all 0.2s ease',
-            position: 'relative',
-            '&:hover': {
-              borderColor: getCategoryColor(category),
-              boxShadow: resource.isHighlighted
-                ? 'var(--shadow-md)'
-                : 'var(--shadow-sm)',
-            },
-          }}
-        >
-          {resource.isHighlighted && (
-            <Box
-              component="div"
-              sx={{
-                position: 'absolute',
-                top: '-8px',
-                left: '16px',
-                backgroundColor: getCategoryColor(category),
-                color: 'white',
-                padding: '2px 8px',
-                borderRadius: '12px',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 600,
-                zIndex: 1,
-                boxShadow: 'var(--shadow-sm)',
-              }}
-            >
-              NEW
-            </Box>
-          )}
-          <ListItemIcon sx={{ color: getCategoryColor(category) }}>
-            <resource.Icon />
-          </ListItemIcon>
-          <ListItemText
-            primary={
-              <Typography
-                variant="h6"
-                sx={{
-                  color: 'var(--text-dark)',
-                  fontWeight: resource.isHighlighted ? 700 : 600,
-                  fontSize: 'var(--text-lg)',
-                }}
-              >
-                {resource.title}
-              </Typography>
-            }
-            secondary={
-              <Typography
-                variant="body2"
-                sx={{
-                  color: 'var(--text-secondary)',
-                  lineHeight: 'var(--leading-relaxed)',
-                  marginTop: 'var(--spacing-xs)',
-                }}
-              >
-                {resource.description}
-              </Typography>
-            }
-          />
-          <Link
-            href={resource.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: 'var(--text-sm)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 'var(--spacing-xs)',
-              padding: 'var(--spacing-sm) var(--spacing-md)',
-              borderRadius: '6px',
-              backgroundColor: resource.isHighlighted
-                ? getCategoryColor(category)
-                : 'var(--light-gray)',
-              color: resource.isHighlighted
-                ? 'white'
-                : getCategoryColor(category),
-              '&:hover': {
-                backgroundColor: getCategoryColor(category),
-                color: 'white',
-                textDecoration: 'none',
-                transform: resource.isHighlighted ? 'scale(1.05)' : 'none',
-              },
-              '&:focus': {
-                outline: `2px solid ${getCategoryColor(category)}`,
-                outlineOffset: '2px',
-                borderRadius: '6px',
-              },
-            }}
-          >
-            {resource.isHighlighted ? 'View Now →' : 'View →'}
-          </Link>
-        </ListItem>
+          resource={resource}
+          category={category}
+          categoryColor={getCategoryColor(category)}
+          index={index}
+        />
       ))}
     </List>
   );
@@ -205,99 +104,13 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
           : 'information';
 
         return (
-          <ListItem
+          <ResourceListItem
             key={`highlighted-${index}`}
-            sx={{
-              border: `2px solid ${getCategoryColor(category)}`,
-              borderRadius: '8px',
-              marginBottom: 'var(--spacing-sm)',
-              backgroundColor: 'var(--light-gray)',
-              transition: 'all 0.2s ease',
-              position: 'relative',
-              '&:hover': {
-                borderColor: getCategoryColor(category),
-                boxShadow: 'var(--shadow-md)',
-              },
-            }}
-          >
-            <Box
-              component="div"
-              sx={{
-                position: 'absolute',
-                top: '-8px',
-                left: '16px',
-                backgroundColor: getCategoryColor(category),
-                color: 'white',
-                padding: '2px 8px',
-                borderRadius: '12px',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 600,
-                zIndex: 1,
-                boxShadow: 'var(--shadow-sm)',
-              }}
-            >
-              NEW
-            </Box>
-            <ListItemIcon sx={{ color: getCategoryColor(category) }}>
-              <resource.Icon />
-            </ListItemIcon>
-            <ListItemText
-              primary={
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: 'var(--text-dark)',
-                    fontWeight: 700,
-                    fontSize: 'var(--text-lg)',
-                  }}
-                >
-                  {resource.title}
-                </Typography>
-              }
-              secondary={
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: 'var(--text-secondary)',
-                    lineHeight: 'var(--leading-relaxed)',
-                    marginTop: 'var(--spacing-xs)',
-                  }}
-                >
-                  {resource.description}
-                </Typography>
-              }
-            />
-            <Link
-              href={resource.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: 'var(--text-sm)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 'var(--spacing-xs)',
-                padding: 'var(--spacing-sm) var(--spacing-md)',
-                borderRadius: '6px',
-                backgroundColor: getCategoryColor(category),
-                color: 'white',
-                '&:hover': {
-                  backgroundColor: getCategoryColor(category),
-                  color: 'white',
-                  textDecoration: 'none',
-                  transform: 'scale(1.05)',
-                },
-                '&:focus': {
-                  outline: `2px solid ${getCategoryColor(category)}`,
-                  outlineOffset: '2px',
-                  borderRadius: '6px',
-                },
-              }}
-            >
-              View Now →
-            </Link>
-          </ListItem>
+            resource={resource}
+            category={category}
+            categoryColor={getCategoryColor(category)}
+            index={index}
+          />
         );
       })}
     </List>
@@ -454,6 +267,7 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
                     color: 'var(--text-dark)',
                     fontWeight: 700,
                     fontSize: 'var(--text-xl)',
+                    marginBottom: 0,
                   }}
                 >
                   Forms & Applications
