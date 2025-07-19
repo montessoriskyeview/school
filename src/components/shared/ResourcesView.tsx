@@ -450,7 +450,6 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
           variant="h3"
           sx={{
             color: 'var(--text-dark)',
-            marginBottom: 'var(--spacing-lg)',
             fontWeight: 700,
           }}
         >
