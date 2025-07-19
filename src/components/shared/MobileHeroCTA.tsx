@@ -1,16 +1,10 @@
-import {
-  Box,
-  Container,
-  Button,
-  Stack,
-  IconButton,
-  Collapse,
-} from '@mui/material';
+import { Box, Container, Stack, IconButton, Collapse } from '@mui/material';
 import { EnrollmentButtons } from './EnrollmentButtons';
 import { useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { createEmailLink, createPhoneLink } from './contactUtils';
+import { EmailContact } from './EmailContact';
+import { PhoneContact } from './PhoneContact';
 
 export const MobileHeroCTA = () => {
   const [expanded, setExpanded] = useState(false);
@@ -168,10 +162,8 @@ export const MobileHeroCTA = () => {
             justifyContent="center"
             sx={{ mt: 2 }}
           >
-            <Button
-              variant="outlined"
-              color="primary"
-              href={createPhoneLink()}
+            <PhoneContact
+              variant="button"
               sx={{
                 minWidth: 0,
                 px: 2,
@@ -183,14 +175,11 @@ export const MobileHeroCTA = () => {
                 lineHeight: 1.2,
                 minHeight: 44, // Ensure touch target
               }}
-              aria-label="Call Montessori Skye View"
             >
               📞 Call
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              href={createEmailLink()}
+            </PhoneContact>
+            <EmailContact
+              variant="button"
               sx={{
                 minWidth: 0,
                 px: 2,
@@ -202,10 +191,9 @@ export const MobileHeroCTA = () => {
                 lineHeight: 1.2,
                 minHeight: 44, // Ensure touch target
               }}
-              aria-label="Email Montessori Skye View"
             >
               ✉️ Email
-            </Button>
+            </EmailContact>
           </Stack>
         </Container>
       </Collapse>

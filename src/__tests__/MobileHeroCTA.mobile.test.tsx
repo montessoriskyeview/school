@@ -3,10 +3,21 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { setMobileViewport } from '../utils/mobileTestUtils';
 import { MobileHeroCTA } from '../components/shared/MobileHeroCTA';
 
-// Mock the contact utilities
-jest.mock('../components/shared/contactUtils', () => ({
-  createEmailLink: () => 'mailto:test@example.com',
-  createPhoneLink: () => 'tel:+1234567890',
+// Mock the new contact components
+jest.mock('../components/shared/EmailContact', () => ({
+  EmailContact: ({ children, ...props }: any) => (
+    <a href="mailto:test@example.com" aria-label="Email Montessori Skye View" {...props}>
+      {children}
+    </a>
+  ),
+}));
+
+jest.mock('../components/shared/PhoneContact', () => ({
+  PhoneContact: ({ children, ...props }: any) => (
+    <a href="tel:+1234567890" aria-label="Call Montessori Skye View" {...props}>
+      {children}
+    </a>
+  ),
 }));
 
 describe('MobileHeroCTA Component - Mobile Experience', () => {
