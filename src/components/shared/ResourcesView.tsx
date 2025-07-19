@@ -345,6 +345,7 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
                     color: 'var(--text-dark)',
                     fontWeight: 700,
                     fontSize: 'var(--text-xl)',
+                    marginBottom: 0,
                   }}
                 >
                   Documents & Handbooks
@@ -422,6 +423,7 @@ export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
                     color: 'var(--text-dark)',
                     fontWeight: 700,
                     fontSize: 'var(--text-xl)',
+                    marginBottom: 0,
                   }}
                 >
                   Information & Guidelines
