@@ -13,7 +13,10 @@ import { Typography } from '../../components/shared/Typography';
 
 export const Schedule = () => {
   return (
-    <CanvasView>
+    <CanvasView
+      extraMobileCtaTitle="Want different hours?"
+      extraMobileCtaMessage="If you have specific needs, contact us to see if we can provide specific accommodations."
+    >
       <InfoText
         title="Schedule"
         text="We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day learning day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm."
@@ -49,6 +52,41 @@ export const Schedule = () => {
           'Part time: Monday through Thursday - 9am to 1pm',
         ]}
       />
+
+      {/* Want different hours section */}
+      <div
+        style={{
+          marginTop: 'var(--spacing-xl)',
+          padding: 'var(--spacing-lg)',
+          backgroundColor: 'var(--primary-blue)',
+          borderRadius: 'var(--radius-lg)',
+          color: 'var(--white)',
+          textAlign: 'center',
+        }}
+      >
+        <Typography
+          variant="h3"
+          style={{
+            color: 'var(--white)',
+            marginBottom: 'var(--spacing-md)',
+            fontSize: 'var(--text-xl)',
+            fontWeight: 700,
+          }}
+        >
+          Want different hours? 📱
+        </Typography>
+        <Typography
+          style={{
+            color: 'var(--white)',
+            fontSize: 'var(--text-base)',
+            lineHeight: 1.6,
+            opacity: 0.95,
+          }}
+        >
+          We understand every family has unique scheduling needs. Contact us to
+          discuss flexible arrangements that work for your family.
+        </Typography>
+      </div>
     </CanvasView>
   );
 };

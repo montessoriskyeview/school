@@ -8,9 +8,13 @@ import property from '../../../resources/images/location/property1.png';
 export const CanvasView = ({
   children,
   hideRouteChips,
+  extraMobileCtaTitle,
+  extraMobileCtaMessage,
 }: {
   children: React.ReactNode;
   hideRouteChips?: boolean;
+  extraMobileCtaTitle?: string;
+  extraMobileCtaMessage?: string;
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -123,7 +127,10 @@ export const CanvasView = ({
       </Container>
 
       {/* Mobile Hero CTA - positioned independently outside main container */}
-      <MobileHeroCTA />
+      <MobileHeroCTA
+        extraTitle={extraMobileCtaTitle}
+        extraMessage={extraMobileCtaMessage}
+      />
 
       {/* Footer Container */}
       <Box
