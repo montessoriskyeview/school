@@ -43,7 +43,7 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://gavinolsen.github.io/school/" />
+<meta property="og:url" content="https://montessoriskyeview.com/school/" />
 <meta property="og:title" content="Montessori Skye View Learning Center..." />
 <meta property="og:description" content="Nurturing curious minds..." />
 <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
@@ -85,7 +85,7 @@ export const SEOConfigs = {
   "@type": "EducationalOrganization",
   "name": "Montessori Skye View Learning Center",
   "description": "A child-centered Montessori learning center...",
-  "url": "https://gavinolsen.github.io/school/",
+  "url": "https://montessoriskyeview.com/school/",
   "logo": "%PUBLIC_URL%/og-image-icon.png",
   "image": "%PUBLIC_URL%/og-image.png",
   "address": {
@@ -112,7 +112,7 @@ export const SEOConfigs = {
 ### 1. Facebook Sharing Debugger
 **URL**: https://developers.facebook.com/tools/debug/
 **Steps**:
-1. Enter your website URL: `https://gavinolsen.github.io/school/`
+1. Enter your website URL: `https://montessoriskyeview.com/school/`
 2. Click "Debug"
 3. Verify all Open Graph tags are present
 4. Check image preview
@@ -157,7 +157,7 @@ export const SEOConfigs = {
 Title: Montessori Skye View Learning Center | Child-Centered Education Las Vegas
 Description: Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas.
 Image: [og-image.png - House with heart and stars on light blue background]
-URL: https://gavinolsen.github.io/school/
+URL: https://montessoriskyeview.com/school/
 ```
 
 ### Twitter Preview
@@ -165,7 +165,7 @@ URL: https://gavinolsen.github.io/school/
 Title: Montessori Skye View Learning Center | Child-Centered Education Las Vegas
 Description: Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas.
 Image: [og-image.png - Large image format]
-URL: https://gavinolsen.github.io/school/
+URL: https://montessoriskyeview.com/school/
 ```
 
 ---
