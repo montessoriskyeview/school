@@ -19,7 +19,7 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'Nurturing curious minds and joyful hearts in grades Pre-K through 5th. Child-centered Montessori education with outdoor learning focus in Las Vegas. Superior staff ratio, homeschool supplementation available.',
   keywords = 'Montessori education Las Vegas, child-centered learning, outdoor education, homeschool supplementation, Pre-K through 5th grade, Las Vegas learning center, Montessori school, child development, nature-based learning',
   image = '/og-image.png',
-  url = 'https://montessoriskyeview.com/school/',
+  url = 'https://montessoriskyeview.com/',
   type = 'website',
   author = 'Montessori Skye View Learning Center',
   publishedTime,
@@ -29,10 +29,10 @@ export const SEO: React.FC<SEOProps> = ({
 }) => {
   const fullUrl = url.startsWith('http')
     ? url
-    : `https://montessoriskyeview.com/school${url}`;
+    : `https://montessoriskyeview.com/${url}`;
   const fullImageUrl = image.startsWith('http')
     ? image
-    : `https://montessoriskyeview.com/school${image}`;
+    : `https://montessoriskyeview.com/${image}`;
 
   React.useEffect(() => {
     // Update document title
