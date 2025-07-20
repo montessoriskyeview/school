@@ -7,73 +7,73 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/location</loc>
+    <loc>https://montessoriskyeview.com?p=location</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/tuition</loc>
+    <loc>https://montessoriskyeview.com?p=tuition</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/schedule</loc>
+    <loc>https://montessoriskyeview.com?p=schedule</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/registration</loc>
+    <loc>https://montessoriskyeview.com?p=registration</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/philosophy</loc>
+    <loc>https://montessoriskyeview.com?p=philosophy</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/contact</loc>
+    <loc>https://montessoriskyeview.com?p=contact</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/faq</loc>
+    <loc>https://montessoriskyeview.com?p=faq</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/accessibility</loc>
+    <loc>https://montessoriskyeview.com?p=accessibility</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/review</loc>
+    <loc>https://montessoriskyeview.com?p=review</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/blog</loc>
+    <loc>https://montessoriskyeview.com?p=blog</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/parents</loc>
+    <loc>https://montessoriskyeview.com?p=parents</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montessoriskyeview.com/handbook</loc>
+    <loc>https://montessoriskyeview.com/handbook.pdf</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
