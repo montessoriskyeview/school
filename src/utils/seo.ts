@@ -109,10 +109,6 @@ const updateOpenGraph = (metadata: ISEOMetadata) => {
     },
   ];
 
-  if (metadata.ogImage) {
-    ogTags.push({ property: 'og:image', content: metadata.ogImage });
-  }
-
   ogTags.forEach(tag => {
     let metaTag = document.querySelector(`meta[property="${tag.property}"]`);
     if (!metaTag) {
