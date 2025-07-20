@@ -27,7 +27,7 @@ export const Schedule = () => {
       />
 
       {/* Program Options Cards */}
-      <Box sx={{ marginBottom: 'var(--spacing-3xl)' }}>
+      <Box component="div" sx={{ marginBottom: 'var(--spacing-3xl)' }}>
         <Typography
           variant="h2"
           sx={{
