@@ -14,6 +14,7 @@ export interface ISEOMetadata {
   canonicalUrl?: string;
   ogImageAlt?: string;
   ogUpdatedTime?: string;
+  ogLogo?: string;
 }
 
 export interface IStructuredData {
@@ -100,6 +101,11 @@ const updateOpenGraph = (metadata: ISEOMetadata) => {
       property: 'og:image',
       content:
         metadata.ogImage || 'https://montessoriskyeview.com/og-image.png',
+    },
+    {
+      property: 'og:logo',
+      content:
+        metadata.ogLogo || 'https://montessoriskyeview.com/og-image-icon.png',
     },
   ];
 
