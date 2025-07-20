@@ -27,6 +27,16 @@ const Tuition = React.lazy(() =>
 const Schedule = React.lazy(() =>
   import('./views/Schedule').then(module => ({ default: module.Schedule }))
 );
+const FullTimeLanding = React.lazy(() =>
+  import('./views/Schedule/FullTimeLanding').then(module => ({
+    default: module.FullTimeLanding,
+  }))
+);
+const PartTimeLanding = React.lazy(() =>
+  import('./views/Schedule/PartTimeLanding').then(module => ({
+    default: module.PartTimeLanding,
+  }))
+);
 const Registration = React.lazy(() =>
   import('./views/Registration').then(module => ({
     default: module.Registration,
@@ -141,6 +151,12 @@ const SEOUpdater: React.FC = () => {
       break;
     case '/staff-resources':
       seoConfig = SEOConfigs.staffResources;
+      break;
+    case '/schedule/full-time':
+      seoConfig = SEOConfigs.fullTimeLanding;
+      break;
+    case '/schedule/part-time':
+      seoConfig = SEOConfigs.partTimeLanding;
       break;
     default:
       seoConfig = SEOConfigs.home;
@@ -306,6 +322,14 @@ function App() {
                 <Route path="/location" element={<Location />} />
                 <Route path="/tuition" element={<Tuition />} />
                 <Route path="/schedule" element={<Schedule />} />
+                <Route
+                  path="/schedule/full-time"
+                  element={<FullTimeLanding />}
+                />
+                <Route
+                  path="/schedule/part-time"
+                  element={<PartTimeLanding />}
+                />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/philosophy" element={<Philosophy />} />
                 <Route path="/contact" element={<Contact />} />

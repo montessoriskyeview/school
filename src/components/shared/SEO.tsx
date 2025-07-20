@@ -233,4 +233,22 @@ export const SEOConfigs = {
       'staff resources, Montessori staff materials, curriculum guidelines, assessment forms, professional development, Montessori staff documents',
     url: '/staff-resources',
   },
+  fullTimeLanding: {
+    title:
+      'Full-Time Montessori Program | 8AM-4PM Daily | Skye View Learning Center',
+    description:
+      'Give your child the complete Montessori experience with our full-time program. Extended hours 8AM-4PM with enriched curriculum, outdoor learning, and comprehensive care. Perfect for working parents.',
+    keywords:
+      'full-time Montessori Las Vegas, 8AM-4PM Montessori program, extended care Montessori, working parents Montessori, complete Montessori curriculum, Las Vegas full-time learning center',
+    url: '/schedule/full-time',
+  },
+  partTimeLanding: {
+    title:
+      'Part-Time Montessori Program | 9AM-1PM Daily | Skye View Learning Center',
+    description:
+      'Perfect Montessori introduction with our part-time program. Core learning hours 9AM-1PM with focused academics, outdoor activities, and family time balance. Ideal for families wanting quality education with flexibility.',
+    keywords:
+      'part-time Montessori Las Vegas, 9AM-1PM Montessori program, half-day Montessori, flexible Montessori schedule, family-friendly Montessori, Las Vegas part-time learning center',
+    url: '/schedule/part-time',
+  },
 };

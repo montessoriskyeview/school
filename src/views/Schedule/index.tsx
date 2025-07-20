@@ -10,6 +10,10 @@ import {
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { Typography } from '../../components/shared/Typography';
+import { Box, Button, Card, CardContent, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 export const Schedule = () => {
   return (
@@ -21,6 +25,190 @@ export const Schedule = () => {
         title="Schedule"
         text="We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day learning day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm."
       />
+
+      {/* Program Options Cards */}
+      <Box sx={{ marginBottom: 'var(--spacing-3xl)' }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: { xs: 'var(--text-2xl)', md: 'var(--text-3xl)' },
+            fontWeight: 700,
+            textAlign: 'center',
+            marginBottom: 'var(--spacing-xl)',
+            color: 'var(--text-dark)',
+          }}
+        >
+          Choose Your Program
+        </Typography>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6}>
+            <Card
+              sx={{
+                height: '100%',
+                padding: 'var(--spacing-xl)',
+                borderRadius: 'var(--radius-xl)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                border: '2px solid var(--primary-blue)',
+                background: 'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)',
+                transition:
+                  'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0 8px 30px rgba(37, 99, 235, 0.2)',
+                },
+              }}
+            >
+              <CardContent sx={{ padding: 0, textAlign: 'center' }}>
+                <AccessTimeIcon
+                  sx={{
+                    fontSize: 64,
+                    color: 'var(--primary-blue)',
+                    marginBottom: 'var(--spacing-lg)',
+                  }}
+                />
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: 'var(--text-2xl)',
+                    fontWeight: 700,
+                    marginBottom: 'var(--spacing-md)',
+                    color: 'var(--primary-blue)',
+                  }}
+                >
+                  Full-Time Program
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 'var(--text-xl)',
+                    fontWeight: 600,
+                    marginBottom: 'var(--spacing-lg)',
+                    color: 'var(--text-dark)',
+                  }}
+                >
+                  8:00 AM - 4:00 PM
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 'var(--text-base)',
+                    lineHeight: 1.6,
+                    marginBottom: 'var(--spacing-xl)',
+                    color: 'var(--text-secondary)',
+                  }}
+                >
+                  Complete Montessori experience with extended learning time,
+                  enriched curriculum, and comprehensive care. Perfect for
+                  working families who need reliable, extended care.
+                </Typography>
+                <Button
+                  component={Link}
+                  to="/schedule/full-time"
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    backgroundColor: 'var(--primary-blue)',
+                    color: 'white',
+                    fontSize: 'var(--text-lg)',
+                    padding: 'var(--spacing-md) var(--spacing-xl)',
+                    fontWeight: 700,
+                    '&:hover': {
+                      backgroundColor: '#1D4ED8',
+                      transform: 'translateY(-2px)',
+                    },
+                    minHeight: 56,
+                    minWidth: 200,
+                  }}
+                >
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <Card
+              sx={{
+                height: '100%',
+                padding: 'var(--spacing-xl)',
+                borderRadius: 'var(--radius-xl)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                border: '2px solid var(--primary-green)',
+                background: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%)',
+                transition:
+                  'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0 8px 30px rgba(5, 150, 105, 0.2)',
+                },
+              }}
+            >
+              <CardContent sx={{ padding: 0, textAlign: 'center' }}>
+                <FamilyRestroomIcon
+                  sx={{
+                    fontSize: 64,
+                    color: 'var(--primary-green)',
+                    marginBottom: 'var(--spacing-lg)',
+                  }}
+                />
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: 'var(--text-2xl)',
+                    fontWeight: 700,
+                    marginBottom: 'var(--spacing-md)',
+                    color: 'var(--primary-green)',
+                  }}
+                >
+                  Part-Time Program
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 'var(--text-xl)',
+                    fontWeight: 600,
+                    marginBottom: 'var(--spacing-lg)',
+                    color: 'var(--text-dark)',
+                  }}
+                >
+                  9:00 AM - 1:00 PM
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 'var(--text-base)',
+                    lineHeight: 1.6,
+                    marginBottom: 'var(--spacing-xl)',
+                    color: 'var(--text-secondary)',
+                  }}
+                >
+                  Perfect balance of quality Montessori education and family
+                  time. Focused learning during core hours while maintaining
+                  precious afternoon time for family activities.
+                </Typography>
+                <Button
+                  component={Link}
+                  to="/schedule/part-time"
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    backgroundColor: 'var(--primary-green)',
+                    color: 'white',
+                    fontSize: 'var(--text-lg)',
+                    padding: 'var(--spacing-md) var(--spacing-xl)',
+                    fontWeight: 700,
+                    '&:hover': {
+                      backgroundColor: '#059669',
+                      transform: 'translateY(-2px)',
+                    },
+                    minHeight: 56,
+                    minWidth: 200,
+                  }}
+                >
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Box>
+
       <CollapseContainer
         title="2025-2026 Learning Year"
         content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
@@ -118,4 +306,7 @@ const YearlySchedule = ({ items }: YearlyScheduleProps) => {
     </>
   );
 };
+
+export { FullTimeLanding } from './FullTimeLanding';
+export { PartTimeLanding } from './PartTimeLanding';
 
