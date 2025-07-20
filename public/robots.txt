@@ -6,4 +6,4 @@ Allow: /
 Sitemap: https://montessoriskyeview.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
-Crawl-delay: 1
+# Crawl-delay: 1
