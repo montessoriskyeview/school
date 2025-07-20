@@ -12,6 +12,8 @@ export interface ISEOMetadata {
   twitterTitle?: string;
   twitterDescription?: string;
   canonicalUrl?: string;
+  ogImageAlt?: string;
+  ogUpdatedTime?: string;
 }
 
 export interface IStructuredData {
@@ -80,6 +82,24 @@ const updateOpenGraph = (metadata: ISEOMetadata) => {
     {
       property: 'og:url',
       content: metadata.canonicalUrl || window.location.href,
+    },
+    { property: 'og:image:width', content: '1260' },
+    { property: 'og:image:height', content: '628' },
+    {
+      property: 'og:image:alt',
+      content:
+        metadata.ogImageAlt ||
+        "Montessori Skye View Learning Center - Don't compromise on education",
+    },
+    { property: 'og:image:type', content: 'image/png' },
+    {
+      property: 'og:updated_time',
+      content: metadata.ogUpdatedTime || new Date().toISOString(),
+    },
+    {
+      property: 'og:image',
+      content:
+        metadata.ogImage || 'https://montessoriskyeview.com/og-image.png',
     },
   ];
 
