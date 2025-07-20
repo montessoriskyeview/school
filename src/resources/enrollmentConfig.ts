@@ -41,6 +41,10 @@ export const getActiveEnrollmentPeriods = () => {
   return ENROLLMENT_PERIODS.filter(period => period.isActive);
 };
 
+export const getNextActiveEnrollmentPeriod = () => {
+  return ENROLLMENT_PERIODS[0];
+};
+
 // Helper function to get a specific enrollment period by ID
 export const getEnrollmentPeriod = (id: string) => {
   return ENROLLMENT_PERIODS.find(period => period.id === id);

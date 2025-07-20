@@ -14,6 +14,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import GroupsIcon from '@mui/icons-material/Groups';
 import NatureIcon from '@mui/icons-material/Nature';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { getNextActiveEnrollmentPeriod } from '../../resources/enrollmentConfig';
 
 export const FullTimeLanding = () => {
   return (
@@ -75,7 +76,8 @@ export const FullTimeLanding = () => {
           </Typography>
           <Button
             component={Link}
-            to="/registration"
+            to={getNextActiveEnrollmentPeriod().href}
+            target="_blank"
             variant="contained"
             size="large"
             sx={{
@@ -985,7 +987,8 @@ export const FullTimeLanding = () => {
           >
             <Button
               component={Link}
-              to="/registration"
+              to={getNextActiveEnrollmentPeriod().href}
+              target="_blank"
               variant="contained"
               size="large"
               sx={{

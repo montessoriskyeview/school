@@ -15,6 +15,7 @@ import NatureIcon from '@mui/icons-material/Nature';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SavingsIcon from '@mui/icons-material/Savings';
+import { getNextActiveEnrollmentPeriod } from '../../resources/enrollmentConfig';
 
 export const PartTimeLanding = () => {
   return (
@@ -76,7 +77,8 @@ export const PartTimeLanding = () => {
           </Typography>
           <Button
             component={Link}
-            to="/registration"
+            to={getNextActiveEnrollmentPeriod().href}
+            target="_blank"
             variant="contained"
             size="large"
             sx={{
@@ -1079,7 +1081,8 @@ export const PartTimeLanding = () => {
           >
             <Button
               component={Link}
-              to="/registration"
+              to={getNextActiveEnrollmentPeriod().href}
+              target="_blank"
               variant="contained"
               size="large"
               sx={{
