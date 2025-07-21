@@ -180,7 +180,7 @@ export const Schedule = () => {
                 >
                   Perfect balance of quality Montessori education and family
                   time. Focused learning during core hours while maintaining
-                  precious afternoon time for family activities.
+                  precious afternoon time.
                 </Typography>
                 <Button
                   component={Link}
