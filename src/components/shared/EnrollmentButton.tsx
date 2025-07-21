@@ -36,6 +36,7 @@ export const EnrollmentButton = ({
     py: 0.5,
     borderRadius: 'var(--radius-sm)',
     transition: 'background 0.2s, color 0.2s',
+    color: { xs: 'var(--white)', md: 'var(--text-dark)' },
     '&:hover, &:focus': {
       background: 'var(--primary-green)',
       color: 'var(--white)',
@@ -46,7 +47,7 @@ export const EnrollmentButton = ({
 
   const variantStyles = {
     primary: {
-      color: 'var(--text-dark)', // Use theme text color for proper contrast
+      color: { xs: 'var(--white)', md: 'var(--text-dark)' },
     },
     secondary: {
       color: 'var(--white)',
@@ -75,7 +76,7 @@ export const EnrollmentButton = ({
         }}
       >
         <SchoolIcon />
-        <Typography variant="body1" sx={{ color: 'white' }}>
+        <Typography variant="body1" sx={{ color: 'inherit' }}>
           {children}
         </Typography>
       </div>
