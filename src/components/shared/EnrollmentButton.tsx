@@ -1,4 +1,7 @@
-import { Link } from '@mui/material';
+import React from 'react';
+import { Link, Typography } from '@mui/material';
+import { School as SchoolIcon } from '@mui/icons-material';
+import { trackEvent } from '../../utils/performance';
 import { DEFAULT_CONVERSION_ID } from '../../resources/enrollmentConfig';
 
 interface IEnrollmentButtonProps {
@@ -12,8 +15,7 @@ interface IEnrollmentButtonProps {
 const trackEnrollmentConversion = (
   conversionId: string = DEFAULT_CONVERSION_ID
 ) => {
-  // @ts-ignore - gtag is globally available
-  window.gtag('event', 'conversion', {
+  trackEvent('conversion', {
     send_to: conversionId,
   });
 };
@@ -55,18 +57,28 @@ export const EnrollmentButton = ({
 
   return (
     <Link
-      variant="body1"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => trackEnrollmentConversion(conversionId)}
       sx={{
         ...baseStyles,
         ...variantStyles[variant],
         ...sx,
       }}
-      rel="noopener noreferrer"
-      target="_blank"
-      href={href}
-      onClick={() => trackEnrollmentConversion(conversionId)}
     >
-      {children}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 'var(--spacing-sm)',
+        }}
+      >
+        <SchoolIcon />
+        <Typography variant="body1" sx={{ color: 'white' }}>
+          {children}
+        </Typography>
+      </div>
     </Link>
   );
 };

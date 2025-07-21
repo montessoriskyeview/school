@@ -1,5 +1,6 @@
-import { Link } from '@mui/material';
-import { createPhoneLink } from './contactUtils';
+import React from 'react';
+import { Button, Link, Typography } from '@mui/material';
+import { trackEvent } from '../../utils/performance';
 
 interface IPhoneContactProps {
   children?: React.ReactNode;
@@ -9,13 +10,9 @@ interface IPhoneContactProps {
 }
 
 const trackPhoneConversion = () => {
-  // @ts-ignore - gtag is globally available
-  if (typeof window !== 'undefined' && window.gtag) {
-    // @ts-ignore - gtag is globally available
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
-    });
-  }
+  trackEvent('conversion', {
+    send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
+  });
 };
 
 export const PhoneContact = ({
@@ -75,9 +72,47 @@ export const PhoneContact = ({
     },
   };
 
+  const content = (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 'var(--spacing-sm)',
+      }}
+    >
+      <Typography
+        variant="body1"
+        style={{
+          color: 'inherit',
+          fontWeight: 600,
+        }}
+      >
+        {children || '📞 Call Us'}
+      </Typography>
+    </div>
+  );
+
+  if (variant === 'button') {
+    return (
+      <Link
+        href="tel:+61400000000"
+        onClick={handleClick}
+        sx={{
+          ...baseStyles,
+          ...variantStyles[variant],
+          ...sx,
+        }}
+        className={className}
+        aria-label="Call Montessori Skye View"
+      >
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <Link
-      href={createPhoneLink()}
+      href="tel:+61400000000"
       onClick={handleClick}
       sx={{
         ...baseStyles,
@@ -87,7 +122,7 @@ export const PhoneContact = ({
       className={className}
       aria-label="Call Montessori Skye View"
     >
-      {children || '📞 Call Us'}
+      {content}
     </Link>
   );
 };

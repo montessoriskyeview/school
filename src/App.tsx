@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import './App.css';
 import {
   CssBaseline,
@@ -11,8 +11,11 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
 import { SEO, SEOConfigs } from './components/shared/SEO';
+import { ConsentBanner } from './components/shared/ConsentBanner';
+// import { PerformanceDashboard } from './components/shared/PerformanceDashboard';
 import { ErrorPage } from './views/ErrorView';
 import { useQueryParams } from './hooks/useQueryParams';
+import { performanceOptimizer, trackPageView } from './utils/performance';
 
 // Lazy load components for better performance during peak hours
 const Home = React.lazy(() =>
@@ -279,6 +282,15 @@ function App() {
     []
   );
 
+  useEffect(() => {
+    const initializePerformance = async () => {
+      await performanceOptimizer.initialize();
+      trackPageView();
+    };
+
+    initializePerformance();
+  }, []);
+
   return (
     <div lang="en">
       {/* Skip to main content link for screen readers */}
@@ -344,6 +356,8 @@ function App() {
               </Routes>
             </Suspense>
           </main>
+          <ConsentBanner />
+          {/* <PerformanceDashboard /> */}
         </BrowserRouter>
       </ThemeProvider>
     </div>

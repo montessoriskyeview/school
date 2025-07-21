@@ -1,5 +1,6 @@
-import { Link } from '@mui/material';
-import { createEmailLink } from './contactUtils';
+import React from 'react';
+import { Button, Link, Typography } from '@mui/material';
+import { trackEvent } from '../../utils/performance';
 
 interface IEmailContactProps {
   children?: React.ReactNode;
@@ -9,15 +10,11 @@ interface IEmailContactProps {
 }
 
 const trackEmailConversion = () => {
-  // @ts-ignore - gtag is globally available
-  if (typeof window !== 'undefined' && window.gtag) {
-    // @ts-ignore - gtag is globally available
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
-      value: 1.0,
-      currency: 'USD',
-    });
-  }
+  trackEvent('conversion', {
+    send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+    value: 1.0,
+    currency: 'USD',
+  });
 };
 
 export const EmailContact = ({
@@ -77,9 +74,47 @@ export const EmailContact = ({
     },
   };
 
+  const content = (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 'var(--spacing-sm)',
+      }}
+    >
+      <Typography
+        variant="body1"
+        style={{
+          color: 'inherit',
+          fontWeight: 600,
+        }}
+      >
+        {children || '✉️ Email Us'}
+      </Typography>
+    </div>
+  );
+
+  if (variant === 'button') {
+    return (
+      <Link
+        href="mailto:info@montessori-skye-view.com"
+        onClick={handleClick}
+        sx={{
+          ...baseStyles,
+          ...variantStyles[variant],
+          ...sx,
+        }}
+        className={className}
+        aria-label="Email Montessori Skye View"
+      >
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <Link
-      href={createEmailLink()}
+      href="mailto:info@montessori-skye-view.com"
       onClick={handleClick}
       sx={{
         ...baseStyles,
@@ -89,7 +124,7 @@ export const EmailContact = ({
       className={className}
       aria-label="Email Montessori Skye View"
     >
-      {children || '✉️ Email Us'}
+      {content}
     </Link>
   );
 };

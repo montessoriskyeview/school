@@ -58,20 +58,58 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               class="MuiBox-root css-1g20b0n"
             >
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Fall registration
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Fall registration
+                  </p>
+                </div>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Summer camp
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Summer camp
+                  </p>
+                </div>
               </a>
             </div>
           </div>
@@ -521,20 +559,58 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                 class="MuiBox-root css-n88plx"
               >
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Fall registration
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Fall registration
+                    </p>
+                  </div>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Summer camp
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Summer camp
+                    </p>
+                  </div>
                 </a>
               </div>
               <h4
@@ -575,6 +651,260 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
         </div>
       </div>
     </main>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
+      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+    >
+      <div
+        style="max-width: 1200px; margin: 0px auto;"
+      >
+        <div
+          style="display: flex; align-items: center; justify-content: space-between;"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+              style="line-height: 1.4;"
+            >
+              By continuing to use our site, you consent to our use of cookies.
+            </p>
+            <button
+              aria-label="Learn more about cookies"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              style="padding: 4px;"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="InfoIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
+            style="margin-left: 16px; min-width: 80px;"
+            tabindex="0"
+            type="button"
+          >
+            Accept
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
+                  style="font-weight: 700; margin-bottom: 8px;"
+                >
+                  🍪 Privacy & Cookie Preferences
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                  style="margin-bottom: 16px; line-height: 1.5;"
+                >
+                  We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
+                </p>
+                <div
+                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
+                    style="margin-bottom: 12px; font-weight: 600;"
+                  >
+                    Cookie Categories
+                  </h6>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Analytics Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Advertising Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to deliver relevant advertisements and track campaign performance.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Marketing Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to track visitors across websites to display relevant advertisements.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div
+                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Essential Only
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Customize
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -637,20 +967,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               class="MuiBox-root css-1g20b0n"
             >
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Fall registration
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Fall registration
+                  </p>
+                </div>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Summer camp
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Summer camp
+                  </p>
+                </div>
               </a>
             </div>
           </div>
@@ -1100,20 +1468,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                 class="MuiBox-root css-n88plx"
               >
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Fall registration
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Fall registration
+                    </p>
+                  </div>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Summer camp
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Summer camp
+                    </p>
+                  </div>
                 </a>
               </div>
               <h4
@@ -1154,6 +1560,260 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
         </div>
       </div>
     </main>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
+      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+    >
+      <div
+        style="max-width: 1200px; margin: 0px auto;"
+      >
+        <div
+          style="display: flex; align-items: center; justify-content: space-between;"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+              style="line-height: 1.4;"
+            >
+              By continuing to use our site, you consent to our use of cookies.
+            </p>
+            <button
+              aria-label="Learn more about cookies"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              style="padding: 4px;"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="InfoIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
+            style="margin-left: 16px; min-width: 80px;"
+            tabindex="0"
+            type="button"
+          >
+            Accept
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
+                  style="font-weight: 700; margin-bottom: 8px;"
+                >
+                  🍪 Privacy & Cookie Preferences
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                  style="margin-bottom: 16px; line-height: 1.5;"
+                >
+                  We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
+                </p>
+                <div
+                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
+                    style="margin-bottom: 12px; font-weight: 600;"
+                  >
+                    Cookie Categories
+                  </h6>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Analytics Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Advertising Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to deliver relevant advertisements and track campaign performance.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Marketing Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to track visitors across websites to display relevant advertisements.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div
+                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Essential Only
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Customize
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -1216,20 +1876,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               class="MuiBox-root css-1g20b0n"
             >
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Fall registration
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Fall registration
+                  </p>
+                </div>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Summer camp
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Summer camp
+                  </p>
+                </div>
               </a>
             </div>
           </div>
@@ -1679,20 +2377,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                 class="MuiBox-root css-n88plx"
               >
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Fall registration
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Fall registration
+                    </p>
+                  </div>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Summer camp
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Summer camp
+                    </p>
+                  </div>
                 </a>
               </div>
               <h4
@@ -1733,6 +2469,260 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
         </div>
       </div>
     </main>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
+      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+    >
+      <div
+        style="max-width: 1200px; margin: 0px auto;"
+      >
+        <div
+          style="display: flex; align-items: center; justify-content: space-between;"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+              style="line-height: 1.4;"
+            >
+              By continuing to use our site, you consent to our use of cookies.
+            </p>
+            <button
+              aria-label="Learn more about cookies"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              style="padding: 4px;"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="InfoIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
+            style="margin-left: 16px; min-width: 80px;"
+            tabindex="0"
+            type="button"
+          >
+            Accept
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
+                  style="font-weight: 700; margin-bottom: 8px;"
+                >
+                  🍪 Privacy & Cookie Preferences
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                  style="margin-bottom: 16px; line-height: 1.5;"
+                >
+                  We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
+                </p>
+                <div
+                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
+                    style="margin-bottom: 12px; font-weight: 600;"
+                  >
+                    Cookie Categories
+                  </h6>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Analytics Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Advertising Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to deliver relevant advertisements and track campaign performance.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Marketing Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to track visitors across websites to display relevant advertisements.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div
+                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Essential Only
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Customize
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -1795,20 +2785,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               class="MuiBox-root css-1g20b0n"
             >
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Fall registration
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Fall registration
+                  </p>
+                </div>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Summer camp
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Summer camp
+                  </p>
+                </div>
               </a>
             </div>
           </div>
@@ -2258,20 +3286,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                 class="MuiBox-root css-n88plx"
               >
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Fall registration
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Fall registration
+                    </p>
+                  </div>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Summer camp
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Summer camp
+                    </p>
+                  </div>
                 </a>
               </div>
               <h4
@@ -2312,6 +3378,260 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
         </div>
       </div>
     </main>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
+      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+    >
+      <div
+        style="max-width: 1200px; margin: 0px auto;"
+      >
+        <div
+          style="display: flex; align-items: center; justify-content: space-between;"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+              style="line-height: 1.4;"
+            >
+              By continuing to use our site, you consent to our use of cookies.
+            </p>
+            <button
+              aria-label="Learn more about cookies"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              style="padding: 4px;"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="InfoIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
+            style="margin-left: 16px; min-width: 80px;"
+            tabindex="0"
+            type="button"
+          >
+            Accept
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
+                  style="font-weight: 700; margin-bottom: 8px;"
+                >
+                  🍪 Privacy & Cookie Preferences
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                  style="margin-bottom: 16px; line-height: 1.5;"
+                >
+                  We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
+                </p>
+                <div
+                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
+                    style="margin-bottom: 12px; font-weight: 600;"
+                  >
+                    Cookie Categories
+                  </h6>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Analytics Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Advertising Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to deliver relevant advertisements and track campaign performance.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Marketing Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to track visitors across websites to display relevant advertisements.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div
+                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Essential Only
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Customize
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -2374,20 +3694,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               class="MuiBox-root css-1g20b0n"
             >
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Fall registration
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Fall registration
+                  </p>
+                </div>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-1x33uhq-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-s8i6go-MuiTypography-root-MuiLink-root"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                2025 Summer camp
+                <div
+                  style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SchoolIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                  >
+                    2025 Summer camp
+                  </p>
+                </div>
               </a>
             </div>
           </div>
@@ -2837,20 +4195,58 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                 class="MuiBox-root css-n88plx"
               >
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://forms.gle/oLbEBeBKnYjJDNBt6"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Fall registration
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Fall registration
+                    </p>
+                  </div>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-2yj6c2-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ib0di7-MuiTypography-root-MuiLink-root"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  2025 Summer camp
+                  <div
+                    style="display: flex; align-items: center; gap: var(--spacing-sm);"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="SchoolIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 13.18v4L12 21l7-3.82v-4L12 17zM12 3 1 9l11 6 9-4.91V17h2V9z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-xwdcnm-MuiTypography-root"
+                    >
+                      2025 Summer camp
+                    </p>
+                  </div>
                 </a>
               </div>
               <h4
@@ -2891,6 +4287,260 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
         </div>
       </div>
     </main>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
+      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+    >
+      <div
+        style="max-width: 1200px; margin: 0px auto;"
+      >
+        <div
+          style="display: flex; align-items: center; justify-content: space-between;"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+              style="line-height: 1.4;"
+            >
+              By continuing to use our site, you consent to our use of cookies.
+            </p>
+            <button
+              aria-label="Learn more about cookies"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              style="padding: 4px;"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="InfoIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
+            style="margin-left: 16px; min-width: 80px;"
+            tabindex="0"
+            type="button"
+          >
+            Accept
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
+                  style="font-weight: 700; margin-bottom: 8px;"
+                >
+                  🍪 Privacy & Cookie Preferences
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                  style="margin-bottom: 16px; line-height: 1.5;"
+                >
+                  We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
+                </p>
+                <div
+                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
+                    style="margin-bottom: 12px; font-weight: 600;"
+                  >
+                    Cookie Categories
+                  </h6>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Analytics Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="margin-bottom: 8px; align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Advertising Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to deliver relevant advertisements and track campaign performance.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                    style="align-items: flex-start;"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-1m9pwf3"
+                        data-indeterminate="false"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="CheckBoxOutlineBlankIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
+                    >
+                      <div>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
+                          style="font-weight: 600;"
+                        >
+                          Marketing Cookies
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                        >
+                          Used to track visitors across websites to display relevant advertisements.
+                        </span>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div
+                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Essential Only
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Customize
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
