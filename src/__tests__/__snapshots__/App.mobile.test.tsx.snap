@@ -49,7 +49,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
           <h1
             class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
           >
-            Montessori Skye View
+            <a
+              href="/"
+              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
+            >
+              Montessori Skye View
+            </a>
           </h1>
           <div
             class="MuiBox-root css-13tqxrv"
@@ -316,12 +321,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <p
                 class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
               >
-                "In every walk with nature, one receives far more than he seeks." - John Muir
+                "Nature is the best playground. It is the source of all learning, the foundation of all growth." - Dr. Maria Montessori
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
@@ -940,7 +945,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           <h1
             class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
           >
-            Montessori Skye View
+            <a
+              href="/"
+              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
+            >
+              Montessori Skye View
+            </a>
           </h1>
           <div
             class="MuiBox-root css-13tqxrv"
@@ -1207,12 +1217,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               <p
                 class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
               >
-                "In every walk with nature, one receives far more than he seeks." - John Muir
+                "Nature is the best playground. It is the source of all learning, the foundation of all growth." - Dr. Maria Montessori
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
@@ -1831,7 +1841,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           <h1
             class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
           >
-            Montessori Skye View
+            <a
+              href="/"
+              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
+            >
+              Montessori Skye View
+            </a>
           </h1>
           <div
             class="MuiBox-root css-13tqxrv"
@@ -2098,12 +2113,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               <p
                 class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
               >
-                "In every walk with nature, one receives far more than he seeks." - John Muir
+                "Nature is the best playground. It is the source of all learning, the foundation of all growth." - Dr. Maria Montessori
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
@@ -2722,7 +2737,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           <h1
             class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
           >
-            Montessori Skye View
+            <a
+              href="/"
+              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
+            >
+              Montessori Skye View
+            </a>
           </h1>
           <div
             class="MuiBox-root css-13tqxrv"
@@ -2989,12 +3009,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               <p
                 class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
               >
-                "In every walk with nature, one receives far more than he seeks." - John Muir
+                "Nature is the best playground. It is the source of all learning, the foundation of all growth." - Dr. Maria Montessori
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
@@ -3613,7 +3633,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           <h1
             class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
           >
-            Montessori Skye View
+            <a
+              href="/"
+              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
+            >
+              Montessori Skye View
+            </a>
           </h1>
           <div
             class="MuiBox-root css-13tqxrv"
@@ -3880,12 +3905,12 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
               <p
                 class="MuiTypography-root MuiTypography-body1 css-nnjhko-MuiTypography-root"
               >
-                "In every walk with nature, one receives far more than he seeks." - John Muir
+                "Nature is the best playground. It is the source of all learning, the foundation of all growth." - Dr. Maria Montessori
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center campus boasts the largest outdoor learning space in the Las Vegas valley - on over an entire acre of land in a suburban neighborhood!
+                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"

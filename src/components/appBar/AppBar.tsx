@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState, useRef, useEffect } from 'react';
 import { DrawerContent } from './DrawerContent';
 import { EnrollmentButtons } from '../shared/EnrollmentButtons';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -129,7 +130,25 @@ export const AppBar = () => {
               minHeight: { xs: 56, md: 'auto' }, // Match toolbar height on mobile
             }}
           >
-            Montessori Skye View
+            <Link
+              to="/"
+              style={{
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'inherit',
+                outline: 'none',
+              }}
+              onFocus={e => {
+                e.target.style.outline = 'none';
+              }}
+              onBlur={e => {
+                e.target.style.outline = 'none';
+              }}
+            >
+              Montessori Skye View
+            </Link>
           </Typography>
           <Box
             component="div"
