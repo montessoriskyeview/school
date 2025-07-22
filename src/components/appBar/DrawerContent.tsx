@@ -5,10 +5,12 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
 import HomeIcon from '@mui/icons-material/Home';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ScheduleIcon from '@mui/icons-material/Schedule';
@@ -22,7 +24,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import PeopleIcon from '@mui/icons-material/People';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const DRAWER_WIDTH = 240;
@@ -39,6 +41,11 @@ export const DrawerContent = ({
   const theme = useTheme();
   const drawerRef = useRef<HTMLDivElement>(null);
   const firstMenuItemRef = useRef<HTMLLIElement>(null);
+  const [collapseMenuOpen, setCollapseMenuOpen] = useState(false);
+
+  // Separate main items from collapse items
+  const mainItems = NAVBAR_ITEMS.filter(item => !item.isInCollapseMenu);
+  const collapseItems = NAVBAR_ITEMS.filter(item => item.isInCollapseMenu);
 
   // Focus management for drawer
   useEffect(() => {
@@ -85,6 +92,28 @@ export const DrawerContent = ({
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [open]);
 
+  const handleCollapseToggle = () => {
+    setCollapseMenuOpen(!collapseMenuOpen);
+    // Scroll drawer to top when toggling collapse menu
+    if (drawerRef.current) {
+      const drawerContent = drawerRef.current.querySelector('.MuiDrawer-paper');
+      if (drawerContent) {
+        drawerContent.scrollTop = 0;
+      }
+    }
+  };
+
+  const handleItemClick = () => {
+    handleDrawerClose();
+    // Scroll drawer to top when any navigation item is clicked
+    if (drawerRef.current) {
+      const drawerContent = drawerRef.current.querySelector('.MuiDrawer-paper');
+      if (drawerContent) {
+        drawerContent.scrollTop = 0;
+      }
+    }
+  };
+
   return (
     <Drawer
       ref={drawerRef}
@@ -118,8 +147,15 @@ export const DrawerContent = ({
         </IconButton>
       </DrawerHeader>
       <Divider />
-      <List role="menu">
-        {NAVBAR_ITEMS.map(({ text, Icon, path }, index) => (
+      <List
+        role="menu"
+        sx={{
+          // Add bottom padding to ensure last items are not hidden behind mobile CTA banner
+          pb: { xs: 8, sm: 4 }, // More padding on mobile, less on larger screens
+        }}
+      >
+        {/* Main navigation items */}
+        {mainItems.map(({ text, Icon, path }, index) => (
           <ListItem
             key={text}
             disablePadding
@@ -129,7 +165,7 @@ export const DrawerContent = ({
               role="menuitem"
               component={Link}
               to={path}
-              onClick={handleDrawerClose}
+              onClick={handleItemClick}
             >
               <ListItemIcon aria-hidden="true">
                 <Icon />
@@ -138,6 +174,71 @@ export const DrawerContent = ({
             </ListItemButton>
           </ListItem>
         ))}
+
+        {/* More Options collapsible section */}
+        {collapseItems.length > 0 && (
+          <>
+            <Divider sx={{ my: 1 }} />
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={handleCollapseToggle}
+                aria-expanded={collapseMenuOpen}
+                aria-controls="more-options-menu"
+                aria-label="More options"
+              >
+                <ListItemIcon aria-hidden="true">
+                  <ExpandMoreIcon
+                    sx={{
+                      transform: collapseMenuOpen
+                        ? 'rotate(180deg)'
+                        : 'rotate(0deg)',
+                      transition: 'transform 0.2s ease-in-out',
+                    }}
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  primary="More Options"
+                  sx={{ color: 'var(--text-dark)' }}
+                />
+              </ListItemButton>
+            </ListItem>
+
+            <Collapse
+              in={collapseMenuOpen}
+              timeout="auto"
+              unmountOnExit
+              id="more-options-menu"
+            >
+              <List component="div" disablePadding>
+                {collapseItems.map(({ text, Icon, path }, index) => (
+                  <ListItem key={text} disablePadding>
+                    <ListItemButton
+                      role="menuitem"
+                      component={Link}
+                      to={path}
+                      onClick={handleItemClick}
+                      sx={{
+                        pl: 4,
+                        // Add extra bottom padding to the last item in collapse menu
+                        ...(index === collapseItems.length - 1 && {
+                          pb: { xs: 2, sm: 1 }, // Extra padding for last item
+                        }),
+                      }}
+                    >
+                      <ListItemIcon aria-hidden="true">
+                        <Icon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={text}
+                        sx={{ color: 'var(--text-dark)' }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </Collapse>
+          </>
+        )}
       </List>
     </Drawer>
   );
@@ -158,6 +259,7 @@ interface NavbarItem {
   Icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
     muiName: string;
   };
+  isInCollapseMenu?: boolean;
 }
 
 export const NAVBAR_ITEMS: NavbarItem[] = [
@@ -167,9 +269,15 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     Icon: HomeIcon,
   },
   {
-    text: 'Parents',
+    text: 'Parents Resources',
     path: '/parents',
     Icon: PeopleIcon,
+    isInCollapseMenu: true,
+  },
+  {
+    text: 'Registration',
+    path: '/registration',
+    Icon: RegistrationIcon,
   },
   {
     text: 'Tuition',
@@ -181,39 +289,40 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     path: '/schedule',
     Icon: ScheduleIcon,
   },
-  {
-    text: 'Registration',
-    path: '/registration',
-    Icon: RegistrationIcon,
-  },
+
   {
     text: 'Location',
     path: '/location',
     Icon: LocationOnIcon,
   },
   {
-    text: 'Contact',
-    path: '/contact',
-    Icon: PhoneIcon,
-  },
-  {
     text: 'FAQ',
     path: '/faq',
     Icon: QuestionIcon,
+    isInCollapseMenu: true,
   },
   {
     text: 'Philosophy',
     path: '/philosophy',
     Icon: LightbulbIcon,
+    isInCollapseMenu: true,
   },
   {
     text: 'Accessibility',
     path: '/accessibility',
     Icon: AccessibilityIcon,
+    isInCollapseMenu: true,
   },
   {
     text: 'Blog',
     path: '/blog',
     Icon: ArticleIcon,
+    isInCollapseMenu: true,
+  },
+  {
+    text: 'Contact',
+    path: '/contact',
+    Icon: PhoneIcon,
+    isInCollapseMenu: true,
   },
 ];

@@ -135,7 +135,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
           class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
         >
           <div
-            class="MuiBox-root css-xf2up9"
+            class="MuiBox-root css-tl7x22"
           >
             <div
               class="MuiStack-root css-1fktiy7-MuiStack-root"
@@ -152,24 +152,6 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parents"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parents
                   </span>
                 </div>
                 <span
@@ -248,42 +230,42 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
-              <a
+            </div>
+            <div
+              class="MuiBox-root css-cpp62s"
+            >
+              <button
+                aria-controls="more-options-quick-nav"
+                aria-expanded="false"
+                aria-label="More options"
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/faq"
                 tabindex="0"
+                type="button"
               >
                 <div
                   class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    FAQ
+                    More Options
                   </span>
                 </div>
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/philosophy"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Philosophy
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
+              </button>
             </div>
           </div>
           <div
@@ -1044,7 +1026,7 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
         >
           <div
-            class="MuiBox-root css-xf2up9"
+            class="MuiBox-root css-tl7x22"
           >
             <div
               class="MuiStack-root css-1fktiy7-MuiStack-root"
@@ -1061,24 +1043,6 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parents"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parents
                   </span>
                 </div>
                 <span
@@ -1157,42 +1121,42 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
-              <a
+            </div>
+            <div
+              class="MuiBox-root css-cpp62s"
+            >
+              <button
+                aria-controls="more-options-quick-nav"
+                aria-expanded="false"
+                aria-label="More options"
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/faq"
                 tabindex="0"
+                type="button"
               >
                 <div
                   class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    FAQ
+                    More Options
                   </span>
                 </div>
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/philosophy"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Philosophy
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
+              </button>
             </div>
           </div>
           <div
@@ -1953,7 +1917,7 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
         >
           <div
-            class="MuiBox-root css-xf2up9"
+            class="MuiBox-root css-tl7x22"
           >
             <div
               class="MuiStack-root css-1fktiy7-MuiStack-root"
@@ -1970,24 +1934,6 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parents"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parents
                   </span>
                 </div>
                 <span
@@ -2066,42 +2012,42 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
-              <a
+            </div>
+            <div
+              class="MuiBox-root css-cpp62s"
+            >
+              <button
+                aria-controls="more-options-quick-nav"
+                aria-expanded="false"
+                aria-label="More options"
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/faq"
                 tabindex="0"
+                type="button"
               >
                 <div
                   class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    FAQ
+                    More Options
                   </span>
                 </div>
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/philosophy"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Philosophy
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
+              </button>
             </div>
           </div>
           <div
@@ -2862,7 +2808,7 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
         >
           <div
-            class="MuiBox-root css-xf2up9"
+            class="MuiBox-root css-tl7x22"
           >
             <div
               class="MuiStack-root css-1fktiy7-MuiStack-root"
@@ -2879,24 +2825,6 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parents"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parents
                   </span>
                 </div>
                 <span
@@ -2975,42 +2903,42 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
-              <a
+            </div>
+            <div
+              class="MuiBox-root css-cpp62s"
+            >
+              <button
+                aria-controls="more-options-quick-nav"
+                aria-expanded="false"
+                aria-label="More options"
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/faq"
                 tabindex="0"
+                type="button"
               >
                 <div
                   class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    FAQ
+                    More Options
                   </span>
                 </div>
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/philosophy"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Philosophy
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
+              </button>
             </div>
           </div>
           <div
@@ -3771,7 +3699,7 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
           class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
         >
           <div
-            class="MuiBox-root css-xf2up9"
+            class="MuiBox-root css-tl7x22"
           >
             <div
               class="MuiStack-root css-1fktiy7-MuiStack-root"
@@ -3788,24 +3716,6 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parents"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parents
                   </span>
                 </div>
                 <span
@@ -3884,42 +3794,42 @@ exports[`App Component - Mobile Experience Mobile Viewport Variations renders co
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
-              <a
+            </div>
+            <div
+              class="MuiBox-root css-cpp62s"
+            >
+              <button
+                aria-controls="more-options-quick-nav"
+                aria-expanded="false"
+                aria-label="More options"
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/faq"
                 tabindex="0"
+                type="button"
               >
                 <div
                   class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    FAQ
+                    More Options
                   </span>
                 </div>
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/philosophy"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Philosophy
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
+              </button>
             </div>
           </div>
           <div
