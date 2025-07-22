@@ -45,7 +45,9 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledContent = styled(Box)<{ isExpanded: boolean }>`
+const StyledContent = styled(Box, {
+  shouldForwardProp: prop => prop !== 'isExpanded',
+})<{ isExpanded: boolean }>`
   max-height: ${props => (props.isExpanded ? '1000px' : '0')};
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;

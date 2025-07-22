@@ -236,11 +236,14 @@ export const QuickNavigation = () => {
           </Button>
 
           <Collapse
-            in={collapseMenuOpen}
             timeout="auto"
             unmountOnExit
             id="more-options-quick-nav"
-            sx={{ width: '100%', mt: 1 }}
+            sx={{
+              width: '100%',
+              mt: 1,
+              ...(collapseMenuOpen && { 'aria-expanded': 'true' }),
+            }}
           >
             {renderNavItems(collapseItems)}
           </Collapse>

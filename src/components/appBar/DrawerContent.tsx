@@ -182,9 +182,14 @@ export const DrawerContent = ({
             <ListItem disablePadding>
               <ListItemButton
                 onClick={handleCollapseToggle}
-                aria-expanded={collapseMenuOpen}
                 aria-controls="more-options-menu"
                 aria-label="More options"
+                sx={{
+                  '&[aria-expanded="true"]': {
+                    backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                  },
+                }}
+                {...(collapseMenuOpen && { 'aria-expanded': 'true' })}
               >
                 <ListItemIcon aria-hidden="true">
                   <ExpandMoreIcon
@@ -208,6 +213,12 @@ export const DrawerContent = ({
               timeout="auto"
               unmountOnExit
               id="more-options-menu"
+              sx={{
+                '&[aria-expanded="true"]': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                },
+              }}
+              {...(collapseMenuOpen && { 'aria-expanded': 'true' })}
             >
               <List component="div" disablePadding>
                 {collapseItems.map(({ text, Icon, path }, index) => (
