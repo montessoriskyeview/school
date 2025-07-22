@@ -89,7 +89,8 @@ export const SchoolList = ({
   variant = 'default',
   size = 'md',
   spacing = 'md',
-}: Omit<ListProps, 'title' | 'style'>) => {
+  emphasized = false,
+}: Omit<ListProps, 'title' | 'style'> & { emphasized?: boolean }) => {
   return (
     <StyledList spacing={spacing}>
       {items.map((item, i) =>
@@ -101,7 +102,8 @@ export const SchoolList = ({
             sx={{
               textAlign: 'center',
               padding: 'var(--spacing-sm) 0',
-              fontWeight: 600,
+              fontWeight: emphasized ? 700 : 600,
+              fontSize: emphasized ? 'var(--text-lg)' : 'var(--text-base)',
             }}
           >
             {item}
@@ -112,6 +114,13 @@ export const SchoolList = ({
               <Typography
                 variant="body1"
                 color={variant === 'default' ? 'text' : variant}
+                sx={{
+                  fontWeight: emphasized ? 600 : 400,
+                  fontSize: emphasized ? 'var(--text-lg)' : 'var(--text-base)',
+                  lineHeight: emphasized
+                    ? 'var(--leading-relaxed)'
+                    : 'var(--leading-normal)',
+                }}
               >
                 {item}
               </Typography>

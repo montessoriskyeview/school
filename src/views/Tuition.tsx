@@ -3,6 +3,7 @@ import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
+import { PricingDisplay } from '../components/shared/PricingDisplay';
 
 export const Tuition = () => {
   return (
@@ -47,31 +48,55 @@ export const Tuition = () => {
       <CollapseContainer
         title="🌅 Part-time Core Day Only"
         content={
-          <SchoolList
-            items={[
-              '$6,750 per learning year',
-              'OR',
-              '$750 paid monthly for September through May',
-              'Year round financing is available at $587.50 per month from September through August',
+          <PricingDisplay
+            yearlyPrice={{
+              label: 'Full Year Payment',
+              amount: '$6,750',
+              description: 'Pay once for the entire learning year',
+            }}
+            monthlyOptions={[
+              {
+                label: 'Monthly Payment (Sept-May)',
+                amount: '$750',
+                description: '9 monthly payments',
+              },
+              {
+                label: 'Year-round Financing',
+                amount: '$587.50',
+                description: '12 monthly payments (Sept-Aug)',
+              },
             ]}
           />
         }
         spacing="lg"
       />
+
       <CollapseContainer
         title="☀️ Full-time Learning Day"
         content={
-          <SchoolList
-            items={[
-              '$9,900 per learning year',
-              'OR',
-              '$1,100 paid monthly for September through May',
-              'Year round financing is available at $850 per month from September through August',
+          <PricingDisplay
+            yearlyPrice={{
+              label: 'Full Year Payment',
+              amount: '$9,900',
+              description: 'Pay once for the entire learning year',
+            }}
+            monthlyOptions={[
+              {
+                label: 'Monthly Payment (Sept-May)',
+                amount: '$1,100',
+                description: '9 monthly payments',
+              },
+              {
+                label: 'Year-round Financing',
+                amount: '$850',
+                description: '12 monthly payments (Sept-Aug)',
+              },
             ]}
           />
         }
         spacing="lg"
       />
+
       <CollapseContainer
         title="📝 Registration Fees"
         content={
@@ -80,6 +105,7 @@ export const Tuition = () => {
               '$400 Registration Fee before August 31st',
               '$500 Registration Fee after August 31st',
             ]}
+            emphasized={true}
           />
         }
         spacing="lg"
@@ -95,6 +121,7 @@ export const Tuition = () => {
               'Healthy snacks and refreshments',
               'All educational supplies and materials',
             ]}
+            emphasized={true}
           />
         }
         spacing="lg"

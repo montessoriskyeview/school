@@ -1,11 +1,11 @@
-import {InfoText} from "../../components/shared/InfoText"
-import {CanvasView} from "../../components/shared/Canvas/CanvasView"
+import { InfoText } from '../../components/shared/InfoText';
+import { CanvasView } from '../../components/shared/Canvas/CanvasView';
 import { ListText } from '../../components/shared/ListText';
 import {
   DailyScheduleProps,
   YearlyScheduleProps,
   SCHEDULE_ITEMS,
-  YEARLY_SCHEDULE_ITEMS
+  YEARLY_SCHEDULE_ITEMS,
 } from './items';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
@@ -14,6 +14,7 @@ import { Box, Button, Card, CardContent, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
+import { EnrollmentButtons } from '../../components/shared/EnrollmentButtons';
 
 export const Schedule = () => {
   return (
@@ -209,6 +210,20 @@ export const Schedule = () => {
         </Grid>
       </Box>
 
+      <Box
+        component="div"
+        sx={{
+          marginBottom: 'var(--spacing-3xl)',
+          alignItems: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Typography variant="h2">Enroll Today</Typography>
+        <EnrollmentButtons />
+      </Box>
+
       <CollapseContainer
         title="2025-2026 Learning Year"
         content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
@@ -309,4 +324,3 @@ const YearlySchedule = ({ items }: YearlyScheduleProps) => {
 
 export { FullTimeLanding } from './FullTimeLanding';
 export { PartTimeLanding } from './PartTimeLanding';
-
