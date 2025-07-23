@@ -22,6 +22,7 @@ export interface IConsentState {
 // Google Analytics configuration
 interface IGoogleAnalyticsConfig {
   measurementId: string;
+  analyticsMeasurementId: string;
   debugMode?: boolean;
   anonymizeIp?: boolean;
   pageViewTimeout?: number;
@@ -174,6 +175,8 @@ export class ConsentManager {
   }
 }
 
+// G-EW5S4BY15P
+
 /**
  * Optimized Google Analytics loader
  */
@@ -220,6 +223,12 @@ export class GoogleAnalyticsLoader {
           // Configure Google Analytics
           (window as any).gtag('js', new Date());
           (window as any).gtag('config', this.config.measurementId, {
+            anonymize_ip: this.config.anonymizeIp ?? true,
+            debug_mode: this.config.debugMode ?? false,
+            page_view_timeout: this.config.pageViewTimeout ?? 5000,
+          });
+
+          (window as any).gtag('config', this.config.analyticsMeasurementId, {
             anonymize_ip: this.config.anonymizeIp ?? true,
             debug_mode: this.config.debugMode ?? false,
             page_view_timeout: this.config.pageViewTimeout ?? 5000,
@@ -386,6 +395,7 @@ export class PerformanceOptimizer {
     this.consentManager = new ConsentManager();
     this.analyticsLoader = new GoogleAnalyticsLoader({
       measurementId: 'AW-16665018583',
+      analyticsMeasurementId: 'G-EW5S4BY15P',
       anonymizeIp: true,
       debugMode: process.env.NODE_ENV === 'development',
     });
