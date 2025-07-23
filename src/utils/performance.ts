@@ -413,7 +413,7 @@ export class PerformanceOptimizer {
     this.consentManager = new ConsentManager();
     this.analyticsLoader = new GoogleAnalyticsLoader({
       measurementId: 'AW-16665018583',
-      analyticsMeasurementId: 'G-EW5S4BY15P',
+      analyticsMeasurementId: 'G-0FTM2V6DK7',
       anonymizeIp: true,
       debugMode: process.env.NODE_ENV === 'development',
     });

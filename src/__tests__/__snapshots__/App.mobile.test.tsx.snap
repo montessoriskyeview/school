@@ -130,7 +130,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
       >
         <div
           class="MuiBox-root css-1mwyucw"
-          style="background-image: none; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
+          style="background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; transition: opacity 0.3s ease; opacity: 0;"
         >
           <div
             class="MuiBox-root css-wsi8sc"

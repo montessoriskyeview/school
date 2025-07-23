@@ -2,8 +2,7 @@ import { Box, Container } from '@mui/material';
 import { ContactInfo } from '../ContactInfo';
 import { QuickNavigation } from '../QuickNavigation';
 import { MobileHeroCTA } from '../MobileHeroCTA';
-import { useState, useEffect } from 'react';
-import property from '../../../resources/images/location/property1.webp';
+import { useState } from 'react';
 
 export const CanvasView = ({
   children,
@@ -16,14 +15,7 @@ export const CanvasView = ({
   extraMobileCtaTitle?: string;
   extraMobileCtaMessage?: string;
 }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  // Preload background image for better performance
-  useEffect(() => {
-    const img = new Image();
-    img.onload = () => setImageLoaded(true);
-    img.src = property;
-  }, []);
+  const [imageLoaded] = useState(false);
 
   return (
     <Box
@@ -60,7 +52,6 @@ export const CanvasView = ({
           },
         }}
         style={{
-          backgroundImage: imageLoaded ? `url(${property})` : 'none',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
