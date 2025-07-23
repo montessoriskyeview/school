@@ -1,12 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+
+// Load non-critical CSS asynchronously
+const loadNonCriticalCSS = () => {
+  // Create link elements for non-critical CSS
+  const createStylesheetLink = (href: string) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.media = 'print';
+    link.onload = () => {
+      link.media = 'all';
+    };
+    document.head.appendChild(link);
+  };
+
+  // Load theme CSS
+  createStylesheetLink('/static/css/main.css');
+
+  // Load Roboto fonts
+  createStylesheetLink(
+    'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
+  );
+};
+
+// Load non-critical CSS after initial render
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadNonCriticalCSS);
+} else {
+  // Use requestIdleCallback for better performance
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadNonCriticalCSS);
+  } else {
+    setTimeout(loadNonCriticalCSS, 1);
+  }
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

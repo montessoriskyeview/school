@@ -1,5 +1,4 @@
 import React, { Suspense, useEffect } from 'react';
-import './App.css';
 import {
   CssBaseline,
   ThemeProvider,
@@ -12,7 +11,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AppBar } from './components/appBar/AppBar';
 import { SEO, SEOConfigs } from './components/shared/SEO';
 import { ConsentBanner } from './components/shared/ConsentBanner';
-// import { PerformanceDashboard } from './components/shared/PerformanceDashboard';
 import { ErrorPage } from './views/ErrorView';
 import { useQueryParams } from './hooks/useQueryParams';
 import { performanceOptimizer, trackPageView } from './utils/performance';
@@ -358,6 +356,7 @@ function App() {
           </main>
           <ConsentBanner />
           {/* <PerformanceDashboard /> */}
+          {/* <CSSPerformanceMonitor /> */}
         </BrowserRouter>
       </ThemeProvider>
     </div>

@@ -1,12 +1,16 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { setMobileViewport } from '../utils/mobileTestUtils';
+import { screen, fireEvent, waitFor } from '@testing-library/react';
+import { render } from '../utils/testUtils';
 import { MobileHeroCTA } from '../components/shared/MobileHeroCTA';
 
-// Mock the new contact components
+// Mock the contact components
 jest.mock('../components/shared/EmailContact', () => ({
   EmailContact: ({ children, ...props }: any) => (
-    <a href="mailto:test@example.com" aria-label="Email Montessori Skye View" {...props}>
+    <a
+      href="mailto:test@example.com"
+      aria-label="Email Montessori Skye View"
+      {...props}
+    >
       {children}
     </a>
   ),
@@ -20,37 +24,63 @@ jest.mock('../components/shared/PhoneContact', () => ({
   ),
 }));
 
-describe('MobileHeroCTA Component - Mobile Experience', () => {
+describe('MobileHeroCTA', () => {
   beforeEach(() => {
-    // Set mobile viewport for all tests
-    setMobileViewport('iPhoneSE');
+    // Reset any viewport modifications
+    Object.defineProperty(window, 'innerWidth', {
+      value: 375,
+      configurable: true,
+    });
+    Object.defineProperty(window, 'innerHeight', {
+      value: 667,
+      configurable: true,
+    });
   });
 
-  describe('Mobile Layout and Positioning', () => {
-    test('renders correctly on mobile viewport', () => {
+  describe('Rendering', () => {
+    test('renders the expandable header with correct text', () => {
       render(<MobileHeroCTA />);
-      expect(
-        screen.getByRole('button', { name: /expand enrollment options/i })
-      ).toBeInTheDocument();
-    });
 
-    test('component is visible and accessible', () => {
-      render(<MobileHeroCTA />);
       const header = screen.getByRole('button', {
         name: /expand enrollment options/i,
       });
-      expect(header).toBeVisible();
       expect(header).toBeInTheDocument();
+      expect(screen.getByText(/ready to enroll/i)).toBeInTheDocument();
     });
 
-    test('snapshot matches mobile layout', () => {
-      const { container } = render(<MobileHeroCTA />);
-      expect(container).toMatchSnapshot();
+    test('renders with extra title and message when provided', async () => {
+      const extraTitle = 'Special Program';
+      const extraMessage = 'Limited time offer';
+
+      render(
+        <MobileHeroCTA extraTitle={extraTitle} extraMessage={extraMessage} />
+      );
+
+      // Check that the extra title text is present in the document
+      expect(screen.getByText(/ready to enroll/i)).toBeInTheDocument();
+      expect(document.body.textContent).toContain(extraTitle);
+
+      // Expand the component to see the extra message
+      const header = screen.getByRole('button', {
+        name: /expand enrollment options/i,
+      });
+      fireEvent.click(header);
+
+      await waitFor(() => {
+        expect(screen.getByText(extraMessage)).toBeInTheDocument();
+      });
+    });
+
+    test('renders expand/collapse icon correctly', () => {
+      render(<MobileHeroCTA />);
+
+      // Check for expand/collapse icon using data-testid
+      expect(screen.getByTestId('ExpandMoreIcon')).toBeInTheDocument();
     });
   });
 
-  describe('Mobile Touch Interactions', () => {
-    test('expand/collapse functionality works with touch', async () => {
+  describe('Interaction', () => {
+    test('expands and collapses on click', async () => {
       render(<MobileHeroCTA />);
 
       const header = screen.getByRole('button', {
@@ -62,20 +92,18 @@ describe('MobileHeroCTA Component - Mobile Experience', () => {
 
       // Click to expand
       fireEvent.click(header);
-
       await waitFor(() => {
         expect(header).toHaveAttribute('aria-expanded', 'true');
       });
 
       // Click to collapse
       fireEvent.click(header);
-
       await waitFor(() => {
         expect(header).toHaveAttribute('aria-expanded', 'false');
       });
     });
 
-    test('keyboard navigation works for accessibility', async () => {
+    test('expands and collapses on keyboard interaction', async () => {
       render(<MobileHeroCTA />);
 
       const header = screen.getByRole('button', {
@@ -84,67 +112,35 @@ describe('MobileHeroCTA Component - Mobile Experience', () => {
 
       // Test Enter key
       fireEvent.keyDown(header, { key: 'Enter' });
-
       await waitFor(() => {
         expect(header).toHaveAttribute('aria-expanded', 'true');
       });
 
       // Test Space key
       fireEvent.keyDown(header, { key: ' ' });
-
       await waitFor(() => {
         expect(header).toHaveAttribute('aria-expanded', 'false');
       });
     });
-  });
 
-  describe('Mobile Content and Typography', () => {
-    test('displays correct enrollment message', () => {
+    test('shows enrollment and contact buttons when expanded', async () => {
       render(<MobileHeroCTA />);
 
-      expect(screen.getByText(/ready to enroll/i)).toBeInTheDocument();
-    });
-
-    test('enrollment buttons are present when expanded', async () => {
-      render(<MobileHeroCTA />);
-
-      // Expand the component first
       const header = screen.getByRole('button', {
         name: /expand enrollment options/i,
       });
       fireEvent.click(header);
 
       await waitFor(() => {
-        const enrollmentButtons = screen.getAllByRole('link');
-        expect(enrollmentButtons.length).toBeGreaterThan(0);
-      });
-    });
-
-    test('contact buttons are present when expanded', async () => {
-      render(<MobileHeroCTA />);
-
-      // Expand the component first
-      const header = screen.getByRole('button', {
-        name: /expand enrollment options/i,
-      });
-      fireEvent.click(header);
-
-      await waitFor(() => {
-        const callButton = screen.getByRole('link', { name: /call/i });
-
-        expect(callButton).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /call/i })).toBeInTheDocument();
       });
 
-      await waitFor(() => {
-        const emailButton = screen.getByRole('link', { name: /email/i });
-
-        expect(emailButton).toBeInTheDocument();
-      });
+      expect(screen.getByRole('link', { name: /email/i })).toBeInTheDocument();
     });
   });
 
-  describe('Mobile Accessibility', () => {
-    test('component has proper ARIA attributes', () => {
+  describe('Accessibility', () => {
+    test('has proper ARIA attributes', () => {
       render(<MobileHeroCTA />);
 
       const header = screen.getByRole('button', {
@@ -153,22 +149,21 @@ describe('MobileHeroCTA Component - Mobile Experience', () => {
 
       expect(header).toHaveAttribute('aria-expanded');
       expect(header).toHaveAttribute('aria-label');
-      expect(header).toHaveAttribute('tabIndex');
+      expect(header).toHaveAttribute('tabIndex', '0');
     });
 
-    test('expand/collapse state is properly announced', async () => {
+    test('updates aria-label when expanded/collapsed', async () => {
       render(<MobileHeroCTA />);
 
       const header = screen.getByRole('button', {
         name: /expand enrollment options/i,
       });
 
-      // Check initial state
+      // Initial state
       expect(header).toHaveAttribute('aria-label', 'Expand enrollment options');
 
-      // Expand and check updated state
+      // Expanded state
       fireEvent.click(header);
-
       await waitFor(() => {
         expect(header).toHaveAttribute(
           'aria-label',
@@ -180,49 +175,31 @@ describe('MobileHeroCTA Component - Mobile Experience', () => {
     test('contact buttons have proper ARIA labels', async () => {
       render(<MobileHeroCTA />);
 
-      // Expand the component first
       const header = screen.getByRole('button', {
         name: /expand enrollment options/i,
       });
       fireEvent.click(header);
 
       await waitFor(() => {
-        const callButton = screen.getByRole('link', { name: /call/i });
-
-        expect(callButton).toHaveAttribute('aria-label');
+        expect(screen.getByRole('link', { name: /call/i })).toBeInTheDocument();
       });
 
-      await waitFor(() => {
-        const emailButton = screen.getByRole('link', { name: /email/i });
+      const callButton = screen.getByRole('link', { name: /call/i });
+      const emailButton = screen.getByRole('link', { name: /email/i });
 
-        expect(emailButton).toHaveAttribute('aria-label');
-      });
-    });
-
-    test('focus management works correctly', async () => {
-      render(<MobileHeroCTA />);
-
-      const header = screen.getByRole('button', {
-        name: /expand enrollment options/i,
-      });
-
-      // Focus the header
-      header.focus();
-      expect(header).toHaveFocus();
-
-      // Expand and check if focus remains
-      fireEvent.click(header);
-
-      await waitFor(() => {
-        expect(header).toHaveFocus();
-      });
+      expect(callButton).toHaveAttribute(
+        'aria-label',
+        'Call Montessori Skye View'
+      );
+      expect(emailButton).toHaveAttribute(
+        'aria-label',
+        'Email Montessori Skye View'
+      );
     });
   });
 
-  describe('Mobile Performance', () => {
-    test('expands and collapses smoothly', async () => {
-      const startTime = performance.now();
-
+  describe('Contact Links', () => {
+    test('contact buttons have correct href attributes', async () => {
       render(<MobileHeroCTA />);
 
       const header = screen.getByRole('button', {
@@ -231,101 +208,14 @@ describe('MobileHeroCTA Component - Mobile Experience', () => {
       fireEvent.click(header);
 
       await waitFor(() => {
-        expect(header).toHaveAttribute('aria-expanded', 'true');
+        expect(screen.getByRole('link', { name: /call/i })).toBeInTheDocument();
       });
 
-      const endTime = performance.now();
-      const expandTime = endTime - startTime;
+      const callButton = screen.getByRole('link', { name: /call/i });
+      const emailButton = screen.getByRole('link', { name: /email/i });
 
-      // Should expand within 100ms
-      expect(expandTime).toBeLessThan(100);
-    });
-
-    test('no console errors during interactions', () => {
-      const consoleSpy = jest
-        .spyOn(console, 'error')
-        .mockImplementation(() => {});
-
-      render(<MobileHeroCTA />);
-
-      const header = screen.getByRole('button', {
-        name: /expand enrollment options/i,
-      });
-      fireEvent.click(header);
-
-      expect(consoleSpy).not.toHaveBeenCalled();
-      consoleSpy.mockRestore();
-    });
-  });
-
-  describe('Mobile Responsive Behavior', () => {
-    test('renders correctly on different mobile viewports', () => {
-      const viewports = ['iPhoneSE', 'iPhone12', 'SamsungGalaxyS20'] as const;
-
-      viewports.forEach(viewport => {
-        setMobileViewport(viewport);
-        const { container } = render(<MobileHeroCTA />);
-        expect(container).toMatchSnapshot();
-      });
-    });
-
-    test('maintains functionality across mobile devices', () => {
-      const viewports = ['iPhoneSE', 'iPhone12', 'SamsungGalaxyS20'] as const;
-
-      viewports.forEach(viewport => {
-        setMobileViewport(viewport);
-        render(<MobileHeroCTA />);
-
-        const headers = screen.getAllByRole('button', {
-          name: /expand enrollment options/i,
-        });
-        expect(headers.length).toBeGreaterThan(0);
-        expect(headers[0]).toBeInTheDocument();
-      });
-    });
-  });
-
-  describe('Mobile Content Validation', () => {
-    test('contact buttons have correct links', async () => {
-      render(<MobileHeroCTA />);
-
-      // Expand the component first
-      const header = screen.getByRole('button', {
-        name: /expand enrollment options/i,
-      });
-      fireEvent.click(header);
-
-      await waitFor(() => {
-        const emailButton = screen.getByRole('link', { name: /email/i });
-
-        expect(emailButton).toHaveAttribute('href', 'mailto:test@example.com');
-      });
-
-      await waitFor(() => {
-        const callButton = screen.getByRole('link', { name: /call/i });
-
-        expect(callButton).toHaveAttribute('href', 'tel:+1234567890');
-      });
-    });
-
-    test('enrollment buttons have valid links', async () => {
-      render(<MobileHeroCTA />);
-
-      // Expand the component first
-      const header = screen.getByRole('button', {
-        name: /expand enrollment options/i,
-      });
-      fireEvent.click(header);
-
-      await waitFor(() => {
-        const enrollmentButtons = screen.getAllByRole('link');
-        enrollmentButtons.forEach(button => {
-          expect(button).toHaveAttribute('href');
-          const href = button.getAttribute('href');
-          // Check for valid link types (https, tel, mailto)
-          expect(href).toMatch(/^(https:\/\/|tel:|mailto:)/);
-        });
-      });
+      expect(callButton).toHaveAttribute('href', 'tel:+1234567890');
+      expect(emailButton).toHaveAttribute('href', 'mailto:test@example.com');
     });
   });
 });

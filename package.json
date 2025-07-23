@@ -34,13 +34,15 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "test": "react-scripts test --watchAll=false",
     "test:mobile": "react-scripts test --testPathPattern=mobile --watchAll=false",
     "test:mobile:watch": "react-scripts test --testPathPattern=mobile",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "test:lighthouse": "npx lighthouse --chrome-flags=\"--headless\" --output=html --output-path=./lighthouse-report.html http://localhost:3000",
+    "test:perf": "npm run build && npm run test:lighthouse",
+    "test:perf:dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run test:lighthouse\"",
     "test:mobile:coverage": "react-scripts test --testPathPattern=mobile --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "migrate-box": "node scripts/migrate-box-imports.js",
@@ -68,9 +70,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@craco/craco": "^7.1.0",
+    "concurrently": "^9.2.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0"
+    "lint-staged": "^15.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "wait-on": "^8.0.3"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -96,7 +103,8 @@
     },
     "moduleNameMapper": {
       "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "^src/utils/cssOptimizer$": "<rootDir>/src/__mocks__/cssOptimizer.ts"
     }
   }
 }

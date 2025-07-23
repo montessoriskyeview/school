@@ -236,6 +236,7 @@ export const QuickNavigation = () => {
           </Button>
 
           <Collapse
+            in={collapseMenuOpen}
             timeout="auto"
             unmountOnExit
             id="more-options-quick-nav"

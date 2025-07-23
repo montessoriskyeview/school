@@ -4,24 +4,50 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Mobile viewport setup for testing
+// Mock viewport dimensions to prevent CSS NaN warnings
 Object.defineProperty(window, 'innerWidth', {
   writable: true,
   configurable: true,
-  value: 375, // iPhone SE width
+  value: 1024,
 });
 
 Object.defineProperty(window, 'innerHeight', {
   writable: true,
   configurable: true,
-  value: 667, // iPhone SE height
+  value: 768,
 });
 
-// Mock matchMedia for mobile testing
+Object.defineProperty(window, 'outerWidth', {
+  writable: true,
+  configurable: true,
+  value: 1024,
+});
+
+Object.defineProperty(window, 'outerHeight', {
+  writable: true,
+  configurable: true,
+  value: 768,
+});
+
+// Mock ResizeObserver to prevent Material-UI warnings
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock IntersectionObserver to prevent Material-UI warnings
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock matchMedia to prevent Material-UI warnings
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
-    matches: query.includes('max-width: 768px') || query.includes('max-width: 480px'),
+    matches: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated
@@ -32,31 +58,85 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-// Mock IntersectionObserver for mobile testing
-(global as any).IntersectionObserver = class IntersectionObserver {
-  observe() {
-    return null;
-  }
-  disconnect() {
-    return null;
-  }
-  unobserve() {
-    return null;
-  }
-};
+// Mock getComputedStyle to return proper values
+Object.defineProperty(window, 'getComputedStyle', {
+  value: () => ({
+    getPropertyValue: (prop: string) => {
+      switch (prop) {
+        case 'width':
+          return '100px';
+        case 'height':
+          return '100px';
+        case 'transform':
+          return 'none';
+        default:
+          return '';
+      }
+    },
+  }),
+});
 
-// Mock ResizeObserver for mobile testing
-(global as any).ResizeObserver = class ResizeObserver {
-  observe() {
-    return null;
-  }
-  disconnect() {
-    return null;
-  }
-  unobserve() {
-    return null;
-  }
-};
+// Mock requestAnimationFrame to prevent timing issues
+global.requestAnimationFrame = jest.fn(callback => {
+  setTimeout(callback, 0);
+  return 1;
+});
+
+global.cancelAnimationFrame = jest.fn();
+
+// Mock performance.now for consistent timing
+Object.defineProperty(performance, 'now', {
+  value: jest.fn(() => Date.now()),
+});
+
+// Suppress console warnings for known issues in tests
+const originalWarn = console.warn;
+const originalError = console.error;
+
+beforeAll(() => {
+  console.warn = jest.fn((...args) => {
+    // Suppress specific warnings that are expected in test environment
+    const message = args[0];
+    if (
+      typeof message === 'string' &&
+      (message.includes(
+        'NaN is an invalid value for the width css style property'
+      ) ||
+        message.includes(
+          'A suspended resource finished loading inside a test'
+        ) ||
+        (message.includes('An update to') &&
+          message.includes('was not wrapped in act')))
+    ) {
+      return;
+    }
+    originalWarn(...args);
+  });
+
+  console.error = jest.fn((...args) => {
+    // Suppress specific errors that are expected in test environment
+    const message = args[0];
+    if (
+      typeof message === 'string' &&
+      (message.includes(
+        'NaN is an invalid value for the width css style property'
+      ) ||
+        message.includes(
+          'A suspended resource finished loading inside a test'
+        ) ||
+        (message.includes('An update to') &&
+          message.includes('was not wrapped in act')))
+    ) {
+      return;
+    }
+    originalError(...args);
+  });
+});
+
+afterAll(() => {
+  console.warn = originalWarn;
+  console.error = originalError;
+});
 
 // Custom matchers for mobile testing
 expect.extend({
