@@ -1,22 +1,22 @@
 import { Box } from '@mui/material';
 import IMG_6887 from '../resources/images/location/IMG_6887.webp';
 import IMG_4940 from '../resources/images/location/IMG_4940.webp';
-import property1 from '../resources/images/location/property1.png';
-import property2 from '../resources/images/location/property2.png';
-import property3 from '../resources/images/location/property3.jpg';
-import property4 from '../resources/images/location/property4.jpg';
-import property5 from '../resources/images/location/property5.jpg';
-import property6 from '../resources/images/location/property6.png';
-import property7 from '../resources/images/location/property7.png';
-import property8 from '../resources/images/location/property8.png';
-import property9 from '../resources/images/location/property9.png';
-import property10 from '../resources/images/location/property10.png';
-import property11 from '../resources/images/location/property11.png';
-import property12 from '../resources/images/location/property12.png';
-import property13 from '../resources/images/location/property13.jpg';
-import property14 from '../resources/images/location/property14.jpg';
-import property15 from '../resources/images/location/property15.jpg';
-import property16 from '../resources/images/location/property16.jpg';
+import property1 from '../resources/images/location/property1.webp';
+import property2 from '../resources/images/location/property2.webp';
+import property3 from '../resources/images/location/property3.webp';
+import property4 from '../resources/images/location/property4.webp';
+import property5 from '../resources/images/location/property5.webp';
+import property6 from '../resources/images/location/property6.webp';
+import property7 from '../resources/images/location/property7.webp';
+import property8 from '../resources/images/location/property8.webp';
+import property9 from '../resources/images/location/property9.webp';
+import property10 from '../resources/images/location/property10.webp';
+import property11 from '../resources/images/location/property11.webp';
+import property12 from '../resources/images/location/property12.webp';
+import property13 from '../resources/images/location/property13.webp';
+import property14 from '../resources/images/location/property14.webp';
+import property15 from '../resources/images/location/property15.webp';
+import property16 from '../resources/images/location/property16.webp';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { Carousel } from '../components/shared/Carousel';
@@ -203,6 +203,7 @@ export const Location = () => {
 
       {/* H2 Section - Campus photo gallery */}
       <CollapseContainer
+        defaultExpanded
         title="📸 Campus Photo Gallery - Montessori Learning Environment"
         content={
           <Box
@@ -213,7 +214,7 @@ export const Location = () => {
               padding: 'var(--spacing-lg) 0',
             }}
           >
-            <Carousel slides={slides} height="lg" />
+            <Carousel slides={slides} height="lg" autoPlay={false} />
           </Box>
         }
         spacing="lg"

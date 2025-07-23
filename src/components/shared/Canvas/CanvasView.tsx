@@ -3,7 +3,7 @@ import { ContactInfo } from '../ContactInfo';
 import { QuickNavigation } from '../QuickNavigation';
 import { MobileHeroCTA } from '../MobileHeroCTA';
 import { useState, useEffect } from 'react';
-import property from '../../../resources/images/location/property1.png';
+import property from '../../../resources/images/location/property1.webp';
 
 export const CanvasView = ({
   children,
