@@ -189,6 +189,36 @@ export class GoogleAnalyticsLoader {
     this.config = config;
   }
 
+  /**
+   * Helper method to load a single Google Analytics script
+   */
+  private loadAnalyticsScript(measurementId: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      script.onload = () => {
+        this.configureAnalytics(measurementId);
+        resolve();
+      };
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
+
+  /**
+   * Helper method to configure Google Analytics for a measurement ID
+   */
+  private configureAnalytics(measurementId: string): void {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', measurementId, {
+        anonymize_ip: this.config.anonymizeIp ?? true,
+        debug_mode: this.config.debugMode ?? false,
+        page_view_timeout: this.config.pageViewTimeout ?? 5000,
+      });
+    }
+  }
+
   public async load(): Promise<void> {
     if (this.isLoaded) {
       return Promise.resolve();
@@ -198,7 +228,7 @@ export class GoogleAnalyticsLoader {
       return this.loadPromise;
     }
 
-    this.loadPromise = new Promise((resolve, reject) => {
+    this.loadPromise = new Promise(async (resolve, reject) => {
       try {
         // Initialize dataLayer
         (window as any).dataLayer = (window as any).dataLayer || [];
@@ -215,31 +245,19 @@ export class GoogleAnalyticsLoader {
           wait_for_update: 500,
         });
 
-        // Load Google Analytics script
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${this.config.measurementId}`;
-        script.onload = () => {
-          // Configure Google Analytics
-          (window as any).gtag('js', new Date());
-          (window as any).gtag('config', this.config.measurementId, {
-            anonymize_ip: this.config.anonymizeIp ?? true,
-            debug_mode: this.config.debugMode ?? false,
-            page_view_timeout: this.config.pageViewTimeout ?? 5000,
-          });
+        // Set initial timestamp
+        (window as any).gtag('js', new Date());
 
-          (window as any).gtag('config', this.config.analyticsMeasurementId, {
-            anonymize_ip: this.config.anonymizeIp ?? true,
-            debug_mode: this.config.debugMode ?? false,
-            page_view_timeout: this.config.pageViewTimeout ?? 5000,
-          });
+        // Load both Google Analytics scripts in parallel
+        const loadPromises = [
+          this.loadAnalyticsScript(this.config.measurementId),
+          this.loadAnalyticsScript(this.config.analyticsMeasurementId),
+        ];
 
-          this.isLoaded = true;
-          resolve();
-        };
-        script.onerror = reject;
+        await Promise.all(loadPromises);
 
-        document.head.appendChild(script);
+        this.isLoaded = true;
+        resolve();
       } catch (error) {
         reject(error);
       }
