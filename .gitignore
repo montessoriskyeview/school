@@ -27,3 +27,6 @@ yarn-error.log*
 
 # Environment variables
 .env
+
+# Lighthouse report
+lighthouse-report.html
