@@ -23,6 +23,7 @@ export interface IConsentState {
 interface IGoogleAnalyticsConfig {
   measurementId: string;
   analyticsMeasurementId: string;
+  secondaryAnalyticsMeasurementId: string;
   debugMode?: boolean;
   anonymizeIp?: boolean;
   pageViewTimeout?: number;
@@ -211,11 +212,7 @@ export class GoogleAnalyticsLoader {
    */
   private configureAnalytics(measurementId: string): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', measurementId, {
-        anonymize_ip: this.config.anonymizeIp ?? true,
-        debug_mode: this.config.debugMode ?? false,
-        page_view_timeout: this.config.pageViewTimeout ?? 5000,
-      });
+      (window as any).gtag('config', measurementId);
     }
   }
 
@@ -252,6 +249,7 @@ export class GoogleAnalyticsLoader {
         const loadPromises = [
           this.loadAnalyticsScript(this.config.measurementId),
           this.loadAnalyticsScript(this.config.analyticsMeasurementId),
+          this.loadAnalyticsScript(this.config.secondaryAnalyticsMeasurementId),
         ];
 
         await Promise.all(loadPromises);
@@ -414,6 +412,7 @@ export class PerformanceOptimizer {
     this.analyticsLoader = new GoogleAnalyticsLoader({
       measurementId: 'AW-16665018583',
       analyticsMeasurementId: 'G-0FTM2V6DK7',
+      secondaryAnalyticsMeasurementId: 'G-EW5S4BY15P',
       anonymizeIp: true,
       debugMode: process.env.NODE_ENV === 'development',
     });
