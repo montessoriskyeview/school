@@ -212,7 +212,11 @@ export class GoogleAnalyticsLoader {
    */
   private configureAnalytics(measurementId: string): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', measurementId);
+      (window as any).gtag('config', measurementId, {
+        anonymize_ip: this.config.anonymizeIp ?? false,
+        debug_mode: this.config.debugMode ?? false,
+        page_view_timeout: this.config.pageViewTimeout ?? 5000,
+      });
     }
   }
 
