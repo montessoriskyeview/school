@@ -160,17 +160,12 @@ export class ConsentManager {
 
   private applyConsent() {
     // Apply consent to Google Analytics
-    if (
-      this.consentState.analytics &&
-      typeof window !== 'undefined' &&
-      (window as any).gtag
-    ) {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('consent', 'update', {
-        analytics_storage: 'granted',
-      });
-    } else if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('consent', 'update', {
-        analytics_storage: 'denied',
+        analytics_storage: this.consentState.analytics ? 'granted' : 'denied',
+        ad_storage: this.consentState.ads ? 'granted' : 'denied',
+        ad_user_data: this.consentState.marketing ? 'granted' : 'denied',
+        ad_personalization: this.consentState.marketing ? 'granted' : 'denied',
       });
     }
   }
@@ -234,6 +229,14 @@ export class GoogleAnalyticsLoader {
 
     this.loadPromise = new Promise(async (resolve, reject) => {
       try {
+        // Check if gtag is already loaded from static HTML
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          console.log('Google Analytics already loaded from static HTML');
+          this.isLoaded = true;
+          resolve();
+          return;
+        }
+
         // Initialize dataLayer
         (window as any).dataLayer = (window as any).dataLayer || [];
 
@@ -429,14 +432,30 @@ export class PerformanceOptimizer {
   }
 
   public async initialize() {
-    // Load analytics only if consent is granted
+    // Always initialize analytics since it's now loaded statically in HTML
+    // But respect consent for tracking behavior
+    await this.analyticsLoader.load();
+
+    // Apply current consent settings to analytics
     const consent = this.consentManager.getConsent();
-    if (consent.analytics) {
-      await this.analyticsLoader.load();
-    }
+    this.applyAnalyticsConsent(consent);
 
     // Preload critical resources
     this.preloadCriticalResources();
+  }
+
+  public applyAnalyticsConsent(consent: IConsentState) {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      if (consent.analytics) {
+        (window as any).gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+      } else {
+        (window as any).gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    }
   }
 
   private preloadCriticalResources() {
