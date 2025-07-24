@@ -47,6 +47,7 @@
     "test:analytics": "react-scripts test --testPathPattern='(analytics|conversion-tracking|analytics-environment)' --watchAll=false",
     "test:analytics:watch": "react-scripts test --testPathPattern='(analytics|conversion-tracking|analytics-environment)'",
     "validate:analytics": "node scripts/validate-analytics.js",
+    "test:analytics-blocking": "node scripts/test-analytics-blocking.js",
     "eject": "react-scripts eject",
     "migrate-box": "node scripts/migrate-box-imports.js",
     "lint": "eslint src --ext .ts,.tsx",

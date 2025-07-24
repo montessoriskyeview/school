@@ -249,9 +249,6 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:updated_time" content="2025-01-27T00:00:00+00:00" />
   
-  <!-- Facebook App ID (if you have one) -->
-  <!-- <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" /> -->
-  
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://montessoriskyeview.com/" />
@@ -320,36 +317,79 @@
   </script>
   
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
   
-  <!-- Google Analytics will be loaded dynamically with consent management -->
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FTM2V6DK7"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16665018583"></script>
+  <!-- Environment-based Analytics Loading -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    // Check if we're in production (not localhost)
+    var isProduction = window.location.hostname !== 'localhost' && 
+                      window.location.hostname !== '127.0.0.1' && 
+                      window.location.hostname !== '0.0.0.0';
+    
+    // Update meta tags for development
+    if (!isProduction) {
+      // Update title for development
+      document.title = 'Montessori Skye View Learning Center | Child-Centered Education Las Vegas (DEV)';
+      
+      // Update robots meta tag for development
+      var robotsMeta = document.querySelector('meta[name="robots"]');
+      if (robotsMeta) {
+        robotsMeta.setAttribute('content', 'noindex, nofollow');
+      }
+      
+      // Update Open Graph URLs for development
+      var ogUrlMeta = document.querySelector('meta[property="og:url"]');
+      if (ogUrlMeta) {
+        ogUrlMeta.setAttribute('content', window.location.origin + '/');
+      }
+      
+      var ogImageMeta = document.querySelector('meta[property="og:image"]');
+      if (ogImageMeta) {
+        ogImageMeta.setAttribute('content', window.location.origin + '/og-image.png');
+      }
+      
+      var ogImageSecureMeta = document.querySelector('meta[property="og:image:secure_url"]');
+      if (ogImageSecureMeta) {
+        ogImageSecureMeta.setAttribute('content', window.location.origin + '/og-image.png');
+      }
+      
+      // Update Twitter URLs for development
+      var twitterUrlMeta = document.querySelector('meta[property="twitter:url"]');
+      if (twitterUrlMeta) {
+        twitterUrlMeta.setAttribute('content', window.location.origin + '/');
+      }
+      
+      var twitterImageMeta = document.querySelector('meta[property="twitter:image"]');
+      if (twitterImageMeta) {
+        twitterImageMeta.setAttribute('content', window.location.origin + '/og-image.png');
+      }
+      
+      console.log('🔒 Analytics disabled in development environment');
+    } else {
+      // Only load analytics in production
+      console.log('📊 Analytics enabled in production environment');
+      
+      // Load Google Analytics script dynamically
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0FTM2V6DK7';
+      document.head.appendChild(gaScript);
+      
+      // Initialize Google Analytics
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    // Set default consent mode
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
+      // Set default consent mode
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
 
-    gtag('config', 'G-0FTM2V6DK7');
-    gtag('config', 'AW-16665018583');
+      gtag('config', 'G-0FTM2V6DK7');
+      gtag('config', 'AW-16665018583');
+    }
   </script>
 </head>
 
@@ -368,4 +408,4 @@
     -->
 </body>
 
-</html>
+</html> 
