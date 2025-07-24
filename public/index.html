@@ -340,6 +340,14 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
+    // Set default consent mode
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+
     gtag('config', 'G-0FTM2V6DK7');
     gtag('config', 'AW-16665018583');
   </script>
