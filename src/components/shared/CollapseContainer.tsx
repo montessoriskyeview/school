@@ -12,6 +12,7 @@ interface CollapseContainerProps {
   variant?: 'default' | 'primary' | 'secondary';
   spacing?: 'sm' | 'md' | 'lg';
   defaultExpanded?: boolean;
+  testId?: string;
 }
 
 const StyledBox = styled(Box)`
@@ -69,10 +70,13 @@ export const CollapseContainer = ({
   variant = 'default',
   spacing = 'md',
   defaultExpanded = false,
+  testId,
 }: CollapseContainerProps) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const [uniqueId] = useState(
-    () => `collapse-${Math.random().toString(36).substr(2, 9)}`
+  const [uniqueId] = useState(() =>
+    testId
+      ? `collapse-${testId}`
+      : `collapse-${Math.random().toString(36).substr(2, 9)}`
   );
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -97,6 +101,7 @@ export const CollapseContainer = ({
           aria-expanded={isExpanded}
           aria-controls={uniqueId}
           aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${title}`}
+          data-testid={testId}
         >
           {isExpanded ? (
             <ExpandLessIcon

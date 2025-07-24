@@ -47,16 +47,18 @@ describe('Schedule Component', () => {
     expect(screen.getByText('Full-Time Program')).toBeInTheDocument();
     expect(screen.getByText('Part-Time Program')).toBeInTheDocument();
 
-    // Check that separate schedule collapse containers are present
-    expect(screen.getByText('Full-Time Daily Schedule')).toBeInTheDocument();
-    expect(screen.getByText('Part-Time Daily Schedule')).toBeInTheDocument();
+    // Check that separate schedule collapse containers are present using test IDs
+    expect(screen.getByTestId('full-time-daily-schedule')).toBeInTheDocument();
+    expect(screen.getByTestId('part-time-daily-schedule')).toBeInTheDocument();
   });
 
   test('full-time schedule contains extended hours content', async () => {
     render(<ScheduleWithRouter />);
 
     // Expand full-time schedule
-    const fullTimeScheduleButton = screen.getByText('Full-Time Daily Schedule');
+    const fullTimeScheduleButton = screen.getByTestId(
+      'full-time-daily-schedule'
+    );
     fireEvent.click(fullTimeScheduleButton);
 
     await waitFor(() => {
@@ -81,7 +83,9 @@ describe('Schedule Component', () => {
     render(<ScheduleWithRouter />);
 
     // Expand part-time schedule
-    const partTimeScheduleButton = screen.getByText('Part-Time Daily Schedule');
+    const partTimeScheduleButton = screen.getByTestId(
+      'part-time-daily-schedule'
+    );
     fireEvent.click(partTimeScheduleButton);
 
     await waitFor(() => {
@@ -110,8 +114,8 @@ describe('Schedule Component', () => {
     render(<ScheduleWithRouter />);
 
     // Expand both schedules
-    fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-    fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+    fireEvent.click(screen.getByTestId('full-time-daily-schedule'));
+    fireEvent.click(screen.getByTestId('part-time-daily-schedule'));
 
     await waitFor(() => {
       // Full-time should have more items than part-time
@@ -145,8 +149,8 @@ describe('Schedule Component', () => {
     render(<ScheduleWithRouter />);
 
     // Expand both schedules
-    fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-    fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+    fireEvent.click(screen.getByTestId('full-time-daily-schedule'));
+    fireEvent.click(screen.getByTestId('part-time-daily-schedule'));
 
     // Verify last items of each schedule are accessible (the key test for mobile height issue)
     const lastFullTimeItem =
@@ -187,12 +191,8 @@ describe('Schedule Component', () => {
   test('accessibility features work correctly', async () => {
     render(<ScheduleWithRouter />);
 
-    const fullTimeButton = screen.getByLabelText(
-      /expand full-time daily schedule/i
-    );
-    const partTimeButton = screen.getByLabelText(
-      /expand part-time daily schedule/i
-    );
+    const fullTimeButton = screen.getByTestId('full-time-daily-schedule');
+    const partTimeButton = screen.getByTestId('part-time-daily-schedule');
 
     // Check initial aria-expanded state
     expect(fullTimeButton).toHaveAttribute('aria-expanded', 'false');
@@ -219,8 +219,8 @@ describe('Schedule Component', () => {
     expect(screen.getByText('9:00 AM - 1:00 PM')).toBeInTheDocument(); // Part-time
 
     // Expand both schedules to verify content differentiation
-    fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-    fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+    fireEvent.click(screen.getByTestId('full-time-daily-schedule'));
+    fireEvent.click(screen.getByTestId('part-time-daily-schedule'));
 
     await waitFor(() => {
       // Full-time unique content - use partial text matching

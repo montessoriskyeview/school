@@ -70,8 +70,10 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
         render(<ScheduleWithRouter />);
 
         // Expand both schedules
-        fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-        fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+        const fullTimeScheduleButton = screen.getByTestId(
+          'full-time-daily-schedule'
+        );
+        fireEvent.click(fullTimeScheduleButton);
 
         // Get last items
         const lastFullTimeItem =
@@ -116,8 +118,10 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
       render(<ScheduleWithRouter />);
 
       // Expand both schedules
-      fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-      fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+      const fullTimeScheduleButton = screen.getByTestId(
+        'full-time-daily-schedule'
+      );
+      fireEvent.click(fullTimeScheduleButton);
 
       // Simulate scrolling by checking element visibility
       const lastFullTimeItem =
@@ -221,8 +225,10 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
       setViewport({ width: 320, height: 568 }); // iPhone SE
       render(<ScheduleWithRouter />);
 
-      fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-      fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+      const fullTimeScheduleButton = screen.getByTestId(
+        'full-time-daily-schedule'
+      );
+      fireEvent.click(fullTimeScheduleButton);
 
       const lastFullTimeItem =
         FULL_TIME_SCHEDULE_ITEMS[FULL_TIME_SCHEDULE_ITEMS.length - 1];
@@ -245,8 +251,10 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
       setViewport({ width: 2560, height: 1440 }); // 4K screen
       render(<ScheduleWithRouter />);
 
-      fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-      fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+      const fullTimeScheduleButton = screen.getByTestId(
+        'full-time-daily-schedule'
+      );
+      fireEvent.click(fullTimeScheduleButton);
 
       const lastFullTimeItem =
         FULL_TIME_SCHEDULE_ITEMS[FULL_TIME_SCHEDULE_ITEMS.length - 1];
@@ -267,8 +275,8 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
     test('last items visible when rapidly expanding/collapsing', async () => {
       render(<ScheduleWithRouter />);
 
-      const fullTimeButton = screen.getByText('Full-Time Daily Schedule');
-      const partTimeButton = screen.getByText('Part-Time Daily Schedule');
+      const fullTimeButton = screen.getByTestId('full-time-daily-schedule');
+      const partTimeButton = screen.getByTestId('part-time-daily-schedule');
 
       // Rapidly expand and collapse
       fireEvent.click(fullTimeButton);
@@ -300,11 +308,11 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
       render(<ScheduleWithRouter />);
 
       // Focus and activate via keyboard
-      const fullTimeButton = screen.getByText('Full-Time Daily Schedule');
+      const fullTimeButton = screen.getByTestId('full-time-daily-schedule');
       fullTimeButton.focus();
       fireEvent.keyDown(fullTimeButton, { key: 'Enter' });
 
-      const partTimeButton = screen.getByText('Part-Time Daily Schedule');
+      const partTimeButton = screen.getByTestId('part-time-daily-schedule');
       partTimeButton.focus();
       fireEvent.keyDown(partTimeButton, { key: 'Enter' });
 
@@ -327,8 +335,10 @@ describe('Schedule Last Item Visibility - Comprehensive Coverage', () => {
     test('last items maintain proper ARIA relationships', async () => {
       render(<ScheduleWithRouter />);
 
-      fireEvent.click(screen.getByText('Full-Time Daily Schedule'));
-      fireEvent.click(screen.getByText('Part-Time Daily Schedule'));
+      const fullTimeScheduleButton = screen.getByTestId(
+        'full-time-daily-schedule'
+      );
+      fireEvent.click(fullTimeScheduleButton);
 
       await waitFor(() => {
         const scheduleRegions = screen.getAllByRole('region');

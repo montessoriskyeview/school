@@ -108,6 +108,7 @@ export const Schedule = () => {
                 >
                   <CollapseContainer
                     title="Daily Schedule"
+                    testId="full-time-daily-schedule"
                     content={
                       <>
                         <DailySchedule items={FULL_TIME_SCHEDULE_ITEMS} />
@@ -217,6 +218,7 @@ export const Schedule = () => {
                 >
                   <CollapseContainer
                     title="Daily Schedule"
+                    testId="part-time-daily-schedule"
                     content={
                       <>
                         <DailySchedule items={PART_TIME_SCHEDULE_ITEMS} />
@@ -279,6 +281,7 @@ export const Schedule = () => {
 
       <CollapseContainer
         title="2025-2026 Learning Year"
+        testId="yearly-schedule"
         content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
       />
 
