@@ -217,6 +217,9 @@ export class GoogleAnalyticsLoader {
         debug_mode: this.config.debugMode ?? false,
         page_view_timeout: this.config.pageViewTimeout ?? 5000,
       });
+      // console.log('gac');
+    } else {
+      console.warn('ga n/a');
     }
   }
 
@@ -238,14 +241,6 @@ export class GoogleAnalyticsLoader {
         (window as any).gtag = function () {
           (window as any).dataLayer.push(arguments);
         };
-
-        // Set initial consent state (denied by default)
-        (window as any).gtag('consent', 'default', {
-          analytics_storage: 'denied',
-          ad_storage: 'denied',
-          wait_for_update: 500,
-        });
-
         // Set initial timestamp
         (window as any).gtag('js', new Date());
 
