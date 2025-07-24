@@ -1,17 +1,11 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { PhoneContact } from '../components/shared/PhoneContact';
-
-// Mock gtag
-const mockGtag = jest.fn();
-Object.defineProperty(window, 'gtag', {
-  value: mockGtag,
-  writable: true,
-});
+import { getMockAnalytics, clearMockAnalytics } from '../utils/analytics';
 
 describe('PhoneContact Component', () => {
   beforeEach(() => {
-    mockGtag.mockClear();
+    clearMockAnalytics();
   });
 
   test('renders with default props', () => {
@@ -39,7 +33,13 @@ describe('PhoneContact Component', () => {
 
     fireEvent.click(link);
 
-    expect(mockGtag).toHaveBeenCalledWith('event', 'conversion', {
+    const mockAnalytics = getMockAnalytics();
+    expect(mockAnalytics).toBeTruthy();
+
+    const events = mockAnalytics!.getEvents();
+    expect(events).toHaveLength(1);
+    expect(events[0]).toEqual({
+      event: 'conversion',
       send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
     });
   });

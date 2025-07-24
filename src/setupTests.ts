@@ -4,6 +4,106 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// ============================================================================
+// ANALYTICS MOCKING - Prevent real analytics calls during testing
+// ============================================================================
+
+// Mock gtag function globally
+const mockGtag = jest.fn();
+const mockDataLayer: any[] = [];
+
+// Mock window.gtag and window.dataLayer
+Object.defineProperty(window, 'gtag', {
+  value: mockGtag,
+  writable: true,
+  configurable: true,
+});
+
+Object.defineProperty(window, 'dataLayer', {
+  value: mockDataLayer,
+  writable: true,
+  configurable: true,
+});
+
+// Mock Google Analytics script loading
+const originalCreateElement = document.createElement;
+document.createElement = function(tagName: string) {
+  const element = originalCreateElement.call(document, tagName);
+  if (tagName.toLowerCase() === 'script') {
+    // Mock script loading for Google Analytics
+    const originalSetAttribute = element.setAttribute;
+    element.setAttribute = function(name: string, value: string) {
+      if (name === 'src' && value.includes('googletagmanager.com')) {
+        // Prevent actual Google Analytics script loading
+        console.log('[TEST] Mocked Google Analytics script loading:', value);
+        return;
+      }
+      return originalSetAttribute.call(this, name, value);
+    };
+  }
+  return element;
+};
+
+// Mock localStorage for consent management
+const mockLocalStorage = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+  key: jest.fn(),
+  length: 0,
+};
+
+Object.defineProperty(window, 'localStorage', {
+  value: mockLocalStorage,
+  writable: true,
+});
+
+// Mock sessionStorage
+const mockSessionStorage = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+  key: jest.fn(),
+  length: 0,
+};
+
+Object.defineProperty(window, 'sessionStorage', {
+  value: mockSessionStorage,
+  writable: true,
+});
+
+// Mock performance API for analytics
+const mockPerformanceObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn(() => []),
+}));
+
+Object.defineProperty(window, 'PerformanceObserver', {
+  value: mockPerformanceObserver,
+  writable: true,
+});
+
+// Mock IntersectionObserver for lazy loading
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock ResizeObserver
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// ============================================================================
+// VIEWPORT AND STYLING MOCKS
+// ============================================================================
+
 // Mock viewport dimensions to prevent CSS NaN warnings
 Object.defineProperty(window, 'innerWidth', {
   writable: true,
@@ -28,20 +128,6 @@ Object.defineProperty(window, 'outerHeight', {
   configurable: true,
   value: 768,
 });
-
-// Mock ResizeObserver to prevent Material-UI warnings
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock IntersectionObserver to prevent Material-UI warnings
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
 
 // Mock matchMedia to prevent Material-UI warnings
 Object.defineProperty(window, 'matchMedia', {
@@ -89,9 +175,14 @@ Object.defineProperty(performance, 'now', {
   value: jest.fn(() => Date.now()),
 });
 
+// ============================================================================
+// CONSOLE SUPPRESSION
+// ============================================================================
+
 // Suppress console warnings for known issues in tests
 const originalWarn = console.warn;
 const originalError = console.error;
+const originalLog = console.log;
 
 beforeAll(() => {
   console.warn = jest.fn((...args) => {
@@ -106,7 +197,8 @@ beforeAll(() => {
           'A suspended resource finished loading inside a test'
         ) ||
         (message.includes('An update to') &&
-          message.includes('was not wrapped in act')))
+          message.includes('was not wrapped in act')) ||
+        message.includes('[TEST] Mocked Google Analytics'))
     ) {
       return;
     }
@@ -131,12 +223,31 @@ beforeAll(() => {
     }
     originalError(...args);
   });
+
+  console.log = jest.fn((...args) => {
+    // Allow test-related logs but suppress others
+    const message = args[0];
+    if (
+      typeof message === 'string' &&
+      (message.includes('[TEST]') ||
+        message.includes('Mocked Google Analytics'))
+    ) {
+      originalLog(...args);
+      return;
+    }
+    // Suppress other console.log calls during tests
+  });
 });
 
 afterAll(() => {
   console.warn = originalWarn;
   console.error = originalError;
+  console.log = originalLog;
 });
+
+// ============================================================================
+// CUSTOM MATCHERS
+// ============================================================================
 
 // Custom matchers for mobile testing
 expect.extend({

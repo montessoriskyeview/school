@@ -3,6 +3,13 @@
  * Implements best practices for Google Analytics and ad performance
  */
 
+import {
+  trackEvent as trackAnalyticsEvent,
+  trackPageView as trackAnalyticsPageView,
+  updateConsent as updateAnalyticsConsent,
+  trackWebVitals,
+} from './analytics';
+
 // Performance monitoring
 export interface IPerformanceMetrics {
   lcp: number;
@@ -90,15 +97,8 @@ export class PerformanceMonitor {
   }
 
   private reportMetric(name: string, value: number) {
-    // Report to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Web Vitals',
-        event_label: name,
-        value: Math.round(name === 'CLS' ? value * 1000 : value),
-        non_interaction: true,
-      });
-    }
+    // Use the new analytics utility for Web Vitals tracking
+    trackWebVitals(name, value);
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -112,6 +112,7 @@ export class PerformanceMonitor {
 
   public disconnect() {
     this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
   }
 }
 
@@ -159,22 +160,18 @@ export class ConsentManager {
   }
 
   private applyConsent() {
-    // Apply consent to Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('consent', 'update', {
-        analytics_storage: this.consentState.analytics ? 'granted' : 'denied',
-        ad_storage: this.consentState.ads ? 'granted' : 'denied',
-        ad_user_data: this.consentState.marketing ? 'granted' : 'denied',
-        ad_personalization: this.consentState.marketing ? 'granted' : 'denied',
-      });
-    }
+    // Use the new analytics utility for consent updates
+    updateAnalyticsConsent('update', {
+      analytics_storage: this.consentState.analytics ? 'granted' : 'denied',
+      ad_storage: this.consentState.ads ? 'granted' : 'denied',
+      ad_user_data: this.consentState.marketing ? 'granted' : 'denied',
+      ad_personalization: this.consentState.marketing ? 'granted' : 'denied',
+    });
   }
 }
 
-// G-EW5S4BY15P
-
 /**
- * Optimized Google Analytics loader
+ * Google Analytics loader with environment-aware behavior
  */
 export class GoogleAnalyticsLoader {
   private config: IGoogleAnalyticsConfig;
@@ -190,6 +187,18 @@ export class GoogleAnalyticsLoader {
    */
   private loadAnalyticsScript(measurementId: string): Promise<void> {
     return new Promise((resolve, reject) => {
+      // In test or development environment, don't actually load scripts
+      if (
+        process.env.NODE_ENV === 'test' ||
+        process.env.NODE_ENV === 'development'
+      ) {
+        console.log(
+          `[ANALYTICS] Would load script for measurement ID: ${measurementId}`
+        );
+        resolve();
+        return;
+      }
+
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
@@ -206,16 +215,13 @@ export class GoogleAnalyticsLoader {
    * Helper method to configure Google Analytics for a measurement ID
    */
   private configureAnalytics(measurementId: string): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', measurementId, {
-        anonymize_ip: this.config.anonymizeIp ?? false,
-        debug_mode: this.config.debugMode ?? false,
-        page_view_timeout: this.config.pageViewTimeout ?? 5000,
-      });
-      // console.log('gac');
-    } else {
-      console.warn('ga n/a');
-    }
+    // Use the new analytics utility for configuration
+    trackAnalyticsEvent('config', {
+      measurementId,
+      anonymize_ip: this.config.anonymizeIp ?? false,
+      debug_mode: this.config.debugMode ?? false,
+      page_view_timeout: this.config.pageViewTimeout ?? 5000,
+    });
   }
 
   public async load(): Promise<void> {
@@ -232,6 +238,19 @@ export class GoogleAnalyticsLoader {
         // Check if gtag is already loaded from static HTML
         if (typeof window !== 'undefined' && (window as any).gtag) {
           console.log('Google Analytics already loaded from static HTML');
+          this.isLoaded = true;
+          resolve();
+          return;
+        }
+
+        // In test or development environment, skip actual loading
+        if (
+          process.env.NODE_ENV === 'test' ||
+          process.env.NODE_ENV === 'development'
+        ) {
+          console.log(
+            '[ANALYTICS] Skipping actual script loading in test/development environment'
+          );
           this.isLoaded = true;
           resolve();
           return;
@@ -271,18 +290,13 @@ export class GoogleAnalyticsLoader {
   }
 
   public trackEvent(eventName: string, parameters?: Record<string, any>) {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
-    }
+    // Use the new analytics utility
+    trackAnalyticsEvent(eventName, parameters);
   }
 
   public trackPageView(pageTitle?: string, pageLocation?: string) {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'page_view', {
-        page_title: pageTitle || document.title,
-        page_location: pageLocation || window.location.href,
-      });
-    }
+    // Use the new analytics utility
+    trackAnalyticsPageView(pageTitle, pageLocation);
   }
 }
 
@@ -445,17 +459,10 @@ export class PerformanceOptimizer {
   }
 
   public applyAnalyticsConsent(consent: IConsentState) {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      if (consent.analytics) {
-        (window as any).gtag('consent', 'update', {
-          analytics_storage: 'granted',
-        });
-      } else {
-        (window as any).gtag('consent', 'update', {
-          analytics_storage: 'denied',
-        });
-      }
-    }
+    // Use the new analytics utility for consent updates
+    updateAnalyticsConsent('update', {
+      analytics_storage: consent.analytics ? 'granted' : 'denied',
+    });
   }
 
   private preloadCriticalResources() {
@@ -496,18 +503,16 @@ export class PerformanceOptimizer {
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 
-// Export utility functions
+// Export utility functions using the new analytics utility
 export const trackEvent = (
   eventName: string,
   parameters?: Record<string, any>
 ) => {
-  performanceOptimizer.getAnalyticsLoader().trackEvent(eventName, parameters);
+  trackAnalyticsEvent(eventName, parameters);
 };
 
 export const trackPageView = (pageTitle?: string, pageLocation?: string) => {
-  performanceOptimizer
-    .getAnalyticsLoader()
-    .trackPageView(pageTitle, pageLocation);
+  trackAnalyticsPageView(pageTitle, pageLocation);
 };
 
 export const updateConsent = (consent: Partial<IConsentState>) => {

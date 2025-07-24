@@ -11,20 +11,23 @@ import { EmailContact } from '../../components/shared/EmailContact';
 import { PhoneContact } from '../../components/shared/PhoneContact';
 import { EnrollmentButton } from '../../components/shared/EnrollmentButton';
 import { EnrollmentButtons } from '../../components/shared/EnrollmentButtons';
-import { trackEvent } from '../../utils/performance';
+import { getMockAnalytics, clearMockAnalytics } from '../../utils/analytics';
 import { DEFAULT_CONVERSION_ID } from '../../resources/enrollmentConfig';
 
-// Mock trackEvent function
-jest.mock('../../utils/performance', () => ({
-  trackEvent: jest.fn(),
-}));
-
-const mockTrackEvent = trackEvent as jest.MockedFunction<typeof trackEvent>;
-
 describe('Conversion Tracking Tests', () => {
+  let mockAnalytics: any;
+
   beforeEach(() => {
-    jest.clearAllMocks();
-    mockTrackEvent.mockClear();
+    // Get the mock analytics instance
+    mockAnalytics = getMockAnalytics();
+    if (mockAnalytics) {
+      mockAnalytics.clear();
+    }
+  });
+
+  afterEach(() => {
+    // Clear mock analytics after each test
+    clearMockAnalytics();
   });
 
   describe('Email Contact Conversion Tracking', () => {
@@ -36,7 +39,10 @@ describe('Conversion Tracking Tests', () => {
 
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(1);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         value: 1.0,
         currency: 'USD',
@@ -52,13 +58,16 @@ describe('Conversion Tracking Tests', () => {
       fireEvent.click(link);
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledTimes(2);
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(1, 'conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(2);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         value: 1.0,
         currency: 'USD',
       });
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(2, 'conversion', {
+      expect(events[1]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         value: 1.0,
         currency: 'USD',
@@ -80,7 +89,10 @@ describe('Conversion Tracking Tests', () => {
 
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(1);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
       });
     });
@@ -94,11 +106,14 @@ describe('Conversion Tracking Tests', () => {
       fireEvent.click(link);
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledTimes(2);
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(1, 'conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(2);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
       });
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(2, 'conversion', {
+      expect(events[1]).toEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
       });
     });
@@ -122,7 +137,10 @@ describe('Conversion Tracking Tests', () => {
 
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(1);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: DEFAULT_CONVERSION_ID,
       });
     });
@@ -141,7 +159,10 @@ describe('Conversion Tracking Tests', () => {
 
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(1);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: customConversionId,
       });
     });
@@ -159,11 +180,14 @@ describe('Conversion Tracking Tests', () => {
       fireEvent.click(link);
       fireEvent.click(link);
 
-      expect(mockTrackEvent).toHaveBeenCalledTimes(2);
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(1, 'conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(2);
+      expect(events[0]).toEqual({
+        event: 'conversion',
         send_to: DEFAULT_CONVERSION_ID,
       });
-      expect(mockTrackEvent).toHaveBeenNthCalledWith(2, 'conversion', {
+      expect(events[1]).toEqual({
+        event: 'conversion',
         send_to: DEFAULT_CONVERSION_ID,
       });
     });
@@ -186,14 +210,13 @@ describe('Conversion Tracking Tests', () => {
       });
 
       // Should track conversion for each button
-      expect(mockTrackEvent).toHaveBeenCalledTimes(enrollmentLinks.length);
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(enrollmentLinks.length);
 
-      // Each call should be a conversion event
-      enrollmentLinks.forEach(() => {
-        expect(mockTrackEvent).toHaveBeenCalledWith(
-          'conversion',
-          expect.any(Object)
-        );
+      // Each event should be a conversion event
+      events.forEach((event: any) => {
+        expect(event.event).toBe('conversion');
+        expect(event.send_to).toBeDefined();
       });
     });
 
@@ -208,8 +231,9 @@ describe('Conversion Tracking Tests', () => {
         fireEvent.click(link);
       });
 
-      // Should have called trackEvent for each button
-      expect(mockTrackEvent).toHaveBeenCalledTimes(enrollmentLinks.length);
+      // Should have tracked events for each button
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(enrollmentLinks.length);
     });
   });
 
@@ -318,17 +342,23 @@ describe('Conversion Tracking Tests', () => {
       fireEvent.click(enrollmentLink);
 
       // Verify all conversions were tracked
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      const events = mockAnalytics?.getEvents() || [];
+      expect(events).toHaveLength(3);
+
+      expect(events).toContainEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         value: 1.0,
         currency: 'USD',
       });
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      expect(events).toContainEqual({
+        event: 'conversion',
         send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
       });
 
-      expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+      expect(events).toContainEqual({
+        event: 'conversion',
         send_to: DEFAULT_CONVERSION_ID,
       });
     });

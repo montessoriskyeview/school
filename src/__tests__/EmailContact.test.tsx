@@ -1,17 +1,20 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { EmailContact } from '../components/shared/EmailContact';
-
-// Mock gtag
-const mockGtag = jest.fn();
-Object.defineProperty(window, 'gtag', {
-  value: mockGtag,
-  writable: true,
-});
+import { getMockAnalytics, clearMockAnalytics } from '../utils/analytics';
 
 describe('EmailContact Component', () => {
+  let mockAnalytics: any;
+
   beforeEach(() => {
-    mockGtag.mockClear();
+    mockAnalytics = getMockAnalytics();
+    if (mockAnalytics) {
+      mockAnalytics.clear();
+    }
+  });
+
+  afterEach(() => {
+    clearMockAnalytics();
   });
 
   test('renders with default props', () => {
@@ -39,7 +42,10 @@ describe('EmailContact Component', () => {
 
     fireEvent.click(link);
 
-    expect(mockGtag).toHaveBeenCalledWith('event', 'conversion', {
+    const events = mockAnalytics?.getEvents() || [];
+    expect(events).toHaveLength(1);
+    expect(events[0]).toEqual({
+      event: 'conversion',
       send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
       value: 1.0,
       currency: 'USD',
