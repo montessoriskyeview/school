@@ -48,13 +48,19 @@ const StyledButton = styled(Button)`
 const StyledContent = styled(Box, {
   shouldForwardProp: prop => prop !== 'isExpanded',
 })<{ isExpanded: boolean }>`
-  max-height: ${props => (props.isExpanded ? '1000px' : '0')};
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  max-height: ${props => (props.isExpanded ? 'none' : '0')};
+  overflow: ${props => (props.isExpanded ? 'visible' : 'hidden')};
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: ${props => (props.isExpanded ? 1 : 0)};
   padding-top: ${props => (props.isExpanded ? 'var(--spacing-xl)' : '0')};
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
   padding-bottom: ${props => (props.isExpanded ? 'var(--spacing-lg)' : '0')};
+
+  @media (max-width: 768px) {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
 `;
 
 export const CollapseContainer = ({

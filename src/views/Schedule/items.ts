@@ -24,78 +24,121 @@ export interface YearlyScheduleProps {
   items: YearlyScheduleItem[];
 }
 
-export const SCHEDULE_ITEMS: DailyScheduleItem[] = [
+// Full-time schedule (8am - 4pm)
+export const FULL_TIME_SCHEDULE_ITEMS: DailyScheduleItem[] = [
   {
     startTime: '8am',
-    endTime: '9',
+    endTime: '9am',
     title: 'Supervised Care',
-    detail: 'Supervised before care program available for full time students.'
+    detail:
+      'Supervised before care program for early arrivals. Students can engage in quiet activities and prepare for the day.',
   },
   {
-    startTime: '9',
-    endTime: '9:30',
+    startTime: '9am',
+    endTime: '9:30am',
     title: 'Arrival & Greetings',
     detail:
-      'Students arrive, meet with teachers/advisors for announcements and check-ins.'
+      'Students arrive, meet with teachers/advisors for announcements and check-ins.',
   },
   {
-    startTime: '9:30',
-    endTime: '10:30',
+    startTime: '9:30am',
+    endTime: '10:30am',
     title: 'Core Academics',
     detail:
-      'Focus on foundational skills in reading, writing, and math through hands-on projects and interactive learning. Can be done indoors or outdoors.'
+      'Focus on foundational skills in reading, writing, and math through hands-on projects and interactive learning. Can be done indoors or outdoors.',
   },
   {
-    startTime: '10:30',
-    endTime: '11',
+    startTime: '10:30am',
+    endTime: '11am',
     title: 'Movement & Mindfulness',
     detail:
-      'Active break outdoors with energizing activities like jump rope, yoga, or team games.'
+      'Active break outdoors with energizing activities like jump rope, yoga, or team games.',
   },
   {
-    startTime: '11',
+    startTime: '11am',
     endTime: '12pm',
     title: 'Deep Dives',
     detail:
-      'Students delve into self-chosen areas of interest through project-based learning, discussions, or guest speakers. Can incorporate outdoor learning gardens or nature exploration.'
+      'Students delve into self-chosen areas of interest through project-based learning, discussions, or guest speakers. Can incorporate outdoor learning gardens or nature exploration.',
   },
   {
     startTime: '12pm',
     endTime: '1pm',
     title: 'Lunch & Social',
     detail:
-      'Students enjoy a healthy lunch followed by unstructured playtime or social activities outdoors.'
+      'Students enjoy a healthy lunch followed by unstructured playtime or social activities outdoors.',
   },
-
   {
     startTime: '1pm',
-    endTime: '2',
+    endTime: '2pm',
     title: 'Electives & Enrichment',
     detail:
-      'Students choose from a variety of electives like art, music, drama, or outdoor skills development workshops.'
+      'Students choose from a variety of electives like art, music, drama, or outdoor skills development workshops.',
   },
   {
-    startTime: '2',
-    endTime: '3',
+    startTime: '2pm',
+    endTime: '3pm',
     title: 'Project Time',
     detail:
-      'Students work on ongoing projects related to core academics or electives, with teacher guidance outdoors or in designated indoor spaces.'
+      'Students work on ongoing projects related to core academics or electives, with teacher guidance outdoors or in designated indoor spaces.',
   },
   {
-    startTime: '3',
-    endTime: '3:30',
+    startTime: '3pm',
+    endTime: '3:30pm',
     title: 'Reflection & Wrap-up',
     detail:
-      "Students share learnings, participate in group discussions, and reflect on the day's activities."
+      "Students share learnings, participate in group discussions, and reflect on the day's activities.",
   },
   {
-    startTime: '3:30',
-    endTime: '4',
+    startTime: '3:30pm',
+    endTime: '4pm',
     title: 'Dismissal & Aftercare',
     detail:
-      'Supervised aftercare program available for students who need to stay longer.'
-  }
+      'Supervised aftercare program available for students who need to stay longer.',
+  },
 ];
+
+// Part-time schedule (9am - 1pm) - Core learning hours only
+export const PART_TIME_SCHEDULE_ITEMS: DailyScheduleItem[] = [
+  {
+    startTime: '9am',
+    endTime: '9:30am',
+    title: 'Arrival & Greetings',
+    detail:
+      'Students arrive, meet with teachers/advisors for announcements and check-ins.',
+  },
+  {
+    startTime: '9:30am',
+    endTime: '10:30am',
+    title: 'Core Academics',
+    detail:
+      'Focus on foundational skills in reading, writing, and math through hands-on projects and interactive learning. Can be done indoors or outdoors.',
+  },
+  {
+    startTime: '10:30am',
+    endTime: '11am',
+    title: 'Movement & Mindfulness',
+    detail:
+      'Active break outdoors with energizing activities like jump rope, yoga, or team games.',
+  },
+  {
+    startTime: '11am',
+    endTime: '12pm',
+    title: 'Deep Dives',
+    detail:
+      'Students delve into self-chosen areas of interest through project-based learning, discussions, or guest speakers. Can incorporate outdoor learning gardens or nature exploration.',
+  },
+  {
+    startTime: '12pm',
+    endTime: '1pm',
+    title: 'Lunch & Social',
+    detail:
+      'Students enjoy a healthy lunch followed by unstructured playtime or social activities outdoors. Part-time students are picked up at 1pm.',
+  },
+];
+
+// Legacy schedule for backward compatibility - now defaults to full-time
+export const SCHEDULE_ITEMS: DailyScheduleItem[] = FULL_TIME_SCHEDULE_ITEMS;
 
 export const YEARLY_SCHEDULE_ITEMS: YearlyScheduleItem[] = [
   {

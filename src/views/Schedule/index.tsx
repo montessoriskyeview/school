@@ -4,8 +4,9 @@ import { ListText } from '../../components/shared/ListText';
 import {
   DailyScheduleProps,
   YearlyScheduleProps,
-  SCHEDULE_ITEMS,
   YEARLY_SCHEDULE_ITEMS,
+  FULL_TIME_SCHEDULE_ITEMS,
+  PART_TIME_SCHEDULE_ITEMS,
 } from './items';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
@@ -100,6 +101,33 @@ export const Schedule = () => {
                   enriched curriculum, and comprehensive care. Perfect for
                   working families who need reliable, extended care.
                 </Typography>
+
+                {/* Full-Time Daily Schedule */}
+                <Box
+                  component="div"
+                  sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
+                >
+                  <CollapseContainer
+                    title="Full-Time Daily Schedule"
+                    content={
+                      <>
+                        <DailySchedule items={FULL_TIME_SCHEDULE_ITEMS} />
+                        <Typography
+                          sx={{
+                            fontSize: 'var(--text-sm)',
+                            color: 'var(--text-secondary)',
+                            fontStyle: 'italic',
+                            marginTop: 'var(--spacing-md)',
+                          }}
+                        >
+                          This flexible framework can be tailored to different
+                          age groups and learning objectives.
+                        </Typography>
+                      </>
+                    }
+                  />
+                </Box>
+
                 <Button
                   component={Link}
                   to="/schedule/full-time"
@@ -183,6 +211,33 @@ export const Schedule = () => {
                   time. Focused learning during core hours while maintaining
                   precious afternoon time.
                 </Typography>
+
+                {/* Part-Time Daily Schedule */}
+                <Box
+                  component="div"
+                  sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
+                >
+                  <CollapseContainer
+                    title="Part-Time Daily Schedule"
+                    content={
+                      <>
+                        <DailySchedule items={PART_TIME_SCHEDULE_ITEMS} />
+                        <Typography
+                          sx={{
+                            fontSize: 'var(--text-sm)',
+                            color: 'var(--text-secondary)',
+                            fontStyle: 'italic',
+                            marginTop: 'var(--spacing-md)',
+                          }}
+                        >
+                          Core learning hours focused on essential Montessori
+                          activities and foundational skills.
+                        </Typography>
+                      </>
+                    }
+                  />
+                </Box>
+
                 <Button
                   component={Link}
                   to="/schedule/part-time"
@@ -228,26 +283,7 @@ export const Schedule = () => {
         title="2025-2026 Learning Year"
         content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
       />
-      <CollapseContainer
-        title="Daily Schedule"
-        content={
-          <>
-            <DailySchedule items={SCHEDULE_ITEMS} />
-            <Typography>
-              {
-                'This is a flexible framework, and the specific activities can be tailored to different age groups and learning objectives.'
-              }
-            </Typography>
-          </>
-        }
-      />
-      {/* <ListText
-        title="Calendar"
-        items={[
-          "Traditional learning year: September 3rd - May 30",
-          "Summer camp: June - August",
-        ]}
-      /> */}
+
       <ListText
         title="Weekly schedule"
         items={[

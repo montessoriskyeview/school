@@ -15,6 +15,23 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import NatureIcon from '@mui/icons-material/Nature';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { getNextActiveEnrollmentPeriod } from '../../resources/enrollmentConfig';
+import { CollapseContainer } from '../../components/shared/CollapseContainer';
+import { NestedListItem } from '../../components/shared/NestedListItem';
+import { FULL_TIME_SCHEDULE_ITEMS, DailyScheduleProps } from './items';
+
+const DailySchedule = ({ items }: DailyScheduleProps) => {
+  return (
+    <>
+      {items.map(i => (
+        <NestedListItem
+          key={i.title}
+          title={`${i.startTime} - ${i.endTime}`}
+          description={[i.title, i.detail]}
+        />
+      ))}
+    </>
+  );
+};
 
 export const FullTimeLanding = () => {
   return (
@@ -486,123 +503,26 @@ export const FullTimeLanding = () => {
           >
             Full-Time Daily Schedule
           </Typography>
-          <Card
-            sx={{
-              padding: 'var(--spacing-xl)',
-              borderRadius: 'var(--radius-xl)',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-              background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
-            }}
-          >
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
+          <CollapseContainer
+            title="Full-Time Daily Schedule (8:00 AM - 4:00 PM)"
+            defaultExpanded={true}
+            content={
+              <>
+                <DailySchedule items={FULL_TIME_SCHEDULE_ITEMS} />
                 <Typography
-                  variant="h3"
                   sx={{
-                    fontSize: 'var(--text-xl)',
-                    fontWeight: 700,
-                    marginBottom: 'var(--spacing-lg)',
-                    color: 'var(--primary-blue)',
+                    fontSize: 'var(--text-sm)',
+                    color: 'var(--text-secondary)',
+                    fontStyle: 'italic',
+                    marginTop: 'var(--spacing-md)',
                   }}
                 >
-                  Morning (8:00 AM - 12:00 PM)
+                  This flexible framework can be tailored to different age
+                  groups and learning objectives.
                 </Typography>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    8:00 - 9:00 AM
-                  </Typography>
-                  <Typography>Supervised care & arrival</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    9:00 - 9:30 AM
-                  </Typography>
-                  <Typography>Greetings & morning circle</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    9:30 - 10:30 AM
-                  </Typography>
-                  <Typography>Core academics & hands-on learning</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    10:30 - 11:00 AM
-                  </Typography>
-                  <Typography>Movement & outdoor activities</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    11:00 - 12:00 PM
-                  </Typography>
-                  <Typography>Deep dives & project work</Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    fontSize: 'var(--text-xl)',
-                    fontWeight: 700,
-                    marginBottom: 'var(--spacing-lg)',
-                    color: 'var(--primary-blue)',
-                  }}
-                >
-                  Afternoon (12:00 PM - 4:00 PM)
-                </Typography>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    12:00 - 1:00 PM
-                  </Typography>
-                  <Typography>Lunch & social time</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    1:00 - 2:00 PM
-                  </Typography>
-                  <Typography>Electives & enrichment activities</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    2:00 - 3:00 PM
-                  </Typography>
-                  <Typography>Extended project time</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    3:00 - 3:30 PM
-                  </Typography>
-                  <Typography>Reflection & wrap-up</Typography>
-                </Box>
-                <Box component="div" sx={{ marginBottom: 'var(--spacing-md)' }}>
-                  <Typography
-                    sx={{ fontWeight: 600, color: 'var(--text-dark)' }}
-                  >
-                    3:30 - 4:00 PM
-                  </Typography>
-                  <Typography>Dismissal & aftercare</Typography>
-                </Box>
-              </Grid>
-            </Grid>
-          </Card>
+              </>
+            }
+          />
         </Box>
 
         {/* Tuition Section */}
