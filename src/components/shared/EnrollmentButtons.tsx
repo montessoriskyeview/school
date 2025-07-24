@@ -3,7 +3,7 @@ import { getActiveEnrollmentPeriods } from '../../resources/enrollmentConfig';
 import { EnrollmentButton } from './EnrollmentButton';
 
 interface IEnrollmentButtonsProps {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'dark';
   sx?: any;
   maxButtons?: number; // Limit number of buttons to show
 }

@@ -43,7 +43,7 @@ export const EmailContact = ({
     button: {
       padding: 'var(--spacing-md) var(--spacing-lg)',
       borderRadius: 'var(--radius-full)',
-      backgroundColor: 'var(--secondary-purple)',
+      backgroundColor: 'var(--primary-blue)',
       color: 'var(--white)',
       display: 'inline-block',
       minWidth: '200px',

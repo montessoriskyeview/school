@@ -47,7 +47,6 @@ export const Schedule = () => {
             <Card
               sx={{
                 height: '100%',
-                padding: 'var(--spacing-xl)',
                 borderRadius: 'var(--radius-xl)',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                 border: '2px solid var(--primary-blue)',
@@ -108,7 +107,7 @@ export const Schedule = () => {
                   sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
                 >
                   <CollapseContainer
-                    title="Full-Time Daily Schedule"
+                    title="Daily Schedule"
                     content={
                       <>
                         <DailySchedule items={FULL_TIME_SCHEDULE_ITEMS} />
@@ -157,7 +156,6 @@ export const Schedule = () => {
             <Card
               sx={{
                 height: '100%',
-                padding: 'var(--spacing-xl)',
                 borderRadius: 'var(--radius-xl)',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                 border: '2px solid var(--primary-green)',
@@ -218,7 +216,7 @@ export const Schedule = () => {
                   sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
                 >
                   <CollapseContainer
-                    title="Part-Time Daily Schedule"
+                    title="Daily Schedule"
                     content={
                       <>
                         <DailySchedule items={PART_TIME_SCHEDULE_ITEMS} />
@@ -276,7 +274,7 @@ export const Schedule = () => {
         }}
       >
         <Typography variant="h2">Enroll Today</Typography>
-        <EnrollmentButtons />
+        <EnrollmentButtons variant="dark" />
       </Box>
 
       <CollapseContainer

@@ -7,7 +7,7 @@ import { DEFAULT_CONVERSION_ID } from '../../resources/enrollmentConfig';
 interface IEnrollmentButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'dark';
   sx?: any;
   conversionId?: string;
 }
@@ -45,7 +45,10 @@ export const EnrollmentButton = ({
     },
   };
 
-  const variantStyles = {
+  const variantStyles: Record<
+    NonNullable<IEnrollmentButtonProps['variant']>,
+    any
+  > = {
     primary: {
       color: { xs: 'var(--white)', md: 'var(--text-dark)' },
     },
@@ -53,6 +56,9 @@ export const EnrollmentButton = ({
       color: 'var(--white)',
       marginBottom: 'var(--spacing-lg)',
       fontSize: 'var(--text-lg)',
+    },
+    dark: {
+      color: 'var(--black)',
     },
   };
 
