@@ -639,28 +639,25 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
       </div>
     </main>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-80flq-MuiPaper-root"
-      style="position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9999; padding: 16px 24px; border-radius: 0;"
+      class="MuiBox-root css-i9tlv9"
     >
       <div
-        style="max-width: 1200px; margin: 0px auto;"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 css-1x39m7c-MuiPaper-root"
       >
         <div
-          style="display: flex; align-items: center; justify-content: space-between;"
+          class="MuiBox-root css-axw7ok"
         >
           <div
-            style="display: flex; align-items: center; gap: 12px; flex: 1;"
+            class="MuiBox-root css-1ttyx26"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
-              style="line-height: 1.4;"
+              class="MuiTypography-root MuiTypography-body2 css-1jatta2-MuiTypography-root"
             >
-              By continuing to use our site, you consent to our use of cookies.
+              🍪 We use cookies to improve your experience
             </p>
             <button
               aria-label="Learn more about cookies"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-              style="padding: 4px;"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-19e77u5-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
@@ -681,8 +678,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
             </button>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-5xyax8-MuiButtonBase-root-MuiButton-root"
-            style="margin-left: 16px; min-width: 80px;"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-xmqoqm-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -703,32 +699,28 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
             >
               <div
-                style="margin-top: 16px; padding: 16px; border-radius: 8px;"
+                class="MuiBox-root css-1bhi3d8"
               >
                 <h2
-                  class="MuiTypography-root MuiTypography-h6 css-8h6nq5-MuiTypography-root"
-                  style="font-weight: 700; margin-bottom: 8px;"
+                  class="MuiTypography-root MuiTypography-h6 css-iteswf-MuiTypography-root"
                 >
                   🍪 Privacy & Cookie Preferences
                 </h2>
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
-                  style="margin-bottom: 16px; line-height: 1.5;"
+                  class="MuiTypography-root MuiTypography-body2 css-dpgk57-MuiTypography-root"
                 >
                   We use cookies and similar technologies to enhance your experience, analyze site traffic, and provide personalized content.
                 </p>
                 <div
-                  style="margin-bottom: 16px; padding: 12px; border-radius: 4px;"
+                  class="MuiBox-root css-12rv1js"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 css-ip33lj-MuiTypography-root"
-                    style="margin-bottom: 12px; font-weight: 600;"
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qa0v9m-MuiTypography-root"
                   >
                     Cookie Categories
                   </h6>
                   <label
-                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                    style="margin-bottom: 8px; align-items: flex-start;"
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1fgzyyc-MuiFormControlLabel-root"
                   >
                     <span
                       class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
@@ -756,15 +748,16 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     <span
                       class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
                     >
-                      <div>
+                      <div
+                        class="MuiBox-root css-0"
+                      >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
-                          style="font-weight: 600;"
+                          class="MuiTypography-root MuiTypography-body2 css-8dxh3r-MuiTypography-root"
                         >
                           Analytics Cookies
                         </p>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1vnkz8r-MuiTypography-root"
                         >
                           Help us understand how visitors interact with our website by collecting and reporting information anonymously.
                         </span>
@@ -772,8 +765,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     </span>
                   </label>
                   <label
-                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                    style="margin-bottom: 8px; align-items: flex-start;"
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1fgzyyc-MuiFormControlLabel-root"
                   >
                     <span
                       class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
@@ -801,15 +793,16 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     <span
                       class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
                     >
-                      <div>
+                      <div
+                        class="MuiBox-root css-0"
+                      >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
-                          style="font-weight: 600;"
+                          class="MuiTypography-root MuiTypography-body2 css-8dxh3r-MuiTypography-root"
                         >
                           Advertising Cookies
                         </p>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1vnkz8r-MuiTypography-root"
                         >
                           Used to deliver relevant advertisements and track campaign performance.
                         </span>
@@ -817,8 +810,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     </span>
                   </label>
                   <label
-                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                    style="align-items: flex-start;"
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-kt2xg2-MuiFormControlLabel-root"
                   >
                     <span
                       class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-1nje7i5-MuiButtonBase-root-MuiCheckbox-root"
@@ -846,15 +838,16 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     <span
                       class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1sr4956-MuiTypography-root"
                     >
-                      <div>
+                      <div
+                        class="MuiBox-root css-0"
+                      >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-t5pjc9-MuiTypography-root"
-                          style="font-weight: 600;"
+                          class="MuiTypography-root MuiTypography-body2 css-8dxh3r-MuiTypography-root"
                         >
                           Marketing Cookies
                         </p>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1uvsyjg-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1vnkz8r-MuiTypography-root"
                         >
                           Used to track visitors across websites to display relevant advertisements.
                         </span>
@@ -863,10 +856,10 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   </label>
                 </div>
                 <div
-                  style="display: flex; gap: 12px; flex-wrap: wrap;"
+                  class="MuiBox-root css-1mcghfl"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1ln6b0t-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-8c8hn5-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -876,7 +869,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     />
                   </button>
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1xq0p0l-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-1g1zqqo-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >

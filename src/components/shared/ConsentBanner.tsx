@@ -7,6 +7,7 @@ import {
   FormControlLabel,
   Collapse,
   IconButton,
+  Box,
 } from '@mui/material';
 import { Info as InfoIcon } from '@mui/icons-material';
 import {
@@ -87,91 +88,118 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
   }
 
   return (
-    <Paper
-      elevation={8}
-      style={{
+    <Box
+      component="div"
+      sx={{
         position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 9999,
-        padding: '16px 24px',
-        backgroundColor: 'var(--white)',
-        borderTop: '2px solid var(--primary-green)',
-        borderRadius: 0,
+        bottom: '100px', // 100px from bottom to avoid MobileHeroCTA
+        left: '16px', // 16px from left edge
+        zIndex: 1400, // Higher than most components but lower than MobileHeroCTA
+        maxWidth: '320px', // Limit width for mobile
+        width: 'calc(100vw - 32px)', // Full width minus margins on mobile
+        '@media (min-width: 768px)': {
+          width: '320px', // Fixed width on desktop
+        },
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <Paper
+        elevation={8}
+        sx={{
+          padding: '12px 16px',
+          backgroundColor: 'var(--white)',
+          border: '2px solid var(--primary-green)',
+          borderRadius: 'var(--radius-lg)',
+          boxShadow: 'var(--shadow-lg)',
+        }}
+      >
         {/* Minimal view - shown by default */}
-        <div
-          style={{
+        <Box
+          component="div"
+          sx={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            gap: '8px',
           }}
         >
-          <div
-            style={{
+          <Box
+            component="div"
+            sx={{
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '8px',
               flex: 1,
             }}
           >
             <Typography
               variant="body2"
-              style={{
+              sx={{
                 color: 'var(--text-dark)',
                 lineHeight: 1.4,
+                fontSize: 'var(--text-sm)',
+                fontWeight: 500,
               }}
             >
-              By continuing to use our site, you consent to our use of cookies.
+              🍪 We use cookies to improve your experience
             </Typography>
             <IconButton
               size="small"
               onClick={() => setShowDetails(!showDetails)}
-              style={{
+              sx={{
                 color: 'var(--primary-green)',
                 padding: '4px',
+                minWidth: '24px',
+                minHeight: '24px',
+                '&:hover': {
+                  backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                },
               }}
               aria-label="Learn more about cookies"
             >
               <InfoIcon fontSize="small" />
             </IconButton>
-          </div>
+          </Box>
           <Button
             variant="contained"
             onClick={handleAcceptAll}
             size="small"
-            style={{
+            sx={{
               backgroundColor: 'var(--primary-green)',
               color: 'var(--white)',
-              marginLeft: '16px',
-              minWidth: '80px',
+              minWidth: '60px',
+              height: '32px',
+              fontSize: 'var(--text-sm)',
+              fontWeight: 600,
+              textTransform: 'none',
+              borderRadius: 'var(--radius-md)',
+              '&:hover': {
+                backgroundColor: 'var(--primary-green-dark)',
+              },
             }}
           >
             Accept
           </Button>
-        </div>
+        </Box>
 
         {/* Expanded details */}
         <Collapse in={showDetails}>
-          <div
-            style={{
-              marginTop: '16px',
-              padding: '16px',
+          <Box
+            component="div"
+            sx={{
+              marginTop: '12px',
+              padding: '12px',
               backgroundColor: 'var(--background-light)',
-              borderRadius: '8px',
+              borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
             }}
           >
             <Typography
               variant="h6"
               component="h2"
-              style={{
+              sx={{
                 color: 'var(--text-dark)',
                 fontWeight: 700,
                 marginBottom: '8px',
+                fontSize: 'var(--text-base)',
               }}
             >
               🍪 Privacy & Cookie Preferences
@@ -179,10 +207,11 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
 
             <Typography
               variant="body2"
-              style={{
+              sx={{
                 color: 'var(--text-dark)',
-                marginBottom: '16px',
+                marginBottom: '12px',
                 lineHeight: 1.5,
+                fontSize: 'var(--text-sm)',
               }}
             >
               We use cookies and similar technologies to enhance your
@@ -190,20 +219,22 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
               content.
             </Typography>
 
-            <div
-              style={{
-                marginBottom: '16px',
-                padding: '12px',
+            <Box
+              component="div"
+              sx={{
+                marginBottom: '12px',
+                padding: '8px',
                 backgroundColor: 'var(--white)',
-                borderRadius: '4px',
+                borderRadius: 'var(--radius-sm)',
               }}
             >
               <Typography
                 variant="subtitle2"
-                style={{
-                  marginBottom: '12px',
+                sx={{
+                  marginBottom: '8px',
                   fontWeight: 600,
                   color: 'var(--text-dark)',
+                  fontSize: 'var(--text-sm)',
                 }}
               >
                 Cookie Categories
@@ -224,23 +255,30 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
                   />
                 }
                 label={
-                  <div>
+                  <Box component="div">
                     <Typography
                       variant="body2"
-                      style={{ fontWeight: 600, color: 'var(--text-dark)' }}
+                      sx={{
+                        fontWeight: 600,
+                        color: 'var(--text-dark)',
+                        fontSize: 'var(--text-sm)',
+                      }}
                     >
                       Analytics Cookies
                     </Typography>
                     <Typography
                       variant="caption"
-                      style={{ color: 'var(--text-muted)' }}
+                      sx={{
+                        color: 'var(--text-muted)',
+                        fontSize: 'var(--text-xs)',
+                      }}
                     >
                       Help us understand how visitors interact with our website
                       by collecting and reporting information anonymously.
                     </Typography>
-                  </div>
+                  </Box>
                 }
-                style={{ marginBottom: '8px', alignItems: 'flex-start' }}
+                sx={{ marginBottom: '6px', alignItems: 'flex-start' }}
               />
 
               <FormControlLabel
@@ -258,23 +296,30 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
                   />
                 }
                 label={
-                  <div>
+                  <Box component="div">
                     <Typography
                       variant="body2"
-                      style={{ fontWeight: 600, color: 'var(--text-dark)' }}
+                      sx={{
+                        fontWeight: 600,
+                        color: 'var(--text-dark)',
+                        fontSize: 'var(--text-sm)',
+                      }}
                     >
                       Advertising Cookies
                     </Typography>
                     <Typography
                       variant="caption"
-                      style={{ color: 'var(--text-muted)' }}
+                      sx={{
+                        color: 'var(--text-muted)',
+                        fontSize: 'var(--text-xs)',
+                      }}
                     >
                       Used to deliver relevant advertisements and track campaign
                       performance.
                     </Typography>
-                  </div>
+                  </Box>
                 }
-                style={{ marginBottom: '8px', alignItems: 'flex-start' }}
+                sx={{ marginBottom: '6px', alignItems: 'flex-start' }}
               />
 
               <FormControlLabel
@@ -292,27 +337,37 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
                   />
                 }
                 label={
-                  <div>
+                  <Box component="div">
                     <Typography
                       variant="body2"
-                      style={{ fontWeight: 600, color: 'var(--text-dark)' }}
+                      sx={{
+                        fontWeight: 600,
+                        color: 'var(--text-dark)',
+                        fontSize: 'var(--text-sm)',
+                      }}
                     >
                       Marketing Cookies
                     </Typography>
                     <Typography
                       variant="caption"
-                      style={{ color: 'var(--text-muted)' }}
+                      sx={{
+                        color: 'var(--text-muted)',
+                        fontSize: 'var(--text-xs)',
+                      }}
                     >
                       Used to track visitors across websites to display relevant
                       advertisements.
                     </Typography>
-                  </div>
+                  </Box>
                 }
-                style={{ alignItems: 'flex-start' }}
+                sx={{ alignItems: 'flex-start' }}
               />
-            </div>
+            </Box>
 
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <Box
+              component="div"
+              sx={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}
+            >
               <Button
                 variant="outlined"
                 onClick={handleAcceptEssential}
@@ -320,6 +375,9 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
                 sx={{
                   borderColor: 'var(--text-muted)',
                   color: 'var(--text-muted)',
+                  fontSize: 'var(--text-xs)',
+                  height: '28px',
+                  textTransform: 'none',
                   '&:hover': {
                     borderColor: 'var(--text-dark)',
                     backgroundColor: 'var(--background-light)',
@@ -336,6 +394,9 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
                 sx={{
                   backgroundColor: 'var(--primary-green)',
                   color: 'var(--white)',
+                  fontSize: 'var(--text-xs)',
+                  height: '28px',
+                  textTransform: 'none',
                   '&:hover': {
                     backgroundColor: 'var(--primary-green-dark)',
                   },
@@ -343,10 +404,10 @@ export const ConsentBanner: React.FC<IConsentBannerProps> = ({
               >
                 Customize
               </Button>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </Collapse>
-      </div>
-    </Paper>
+      </Paper>
+    </Box>
   );
 };
