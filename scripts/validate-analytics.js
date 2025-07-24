@@ -29,12 +29,22 @@ const EXPECTED_CONFIG = {
   },
   storageKey: 'consent_state',
   criticalResources: ['/logo192.png', '/og-image.png'],
+  conversionIds: {
+    email: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+    phone: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
+    default: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
+    fall2025: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
+  },
 };
 
 // Files to validate
 const FILES_TO_CHECK = [
   'public/index.html',
   'src/utils/performance.ts',
+  'src/components/shared/EmailContact.tsx',
+  'src/components/shared/PhoneContact.tsx',
+  'src/components/shared/EnrollmentButton.tsx',
+  'src/resources/enrollmentConfig.ts',
 ];
 
 function validateHtmlFile(filePath) {
@@ -156,6 +166,138 @@ function validatePerformanceFile(filePath) {
   return {errors, warnings};
 }
 
+function validateEmailContactFile(filePath) {
+  console.log(`\n🔍 Validating ${filePath}...`);
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  let errors = [];
+  let warnings = [];
+
+  // Check email conversion ID
+  if (!content.includes(EXPECTED_CONFIG.conversionIds.email)) {
+    errors.push(`❌ Missing email conversion ID: ${EXPECTED_CONFIG.conversionIds.email}`);
+  } else {
+    console.log(`✅ Found email conversion ID: ${EXPECTED_CONFIG.conversionIds.email}`);
+  }
+
+  // Check for trackEvent import
+  if (!content.includes('trackEvent')) {
+    errors.push(`❌ Missing trackEvent import in EmailContact`);
+  } else {
+    console.log(`✅ Found trackEvent import in EmailContact`);
+  }
+
+  // Check for conversion tracking function
+  if (!content.includes('trackEmailConversion')) {
+    errors.push(`❌ Missing trackEmailConversion function`);
+  } else {
+    console.log(`✅ Found trackEmailConversion function`);
+  }
+
+  return {errors, warnings};
+}
+
+function validatePhoneContactFile(filePath) {
+  console.log(`\n🔍 Validating ${filePath}...`);
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  let errors = [];
+  let warnings = [];
+
+  // Check phone conversion ID
+  if (!content.includes(EXPECTED_CONFIG.conversionIds.phone)) {
+    errors.push(`❌ Missing phone conversion ID: ${EXPECTED_CONFIG.conversionIds.phone}`);
+  } else {
+    console.log(`✅ Found phone conversion ID: ${EXPECTED_CONFIG.conversionIds.phone}`);
+  }
+
+  // Check for trackEvent import
+  if (!content.includes('trackEvent')) {
+    errors.push(`❌ Missing trackEvent import in PhoneContact`);
+  } else {
+    console.log(`✅ Found trackEvent import in PhoneContact`);
+  }
+
+  // Check for conversion tracking function
+  if (!content.includes('trackPhoneConversion')) {
+    errors.push(`❌ Missing trackPhoneConversion function`);
+  } else {
+    console.log(`✅ Found trackPhoneConversion function`);
+  }
+
+  return {errors, warnings};
+}
+
+function validateEnrollmentButtonFile(filePath) {
+  console.log(`\n🔍 Validating ${filePath}...`);
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  let errors = [];
+  let warnings = [];
+
+  // Check for trackEvent import
+  if (!content.includes('trackEvent')) {
+    errors.push(`❌ Missing trackEvent import in EnrollmentButton`);
+  } else {
+    console.log(`✅ Found trackEvent import in EnrollmentButton`);
+  }
+
+  // Check for conversion tracking function
+  if (!content.includes('trackEnrollmentConversion')) {
+    errors.push(`❌ Missing trackEnrollmentConversion function`);
+  } else {
+    console.log(`✅ Found trackEnrollmentConversion function`);
+  }
+
+  // Check for DEFAULT_CONVERSION_ID import
+  if (!content.includes('DEFAULT_CONVERSION_ID')) {
+    errors.push(`❌ Missing DEFAULT_CONVERSION_ID import`);
+  } else {
+    console.log(`✅ Found DEFAULT_CONVERSION_ID import`);
+  }
+
+  return {errors, warnings};
+}
+
+function validateEnrollmentConfigFile(filePath) {
+  console.log(`\n🔍 Validating ${filePath}...`);
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  let errors = [];
+  let warnings = [];
+
+  // Check default conversion ID
+  if (!content.includes(EXPECTED_CONFIG.conversionIds.default)) {
+    errors.push(`❌ Missing default conversion ID: ${EXPECTED_CONFIG.conversionIds.default}`);
+  } else {
+    console.log(`✅ Found default conversion ID: ${EXPECTED_CONFIG.conversionIds.default}`);
+  }
+
+  // Check fall 2025 conversion ID
+  if (!content.includes(EXPECTED_CONFIG.conversionIds.fall2025)) {
+    errors.push(`❌ Missing fall 2025 conversion ID: ${EXPECTED_CONFIG.conversionIds.fall2025}`);
+  } else {
+    console.log(`✅ Found fall 2025 conversion ID: ${EXPECTED_CONFIG.conversionIds.fall2025}`);
+  }
+
+  // Check for critical functions
+  const criticalFunctions = [
+    'getActiveEnrollmentPeriods',
+    'getNextActiveEnrollmentPeriod',
+    'getEnrollmentPeriod',
+  ];
+
+  criticalFunctions.forEach(func => {
+    if (!content.includes(func)) {
+      errors.push(`❌ Missing critical function: ${func}`);
+    } else {
+      console.log(`✅ Found critical function: ${func}`);
+    }
+  });
+
+  return {errors, warnings};
+}
+
 function main() {
   console.log('🚀 Analytics Setup Validation');
   console.log('=============================');
@@ -172,6 +314,26 @@ function main() {
   const perfResult = validatePerformanceFile('src/utils/performance.ts');
   allErrors.push(...perfResult.errors);
   allWarnings.push(...perfResult.warnings);
+
+  // Validate email contact file
+  const emailResult = validateEmailContactFile('src/components/shared/EmailContact.tsx');
+  allErrors.push(...emailResult.errors);
+  allWarnings.push(...emailResult.warnings);
+
+  // Validate phone contact file
+  const phoneResult = validatePhoneContactFile('src/components/shared/PhoneContact.tsx');
+  allErrors.push(...phoneResult.errors);
+  allWarnings.push(...phoneResult.warnings);
+
+  // Validate enrollment button file
+  const enrollmentButtonResult = validateEnrollmentButtonFile('src/components/shared/EnrollmentButton.tsx');
+  allErrors.push(...enrollmentButtonResult.errors);
+  allWarnings.push(...enrollmentButtonResult.warnings);
+
+  // Validate enrollment config file
+  const enrollmentConfigResult = validateEnrollmentConfigFile('src/resources/enrollmentConfig.ts');
+  allErrors.push(...enrollmentConfigResult.errors);
+  allWarnings.push(...enrollmentConfigResult.warnings);
 
   // Summary
   console.log('\n📊 Validation Summary');
@@ -206,5 +368,9 @@ if (require.main === module) {
 module.exports = {
   validateHtmlFile,
   validatePerformanceFile,
+  validateEmailContactFile,
+  validatePhoneContactFile,
+  validateEnrollmentButtonFile,
+  validateEnrollmentConfigFile,
   EXPECTED_CONFIG,
 }; 

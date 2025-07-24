@@ -11,7 +11,8 @@ This document outlines the comprehensive testing strategy implemented to ensure 
 2. **Validate HTML Structure**: Verify that the static HTML analytics setup is correct
 3. **Test Consent Management**: Ensure GDPR/CCPA compliance functionality works correctly
 4. **Monitor Performance Tracking**: Validate Web Vitals and custom event tracking
-5. **Error Prevention**: Catch configuration errors before they reach production
+5. **Validate Conversion Tracking**: Ensure enrollment forms, phone buttons, and email buttons fire correct events
+6. **Error Prevention**: Catch configuration errors before they reach production
 
 ## 📁 Test Files Structure
 
@@ -19,7 +20,8 @@ This document outlines the comprehensive testing strategy implemented to ensure 
 src/__tests__/utils/
 ├── analytics-simple.test.ts          # Core configuration constants
 ├── analytics-html.test.ts            # HTML structure validation
-└── analytics-html-content.test.ts    # Actual HTML file content validation
+├── analytics-html-content.test.ts    # Actual HTML file content validation
+└── conversion-tracking.test.ts       # Conversion tracking validation
 
 scripts/
 └── validate-analytics.js             # Standalone validation script
@@ -36,6 +38,7 @@ docs/
 
 **What it tests**:
 - Measurement IDs (`G-0FTM2V6DK7`, `AW-16665018583`, `G-EW5S4BY15P`)
+- Conversion tracking constants (email, phone, enrollment conversion IDs)
 - Consent management constants
 - Event tracking structures
 - Error handling messages
@@ -43,9 +46,9 @@ docs/
 
 **Example**:
 ```typescript
-it('should maintain correct primary measurement ID', () => {
-  const PRIMARY_MEASUREMENT_ID = 'AW-16665018583';
-  expect(PRIMARY_MEASUREMENT_ID).toBe('AW-16665018583');
+it('should maintain correct email conversion ID', () => {
+  const EMAIL_CONVERSION_ID = 'AW-16665018583/Z8tpCOHniPQaENeBwIo-';
+  expect(EMAIL_CONVERSION_ID).toBe('AW-16665018583/Z8tpCOHniPQaENeBwIo-');
 });
 ```
 
@@ -79,7 +82,35 @@ it('should contain correct Google Analytics script URLs', () => {
 });
 ```
 
-### 4. Standalone Validation Script (`validate-analytics.js`)
+### 4. Conversion Tracking Tests (`conversion-tracking.test.ts`)
+
+**Purpose**: Validate that all conversion tracking events are fired correctly when users interact with enrollment forms, phone buttons, and email buttons.
+
+**What it tests**:
+- Email contact conversion tracking
+- Phone contact conversion tracking
+- Enrollment button conversion tracking
+- Enrollment buttons component conversion tracking
+- Conversion ID constants validation
+- Conversion event structure validation
+- Integration testing across all conversion types
+
+**Example**:
+```typescript
+it('should track email conversion with correct parameters', () => {
+  render(<EmailContact />);
+  const link = screen.getByRole('link', { name: /email montessori skye view/i });
+  fireEvent.click(link);
+
+  expect(mockTrackEvent).toHaveBeenCalledWith('conversion', {
+    send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+    value: 1.0,
+    currency: 'USD',
+  });
+});
+```
+
+### 5. Standalone Validation Script (`validate-analytics.js`)
 
 **Purpose**: Provide a quick validation tool that can be run independently of the test suite.
 
@@ -89,13 +120,14 @@ it('should contain correct Google Analytics script URLs', () => {
 - Error reporting
 - Warning system
 - Exit codes for CI/CD integration
+- Conversion tracking validation
 
 ## 🚀 Running the Tests
 
 ### Automated Test Commands
 
 ```bash
-# Run all analytics tests
+# Run all analytics tests (including conversion tracking)
 npm run test:analytics
 
 # Run analytics tests in watch mode
@@ -117,6 +149,7 @@ node scripts/validate-analytics.js
 # Check specific files
 grep -n "G-0FTM2V6DK7" public/index.html
 grep -n "AW-16665018583" src/utils/performance.ts
+grep -n "Z8tpCOHniPQaENeBwIo-" src/components/shared/EmailContact.tsx
 ```
 
 ## 📊 Expected Analytics Configuration
@@ -125,6 +158,12 @@ grep -n "AW-16665018583" src/utils/performance.ts
 - **Analytics**: `G-0FTM2V6DK7`
 - **Ads**: `AW-16665018583`
 - **Secondary**: `G-EW5S4BY15P` (commented out but tracked)
+
+### Conversion Tracking IDs
+- **Email**: `AW-16665018583/Z8tpCOHniPQaENeBwIo-`
+- **Phone**: `AW-16665018583/mY27CN7niPQaENeBwIo-`
+- **Default Enrollment**: `AW-16665018583/vFD0CPHVzcgZENeBwIo-`
+- **Fall 2025 Enrollment**: `AW-16665018583/J6ldCMiWifQaENeBwIo-`
 
 ### Script URLs
 - Analytics: `https://www.googletagmanager.com/gtag/js?id=G-0FTM2V6DK7`
@@ -147,6 +186,29 @@ grep -n "AW-16665018583" src/utils/performance.ts
 - `gtag('consent', 'default', { ... })`
 - `gtag('config', 'G-0FTM2V6DK7');`
 - `gtag('config', 'AW-16665018583');`
+
+### Conversion Event Structures
+```javascript
+// Email conversion
+{
+  event: 'conversion',
+  send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+  value: 1.0,
+  currency: 'USD'
+}
+
+// Phone conversion
+{
+  event: 'conversion',
+  send_to: 'AW-16665018583/mY27CN7niPQaENeBwIo-'
+}
+
+// Enrollment conversion
+{
+  event: 'conversion',
+  send_to: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-'
+}
+```
 
 ## 🔍 What the Tests Protect Against
 
@@ -175,13 +237,20 @@ grep -n "AW-16665018583" src/utils/performance.ts
 - Prevents partial updates
 - Ensures all required elements are present
 
+### 6. Conversion Tracking Issues
+- Validates conversion IDs remain consistent
+- Ensures conversion events fire correctly
+- Prevents accidental changes to conversion tracking
+- Validates event structure and parameters
+
 ## 🛠️ Adding New Tests
 
 ### When to Add Tests
 1. **New Measurement IDs**: Add validation for any new Google Analytics IDs
-2. **Configuration Changes**: Test any changes to consent or tracking configuration
-3. **New Scripts**: Validate any additional analytics scripts
-4. **Error Handling**: Test new error scenarios
+2. **New Conversion Tracking**: Add tests for any new conversion tracking events
+3. **Configuration Changes**: Test any changes to consent or tracking configuration
+4. **New Scripts**: Validate any additional analytics scripts
+5. **Error Handling**: Test new error scenarios
 
 ### Test Template
 ```typescript
@@ -220,6 +289,7 @@ The tests are integrated into the pre-commit process to prevent analytics config
 
 ### Test Coverage
 - Analytics tests should maintain 100% coverage of critical configuration
+- Conversion tracking tests should cover all user interaction points
 - Regular review of test effectiveness
 - Update tests when configuration changes are approved
 
@@ -242,7 +312,12 @@ The tests are integrated into the pre-commit process to prevent analytics config
    - Verify measurement IDs are correct
    - Ensure script tags are properly formatted
 
-3. **Performance Monitor Issues**
+3. **Conversion Tracking Failures**
+   - Verify conversion IDs are correct
+   - Check that components are using trackEvent function
+   - Ensure event structure matches expectations
+
+4. **Performance Monitor Issues**
    - Check PerformanceObserver mocking
    - Verify test isolation
    - Review test setup and teardown
@@ -257,6 +332,7 @@ DEBUG=analytics node scripts/validate-analytics.js
 
 # Check file contents
 cat public/index.html | grep -A 5 -B 5 "G-0FTM2V6DK7"
+cat src/components/shared/EmailContact.tsx | grep -A 3 -B 3 "Z8tpCOHniPQaENeBwIo-"
 ```
 
 ## 📋 Maintenance Checklist

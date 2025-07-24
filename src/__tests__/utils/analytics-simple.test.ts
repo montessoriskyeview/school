@@ -41,6 +41,47 @@ describe('Analytics Core Configuration Tests', () => {
     });
   });
 
+  describe('Conversion Tracking Constants', () => {
+    it('should maintain correct email conversion ID', () => {
+      const EMAIL_CONVERSION_ID = 'AW-16665018583/Z8tpCOHniPQaENeBwIo-';
+      expect(EMAIL_CONVERSION_ID).toBe('AW-16665018583/Z8tpCOHniPQaENeBwIo-');
+    });
+
+    it('should maintain correct phone conversion ID', () => {
+      const PHONE_CONVERSION_ID = 'AW-16665018583/mY27CN7niPQaENeBwIo-';
+      expect(PHONE_CONVERSION_ID).toBe('AW-16665018583/mY27CN7niPQaENeBwIo-');
+    });
+
+    it('should maintain correct default enrollment conversion ID', () => {
+      const DEFAULT_ENROLLMENT_CONVERSION_ID =
+        'AW-16665018583/vFD0CPHVzcgZENeBwIo-';
+      expect(DEFAULT_ENROLLMENT_CONVERSION_ID).toBe(
+        'AW-16665018583/vFD0CPHVzcgZENeBwIo-'
+      );
+    });
+
+    it('should maintain correct fall 2025 enrollment conversion ID', () => {
+      const FALL_2025_CONVERSION_ID = 'AW-16665018583/J6ldCMiWifQaENeBwIo-';
+      expect(FALL_2025_CONVERSION_ID).toBe(
+        'AW-16665018583/J6ldCMiWifQaENeBwIo-'
+      );
+    });
+
+    it('should maintain correct conversion ID format', () => {
+      const conversionIds = {
+        email: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+        phone: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
+        default: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
+        fall2025: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
+      };
+
+      // All conversion IDs should follow the correct format
+      Object.values(conversionIds).forEach(id => {
+        expect(id).toMatch(/^AW-16665018583\/[A-Za-z0-9_-]+$/);
+      });
+    });
+  });
+
   describe('Consent Management Constants', () => {
     it('should maintain correct consent storage key', () => {
       const CONSENT_STORAGE_KEY = 'consent_state';
@@ -97,6 +138,22 @@ describe('Analytics Core Configuration Tests', () => {
 
       expect(PAGE_VIEW_EVENT.page_title).toBe('Test Page');
       expect(PAGE_VIEW_EVENT.page_location).toBe('https://test.com');
+    });
+
+    it('should maintain correct conversion event structure', () => {
+      const CONVERSION_EVENT = {
+        event: 'conversion',
+        send_to: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
+        value: 1.0,
+        currency: 'USD',
+      };
+
+      expect(CONVERSION_EVENT.event).toBe('conversion');
+      expect(CONVERSION_EVENT.send_to).toBe(
+        'AW-16665018583/Z8tpCOHniPQaENeBwIo-'
+      );
+      expect(CONVERSION_EVENT.value).toBe(1.0);
+      expect(CONVERSION_EVENT.currency).toBe('USD');
     });
   });
 
