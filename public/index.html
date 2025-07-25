@@ -368,27 +368,43 @@
       // Only load analytics in production
       console.log('📊 Analytics enabled in production environment');
       
+      // Initialize dataLayer immediately
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
       // Load Google Analytics script dynamically
       var gaScript = document.createElement('script');
       gaScript.async = true;
       gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0FTM2V6DK7';
-      document.head.appendChild(gaScript);
       
-      // Initialize Google Analytics
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      // Wait for script to load before calling gtag functions
+      gaScript.onload = function() {
+        console.log('📊 Google Analytics script loaded successfully');
+        
+        // Now that the script is loaded, we can safely call gtag functions
+        gtag('js', new Date());
 
-      // Set default consent mode
-      gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
+        // Set default consent mode
+        gtag('consent', 'default', {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        });
 
-      gtag('config', 'G-0FTM2V6DK7');
-      gtag('config', 'AW-16665018583');
+        gtag('config', 'G-0FTM2V6DK7');
+        gtag('config', 'AW-16665018583');
+        
+        console.log('📊 Google Analytics initialized successfully');
+      };
+      
+      // Handle script loading errors
+      gaScript.onerror = function() {
+        console.error('❌ Failed to load Google Analytics script');
+      };
+      
+      // Add script to head
+      document.head.appendChild(gaScript);
     }
   </script>
 </head>
