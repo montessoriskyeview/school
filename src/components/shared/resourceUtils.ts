@@ -22,6 +22,7 @@ const parentResourceLinks = {
   monthlyParentFeedbackForm: 'https://forms.gle/AZMdY2XUUtUUnUQ79',
   parentHandbook: '/handbook.pdf',
   schoolCalendar: '/schedule',
+  studentWithdrawalForm: 'https://forms.gle/yLLCxgSSZxHSJHKj6',
   parentCommunicationGuidelines:
     'https://docs.google.com/document/d/1JJFfZA7JXo1tRGHWm1H7A4HeN6uyK_pPcBuv5yvxgGQ/edit?usp=sharing',
 };
@@ -32,6 +33,7 @@ const staffResourceLinks = {
   removalRequestForm: 'https://forms.gle/zBhUA3SfxGgRUc6b7',
   materialOrMaintainanceForm: 'https://forms.gle/f1XtXnpS4UXGB5999',
   staffSuggestionsForm: 'https://forms.gle/wi4wQ8ptbBSvX3Ch7',
+  studentWithdrawalForm: 'https://forms.gle/QasjjhNxqE2DUi3D6',
   emergencyProcedures:
     'https://docs.google.com/document/d/1hHweHIfTDGK3PwaowHxVQdlvn26thOPy6K43xmhfjCk/edit?usp=sharing',
 };
@@ -62,6 +64,13 @@ const getParentResources = (): IResourceCategories => {
         link: parentResourceLinks.monthlyParentFeedbackForm,
         Icon: Assignment,
         isHighlighted: true,
+      },
+      {
+        title: 'Student Withdrawal Form',
+        description:
+          'Give us feedback when withdrawing a child from the program',
+        link: parentResourceLinks.studentWithdrawalForm,
+        Icon: Assignment,
       },
     ],
     documents: [
@@ -124,6 +133,12 @@ const getStaffResources = (): IResourceCategories => {
         title: 'Material or Maintainance Form',
         description: 'Request for materials or maintainance',
         link: staffResourceLinks.materialOrMaintainanceForm,
+        Icon: Assignment,
+      },
+      {
+        title: 'Student Withdrawal Form',
+        description: 'Reflection and feedback when a parent withdraws a child',
+        link: staffResourceLinks.studentWithdrawalForm,
         Icon: Assignment,
       },
     ],
