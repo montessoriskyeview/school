@@ -11,6 +11,7 @@ export const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
 
 // Email Template Configuration
 export const EMAIL_SUBJECT = 'Inquiry from Montessori Skye View Website';
+export const INCLUDE_BODY = false;
 export const EMAIL_BODY = `Hello,
 
 I'm interested in learning more about Montessori Skye View Learning Center.
@@ -42,7 +43,11 @@ export const createEmailLink = (): string => {
   const encodedSubject = encodeURIComponent(EMAIL_SUBJECT);
   const encodedBody = encodeURIComponent(EMAIL_BODY);
 
-  return `mailto:${EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+  if (INCLUDE_BODY) {
+    return `mailto:${EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+  }
+
+  return `mailto:${EMAIL}?subject=${encodedSubject}`;
 };
 
 /**

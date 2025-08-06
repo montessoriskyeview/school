@@ -626,7 +626,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               >
                 <a
                   aria-label="Email us at nwlvmontessori@gmail.com"
-                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website&body=Hello%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20Montessori%20Skye%20View%20Learning%20Center.%0A%0APlease%20provide%20me%20with%20information%20about%3A%0A-%20Tour%20availability%0A-%20Enrollment%20availability%0A-%20Program%20details%0A-%20Tuition%20information%0A-%20Any%20other%20relevant%20information%0A%0AThank%20you!"
+                  href="mailto:nwlvmontessori@gmail.com?subject=Inquiry%20from%20Montessori%20Skye%20View%20Website"
                   style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
                 >
                   ✉️ 

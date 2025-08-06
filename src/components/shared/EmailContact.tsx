@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Typography } from '@mui/material';
 import { trackEvent } from '../../utils/performance';
+import { createEmailLink } from './contactUtils';
 
 interface IEmailContactProps {
   children?: React.ReactNode;
@@ -97,7 +98,7 @@ export const EmailContact = ({
   if (variant === 'button') {
     return (
       <Link
-        href="mailto:info@montessori-skye-view.com"
+        href={createEmailLink()}
         onClick={handleClick}
         sx={{
           ...baseStyles,
@@ -114,7 +115,7 @@ export const EmailContact = ({
 
   return (
     <Link
-      href="mailto:info@montessori-skye-view.com"
+      href={createEmailLink()}
       onClick={handleClick}
       sx={{
         ...baseStyles,
