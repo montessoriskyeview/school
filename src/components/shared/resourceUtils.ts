@@ -36,6 +36,8 @@ const staffResourceLinks = {
   studentWithdrawalForm: 'https://forms.gle/QasjjhNxqE2DUi3D6',
   emergencyProcedures:
     'https://docs.google.com/document/d/1hHweHIfTDGK3PwaowHxVQdlvn26thOPy6K43xmhfjCk/edit?usp=sharing',
+  parentCommunicationGuidelines:
+    'https://docs.google.com/document/d/1p0v0ffUkCtoA92e0FvTX5FsH_Gb05c7xL8X_kz7V7rU/edit?usp=sharing',
 };
 
 export const getResourcesByType = (
@@ -130,7 +132,7 @@ const getStaffResources = (): IResourceCategories => {
         Icon: Assignment,
       },
       {
-        title: 'Material or Maintainance Form',
+        title: 'Material or Maintainance Requeest Form',
         description: 'Request for materials or maintainance',
         link: staffResourceLinks.materialOrMaintainanceForm,
         Icon: Assignment,
@@ -148,6 +150,14 @@ const getStaffResources = (): IResourceCategories => {
         description: 'Protocols for emergency situations',
         link: staffResourceLinks.emergencyProcedures,
         Icon: Description,
+      },
+      {
+        title: 'Parent Communication Guidelines',
+        description:
+          'How to communicate with concerned or even frustrated parents',
+        link: staffResourceLinks.parentCommunicationGuidelines,
+        Icon: Info,
+        isHighlighted: true,
       },
     ],
     information: [],
