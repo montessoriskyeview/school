@@ -25,6 +25,8 @@ const parentResourceLinks = {
   studentWithdrawalForm: 'https://forms.gle/yLLCxgSSZxHSJHKj6',
   parentCommunicationGuidelines:
     'https://docs.google.com/document/d/1JJFfZA7JXo1tRGHWm1H7A4HeN6uyK_pPcBuv5yvxgGQ/edit?usp=sharing',
+  complaintForm: 'https://forms.gle/sZRJJQ3eqqydz6zv8',
+  studentDietaryIsolationForm: 'https://forms.gle/hdg4cMQkGQUdZFbA9',
 };
 
 const staffResourceLinks = {
@@ -72,6 +74,19 @@ const getParentResources = (): IResourceCategories => {
         description:
           'Give us feedback when withdrawing a child from the program',
         link: parentResourceLinks.studentWithdrawalForm,
+        Icon: Assignment,
+      },
+      {
+        title: 'Complaint Form',
+        description: 'File a complaint about the program',
+        link: parentResourceLinks.complaintForm,
+        Icon: Assignment,
+        isHighlighted: true,
+      },
+      {
+        title: 'Student Dietary Isolation Form',
+        description: 'Request to isolate a child from the program',
+        link: parentResourceLinks.studentDietaryIsolationForm,
         Icon: Assignment,
       },
     ],
