@@ -3,15 +3,12 @@ import { Button, Box, Grid, Card, CardContent } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
-import { EnrollmentButtons } from '../components/shared/EnrollmentButtons';
 import {
   ENROLLMENT_PERIODS,
-  getActiveEnrollmentPeriods,
   IEnrollmentPeriod,
 } from '../resources/enrollmentConfig';
 
 export const Enrollments = () => {
-  const activeEnrollments = getActiveEnrollmentPeriods();
   const allEnrollments = ENROLLMENT_PERIODS;
 
   const renderEnrollmentCard = (enrollment: IEnrollmentPeriod) => (
@@ -152,23 +149,6 @@ export const Enrollments = () => {
           enrollment options and secure your child's spot in our nurturing
           Montessori environment.
         </Typography>
-
-        {/* Quick Action for Active Enrollments */}
-        {activeEnrollments.length > 0 && (
-          <Box component="div" style={{ marginBottom: 'var(--spacing-2xl)' }}>
-            <Typography
-              variant="h3"
-              sx={{
-                color: 'var(--primary-green)',
-                marginBottom: 'var(--spacing-lg)',
-                fontWeight: 700,
-              }}
-            >
-              🚀 Open for Registration
-            </Typography>
-            <EnrollmentButtons />
-          </Box>
-        )}
       </ContentContainer>
 
       <ContentContainer variant="default" spacing="lg">
