@@ -78,6 +78,16 @@ const StaffResources = React.lazy(() =>
     default: module.StaffResources,
   }))
 );
+const Enrollments = React.lazy(() =>
+  import('./views/Enrollments').then(module => ({
+    default: module.Enrollments,
+  }))
+);
+const Teachers = React.lazy(() =>
+  import('./views/Teachers').then(module => ({
+    default: module.Teachers,
+  }))
+);
 
 // Loading component optimized for mobile users
 const LoadingSpinner = () => (
@@ -152,6 +162,12 @@ const SEOUpdater: React.FC = () => {
       break;
     case '/staff-resources':
       seoConfig = SEOConfigs.staffResources;
+      break;
+    case '/enrollments':
+      seoConfig = SEOConfigs.home; // Will update with specific SEO config later
+      break;
+    case '/teachers':
+      seoConfig = SEOConfigs.home; // Will update with specific SEO config later
       break;
     case '/schedule/full-time':
       seoConfig = SEOConfigs.fullTimeLanding;
@@ -350,6 +366,8 @@ function App() {
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
                 <Route path="/parents" element={<Parents />} />
                 <Route path="/staff-resources" element={<StaffResources />} />
+                <Route path="/enrollments" element={<Enrollments />} />
+                <Route path="/teachers" element={<Teachers />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </Suspense>

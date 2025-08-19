@@ -96,6 +96,22 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     priority: 'low',
     isInCollapseMenu: true,
   },
+  {
+    text: 'Enrollments',
+    path: '/enrollments',
+    pageParam: 'enrollments',
+    color: 'default',
+    priority: 'low',
+    isInCollapseMenu: true,
+  },
+  {
+    text: 'Teachers',
+    path: '/teachers',
+    pageParam: 'teachers',
+    color: 'default',
+    priority: 'low',
+    isInCollapseMenu: true,
+  },
 ];
 
 export const QuickNavigation = () => {

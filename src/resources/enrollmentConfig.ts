@@ -7,30 +7,47 @@ export interface IEnrollmentPeriod {
   href: string;
   isActive: boolean;
   conversionId?: string; // Optional: different conversion tracking for different periods
+  availableInEnrollment?: boolean;
 }
 
 export const ENROLLMENT_PERIODS: IEnrollmentPeriod[] = [
+  // {
+  //   id: 'summer-2025',
+  //   title: '2025 Summer camp',
+  //   href: 'https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform',
+  //   isActive: false,
+  // },
   {
     id: 'fall-2025',
     title: '2025 Fall registration',
     href: 'https://forms.gle/oLbEBeBKnYjJDNBt6',
     isActive: true,
     conversionId: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
-  },
-  {
-    id: 'summer-2025',
-    title: '2025 Summer camp',
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLScRhvdYehIa5daTIsg1npb9pvcU-Vui9GG-wWkUIp9V4PJFzA/viewform',
-    isActive: true,
+    availableInEnrollment: true,
   },
   // Add new enrollment periods here
   // Example for Spring 2026:
-  // {
-  //   id: 'spring-2026',
-  //   title: '2026 Spring registration',
-  //   href: 'YOUR_SPRING_2026_FORM_LINK',
-  //   isActive: true,
-  // },
+  {
+    id: 'spring-2026',
+    title: '2026 Spring registration',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSeXyE5cAKCPzxmLsZehL1N0JzsEvhrPIoVWPgk7E8sJpAkfCA/viewform?usp=sharing&ouid=115535732520602114062',
+    isActive: true,
+    availableInEnrollment: true,
+  },
+  {
+    id: 'summer-2026',
+    title: '2026 Summer camp',
+    href: 'https://forms.gle/BW3jYyWHsSKa58C58',
+    isActive: false,
+    availableInEnrollment: true,
+  },
+  {
+    id: 'fall-2026',
+    title: '2026 Fall registration',
+    href: 'https://forms.gle/6ZQoGdRa2qQZmrQ99',
+    isActive: false,
+    availableInEnrollment: true,
+  },
 ];
 
 // Default conversion tracking ID

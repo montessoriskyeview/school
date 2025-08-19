@@ -22,6 +22,8 @@ import QuestionIcon from '@mui/icons-material/QuestionAnswer';
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import ArticleIcon from '@mui/icons-material/Article';
 import PeopleIcon from '@mui/icons-material/People';
+import SchoolIcon from '@mui/icons-material/School';
+import GroupIcon from '@mui/icons-material/Group';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
@@ -305,6 +307,18 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     text: 'Location',
     path: '/location',
     Icon: LocationOnIcon,
+  },
+  {
+    text: 'Enrollments',
+    path: '/enrollments',
+    Icon: SchoolIcon,
+    isInCollapseMenu: true,
+  },
+  {
+    text: 'Teachers',
+    path: '/teachers',
+    Icon: GroupIcon,
+    isInCollapseMenu: true,
   },
   {
     text: 'FAQ',
