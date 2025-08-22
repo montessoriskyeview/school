@@ -614,12 +614,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                 class="MuiTypography-root MuiTypography-body1 css-1ysnhqj-MuiTypography-root"
               >
                 <a
-                  aria-label="Call us at (702) 721-9488"
-                  href="tel:7027219488"
+                  aria-label="Call us at (760) 534-0671"
+                  href="tel:7605340671"
                   style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 600; transition: all 0.3s ease; border-radius: var(--radius-sm); display: inline-block; min-height: 48px; min-width: 200px; line-height: 1.2; box-shadow: var(--shadow-md);"
                 >
                   📞 
-                  (702) 721-9488
+                  (760) 534-0671
                 </a>
               </p>
               <p
