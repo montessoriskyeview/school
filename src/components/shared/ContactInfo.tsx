@@ -1,7 +1,12 @@
 import { ContentContainer } from './ContentContainer';
 import { Typography } from './Typography';
 import { EnrollmentButtons } from './EnrollmentButtons';
-import { EMAIL, createEmailLink, createPhoneLink } from './contactUtils';
+import {
+  EMAIL,
+  PHONE_FORMATTED,
+  createEmailLink,
+  createPhoneLink,
+} from './contactUtils';
 
 export const ContactInfo = () => {
   return (
@@ -92,9 +97,9 @@ export const ContactInfo = () => {
             e.currentTarget.style.transform = 'translateY(0) scale(1)';
             e.currentTarget.style.boxShadow = 'var(--shadow-md)';
           }}
-          aria-label="Call us at (702)721-9488"
+          aria-label={`Call us at ${PHONE_FORMATTED}`}
         >
-          📞 (702) 721-9488
+          📞 {PHONE_FORMATTED}
         </a>
       </Typography>
       {/* Email Contact - Optimized for mobile */}

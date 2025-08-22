@@ -1,6 +1,7 @@
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
+import { PHONE_FORMATTED } from '../components/shared/contactUtils';
 
 export const Accessibility = () => {
   return (
@@ -436,7 +437,7 @@ export const Accessibility = () => {
                 marginLeft: 'var(--spacing-md)',
               }}
             >
-              • Phone: (702) 555-0123
+              • Phone: {PHONE_FORMATTED}
             </Typography>
           </div>
           <div role="listitem">

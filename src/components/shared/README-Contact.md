@@ -11,6 +11,8 @@ The contact system has been centralized to ensure consistency across all compone
 ```typescript
 // Contact Information Constants
 export const PHONE = '7027219488';
+export const PHONE_FORMATTED = '(702) 721-9488';
+export const PHONE_INTERNATIONAL = '+1-702-721-9488';
 export const EMAIL = 'NWLVMontessori@gmail.com'.toLowerCase();
 
 // Email Template Configuration

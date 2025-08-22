@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Typography } from '@mui/material';
 import { trackEvent } from '../../utils/performance';
+import { PHONE_LINK } from './contactUtils';
 
 interface IPhoneContactProps {
   children?: React.ReactNode;
@@ -95,7 +96,7 @@ export const PhoneContact = ({
   if (variant === 'button') {
     return (
       <Link
-        href="tel:+61400000000"
+        href={PHONE_LINK}
         onClick={handleClick}
         sx={{
           ...baseStyles,
@@ -112,7 +113,7 @@ export const PhoneContact = ({
 
   return (
     <Link
-      href="tel:+61400000000"
+      href={PHONE_LINK}
       onClick={handleClick}
       sx={{
         ...baseStyles,

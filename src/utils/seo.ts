@@ -1,4 +1,5 @@
 // SEO Utility Functions for Montessori Skye View Learning Center
+import { PHONE_INTERNATIONAL } from '../components/shared/contactUtils';
 
 export interface ISEOMetadata {
   title: string;
@@ -206,7 +207,7 @@ export const generateOrganizationStructuredData = (): IStructuredData => {
       addressRegion: 'NV',
       addressCountry: 'US',
     },
-    telephone: '+1-702-XXX-XXXX',
+    telephone: PHONE_INTERNATIONAL,
     email: 'info@skyviewlearning.com',
     sameAs: [
       'https://www.facebook.com/skyviewlearning',
