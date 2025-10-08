@@ -29,9 +29,9 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     isInCollapseMenu: true,
   },
   {
-    text: 'Tuition',
-    path: '/tuition',
-    pageParam: 'tuition',
+    text: 'Parent Involvement',
+    path: '/parent-involvement',
+    pageParam: 'parent-involvement',
     color: 'default',
     priority: 'high',
   },
@@ -48,13 +48,6 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     pageParam: 'registration',
     color: 'default',
     priority: 'high',
-  },
-  {
-    text: 'Location',
-    path: '/location',
-    pageParam: 'location',
-    color: 'default',
-    priority: 'medium',
   },
   {
     text: 'FAQ',

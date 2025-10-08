@@ -27,6 +27,11 @@ const parentResourceLinks = {
     'https://docs.google.com/document/d/1JJFfZA7JXo1tRGHWm1H7A4HeN6uyK_pPcBuv5yvxgGQ/edit?usp=sharing',
   complaintForm: 'https://forms.gle/sZRJJQ3eqqydz6zv8',
   studentDietaryIsolationForm: 'https://forms.gle/hdg4cMQkGQUdZFbA9',
+  // Cooperative-specific resources
+  parentContributionForm: 'https://forms.gle/yoiNwXYbUbm76R5V9',
+  cooperativeMembershipAgreement: '/cooperative-membership-agreement.pdf',
+  governanceHandbook: '/governance-handbook.pdf',
+  parentOrientationSchedule: '/parent-orientation',
 };
 
 const staffResourceLinks = {
@@ -56,36 +61,40 @@ const getParentResources = (): IResourceCategories => {
   return {
     forms: [
       {
+        title: 'Parent Contribution Form',
+        description:
+          'Let us know how you will contribute to our cooperative each month',
+        link: parentResourceLinks.parentContributionForm,
+        Icon: Assignment,
+        isHighlighted: true,
+      },
+      {
         title: 'Medical Release Form',
         description: 'Authorization for medical treatment if needed',
         link: parentResourceLinks.medicalReleaseForm,
         Icon: Assignment,
-        isHighlighted: true,
       },
       {
-        title: 'Monthly Parent Feedback Form',
-        description: 'Feedback form for parents',
+        title: 'Monthly Member Feedback Form',
+        description: 'Feedback form for cooperative members',
         link: parentResourceLinks.monthlyParentFeedbackForm,
         Icon: Assignment,
-        isHighlighted: true,
       },
       {
         title: 'Student Withdrawal Form',
-        description:
-          'Give us feedback when withdrawing a child from the program',
+        description: 'Give us feedback when withdrawing from the cooperative',
         link: parentResourceLinks.studentWithdrawalForm,
         Icon: Assignment,
       },
       {
-        title: 'Complaint Form',
-        description: 'File a complaint about the program',
+        title: 'Concern Resolution Form',
+        description: 'Address concerns through our cooperative process',
         link: parentResourceLinks.complaintForm,
         Icon: Assignment,
-        isHighlighted: true,
       },
       {
         title: 'Student Dietary Isolation Form',
-        description: 'Request to isolate a child from the program',
+        description: 'Request dietary accommodations for your child',
         link: parentResourceLinks.studentDietaryIsolationForm,
         Icon: Assignment,
       },
@@ -93,7 +102,7 @@ const getParentResources = (): IResourceCategories => {
     documents: [
       {
         title: 'Parent Handbook',
-        description: 'Comprehensive guide for parents about our program',
+        description: 'Comprehensive guide for cooperative members',
         link: parentResourceLinks.parentHandbook,
         Icon: Description,
         isHighlighted: true,
@@ -101,15 +110,15 @@ const getParentResources = (): IResourceCategories => {
     ],
     information: [
       {
-        title: 'School Calendar',
-        description: 'Academic calendar with holidays and events',
+        title: 'Cooperative Calendar',
+        description: 'Academic calendar, work days, and community events',
         link: parentResourceLinks.schoolCalendar,
         Icon: School,
         isHighlighted: true,
       },
       {
-        title: 'Parent Communication Guidelines',
-        description: 'How to stay connected with teachers and staff',
+        title: 'Member Communication Guidelines',
+        description: 'How to stay connected with the cooperative community',
         link: parentResourceLinks.parentCommunicationGuidelines,
         Icon: Info,
       },

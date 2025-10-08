@@ -59,10 +59,11 @@ const getCategoryLabel = (category: string) => {
 
 export const ResourcesView: React.FC<IResourcesViewProps> = ({ userType }) => {
   const resources = getResourcesByType(userType);
-  const title = userType === 'parents' ? 'Parent Resources' : 'Staff Resources';
+  const title =
+    userType === 'parents' ? 'Cooperative Member Resources' : 'Staff Resources';
   const subtitle =
     userType === 'parents'
-      ? 'Important documents and forms for parents'
+      ? 'Important documents, forms, and tools for cooperative members'
       : 'Essential resources for staff members';
 
   const [expanded, setExpanded] = useState<string | false>('forms');

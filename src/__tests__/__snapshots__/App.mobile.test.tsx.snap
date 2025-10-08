@@ -165,7 +165,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               </a>
               <a
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/tuition"
+                href="/parent-involvement"
                 tabindex="0"
               >
                 <div
@@ -174,7 +174,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   <span
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
-                    Tuition
+                    Parent Involvement
                   </span>
                 </div>
                 <span
@@ -211,24 +211,6 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                     class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                   >
                     Registration
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/location"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Location
                   </span>
                 </div>
                 <span
@@ -284,17 +266,17 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h1
                 class="MuiTypography-root MuiTypography-h1 css-1wdblo5-MuiTypography-root"
               >
-                Montessori Skye View Learning Center
+                Montessori Skye View Parent Cooperative
               </h1>
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-t22on4-MuiTypography-root"
               >
-                Child-Centered Education Las Vegas
+                Community-Driven Montessori Education Las Vegas
               </h2>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
               >
-                A Private Chez Nous Learning Center serving Pre-K through 5th grade with Montessori education and outdoor learning focus in Las Vegas, Nevada.
+                A collaborative parent cooperative serving Pre-K through 5th grade where families actively participate in creating an exceptional Montessori learning community in Las Vegas, Nevada.
               </p>
             </div>
             <div
@@ -306,7 +288,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
               >
-                🌿 Outdoor Learning in Action
+                🌿 Community Learning in Action
               </h2>
               <div
                 class="MuiBox-root css-1psfugq"
@@ -326,12 +308,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                The Montessori Skye View Learning Center offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, providing an exceptional learning environment in our beautiful suburban campus!
+                The Montessori Skye View Parent Cooperative offers the lowest student-to-teacher ratio and the best outdoor landscape in the Las Vegas valley, with active parent involvement creating an exceptional learning community in our beautiful suburban campus!
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1u4yuiq-MuiTypography-root"
               >
-                Our students thrive in our beautiful outdoor learning environment, where nature becomes the classroom and every day brings new discoveries.
+                Our children thrive in our beautiful outdoor learning environment, where parents, educators, and children work together as nature becomes the classroom and every day brings new discoveries through collaborative learning.
               </p>
             </div>
             <div
@@ -359,12 +341,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
               >
-                About Our Montessori Learning Center
+                About Our Parent Cooperative Community
               </h2>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
               >
-                Montessori Skye View is a new Montessori learning center dedicated to fostering a love of learning for grades pre-k through 5th. We believe in the power of the Montessori Method, an educational approach developed by Dr. Maria Montessori, which emphasizes self-directed exploration, hands-on activities, and a nurturing environment. As a learning center, we provide homeschool supplementation and enrichment programs rather than traditional schooling. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for play and learning.
+                Montessori Skye View is a parent cooperative dedicated to fostering a love of learning for grades pre-k through 5th through active family involvement. We believe in the power of the Montessori Method combined with collaborative community engagement, where parents work alongside educators to create an exceptional learning environment. As a cooperative, families share in the responsibility of education, governance, and daily operations while providing enrichment programs and homeschool supplementation. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for collaborative learning and community building.
               </p>
             </div>
             <div
@@ -376,12 +358,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h3
                 class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
               >
-                🌱 Our Montessori Approach
+                🌱 Our Cooperative Montessori Approach
               </h3>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-160h652-MuiTypography-root"
               >
-                We create an environment where children feel safe, valued, and inspired to explore their natural curiosity. Our experienced teachers guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning.
+                We create a collaborative environment where children, parents, and educators work together to foster safety, value, and inspiration. Our experienced teachers partner with engaged families to guide each child's unique learning journey, helping them develop confidence, independence, and a lifelong love of learning through community involvement.
               </p>
             </div>
             <div
@@ -393,7 +375,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h3
                 class="MuiTypography-root MuiTypography-h3 css-zwp07z-MuiTypography-root"
               >
-                🎨 What Makes Our Montessori Learning Center Special
+                🎨 What Makes Our Parent Cooperative Special
               </h3>
               <div
                 role="list"
@@ -430,7 +412,7 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
                   >
-                    Mixed-age classrooms that foster community
+                    Parent involvement in daily learning activities
                   </p>
                 </div>
                 <div
@@ -464,8 +446,94 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1flfr0h-MuiTypography-root"
                   >
-                    Nurturing environment that celebrates each child
+                    Collaborative community that celebrates every family
                   </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-lg);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                🤝 Why Choose a Parent Cooperative?
+              </h2>
+              <div
+                role="list"
+                style="display: grid; gap: var(--spacing-lg); text-align: left; max-width: 800px; margin: 0px auto;"
+              >
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: flex-start; gap: var(--spacing-md);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 2rem; min-width: 3rem;"
+                  >
+                    👨‍👩‍👧‍👦
+                  </span>
+                  <div>
+                    <h4
+                      class="MuiTypography-root MuiTypography-h4 css-11qddnz-MuiTypography-root"
+                    >
+                      Active Family Involvement
+                    </h4>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-17d5oyv-MuiTypography-root"
+                    >
+                      Parents participate directly in their child's education through classroom assistance, special projects, and community events, creating stronger family-school connections.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: flex-start; gap: var(--spacing-md);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 2rem; min-width: 3rem;"
+                  >
+                    💰
+                  </span>
+                  <div>
+                    <h4
+                      class="MuiTypography-root MuiTypography-h4 css-11qddnz-MuiTypography-root"
+                    >
+                      Affordable Quality Education
+                    </h4>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-17d5oyv-MuiTypography-root"
+                    >
+                      Cooperative membership reduces costs while maintaining high-quality Montessori education through shared responsibilities and community investment.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  role="listitem"
+                  style="display: flex; align-items: flex-start; gap: var(--spacing-md);"
+                >
+                  <span
+                    aria-hidden="true"
+                    style="font-size: 2rem; min-width: 3rem;"
+                  >
+                    🌱
+                  </span>
+                  <div>
+                    <h4
+                      class="MuiTypography-root MuiTypography-h4 css-11qddnz-MuiTypography-root"
+                    >
+                      Stronger Learning Community
+                    </h4>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-17d5oyv-MuiTypography-root"
+                    >
+                      Children benefit from seeing their parents actively engaged in their learning environment, while families build lasting friendships and support networks.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -477,12 +545,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
               >
-                Ready to Begin Your Child's Montessori Journey?
+                Ready to Join Our Cooperative Community?
               </h2>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
               >
-                We invite you to explore our website and discover how Montessori Skye View can provide your child with an exceptional educational foundation. Contact us today to schedule a visit and see our beautiful campus in person!
+                We invite you to explore our website and discover how Montessori Skye View Parent Cooperative can provide your family with an exceptional collaborative educational experience. Contact us today to schedule a visit, meet our community, and learn about becoming an active member of our learning family!
               </p>
             </div>
           </div>

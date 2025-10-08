@@ -19,11 +19,10 @@ import { performanceOptimizer, trackPageView } from './utils/performance';
 const Home = React.lazy(() =>
   import('./views/Home').then(module => ({ default: module.Home }))
 );
-const Location = React.lazy(() =>
-  import('./views/Location').then(module => ({ default: module.Location }))
-);
-const Tuition = React.lazy(() =>
-  import('./views/Tuition').then(module => ({ default: module.Tuition }))
+const ParentInvolvement = React.lazy(() =>
+  import('./views/ParentInvolvement').then(module => ({
+    default: module.ParentInvolvement,
+  }))
 );
 const Schedule = React.lazy(() =>
   import('./views/Schedule').then(module => ({ default: module.Schedule }))
@@ -345,8 +344,10 @@ function App() {
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/location" element={<Location />} />
-                <Route path="/tuition" element={<Tuition />} />
+                <Route
+                  path="/parent-involvement"
+                  element={<ParentInvolvement />}
+                />
                 <Route path="/schedule" element={<Schedule />} />
                 <Route
                   path="/schedule/full-time"

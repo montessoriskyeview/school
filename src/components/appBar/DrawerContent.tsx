@@ -293,20 +293,14 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     Icon: RegistrationIcon,
   },
   {
-    text: 'Tuition',
-    path: '/tuition',
-    Icon: PaymentIcon,
+    text: 'Parent Involvement',
+    path: '/parent-involvement',
+    Icon: PeopleIcon,
   },
   {
     text: 'Schedule',
     path: '/schedule',
     Icon: ScheduleIcon,
-  },
-
-  {
-    text: 'Location',
-    path: '/location',
-    Icon: LocationOnIcon,
   },
   {
     text: 'Enrollments',

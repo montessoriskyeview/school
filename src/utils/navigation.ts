@@ -2,9 +2,8 @@
 
 export const PAGE_ROUTES: Record<string, string> = {
   registration: '/registration',
-  tuition: '/tuition',
+  'parent-involvement': '/parent-involvement',
   schedule: '/schedule',
-  location: '/location',
   philosophy: '/philosophy',
   contact: '/contact',
   faq: '/faq',
