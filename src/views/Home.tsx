@@ -604,7 +604,7 @@ export const Home = () => {
       {/* H2 Section - Call to action */}
       <InfoText
         title="Ready to Commit to Active Participation?"
-        text="We invite families who are ready to be ACTIVE PARTNERS in their child's education to explore our cooperative. This is perfect for families who want to be involved, can commit to monthly contributions, and are comfortable with homeschooling requirements. If you're looking for a traditional drop-off school experience, this program is not for you. Contact us today to schedule a visit, meet our community, and learn about the participation requirements for joining our cooperative learning family!"
+        text="We invite families who are ready to be ACTIVE PARTNERS in their child's education to explore our cooperative. This is perfect for families who want to be involved, can commit their time or materials on a monthly basis, and are comfortable with homeschooling requirements. If you're looking for a traditional drop-off school experience, this program is not for you. Contact us today to schedule a visit, meet our community, and learn about the participation requirements for joining our cooperative learning family!"
         spacing="lg"
         titleVariant="h2"
       />
