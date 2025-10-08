@@ -46,12 +46,12 @@ export const ParentInvolvement = () => {
       skills:
         'Event planning, communication, creativity, organizational skills',
     },
-    {
-      title: '🔧 Maintenance & Facilities',
-      description: 'Help maintain our beautiful campus and learning materials',
-      timeCommitment: '3-4 hours per month',
-      skills: 'Basic handyman skills, attention to detail, reliability',
-    },
+    // {
+    //   title: '🔧 Maintenance & Facilities',
+    //   description: 'Help maintain our beautiful campus and learning materials',
+    //   timeCommitment: '3-4 hours per month',
+    //   skills: 'Basic handyman skills, attention to detail, reliability',
+    // },
   ];
 
   const renderOpportunityCard = (opportunity: any, index: number) => (
@@ -106,6 +106,7 @@ export const ParentInvolvement = () => {
         </Typography>
 
         <Box
+          component="div"
           sx={{
             borderTop: '1px solid var(--light-gray)',
             paddingTop: 'var(--spacing-md)',

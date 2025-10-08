@@ -217,6 +217,24 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </a>
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
+                href="/location"
+                tabindex="0"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                  >
+                    Location
+                  </span>
+                </div>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </a>
             </div>
             <div
               class="MuiBox-root css-cpp62s"
@@ -276,8 +294,74 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <p
                 class="MuiTypography-root MuiTypography-body1 css-8wnz1m-MuiTypography-root"
               >
-                A collaborative parent cooperative serving Pre-K through 5th grade where families actively participate in creating an exceptional Montessori learning community in Las Vegas, Nevada.
+                A homeschool parent cooperative serving Pre-K through 5th grade where families are REQUIRED to actively participate in creating an exceptional Montessori learning community in Las Vegas, Nevada.
               </p>
+            </div>
+            <div
+              class="MuiBox-root css-12recp6"
+              spacing="lg"
+              style="text-align: center; box-shadow: var(--shadow-xl);"
+              variant="card"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-18rb5gt-MuiTypography-root"
+              >
+                ⚠️ IMPORTANT: This is an Active Participation Program
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-16npiqj-MuiTypography-root"
+              >
+                This is a HOMESCHOOL COOPERATIVE where parent participation is MANDATORY, not optional.
+              </p>
+              <div
+                style="display: grid; gap: var(--spacing-md); text-align: left; max-width: 800px; margin: 0px auto;"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19i7co3-MuiTypography-root"
+                >
+                  ✅ 
+                  <strong>
+                    You MUST contribute monthly
+                  </strong>
+                   - time, resources, or other support
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19i7co3-MuiTypography-root"
+                >
+                  ✅ 
+                  <strong>
+                    You MUST participate
+                  </strong>
+                   in classroom activities, maintenance, or administration
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19i7co3-MuiTypography-root"
+                >
+                  ✅ 
+                  <strong>
+                    You MUST homeschool
+                  </strong>
+                   - your child is legally homeschooled in Nevada
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19i7co3-MuiTypography-root"
+                >
+                  ❌ 
+                  <strong>
+                    This is NOT a drop-off program
+                  </strong>
+                   - parents must be engaged partners
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-19i7co3-MuiTypography-root"
+                >
+                  ❌ 
+                  <strong>
+                    If you want minimal involvement
+                  </strong>
+                   - consider traditional private schools
+                </p>
+              </div>
             </div>
             <div
               class="MuiBox-root css-12recp6"
@@ -341,12 +425,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
               >
-                About Our Parent Cooperative Community
+                About Our Homeschool Parent Cooperative
               </h2>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
               >
-                Montessori Skye View is a parent cooperative dedicated to fostering a love of learning for grades pre-k through 5th through active family involvement. We believe in the power of the Montessori Method combined with collaborative community engagement, where parents work alongside educators to create an exceptional learning environment. As a cooperative, families share in the responsibility of education, governance, and daily operations while providing enrichment programs and homeschool supplementation. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for collaborative learning and community building.
+                Montessori Skye View is a homeschool parent cooperative where families are REQUIRED to be active partners in their child's education. This is not a traditional school where you drop off your child - parents must participate monthly in classroom activities, maintenance, administration, or other contributions. We combine the Montessori Method with mandatory family involvement, where parents work alongside educators to create an exceptional learning environment. As a cooperative, families share responsibility for education, governance, and daily operations. Your child is legally homeschooled in Nevada, and we provide guidance for state requirements. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for collaborative learning and community building.
               </p>
             </div>
             <div
@@ -545,12 +629,12 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
               <h2
                 class="MuiTypography-root MuiTypography-h2 css-a8cnyw-MuiTypography-root"
               >
-                Ready to Join Our Cooperative Community?
+                Ready to Commit to Active Participation?
               </h2>
               <p
                 class="MuiTypography-root MuiTypography-body1 css-rhrrh7-MuiTypography-root"
               >
-                We invite you to explore our website and discover how Montessori Skye View Parent Cooperative can provide your family with an exceptional collaborative educational experience. Contact us today to schedule a visit, meet our community, and learn about becoming an active member of our learning family!
+                We invite families who are ready to be ACTIVE PARTNERS in their child's education to explore our cooperative. This is perfect for families who want to be involved, can commit to monthly contributions, and are comfortable with homeschooling requirements. If you're looking for a traditional drop-off school experience, this program is not for you. Contact us today to schedule a visit, meet our community, and learn about the participation requirements for joining our cooperative learning family!
               </p>
             </div>
           </div>

@@ -50,6 +50,13 @@ const QUICK_NAV_ITEMS: QuickNavItem[] = [
     priority: 'high',
   },
   {
+    text: 'Location',
+    path: '/location',
+    pageParam: 'location',
+    color: 'default',
+    priority: 'medium',
+  },
+  {
     text: 'FAQ',
     path: '/faq',
     pageParam: 'faq',

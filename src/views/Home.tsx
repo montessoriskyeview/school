@@ -13,11 +13,120 @@ export const Home = () => {
         title="Montessori Skye View Parent Cooperative"
         subTitle="Community-Driven Montessori Education Las Vegas"
         subTitleVariant="h2"
-        text="A collaborative parent cooperative serving Pre-K through 5th grade where families actively participate in creating an exceptional Montessori learning community in Las Vegas, Nevada."
+        text="A homeschool parent cooperative serving Pre-K through 5th grade where families are REQUIRED to actively participate in creating an exceptional Montessori learning community in Las Vegas, Nevada."
         titleVariant="h1"
         spacing="lg"
         containerVariant="hero"
       />
+
+      {/* IMPORTANT: Active Participation Requirements */}
+      <ContentContainer
+        variant="card"
+        spacing="lg"
+        style={{
+          textAlign: 'center',
+          background: 'var(--primary-yellow)',
+          color: 'var(--text-dark)',
+          border: '4px solid var(--primary-blue)',
+          boxShadow: 'var(--shadow-xl)',
+        }}
+      >
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{
+            color: 'var(--text-dark)',
+            marginBottom: 'var(--spacing-lg)',
+            fontWeight: 700,
+            fontSize: { xs: 'var(--text-2xl)', md: 'var(--text-3xl)' },
+          }}
+        >
+          ⚠️ IMPORTANT: This is an Active Participation Program
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'var(--text-dark)',
+            fontSize: { xs: 'var(--text-lg)', md: 'var(--text-xl)' },
+            lineHeight: 'var(--leading-loose)',
+            fontWeight: 600,
+            marginBottom: 'var(--spacing-lg)',
+          }}
+        >
+          This is a HOMESCHOOL COOPERATIVE where parent participation is
+          MANDATORY, not optional.
+        </Typography>
+        <div
+          style={{
+            display: 'grid',
+            gap: 'var(--spacing-md)',
+            textAlign: 'left',
+            maxWidth: '800px',
+            margin: '0 auto',
+          }}
+        >
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-dark)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-relaxed)',
+              fontWeight: 500,
+            }}
+          >
+            ✅ <strong>You MUST contribute monthly</strong> - time, resources,
+            or other support
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-dark)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-relaxed)',
+              fontWeight: 500,
+            }}
+          >
+            ✅ <strong>You MUST participate</strong> in classroom activities,
+            maintenance, or administration
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-dark)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-relaxed)',
+              fontWeight: 500,
+            }}
+          >
+            ✅ <strong>You MUST homeschool</strong> - your child is legally
+            homeschooled in Nevada
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-dark)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-relaxed)',
+              fontWeight: 500,
+            }}
+          >
+            ❌ <strong>This is NOT a drop-off program</strong> - parents must be
+            engaged partners
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-dark)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-relaxed)',
+              fontWeight: 500,
+            }}
+          >
+            ❌ <strong>If you want minimal involvement</strong> - consider
+            traditional private schools
+          </Typography>
+        </div>
+      </ContentContainer>
 
       {/* Featured Image Section - Outdoor Learning in Action */}
       <ContentContainer
@@ -153,8 +262,8 @@ export const Home = () => {
 
       {/* H2 Section - About Montessori education */}
       <InfoText
-        title="About Our Parent Cooperative Community"
-        text="Montessori Skye View is a parent cooperative dedicated to fostering a love of learning for grades pre-k through 5th through active family involvement. We believe in the power of the Montessori Method combined with collaborative community engagement, where parents work alongside educators to create an exceptional learning environment. As a cooperative, families share in the responsibility of education, governance, and daily operations while providing enrichment programs and homeschool supplementation. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for collaborative learning and community building."
+        title="About Our Homeschool Parent Cooperative"
+        text="Montessori Skye View is a homeschool parent cooperative where families are REQUIRED to be active partners in their child's education. This is not a traditional school where you drop off your child - parents must participate monthly in classroom activities, maintenance, administration, or other contributions. We combine the Montessori Method with mandatory family involvement, where parents work alongside educators to create an exceptional learning environment. As a cooperative, families share responsibility for education, governance, and daily operations. Your child is legally homeschooled in Nevada, and we provide guidance for state requirements. Located in the northwest corner of Las Vegas, our beautiful Skye Canyon campus provides ample outdoor space for collaborative learning and community building."
         spacing="lg"
         titleVariant="h2"
       />
@@ -494,8 +603,8 @@ export const Home = () => {
 
       {/* H2 Section - Call to action */}
       <InfoText
-        title="Ready to Join Our Cooperative Community?"
-        text="We invite you to explore our website and discover how Montessori Skye View Parent Cooperative can provide your family with an exceptional collaborative educational experience. Contact us today to schedule a visit, meet our community, and learn about becoming an active member of our learning family!"
+        title="Ready to Commit to Active Participation?"
+        text="We invite families who are ready to be ACTIVE PARTNERS in their child's education to explore our cooperative. This is perfect for families who want to be involved, can commit to monthly contributions, and are comfortable with homeschooling requirements. If you're looking for a traditional drop-off school experience, this program is not for you. Contact us today to schedule a visit, meet our community, and learn about the participation requirements for joining our cooperative learning family!"
         spacing="lg"
         titleVariant="h2"
       />

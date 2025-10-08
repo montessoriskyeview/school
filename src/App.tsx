@@ -24,6 +24,9 @@ const ParentInvolvement = React.lazy(() =>
     default: module.ParentInvolvement,
   }))
 );
+const Location = React.lazy(() =>
+  import('./views/Location').then(module => ({ default: module.Location }))
+);
 const Schedule = React.lazy(() =>
   import('./views/Schedule').then(module => ({ default: module.Schedule }))
 );
@@ -348,6 +351,7 @@ function App() {
                   path="/parent-involvement"
                   element={<ParentInvolvement />}
                 />
+                <Route path="/location" element={<Location />} />
                 <Route path="/schedule" element={<Schedule />} />
                 <Route
                   path="/schedule/full-time"

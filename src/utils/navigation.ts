@@ -4,6 +4,7 @@ export const PAGE_ROUTES: Record<string, string> = {
   registration: '/registration',
   'parent-involvement': '/parent-involvement',
   schedule: '/schedule',
+  location: '/location',
   philosophy: '/philosophy',
   contact: '/contact',
   faq: '/faq',

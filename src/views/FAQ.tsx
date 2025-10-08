@@ -38,9 +38,172 @@ export const FaqView = () => {
             fontWeight: 500,
           }}
         >
-          Find answers to common questions about Montessori Skye View
+          Find answers to common questions about our parent cooperative and
+          active participation requirements
         </Typography>
       </ContentContainer>
+
+      <CollapseContainer
+        title="🤝 What does it mean that this is a parent cooperative?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              A parent cooperative means that families are active partners in
+              their child's education, not just customers. This is a homeschool
+              operation where parents are required participants, not optional
+              volunteers.
+            </Typography>
+            <SchoolList
+              items={[
+                'Parents are REQUIRED to contribute monthly - this is not optional',
+                'Each family must participate in classroom activities, maintenance, or administrative support',
+                'Parents help make decisions about curriculum, policies, and operations',
+                'Families share responsibility for creating and maintaining our learning environment',
+                'This collaborative model keeps costs lower while building stronger community connections',
+                'Parents who cannot actively participate should consider traditional private schools instead',
+              ]}
+            />
+          </>
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="📋 What are the parent participation requirements?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              <strong>IMPORTANT:</strong> Parent participation is mandatory, not
+              optional. Every family must contribute monthly to maintain
+              membership.
+            </Typography>
+            <SchoolList
+              items={[
+                'Complete monthly Parent Contribution Form specifying how you will help',
+                'Choose from: Time (teaching/volunteering), Resources (funds/materials), or Other contributions',
+                'Minimum 20 hours of volunteer work per semester (40 hours per year)',
+                'Participate in monthly member meetings and decision-making',
+                'Help with classroom activities, events, maintenance, or administration',
+                'Alternative: Pay $25/hour in lieu of volunteer work (limited availability)',
+                'Families who do not participate will be asked to leave the cooperative',
+              ]}
+            />
+          </>
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="🏠 How does the homeschool cooperative model work?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              We operate as a homeschool cooperative, which means parents are
+              legally homeschooling their children while participating in our
+              collaborative learning community.
+            </Typography>
+            <SchoolList
+              items={[
+                'Parents file homeschool documentation with Nevada state (we provide guidance)',
+                'Children attend our learning center 2-5 days per week depending on program',
+                'Parents supplement at home and participate actively in the cooperative',
+                'Families share teaching responsibilities, administrative tasks, and facility maintenance',
+                'This is NOT a drop-off program - parents must be engaged partners',
+                'We provide curriculum, materials, and professional guidance',
+                'Parents contribute their skills, time, and expertise to benefit all children',
+              ]}
+            />
+          </>
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="❗ Is this program right for my family?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              Our cooperative model works best for families who want to be
+              actively involved in their child's education. Please consider
+              these requirements carefully:
+            </Typography>
+            <SchoolList
+              items={[
+                "✅ You want to be an active partner in your child's education",
+                '✅ You can commit time each month for volunteer work or contributions',
+                "✅ You're comfortable with homeschooling legal requirements",
+                '✅ You want to build community with other engaged families',
+                '✅ You can attend monthly meetings and participate in decisions',
+                '❌ You prefer a traditional drop-off school experience',
+                '❌ You cannot commit to monthly participation requirements',
+                '❌ You want minimal parent involvement in school operations',
+              ]}
+            />
+            <Typography sx={{ marginTop: 'var(--spacing-md)' }}>
+              If you answered "❌" to any items, a traditional private school
+              may be a better fit for your family.
+            </Typography>
+          </>
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="💰 How does cooperative membership save money?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              Our cooperative model significantly reduces costs compared to
+              traditional private schools because families share the work and
+              responsibilities.
+            </Typography>
+            <SchoolList
+              items={[
+                'Lower membership fees because parents provide labor and expertise',
+                'Shared costs for materials, supplies, and facility maintenance',
+                'Parent volunteers reduce need for paid staff in many areas',
+                'Families contribute skills (teaching, maintenance, administration) instead of paying for services',
+                'Group purchasing power for educational materials and supplies',
+                'Community fundraising and resource sharing',
+                "Every hour you volunteer directly reduces your family's costs",
+              ]}
+            />
+          </>
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="🎓 What if I don't have teaching experience?"
+        content={
+          'No teaching experience required! We provide training and match families with opportunities that fit their skills and comfort level. You might help with art projects, garden maintenance, snack coordination, administrative tasks, or simply assist in the classroom. Every family has something valuable to contribute, and we help you find the best way to participate.'
+        }
+        spacing="lg"
+      />
+
+      <CollapseContainer
+        title="⏰ What if I work full-time?"
+        content={
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              We understand that many parents work full-time, and we offer
+              flexible ways to meet participation requirements:
+            </Typography>
+            <SchoolList
+              items={[
+                'Evening and weekend volunteer opportunities available',
+                'Take-home projects that can be done on your schedule',
+                'Administrative tasks that can be done remotely',
+                'Contribute resources or materials instead of time',
+                'Partner with other families to share responsibilities',
+                'Limited option to pay $25/hour in lieu of volunteer work',
+                'However, some level of participation is still required - this is not a traditional daycare',
+              ]}
+            />
+          </>
+        }
+        spacing="lg"
+      />
 
       <CollapseContainer
         title="👔 Is there an enforced dress code?"
@@ -75,9 +238,25 @@ export const FaqView = () => {
         spacing="lg"
       />
       <CollapseContainer
-        title="🏫 How does this compare to homeschooling or the Clark County School District?"
+        title="🏫 How does this compare to traditional schools or regular homeschooling?"
         content={
-          'We are a learning center that operates as a microschool. A microschool is the reimagining of the one-room schoolhouse, where class sizes are around 15 students of varying ages, and the schedule and curriculum are tailored to fit the needs of each class. Many describe microschools as a "mid-point" between traditional schooling and homeschooling. According to the state of Nevada, our students are homeschooled. We provide you with the proper documentation to file with the state to declare your child "homeschooled". We facilitate your children in their learning as a supplement to your homeschooling journey.'
+          <>
+            <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
+              We operate as a homeschool cooperative, which is different from
+              both traditional schools and solo homeschooling:
+            </Typography>
+            <SchoolList
+              items={[
+                '<strong>vs. Traditional Schools:</strong> Parents are required active participants, not customers. Families share teaching, administrative, and maintenance responsibilities.',
+                '<strong>vs. Solo Homeschooling:</strong> You get community support, professional guidance, and shared resources while maintaining homeschool flexibility.',
+                '<strong>vs. Private Schools:</strong> Much lower costs because parents provide labor and expertise instead of paying for all services.',
+                'Legally, your child is homeschooled in Nevada - we provide documentation and guidance for state requirements.',
+                'Small class sizes (around 15 students) with mixed ages, like a one-room schoolhouse.',
+                'Curriculum and schedule tailored to each class with parent input and involvement.',
+                'This is a collaborative learning community, not a drop-off educational service.',
+              ]}
+            />
+          </>
         }
         spacing="lg"
       />

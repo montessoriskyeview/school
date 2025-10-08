@@ -303,6 +303,11 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     Icon: ScheduleIcon,
   },
   {
+    text: 'Location',
+    path: '/location',
+    Icon: LocationOnIcon,
+  },
+  {
     text: 'Enrollments',
     path: '/enrollments',
     Icon: SchoolIcon,
