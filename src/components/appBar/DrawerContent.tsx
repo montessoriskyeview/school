@@ -15,7 +15,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import PaymentIcon from '@mui/icons-material/Payment';
 import RegistrationIcon from '@mui/icons-material/AppRegistration';
 import PhoneIcon from '@mui/icons-material/Phone';
 import QuestionIcon from '@mui/icons-material/QuestionAnswer';
