@@ -27,6 +27,10 @@ import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  NAVIGATION_ITEMS,
+  NavigationItemKey,
+} from '../../content/site/navigation';
 
 export const DRAWER_WIDTH = 240;
 
@@ -275,77 +279,24 @@ interface NavbarItem {
 }
 
 export const NAVBAR_ITEMS: NavbarItem[] = [
-  {
-    text: 'Home',
-    path: '/',
-    Icon: HomeIcon,
-  },
-  {
-    text: 'Parents Resources',
-    path: '/parents',
-    Icon: PeopleIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Registration',
-    path: '/registration',
-    Icon: RegistrationIcon,
-  },
-  {
-    text: 'Parent Involvement',
-    path: '/parent-involvement',
-    Icon: PeopleIcon,
-  },
-  {
-    text: 'Schedule',
-    path: '/schedule',
-    Icon: ScheduleIcon,
-  },
-  {
-    text: 'Location',
-    path: '/location',
-    Icon: LocationOnIcon,
-  },
-  {
-    text: 'Enrollments',
-    path: '/enrollments',
-    Icon: SchoolIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Teachers',
-    path: '/teachers',
-    Icon: GroupIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'FAQ',
-    path: '/faq',
-    Icon: QuestionIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Philosophy',
-    path: '/philosophy',
-    Icon: LightbulbIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Accessibility',
-    path: '/accessibility',
-    Icon: AccessibilityIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Blog',
-    path: '/blog',
-    Icon: ArticleIcon,
-    isInCollapseMenu: true,
-  },
-  {
-    text: 'Contact',
-    path: '/contact',
-    Icon: PhoneIcon,
-    isInCollapseMenu: true,
-  },
+  ...NAVIGATION_ITEMS.map(item => ({
+    text: item.text,
+    path: item.path,
+    Icon: {
+      home: HomeIcon,
+      parentsResources: PeopleIcon,
+      registration: RegistrationIcon,
+      parentInvolvement: PeopleIcon,
+      schedule: ScheduleIcon,
+      location: LocationOnIcon,
+      enrollments: SchoolIcon,
+      teachers: GroupIcon,
+      faq: QuestionIcon,
+      philosophy: LightbulbIcon,
+      accessibility: AccessibilityIcon,
+      blog: ArticleIcon,
+      contact: PhoneIcon,
+    }[item.key as NavigationItemKey],
+    isInCollapseMenu: item.isInCollapseMenu,
+  })),
 ];

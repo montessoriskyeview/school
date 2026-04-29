@@ -5,13 +5,13 @@ import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 import {
   ENROLLMENT_PERIODS,
-  IEnrollmentPeriod,
-} from '../resources/enrollmentConfig';
+  EnrollmentPeriod,
+} from '../content/entities/enrollments';
 
 export const Enrollments = () => {
   const allEnrollments = ENROLLMENT_PERIODS;
 
-  const renderEnrollmentCard = (enrollment: IEnrollmentPeriod) => (
+  const renderEnrollmentCard = (enrollment: EnrollmentPeriod) => (
     <Card
       key={enrollment.id}
       sx={{

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Typography } from '@mui/material';
 import { School as SchoolIcon } from '@mui/icons-material';
 import { trackEvent } from '../../utils/performance';
-import { DEFAULT_CONVERSION_ID } from '../../resources/enrollmentConfig';
+import { DEFAULT_CONVERSION_ID } from '../../content/entities/enrollments';
 
 interface IEnrollmentButtonProps {
   href: string;

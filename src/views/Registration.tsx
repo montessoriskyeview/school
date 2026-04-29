@@ -1,7 +1,7 @@
 import { Link } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { SchoolList } from '../components/shared/ListText';
-import { FALL_2024_LINK } from '../resources/links';
+import { FALL_2024_LINK } from '../content/site/links';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';

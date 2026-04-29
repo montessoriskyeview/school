@@ -3,10 +3,10 @@ import { Box, Grid, Card, CardContent, Avatar } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
-import { teacherConfig, TeacherConfig } from '../resources/teacherConfig';
+import { TEACHER_PROFILES, TeacherProfile } from '../content/entities/teachers';
 
 export const Teachers = () => {
-  const renderTeacherCard = (teacher: TeacherConfig) => (
+  const renderTeacherCard = (teacher: TeacherProfile) => (
     <Card
       key={teacher.name}
       sx={{
@@ -132,7 +132,7 @@ export const Teachers = () => {
 
       <ContentContainer variant="default" spacing="lg">
         <Grid container spacing={4}>
-          {teacherConfig.map(teacher => (
+          {TEACHER_PROFILES.map(teacher => (
             <Grid item xs={12} lg={6} key={teacher.name}>
               {renderTeacherCard(teacher)}
             </Grid>

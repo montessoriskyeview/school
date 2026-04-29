@@ -9,8 +9,9 @@ import {
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
-import { SEO, SEOConfigs } from './components/shared/SEO';
+import { SEO } from './components/shared/SEO';
 import { ConsentBanner } from './components/shared/ConsentBanner';
+import { ROUTE_SEO_CONFIGS } from './content/seo/routes';
 import { ErrorPage } from './views/ErrorView';
 import { useQueryParams } from './hooks/useQueryParams';
 import { performanceOptimizer, trackPageView } from './utils/performance';
@@ -130,55 +131,55 @@ const SEOUpdater: React.FC = () => {
 
   switch (path) {
     case '/':
-      seoConfig = SEOConfigs.home;
+      seoConfig = ROUTE_SEO_CONFIGS.home;
       break;
     case '/location':
-      seoConfig = SEOConfigs.location;
+      seoConfig = ROUTE_SEO_CONFIGS.location;
       break;
     case '/tuition':
-      seoConfig = SEOConfigs.tuition;
+      seoConfig = ROUTE_SEO_CONFIGS.tuition;
       break;
     case '/schedule':
-      seoConfig = SEOConfigs.schedule;
+      seoConfig = ROUTE_SEO_CONFIGS.schedule;
       break;
     case '/registration':
-      seoConfig = SEOConfigs.registration;
+      seoConfig = ROUTE_SEO_CONFIGS.registration;
       break;
     case '/philosophy':
-      seoConfig = SEOConfigs.philosophy;
+      seoConfig = ROUTE_SEO_CONFIGS.philosophy;
       break;
     case '/contact':
-      seoConfig = SEOConfigs.contact;
+      seoConfig = ROUTE_SEO_CONFIGS.contact;
       break;
     case '/faq':
-      seoConfig = SEOConfigs.faq;
+      seoConfig = ROUTE_SEO_CONFIGS.faq;
       break;
     case '/accessibility':
-      seoConfig = SEOConfigs.accessibility;
+      seoConfig = ROUTE_SEO_CONFIGS.accessibility;
       break;
     case '/review':
-      seoConfig = SEOConfigs.review;
+      seoConfig = ROUTE_SEO_CONFIGS.review;
       break;
     case '/parents':
-      seoConfig = SEOConfigs.parents;
+      seoConfig = ROUTE_SEO_CONFIGS.parents;
       break;
     case '/staff-resources':
-      seoConfig = SEOConfigs.staffResources;
+      seoConfig = ROUTE_SEO_CONFIGS.staffResources;
       break;
     case '/enrollments':
-      seoConfig = SEOConfigs.home; // Will update with specific SEO config later
+      seoConfig = ROUTE_SEO_CONFIGS.home; // Will update with specific SEO config later
       break;
     case '/teachers':
-      seoConfig = SEOConfigs.home; // Will update with specific SEO config later
+      seoConfig = ROUTE_SEO_CONFIGS.home; // Will update with specific SEO config later
       break;
     case '/schedule/full-time':
-      seoConfig = SEOConfigs.fullTimeLanding;
+      seoConfig = ROUTE_SEO_CONFIGS.fullTimeLanding;
       break;
     case '/schedule/part-time':
-      seoConfig = SEOConfigs.partTimeLanding;
+      seoConfig = ROUTE_SEO_CONFIGS.partTimeLanding;
       break;
     default:
-      seoConfig = SEOConfigs.home;
+      seoConfig = ROUTE_SEO_CONFIGS.home;
   }
 
   return <SEO {...seoConfig} />;
