@@ -52,5 +52,5 @@ export const locationContent = {
     'Location information is shared through our secure member communication channels. Check your member resources or contact the parent coordinators for current location details and schedules.',
   adversityTitle: '💪 Stronger Through Adversity',
   adversityDescription:
-    "While the harassment we experienced was unfortunate, it has ultimately made our cooperative stronger and more resilient. Our distributed model better reflects the true spirit of a parent cooperative - where families work together to create learning opportunities wherever they are needed. We're proud of how our community has adapted and thrived despite these challenges.",
+    "Since our inception, we have faced challenges from certain community members. However, we have adapted and thrived. We're proud of how our community has adapted and thrived despite these challenges.",
 };
