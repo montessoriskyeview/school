@@ -30,15 +30,13 @@ const slot2: EnrollmentSlot = {
   availableInEnrollment: true,
 };
 
-const slot3: EnrollmentSlot = null;
-const slot4: EnrollmentSlot = null;
+// const slot3: EnrollmentSlot = null;
+// const slot4: EnrollmentSlot = null;
 
-export const ENROLLMENT_SLOTS: [
-  EnrollmentSlot,
-  EnrollmentSlot,
-  EnrollmentSlot,
-  EnrollmentSlot,
-] = [slot1, slot2, slot3, slot4];
+export const ENROLLMENT_SLOTS: EnrollmentSlot[] = [  
+  slot1,
+  slot2,
+];
 
 export const ENROLLMENT_PERIODS: EnrollmentPeriod[] = ENROLLMENT_SLOTS.filter(
   (slot): slot is EnrollmentPeriod => slot !== null
