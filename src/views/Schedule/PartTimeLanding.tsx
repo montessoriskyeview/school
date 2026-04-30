@@ -15,7 +15,7 @@ import NatureIcon from '@mui/icons-material/Nature';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SavingsIcon from '@mui/icons-material/Savings';
-import { getNextActiveEnrollmentPeriod } from '../../content/entities/enrollments';
+import { getNextActiveEnrollmentPeriod } from '../../i18n/entities/enrollments';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { PART_TIME_SCHEDULE_ITEMS, DailyScheduleProps } from './items';

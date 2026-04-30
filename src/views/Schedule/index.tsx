@@ -16,16 +16,17 @@ import { Link } from 'react-router-dom';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import { EnrollmentButtons } from '../../components/shared/EnrollmentButtons';
+import { schedulePageContent } from '../../i18n/pages/schedule';
 
 export const Schedule = () => {
   return (
     <CanvasView
-      extraMobileCtaTitle="Want different hours?"
-      extraMobileCtaMessage="If you have specific needs, contact us to see if we can provide specific accommodations."
+      extraMobileCtaTitle={schedulePageContent.extraMobileCtaTitle}
+      extraMobileCtaMessage={schedulePageContent.extraMobileCtaMessage}
     >
       <InfoText
-        title="Schedule"
-        text="We believe time can be used more effectively and efficiently for students in the classroom and offer a shortened core learning day as well as a full-time option for care. Our full-day learning day is offered from 8:00 am to 4:00 pm, with our core learning day taking place between the hours of 9:00 am - 1:00 pm."
+        title={schedulePageContent.title}
+        text={schedulePageContent.intro}
       />
 
       {/* Program Options Cards */}
@@ -40,7 +41,7 @@ export const Schedule = () => {
             color: 'var(--text-dark)',
           }}
         >
-          Choose Your Program
+          {schedulePageContent.chooseProgramTitle}
         </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
@@ -76,7 +77,7 @@ export const Schedule = () => {
                     color: 'var(--primary-blue)',
                   }}
                 >
-                  Full-Time Program
+                  {schedulePageContent.fullTimeProgramTitle}
                 </Typography>
                 <Typography
                   sx={{
@@ -86,7 +87,7 @@ export const Schedule = () => {
                     color: 'var(--text-dark)',
                   }}
                 >
-                  8:00 AM - 4:00 PM
+                  {schedulePageContent.fullTimeProgramHours}
                 </Typography>
                 <Typography
                   sx={{
@@ -96,9 +97,7 @@ export const Schedule = () => {
                     color: 'var(--text-secondary)',
                   }}
                 >
-                  Complete Montessori experience with extended learning time,
-                  enriched curriculum, and comprehensive care. Perfect for
-                  working families who need reliable, extended care.
+                  {schedulePageContent.fullTimeProgramDescription}
                 </Typography>
 
                 {/* Full-Time Daily Schedule */}
@@ -107,7 +106,7 @@ export const Schedule = () => {
                   sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
                 >
                   <CollapseContainer
-                    title="Daily Schedule"
+                    title={schedulePageContent.fullTimeProgramScheduleTitle}
                     testId="full-time-daily-schedule"
                     content={
                       <>
@@ -120,8 +119,7 @@ export const Schedule = () => {
                             marginTop: 'var(--spacing-md)',
                           }}
                         >
-                          This flexible framework can be tailored to different
-                          age groups and learning objectives.
+                          {schedulePageContent.fullTimeProgramScheduleFooter}
                         </Typography>
                       </>
                     }
@@ -147,7 +145,7 @@ export const Schedule = () => {
                     minWidth: 200,
                   }}
                 >
-                  Learn More
+                  {schedulePageContent.learnMoreLabel}
                 </Button>
               </CardContent>
             </Card>
@@ -186,7 +184,7 @@ export const Schedule = () => {
                     color: 'var(--primary-green)',
                   }}
                 >
-                  Part-Time Program
+                  {schedulePageContent.partTimeProgramTitle}
                 </Typography>
                 <Typography
                   sx={{
@@ -196,7 +194,7 @@ export const Schedule = () => {
                     color: 'var(--text-dark)',
                   }}
                 >
-                  9:00 AM - 1:00 PM
+                  {schedulePageContent.partTimeProgramHours}
                 </Typography>
                 <Typography
                   sx={{
@@ -206,9 +204,7 @@ export const Schedule = () => {
                     color: 'var(--text-secondary)',
                   }}
                 >
-                  Perfect balance of quality Montessori education and family
-                  time. Focused learning during core hours while maintaining
-                  precious afternoon time.
+                  {schedulePageContent.partTimeProgramDescription}
                 </Typography>
 
                 {/* Part-Time Daily Schedule */}
@@ -217,7 +213,7 @@ export const Schedule = () => {
                   sx={{ marginBottom: 'var(--spacing-xl)', textAlign: 'left' }}
                 >
                   <CollapseContainer
-                    title="Daily Schedule"
+                    title={schedulePageContent.partTimeProgramScheduleTitle}
                     testId="part-time-daily-schedule"
                     content={
                       <>
@@ -230,8 +226,7 @@ export const Schedule = () => {
                             marginTop: 'var(--spacing-md)',
                           }}
                         >
-                          Core learning hours focused on essential Montessori
-                          activities and foundational skills.
+                          {schedulePageContent.partTimeProgramScheduleFooter}
                         </Typography>
                       </>
                     }
@@ -257,7 +252,7 @@ export const Schedule = () => {
                     minWidth: 200,
                   }}
                 >
-                  Learn More
+                  {schedulePageContent.learnMoreLabel}
                 </Button>
               </CardContent>
             </Card>
@@ -275,22 +270,19 @@ export const Schedule = () => {
           flexDirection: 'column',
         }}
       >
-        <Typography variant="h2">Enroll Today</Typography>
+        <Typography variant="h2">{schedulePageContent.enrollTitle}</Typography>
         <EnrollmentButtons variant="dark" />
       </Box>
 
       <CollapseContainer
-        title="2025-2026 Learning Year"
+        title={schedulePageContent.yearlyScheduleTitle}
         testId="yearly-schedule"
         content={<YearlySchedule items={YEARLY_SCHEDULE_ITEMS} />}
       />
 
       <ListText
-        title="Weekly schedule"
-        items={[
-          'Full time: Monday through Friday - 8am to 4pm',
-          'Part time: Monday through Thursday - 9am to 1pm',
-        ]}
+        title={schedulePageContent.weeklyScheduleTitle}
+        items={schedulePageContent.weeklyScheduleItems}
       />
 
       {/* Want different hours section */}
@@ -313,7 +305,7 @@ export const Schedule = () => {
             fontWeight: 700,
           }}
         >
-          Want different hours? 📱
+          {schedulePageContent.flexibleSectionTitle}
         </Typography>
         <Typography
           style={{
@@ -323,8 +315,7 @@ export const Schedule = () => {
             opacity: 0.95,
           }}
         >
-          We understand every family has unique scheduling needs. Contact us to
-          discuss flexible arrangements that work for your family.
+          {schedulePageContent.flexibleSectionDescription}
         </Typography>
       </div>
     </CanvasView>

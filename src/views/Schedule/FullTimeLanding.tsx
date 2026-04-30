@@ -14,7 +14,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import GroupsIcon from '@mui/icons-material/Groups';
 import NatureIcon from '@mui/icons-material/Nature';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { getNextActiveEnrollmentPeriod } from '../../content/entities/enrollments';
+import { getNextActiveEnrollmentPeriod } from '../../i18n/entities/enrollments';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { FULL_TIME_SCHEDULE_ITEMS, DailyScheduleProps } from './items';

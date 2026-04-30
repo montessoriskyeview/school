@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROUTE_SEO_CONFIGS } from '../../content/seo/routes';
+import { ROUTE_SEO_CONFIGS } from '../../i18n/seo/routes';
 
 interface SEOProps {
   title?: string;

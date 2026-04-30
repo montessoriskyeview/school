@@ -6,7 +6,8 @@ import { Typography } from '../components/shared/Typography';
 import {
   ENROLLMENT_PERIODS,
   EnrollmentPeriod,
-} from '../content/entities/enrollments';
+} from '../i18n/entities/enrollments';
+import { enrollmentsPageContent } from '../i18n/pages/enrollments';
 
 export const Enrollments = () => {
   const allEnrollments = ENROLLMENT_PERIODS;
@@ -63,7 +64,7 @@ export const Enrollments = () => {
               marginBottom: 'var(--spacing-lg)',
             }}
           >
-            Currently Open
+            {enrollmentsPageContent.currentlyOpenLabel}
           </Box>
         )}
 
@@ -104,8 +105,8 @@ export const Enrollments = () => {
           }}
         >
           {enrollment.availableInEnrollment
-            ? 'Register Now'
-            : 'Not Available Yet'}
+            ? enrollmentsPageContent.registerNowLabel
+            : enrollmentsPageContent.notAvailableLabel}
         </Button>
       </CardContent>
     </Card>
@@ -133,7 +134,7 @@ export const Enrollments = () => {
             fontSize: 'var(--text-5xl)',
           }}
         >
-          📚 Enrollment Opportunities
+          {enrollmentsPageContent.heroTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -145,9 +146,7 @@ export const Enrollments = () => {
             marginBottom: 'var(--spacing-xl)',
           }}
         >
-          Welcome to Montessori Skye View Learning Center! Explore our
-          enrollment options and secure your child's spot in our nurturing
-          Montessori environment.
+          {enrollmentsPageContent.heroDescription}
         </Typography>
       </ContentContainer>
 
@@ -161,7 +160,7 @@ export const Enrollments = () => {
             textAlign: 'center',
           }}
         >
-          All Enrollment Periods
+          {enrollmentsPageContent.allPeriodsTitle}
         </Typography>
 
         <Grid container spacing={4}>
@@ -192,7 +191,7 @@ export const Enrollments = () => {
             fontWeight: 700,
           }}
         >
-          🤔 Have Questions?
+          {enrollmentsPageContent.questionsTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -204,8 +203,7 @@ export const Enrollments = () => {
             marginBottom: 'var(--spacing-lg)',
           }}
         >
-          We're here to help! Contact us with any questions about enrollment,
-          our programs, or the Montessori approach.
+          {enrollmentsPageContent.questionsDescription}
         </Typography>
 
         <Button
@@ -233,7 +231,7 @@ export const Enrollments = () => {
             },
           }}
         >
-          Contact Us
+          {enrollmentsPageContent.contactUsLabel}
         </Button>
       </ContentContainer>
     </CanvasView>

@@ -3,7 +3,8 @@ import { Box, Grid, Card, CardContent, Avatar } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
-import { TEACHER_PROFILES, TeacherProfile } from '../content/entities/teachers';
+import { TEACHER_PROFILES, TeacherProfile } from '../i18n/entities/teachers';
+import { teachersPageContent } from '../i18n/pages/teachers';
 
 export const Teachers = () => {
   const renderTeacherCard = (teacher: TeacherProfile) => (
@@ -35,7 +36,7 @@ export const Teachers = () => {
       >
         <Avatar
           src={teacher.image}
-          alt={`${teacher.name} photo`}
+          alt={`${teacher.name} ${teachersPageContent.photoAltSuffix}`}
           sx={{
             width: 150,
             height: 150,
@@ -112,7 +113,7 @@ export const Teachers = () => {
             fontSize: 'var(--text-5xl)',
           }}
         >
-          👩‍🏫 Meet Our Teachers
+          {teachersPageContent.heroTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -123,10 +124,7 @@ export const Teachers = () => {
             fontWeight: 500,
           }}
         >
-          Get to know the dedicated educators who guide your child's learning
-          journey at Montessori Skye View Learning Center. Our passionate
-          teachers bring years of experience and a deep commitment to the
-          Montessori philosophy.
+          {teachersPageContent.heroDescription}
         </Typography>
       </ContentContainer>
 
@@ -159,7 +157,7 @@ export const Teachers = () => {
             fontWeight: 700,
           }}
         >
-          🌟 The Montessori Difference
+          {teachersPageContent.montessoriDifferenceTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -170,10 +168,7 @@ export const Teachers = () => {
             fontWeight: 500,
           }}
         >
-          Our teachers are trained in the Montessori method, which emphasizes
-          hands-on learning, self-directed activity, and collaborative play.
-          They create prepared environments where children develop independence,
-          critical thinking skills, and a lifelong love of learning.
+          {teachersPageContent.montessoriDifferenceDescription}
         </Typography>
       </ContentContainer>
 
@@ -196,7 +191,7 @@ export const Teachers = () => {
             fontWeight: 700,
           }}
         >
-          💬 Want to Learn More?
+          {teachersPageContent.learnMoreTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -207,9 +202,7 @@ export const Teachers = () => {
             fontWeight: 500,
           }}
         >
-          We'd love to introduce you to our team in person! Schedule a visit to
-          see our teachers in action and learn more about our approach to
-          education.
+          {teachersPageContent.learnMoreDescription}
         </Typography>
       </ContentContainer>
     </CanvasView>

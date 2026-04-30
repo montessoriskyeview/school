@@ -30,7 +30,7 @@ import { Link } from 'react-router-dom';
 import {
   NAVIGATION_ITEMS,
   NavigationItemKey,
-} from '../../content/site/navigation';
+} from '../../i18n/site/navigation';
 
 export const DRAWER_WIDTH = 240;
 

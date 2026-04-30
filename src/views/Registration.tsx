@@ -1,10 +1,11 @@
 import { Link } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { SchoolList } from '../components/shared/ListText';
-import { FALL_2024_LINK } from '../content/site/links';
+import { FALL_2024_LINK } from '../i18n/site/links';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
+import { registrationPageContent } from '../i18n/pages/registration';
 
 export const Registration = () => {
   return (
@@ -29,7 +30,7 @@ export const Registration = () => {
             fontSize: 'var(--text-4xl)',
           }}
         >
-          📝 Registration & Enrollment
+          {registrationPageContent.heroTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -40,20 +41,16 @@ export const Registration = () => {
             fontWeight: 500,
           }}
         >
-          Reservations and payments are currently accepted through the
-          individual forms found in the sections below. We make the registration
-          process simple and straightforward for families.
+          {registrationPageContent.heroDescription}
         </Typography>
       </ContentContainer>
 
       <CollapseContainer
-        title="🍂 Fall 2025 Enrollment"
+        title={registrationPageContent.fallEnrollmentTitle}
         content={
           <SchoolList
             items={[
-              'Starting September 3rd',
-              '$400 Registration Fee',
-              'Sibling discount and military discount available',
+              ...registrationPageContent.fallEnrollmentItems,
               <Link
                 variant="body1"
                 sx={{
@@ -74,7 +71,7 @@ export const Registration = () => {
                 }}
                 href={FALL_2024_LINK}
               >
-                Register here
+                {registrationPageContent.registerHereLabel}
               </Link>,
             ]}
           />
@@ -101,7 +98,7 @@ export const Registration = () => {
             fontWeight: 700,
           }}
         >
-          🎯 Enrollment Process
+          {registrationPageContent.processTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -112,9 +109,7 @@ export const Registration = () => {
             fontWeight: 500,
           }}
         >
-          Our enrollment process is designed to be family-friendly and
-          efficient. We work closely with each family to ensure a smooth
-          transition into our Montessori community.
+          {registrationPageContent.processDescription}
         </Typography>
       </ContentContainer>
 
@@ -137,7 +132,7 @@ export const Registration = () => {
             fontWeight: 700,
           }}
         >
-          🌟 Ready to Join Our Community?
+          {registrationPageContent.joinTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -148,9 +143,7 @@ export const Registration = () => {
             fontWeight: 500,
           }}
         >
-          We're excited to welcome your family to Montessori Skye View! Contact
-          us today to begin the enrollment process and secure your child's spot
-          in our nurturing learning environment.
+          {registrationPageContent.joinDescription}
         </Typography>
       </ContentContainer>
     </CanvasView>

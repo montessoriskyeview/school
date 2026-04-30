@@ -1,6 +1,7 @@
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
+import { reviewContent } from '../i18n/pages/review';
 
 export const Review = () => {
   return (
@@ -27,7 +28,7 @@ export const Review = () => {
             fontSize: 'var(--text-4xl)',
           }}
         >
-          ⭐ Share Your Experience
+          {reviewContent.heroTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -38,8 +39,7 @@ export const Review = () => {
             fontWeight: 500,
           }}
         >
-          We value your feedback! Your review helps other families discover
-          quality Montessori education in Las Vegas.
+          {reviewContent.heroDescription}
         </Typography>
       </ContentContainer>
 
@@ -64,7 +64,7 @@ export const Review = () => {
             fontWeight: 700,
           }}
         >
-          📝 Montessori Skye View Review Form
+          {reviewContent.formTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -76,9 +76,7 @@ export const Review = () => {
             marginBottom: 'var(--spacing-xl)',
           }}
         >
-          Please take a moment to share your experience with our Montessori
-          learning center. Your feedback helps us improve and assists other
-          families in making informed decisions.
+          {reviewContent.formDescription}
         </Typography>
 
         {/* Google Forms Embed */}
@@ -94,16 +92,16 @@ export const Review = () => {
           }}
         >
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSejkM6MFDbpgpMmvVobw3bYoNNKLIRh0sBFqSjkD9DUsSQMqg/viewform?embedded=true"
+            src={reviewContent.formUrl}
             width="100%"
             height="100%"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
-            title="Montessori Skye View Review Form"
-            aria-label="Review form for Montessori Skye View Learning Center"
+            title={reviewContent.formFrameTitle}
+            aria-label={reviewContent.formAriaLabel}
           >
-            Loading…
+            {reviewContent.formLoadingLabel}
           </iframe>
         </div>
       </ContentContainer>
@@ -129,7 +127,7 @@ export const Review = () => {
             fontWeight: 700,
           }}
         >
-          🙏 Thank You for Your Feedback
+          {reviewContent.thanksTitle}
         </Typography>
         <Typography
           variant="body1"
@@ -140,10 +138,7 @@ export const Review = () => {
             fontWeight: 500,
           }}
         >
-          Your review helps us continue providing exceptional Montessori
-          education and assists other families in finding the right learning
-          environment for their children. We appreciate you being part of the
-          Montessori Skye View family!
+          {reviewContent.thanksDescription}
         </Typography>
       </ContentContainer>
     </CanvasView>

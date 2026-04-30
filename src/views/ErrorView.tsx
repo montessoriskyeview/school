@@ -1,6 +1,7 @@
 import { useRouteError, Link } from 'react-router-dom';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Home as HomeIcon } from '@mui/icons-material';
+import { errorPageContent } from '../i18n/pages/error';
 
 export function ErrorPage() {
   const error = useRouteError();
@@ -27,7 +28,7 @@ export function ErrorPage() {
             marginBottom: 2,
           }}
         >
-          Oops! 😅
+          {errorPageContent.emojiTitle}
         </Typography>
 
         <Typography
@@ -40,7 +41,7 @@ export function ErrorPage() {
             marginBottom: 2,
           }}
         >
-          Page Not Found
+          {errorPageContent.heading}
         </Typography>
 
         <Typography
@@ -53,8 +54,7 @@ export function ErrorPage() {
             lineHeight: 1.6,
           }}
         >
-          The page you're looking for doesn't exist or has been moved. Don't
-          worry though - you can easily find what you need!
+          {errorPageContent.description}
         </Typography>
 
         <Box
@@ -68,7 +68,7 @@ export function ErrorPage() {
         >
           <Button
             component={Link}
-            to="/"
+            to={errorPageContent.primaryActionPath}
             variant="contained"
             size="large"
             startIcon={<HomeIcon />}
@@ -84,12 +84,12 @@ export function ErrorPage() {
               },
             }}
           >
-            Go Home
+            {errorPageContent.primaryActionLabel}
           </Button>
 
           <Button
             component={Link}
-            to="/contact"
+            to={errorPageContent.secondaryActionPath}
             variant="outlined"
             size="large"
             sx={{
@@ -105,7 +105,7 @@ export function ErrorPage() {
               },
             }}
           >
-            Contact Us
+            {errorPageContent.secondaryActionLabel}
           </Button>
         </Box>
 
@@ -117,8 +117,7 @@ export function ErrorPage() {
             fontSize: 'var(--text-sm)',
           }}
         >
-          If you believe this is an error, please contact us and we'll help you
-          find what you're looking for.
+          {errorPageContent.footerNote}
         </Typography>
       </Box>
     </Container>

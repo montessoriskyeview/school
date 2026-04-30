@@ -12,7 +12,7 @@ import { PhoneContact } from '../../components/shared/PhoneContact';
 import { EnrollmentButton } from '../../components/shared/EnrollmentButton';
 import { EnrollmentButtons } from '../../components/shared/EnrollmentButtons';
 import { getMockAnalytics, clearMockAnalytics } from '../../utils/analytics';
-import { DEFAULT_CONVERSION_ID } from '../../content/entities/enrollments';
+import { DEFAULT_CONVERSION_ID } from '../../i18n/entities/enrollments';
 
 describe('Conversion Tracking Tests', () => {
   let mockAnalytics: any;

@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { getActiveEnrollmentPeriods } from '../../content/entities/enrollments';
+import { getActiveEnrollmentPeriods } from '../../i18n/entities/enrollments';
 import { EnrollmentButton } from './EnrollmentButton';
 
 interface IEnrollmentButtonsProps {

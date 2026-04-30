@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AppBar } from './components/appBar/AppBar';
 import { SEO } from './components/shared/SEO';
 import { ConsentBanner } from './components/shared/ConsentBanner';
-import { ROUTE_SEO_CONFIGS } from './content/seo/routes';
+import { ROUTE_SEO_CONFIGS } from './i18n/seo/routes';
 import { ErrorPage } from './views/ErrorView';
 import { useQueryParams } from './hooks/useQueryParams';
 import { performanceOptimizer, trackPageView } from './utils/performance';
