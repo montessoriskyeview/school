@@ -6,7 +6,13 @@ import {
   CircularProgress,
   Box,
 } from '@mui/material';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from 'react-router-dom';
 
 import { AppBar } from './components/appBar/AppBar';
 import { SEO } from './components/shared/SEO';
@@ -136,8 +142,8 @@ const SEOUpdater: React.FC = () => {
     case '/location':
       seoConfig = ROUTE_SEO_CONFIGS.location;
       break;
-    case '/tuition':
-      seoConfig = ROUTE_SEO_CONFIGS.tuition;
+    case '/donations':
+      seoConfig = ROUTE_SEO_CONFIGS.donations;
       break;
     case '/schedule':
       seoConfig = ROUTE_SEO_CONFIGS.schedule;
@@ -354,6 +360,7 @@ function App() {
                 />
                 <Route path="/location" element={<Location />} />
                 <Route path="/schedule" element={<Schedule />} />
+                <Route path="/donations" element={<Navigate to="/schedule" replace />} />
                 <Route
                   path="/schedule/full-time"
                   element={<FullTimeLanding />}

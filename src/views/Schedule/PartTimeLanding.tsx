@@ -19,6 +19,7 @@ import { getNextActiveEnrollmentPeriod } from '../../i18n/entities/enrollments';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { PART_TIME_SCHEDULE_ITEMS, DailyScheduleProps } from './items';
+import { donationPolicy } from '../../config/donationPolicy';
 
 const DailySchedule = ({ items }: DailyScheduleProps) => {
   return (
@@ -331,7 +332,7 @@ export const PartTimeLanding = () => {
                     variant="h3"
                     sx={{ fontSize: 'var(--text-xl)', fontWeight: 700 }}
                   >
-                    Cost-Effective Option
+                    Community-Supported Option
                   </Typography>
                 </Box>
                 <Typography
@@ -341,9 +342,9 @@ export const PartTimeLanding = () => {
                     marginBottom: 'var(--spacing-md)',
                   }}
                 >
-                  Quality Montessori education at a more affordable rate.
-                  Perfect for families who want the Montessori experience
-                  without the full-time commitment.
+                  Quality Montessori education supported through suggested
+                  family donations. Perfect for families who want the
+                  Montessori experience without the full-time commitment.
                 </Typography>
                 <Box
                   component="div"
@@ -359,7 +360,7 @@ export const PartTimeLanding = () => {
                       marginRight: 'var(--spacing-sm)',
                     }}
                   />
-                  <Typography>Lower tuition costs</Typography>
+                  <Typography>Lower suggested donation levels</Typography>
                 </Box>
                 <Box
                   component="div"
@@ -637,13 +638,13 @@ export const PartTimeLanding = () => {
                       marginBottom: 'var(--spacing-md)',
                     }}
                   >
-                    Seek Cost Efficiency
+                    Seek Donation Flexibility
                   </Typography>
                   <Typography
                     sx={{ fontSize: 'var(--text-base)', lineHeight: 1.6 }}
                   >
-                    Want quality Montessori education at a more affordable rate
-                    while maintaining family budget flexibility.
+                    Want quality Montessori education with flexible family
+                    donation options.
                   </Typography>
                 </CardContent>
               </Card>
@@ -651,7 +652,7 @@ export const PartTimeLanding = () => {
           </Grid>
         </Box>
 
-        {/* Tuition Section */}
+        {/* Donation Section */}
         <Box component="div" sx={{ marginBottom: 'var(--spacing-3xl)' }}>
           <Typography
             variant="h2"
@@ -663,7 +664,7 @@ export const PartTimeLanding = () => {
               color: 'var(--text-dark)',
             }}
           >
-            Part-Time Tuition & Payment Options
+            Part-Time Suggested Donation Options
           </Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
@@ -702,7 +703,8 @@ export const PartTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $6,750 per learning year
+                      {donationPolicy.programs.partTime.annualSuggestedDonation}{' '}
+                      suggested annual donation
                     </Typography>
                     <Typography
                       sx={{
@@ -726,7 +728,9 @@ export const PartTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $750 paid monthly
+                      {donationPolicy.programs.partTime
+                        .monthlySuggestedDonationSchoolYear}{' '}
+                      suggested monthly donation
                     </Typography>
                     <Typography
                       sx={{
@@ -734,7 +738,7 @@ export const PartTimeLanding = () => {
                         color: 'var(--text-secondary)',
                       }}
                     >
-                      September through May
+                      {donationPolicy.programs.partTime.schoolYearMonthsLabel}
                     </Typography>
                   </Box>
                   <Box component="div">
@@ -746,7 +750,9 @@ export const PartTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $587.50 per month
+                      {donationPolicy.programs.partTime
+                        .monthlySuggestedDonationYearRound}{' '}
+                      suggested monthly donation
                     </Typography>
                     <Typography
                       sx={{
@@ -754,7 +760,8 @@ export const PartTimeLanding = () => {
                         color: 'var(--text-secondary)',
                       }}
                     >
-                      Year round financing from September through August
+                      Year-round contribution schedule (
+                      {donationPolicy.programs.partTime.yearRoundMonthsLabel})
                     </Typography>
                   </Box>
                 </CardContent>
@@ -895,7 +902,7 @@ export const PartTimeLanding = () => {
           </Grid>
         </Box>
 
-        {/* Registration Fees Section */}
+        {/* Enrollment Donation Section */}
         <Box component="div" sx={{ marginBottom: 'var(--spacing-3xl)' }}>
           <Card
             sx={{
@@ -916,7 +923,7 @@ export const PartTimeLanding = () => {
                 textAlign: 'center',
               }}
             >
-              📝 Registration Fees
+              📝 Enrollment Donation Guidelines
             </Typography>
             <Grid container spacing={3} justifyContent="center">
               <Grid item xs={12} md={6}>
@@ -938,7 +945,7 @@ export const PartTimeLanding = () => {
                       color: 'var(--primary-green)',
                     }}
                   >
-                    $400
+                    {donationPolicy.enrollment.earlyDonation}
                   </Typography>
                   <Typography
                     sx={{
@@ -946,7 +953,7 @@ export const PartTimeLanding = () => {
                       color: 'var(--text-secondary)',
                     }}
                   >
-                    Before August 31st
+                    {donationPolicy.enrollment.earlyDeadlineLabel}
                   </Typography>
                 </Box>
               </Grid>
@@ -969,7 +976,7 @@ export const PartTimeLanding = () => {
                       color: 'var(--primary-blue)',
                     }}
                   >
-                    $500
+                    {donationPolicy.enrollment.standardDonation}
                   </Typography>
                   <Typography
                     sx={{
@@ -977,7 +984,7 @@ export const PartTimeLanding = () => {
                       color: 'var(--text-secondary)',
                     }}
                   >
-                    After August 31st
+                    {donationPolicy.enrollment.standardDeadlineLabel}
                   </Typography>
                 </Box>
               </Grid>

@@ -540,7 +540,7 @@ export const Home = () => {
                   marginBottom: 'var(--spacing-sm)',
                 }}
               >
-                Affordable Quality Education
+                Community-Supported Quality Education
               </Typography>
               <Typography
                 variant="body1"
@@ -551,9 +551,9 @@ export const Home = () => {
                   lineHeight: 'var(--leading-relaxed)',
                 }}
               >
-                Cooperative membership reduces costs while maintaining
-                high-quality Montessori education through shared
-                responsibilities and community investment.
+                Cooperative membership can lower suggested donation
+                requirements while maintaining high-quality Montessori education
+                through shared responsibilities and community investment.
               </Typography>
             </div>
           </div>

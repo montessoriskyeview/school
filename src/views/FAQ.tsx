@@ -3,6 +3,7 @@ import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { SchoolList } from '../components/shared/ListText';
 import { Typography } from '../components/shared/Typography';
 import { ContentContainer } from '../components/shared/ContentContainer';
+import { donationPolicy } from '../config/donationPolicy';
 
 export const FaqView = () => {
   return (
@@ -59,7 +60,7 @@ export const FaqView = () => {
                 'Each family must participate in classroom activities, maintenance, or administrative support',
                 'Parents help make decisions about curriculum, policies, and operations',
                 'Families share responsibility for creating and maintaining our learning environment',
-                'This collaborative model keeps costs lower while building stronger community connections',
+                'This collaborative model keeps suggested donation levels lower while building stronger community connections',
                 'Parents who cannot actively participate should consider traditional private schools instead',
               ]}
             />
@@ -84,7 +85,7 @@ export const FaqView = () => {
                 'Minimum 20 hours of volunteer work per semester (40 hours per year)',
                 'Participate in monthly member meetings and decision-making',
                 'Help with classroom activities, events, maintenance, or administration',
-                'Alternative: Pay $25/hour in lieu of volunteer work (limited availability)',
+                `Alternative: Suggested donation of $${donationPolicy.familyParticipation.inLieuDonationPerHour}/hour in lieu of volunteer work (limited availability)`,
                 'Families who do not participate will be asked to leave the cooperative',
               ]}
             />
@@ -149,23 +150,24 @@ export const FaqView = () => {
       />
 
       <CollapseContainer
-        title="💰 How does cooperative membership save money?"
+        title="💚 How does cooperative membership reduce donation requirements?"
         content={
           <>
             <Typography sx={{ marginBottom: 'var(--spacing-md)' }}>
-              Our cooperative model significantly reduces costs compared to
+              Our cooperative model can reduce the suggested donation level
+              compared to
               traditional private schools because families share the work and
               responsibilities.
             </Typography>
             <SchoolList
               items={[
-                'Lower membership fees because parents provide labor and expertise',
-                'Shared costs for materials, supplies, and facility maintenance',
+                'Lower suggested donations because parents provide labor and expertise',
+                'Shared operational support for materials, supplies, and facility maintenance',
                 'Parent volunteers reduce need for paid staff in many areas',
-                'Families contribute skills (teaching, maintenance, administration) instead of paying for services',
+                'Families contribute skills (teaching, maintenance, administration) instead of replacing those contributions with cash',
                 'Group purchasing power for educational materials and supplies',
                 'Community fundraising and resource sharing',
-                "Every hour you volunteer directly reduces your family's costs",
+                "Every hour you volunteer can reduce your family's donation requirement",
               ]}
             />
           </>
@@ -196,7 +198,7 @@ export const FaqView = () => {
                 'Administrative tasks that can be done remotely',
                 'Contribute resources or materials instead of time',
                 'Partner with other families to share responsibilities',
-                'Limited option to pay $25/hour in lieu of volunteer work',
+                `Limited option for a $${donationPolicy.familyParticipation.inLieuDonationPerHour}/hour suggested donation in lieu of volunteer work`,
                 'However, some level of participation is still required - this is not a traditional daycare',
               ]}
             />
@@ -221,7 +223,7 @@ export const FaqView = () => {
       <CollapseContainer
         title="🍎 Is lunch provided or should my child bring their own?"
         content={
-          "Students can bring a healthy lunch from home or choose our nutritious learning center meal option for $3 per day. This fee will be conveniently added to your monthly learning center fee statement. We understand that forgetting a lunch happens, and our program ensures your child has a healthy option available each day they're at the learning center. Lunch options include ham, cheese and crackers or a peanut butter and jelly sandwich along with fresh fruit (apple, banana, orange) and vegetables (carrot sticks, cucumber)."
+          `Students can bring a healthy lunch from home or choose our nutritious learning center meal option for a ${donationPolicy.meals.suggestedDonationPerDay} per-day suggested donation. We understand that forgetting a lunch happens, and our program ensures your child has a healthy option available each day they're at the learning center. Lunch options include ham, cheese and crackers or a peanut butter and jelly sandwich along with fresh fruit (apple, banana, orange) and vegetables (carrot sticks, cucumber).`
         }
         spacing="lg"
       />
@@ -249,7 +251,7 @@ export const FaqView = () => {
               items={[
                 '<strong>vs. Traditional Schools:</strong> Parents are required active participants, not customers. Families share teaching, administrative, and maintenance responsibilities.',
                 '<strong>vs. Solo Homeschooling:</strong> You get community support, professional guidance, and shared resources while maintaining homeschool flexibility.',
-                '<strong>vs. Private Schools:</strong> Much lower costs because parents provide labor and expertise instead of paying for all services.',
+                '<strong>vs. Private Schools:</strong> Lower suggested donation levels because parents provide labor and expertise instead of replacing all services with cash contributions.',
                 'Legally, your child is homeschooled in Nevada - we provide documentation and guidance for state requirements.',
                 'Small class sizes (around 15 students) with mixed ages, like a one-room schoolhouse.',
                 'Curriculum and schedule tailored to each class with parent input and involvement.',
@@ -268,18 +270,18 @@ export const FaqView = () => {
         spacing="lg"
       />
       <CollapseContainer
-        title="💳 What if we need to withdraw? What is your refund policy?"
+        title="💳 What if we need to withdraw? How are donations handled?"
         content={
           <>
             <Typography>
               If a student's enrollment is terminated for any reason, the
-              following refund policy will apply:
+              following donation policy will apply:
             </Typography>
             <SchoolList
               items={[
-                "Tuition will be refunded on a prorated basis for the month in which the learning center receives official notice of the student's withdrawal or cancellation, regardless of the number of days the student attended classes during that month.",
-                "All refund requests must be submitted in writing to the learning center administration within 30 days of the student's last day of attendance.",
-                'Refunds may be subject to processing fees or other applicable deductions.',
+                "Donations support the cooperative's educational mission and are generally considered non-refundable once allocated to program operations.",
+                "Any request for a donation adjustment must be submitted in writing to the learning center administration within 30 days of the student's last day of attendance.",
+                'Donation adjustments may be evaluated case-by-case based on timing and operational commitments.',
                 'The learning center reserves the right to make exceptions to this policy in certain circumstances, such as in cases of extended illness or family emergencies.',
               ]}
             />

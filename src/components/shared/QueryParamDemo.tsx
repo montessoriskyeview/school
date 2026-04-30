@@ -6,7 +6,7 @@ import { createQueryUrl } from '../../utils/navigation';
 export const QueryParamDemo: React.FC = () => {
   const demoPages = [
     { name: 'Registration', param: 'registration' },
-    { name: 'Tuition', param: 'tuition' },
+    { name: 'Donations', param: 'donations' },
     { name: 'Schedule', param: 'schedule' },
     { name: 'Location', param: 'location' },
     { name: 'Philosophy', param: 'philosophy' },

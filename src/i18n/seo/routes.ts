@@ -31,13 +31,14 @@ export const ROUTE_SEO_CONFIGS: Record<string, RouteSEOConfig> = {
       'Montessori campus Las Vegas, Skye Canyon location, outdoor learning space, Las Vegas Montessori school location, child-friendly campus',
     url: '/location',
   },
-  tuition: {
-    title: 'Tuition & Fees | Montessori Skye View Learning Center Las Vegas',
+  donations: {
+    title:
+      'Family Donation Support | Montessori Skye View Learning Center Las Vegas',
     description:
-      'Transparent tuition rates and flexible payment options for our Montessori learning center. Quality education at competitive prices in Las Vegas.',
+      'Transparent suggested donation levels and family contribution options for our Montessori learning center.',
     keywords:
-      'Montessori tuition Las Vegas, learning center fees, affordable Montessori education, payment plans, Las Vegas Montessori costs',
-    url: '/tuition',
+      'Montessori family donations Las Vegas, nonprofit learning center support, parent cooperative contributions, Montessori donation options',
+    url: '/donations',
   },
   schedule: {
     title: 'Class Schedule & Programs | Montessori Skye View Learning Center',

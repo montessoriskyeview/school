@@ -101,6 +101,15 @@
 - Document API integrations
 - Keep documentation up to date
 
+## Nonprofit Donation Language Policy (Critical)
+- This project is transitioning to a 501(c)(3) nonprofit model
+- Use donation-oriented language for family monetary contributions
+- Preferred terms: donation, suggested donation, family contribution, in-kind donation
+- Avoid introducing: tuition, payment, fee, billing, pricing, refund (unless quoting historical/legal source material)
+- Keep all donation requirements centralized in `src/config/donationPolicy.ts`
+- When contribution requirements change, update `src/config/donationPolicy.ts` first and then referenced UI copy
+- Preserve legacy routing aliases only when needed for backwards compatibility, but do not present legacy terms in visible UI copy
+
 ## Accessibility Standards (WCAG 2.1 AA)
 
 ### Color Contrast Requirements

@@ -13,7 +13,7 @@ export const locationContent = {
     'More flexible scheduling and location options',
     'Stronger parent involvement in coordinating learning spaces',
     'Access to diverse learning environments (homes, parks, community centers)',
-    'Reduced overhead costs, keeping membership fees lower',
+    'Reduced overhead and lower suggested family donation requirements',
     'Greater sense of community ownership and responsibility',
     'Protection from external harassment and interference',
     'Ability to adapt quickly to changing needs and circumstances',

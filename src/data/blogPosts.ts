@@ -556,7 +556,7 @@ export const blogPosts: IBlogPost[] = [
         <li>More time for family activities and bonding</li>
         <li>Opportunity for one-on-one parent-child time</li>
         <li>Flexibility for families with varying schedules</li>
-        <li>Cost savings for families who don't need full-time care</li>
+        <li>Lower suggested donation levels for families who don't need full-time care</li>
       </ul>
       
       <h3>Individualized Pace</h3>
@@ -581,7 +581,7 @@ export const blogPosts: IBlogPost[] = [
       <h3>Family Circumstances</h3>
       <ul>
         <li><strong>Work Schedules:</strong> Full-time may be necessary for working parents</li>
-        <li><strong>Financial Considerations:</strong> Part-time can be more affordable</li>
+        <li><strong>Family Contribution Considerations:</strong> Part-time can require lower suggested donations</li>
         <li><strong>Other Commitments:</strong> Consider other activities and family time</li>
         <li><strong>Transportation:</strong> Factor in travel time and logistics</li>
       </ul>
@@ -637,7 +637,7 @@ export const blogPosts: IBlogPost[] = [
         <li>What are our family's work and schedule requirements?</li>
         <li>What are our educational goals for our child?</li>
         <li>How much time do we want to spend together as a family?</li>
-        <li>What is our budget for preschool education?</li>
+        <li>What level of family donation is realistic for us?</li>
         <li>Are there other activities or commitments to consider?</li>
       </ul>
       

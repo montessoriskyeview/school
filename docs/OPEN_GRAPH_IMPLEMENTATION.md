@@ -143,7 +143,7 @@ export const SEOConfigs = {
 ### 5. Manual Testing Checklist
 - [ ] **Homepage**: Title and description appear correctly
 - [ ] **Location Page**: Campus-specific metadata
-- [ ] **Tuition Page**: Pricing-focused metadata
+- [ ] **Donations Page**: Donation-focused metadata
 - [ ] **Contact Page**: Contact-focused metadata
 - [ ] **FAQ Page**: Question-focused metadata
 - [ ] **Accessibility Page**: Accessibility-focused metadata

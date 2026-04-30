@@ -28,7 +28,7 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
 - [x] Create transition plan and documentation
 - [x] Update website messaging and content
 - [x] Revise enrollment processes
-- [x] Remove tuition and location pages
+- [x] Remove legacy donation and location pages
 - [x] Add parent contribution form integration
 
 ### ✅ Phase 2: Content & Messaging Updates (COMPLETED)
@@ -36,7 +36,7 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
 - [x] Philosophy page revision for collaborative learning
 - [x] Parent resources restructured as cooperative member hub
 - [x] Created Parent Involvement opportunities page
-- [x] Updated navigation to remove tuition/location references
+- [x] Updated navigation to remove legacy donation/location references
 
 ### 📅 Phase 3: Operational Changes
 - [ ] Governance structure implementation
@@ -75,8 +75,8 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
 - Include cooperative commitment requirements
 - Add parent involvement expectations
 
-#### Remove Tuition/Location Pages
-- Remove tuition page references from navigation
+#### Remove Legacy Donation/Location Pages
+- Remove legacy donation page references from navigation
 - Remove location-specific content that's not relevant to cooperative model
 - Focus on community and parent involvement messaging
 
@@ -132,9 +132,9 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
 - Updated homepage with cooperative messaging
 
 #### Updated Navigation (COMPLETED)
-- ✅ "Parent Involvement" (replaces tuition)
+- ✅ "Parent Involvement" (replaces legacy donation page)
 - ✅ "Cooperative Member Resources" (updated parents page)
-- ✅ Removed location and tuition references
+- ✅ Removed location and legacy donation references
 - ✅ Updated routing and navigation components
 
 #### Future Components (Phase 3)
@@ -170,10 +170,10 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
    - Include parent involvement expectations
    - Create orientation process information
 
-5. **Tuition → Membership Investment**
+5. **Donation Model → Membership Investment**
    - Restructure pricing to reflect cooperative model
    - Add work hour requirements
-   - Explain fee reduction through participation
+   - Explain donation reduction through participation
    - Include community investment messaging
 
 ### New Page Creation (Priority 2)
@@ -309,13 +309,13 @@ This document outlines the comprehensive transition of Montessori Skye View Lear
    - Benefits of parent involvement for families and community
 
 5. **Navigation Updates**
-   - Removed tuition and location page references
+   - Removed legacy donation and location page references
    - Added "Parent Involvement" as main navigation item
    - Updated routing and navigation components
    - Cleaned up unused page references
 
 6. **File Cleanup**
-   - Removed `src/views/Tuition.tsx` and `src/views/Location.tsx`
+   - Removed legacy donation/location views and references
    - Updated all navigation and routing configurations
    - Streamlined resource management
 

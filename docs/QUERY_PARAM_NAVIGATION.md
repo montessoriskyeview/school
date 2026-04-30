@@ -19,7 +19,7 @@ https://montessoriskyeview.com/?p=registration
 |-----------|-------|-------------|
 | `home` | `/` | Home page |
 | `registration` | `/registration` | Registration page |
-| `tuition` | `/tuition` | Tuition page |
+| `donations` | `/donations` | Donation information (redirects to schedule) |
 | `schedule` | `/schedule` | Schedule page |
 | `location` | `/location` | Location page |
 | `philosophy` | `/philosophy` | Philosophy page |
@@ -32,7 +32,7 @@ https://montessoriskyeview.com/?p=registration
 ### Examples
 
 - **Registration**: `https://montessoriskyeview.com/?p=registration`
-- **Tuition**: `https://montessoriskyeview.com/?p=tuition`
+- **Donations**: `https://montessoriskyeview.com/?p=donations`
 - **Schedule**: `https://montessoriskyeview.com/?p=schedule`
 - **Location**: `https://montessoriskyeview.com/?p=location`
 

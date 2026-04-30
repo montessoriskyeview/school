@@ -14,7 +14,7 @@ export const parentInvolvementContent = {
     'Each family commits to 20 hours of volunteer work per semester',
     'Work hours can be fulfilled through various opportunities based on your skills and schedule',
     'Flexible scheduling accommodates working parents and different availability',
-    'Work hours directly reduce your membership fees - every hour saves money',
+    'Work hours can reduce your suggested family donation level',
     'Track your hours easily through our online system',
     'Families can work together to fulfill requirements and build community',
   ],
@@ -64,7 +64,7 @@ export const parentInvolvementContent = {
   governanceItems: [
     'Board of Directors: Elected parent representatives who guide cooperative policy',
     'Education Committee: Focus on curriculum, teaching methods, and learning outcomes',
-    'Finance Committee: Manage budget, fees, and financial planning',
+    'Finance Committee: Manage budget, donation planning, and financial stewardship',
     'Facilities Committee: Oversee maintenance, improvements, and campus development',
     'Events Committee: Plan community gatherings, fundraisers, and celebrations',
     'Communication Committee: Manage newsletters, website, and community outreach',

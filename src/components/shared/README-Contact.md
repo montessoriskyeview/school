@@ -25,7 +25,7 @@ Please provide me with information about:
 - Tour availability
 - Enrollment availability
 - Program details
-- Tuition information
+- Suggested donation information
 - Any other relevant information
 
 Thank you!`;
@@ -108,7 +108,7 @@ The standardized email template provides:
 - **Structured Request**: Pre-filled body includes all common inquiry points
 - **Professional Format**: Consistent formatting across all email inquiries
 - **User-Friendly**: Reduces friction for users who want to contact the school
-- **Complete Information**: Covers tour, enrollment, programs, tuition, and other details
+- **Complete Information**: Covers tour, enrollment, programs, donation guidance, and other details
 
 ## Migration Notes
 

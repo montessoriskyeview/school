@@ -23,7 +23,7 @@ Please provide me with information about:
 - Tour availability
 - Enrollment availability
 - Program details
-- Tuition information
+- Suggested donation information
 - Any other relevant information
 
 Thank you!`;

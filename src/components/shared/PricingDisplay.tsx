@@ -71,11 +71,11 @@ const HintText = styled(Typography)`
 export const PricingDisplay = ({
   yearlyPrice,
   monthlyOptions,
-  hint = '💡 Pay in full to avoid any additional fees or interest charges',
+  hint = '💡 Suggested annual donations help simplify planning for the school year',
 }: PricingDisplayProps) => {
   return (
     <PricingContainer component="div">
-      {/* Yearly Price - Most Prominent */}
+      {/* Suggested Annual Donation - Most Prominent */}
       <YearlyPriceSection component="div">
         <Typography
           variant="h4"
@@ -111,7 +111,7 @@ export const PricingDisplay = ({
         )}
       </YearlyPriceSection>
 
-      {/* Monthly Options */}
+      {/* Monthly Donation Options */}
       <MonthlyOptionsSection>
         <Typography
           variant="h5"
@@ -122,7 +122,7 @@ export const PricingDisplay = ({
             textAlign: 'center',
           }}
         >
-          💳 Monthly Payment Options
+          💳 Monthly Donation Options
         </Typography>
 
         {monthlyOptions.map((option, index) => (

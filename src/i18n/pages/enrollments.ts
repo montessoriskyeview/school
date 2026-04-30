@@ -5,6 +5,9 @@ export const enrollmentsPageContent = {
   currentlyOpenLabel: 'Currently Open',
   registerNowLabel: 'Register Now',
   notAvailableLabel: 'Not Available Yet',
+  emptySlotTitle: 'Enrollment Opening Coming Soon',
+  emptySlotDescription:
+    'This slot is reserved for the next enrollment period. Please check back soon.',
   allPeriodsTitle: 'All Enrollment Periods',
   questionsTitle: '🤔 Have Questions?',
   questionsDescription:

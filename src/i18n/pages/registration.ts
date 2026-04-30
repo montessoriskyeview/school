@@ -1,11 +1,13 @@
+import { donationPolicy } from '../../config/donationPolicy';
+
 export const registrationPageContent = {
   heroTitle: '📝 Registration & Enrollment',
   heroDescription:
-    'Reservations and payments are currently accepted through the individual forms found in the sections below. We make the registration process simple and straightforward for families.',
+    'Enrollment forms and suggested donation commitments are currently accepted through the individual forms found in the sections below. We make the registration process simple and straightforward for families.',
   fallEnrollmentTitle: '🍂 Fall 2025 Enrollment',
   fallEnrollmentItems: [
     'Starting September 3rd',
-    '$400 Registration Fee',
+    `${donationPolicy.enrollment.earlyDonation} Early enrollment donation`,
     'Sibling discount and military discount available',
   ],
   registerHereLabel: 'Register here',

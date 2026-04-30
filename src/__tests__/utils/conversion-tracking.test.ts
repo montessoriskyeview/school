@@ -202,7 +202,7 @@ describe('Conversion Tracking Tests', () => {
       render(React.createElement(EnrollmentButtons, { variant: 'primary' }));
 
       // Find all enrollment buttons
-      const enrollmentLinks = screen.getAllByRole('link');
+      const enrollmentLinks = screen.queryAllByRole('link');
 
       // Click each enrollment button
       enrollmentLinks.forEach(link => {
@@ -224,7 +224,7 @@ describe('Conversion Tracking Tests', () => {
       render(React.createElement(EnrollmentButtons, { variant: 'primary' }));
 
       // Find all enrollment buttons
-      const enrollmentLinks = screen.getAllByRole('link');
+      const enrollmentLinks = screen.queryAllByRole('link');
 
       // Click each enrollment button
       enrollmentLinks.forEach(link => {

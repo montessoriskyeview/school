@@ -18,6 +18,7 @@ import { getNextActiveEnrollmentPeriod } from '../../i18n/entities/enrollments';
 import { CollapseContainer } from '../../components/shared/CollapseContainer';
 import { NestedListItem } from '../../components/shared/NestedListItem';
 import { FULL_TIME_SCHEDULE_ITEMS, DailyScheduleProps } from './items';
+import { donationPolicy } from '../../config/donationPolicy';
 
 const DailySchedule = ({ items }: DailyScheduleProps) => {
   return (
@@ -525,7 +526,7 @@ export const FullTimeLanding = () => {
           />
         </Box>
 
-        {/* Tuition Section */}
+        {/* Donation Section */}
         <Box component="div" sx={{ marginBottom: 'var(--spacing-3xl)' }}>
           <Typography
             variant="h2"
@@ -537,7 +538,7 @@ export const FullTimeLanding = () => {
               color: 'var(--text-dark)',
             }}
           >
-            Full-Time Tuition & Payment Options
+            Full-Time Suggested Donation Options
           </Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
@@ -576,7 +577,8 @@ export const FullTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $9,900 per learning year
+                      {donationPolicy.programs.fullTime.annualSuggestedDonation} suggested
+                      annual donation
                     </Typography>
                     <Typography
                       sx={{
@@ -600,7 +602,9 @@ export const FullTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $1,100 paid monthly
+                      {donationPolicy.programs.fullTime
+                        .monthlySuggestedDonationSchoolYear}{' '}
+                      suggested monthly donation
                     </Typography>
                     <Typography
                       sx={{
@@ -608,7 +612,7 @@ export const FullTimeLanding = () => {
                         color: 'var(--text-secondary)',
                       }}
                     >
-                      September through May
+                      {donationPolicy.programs.fullTime.schoolYearMonthsLabel}
                     </Typography>
                   </Box>
                   <Box component="div">
@@ -620,7 +624,9 @@ export const FullTimeLanding = () => {
                         marginBottom: 'var(--spacing-sm)',
                       }}
                     >
-                      $850 per month
+                      {donationPolicy.programs.fullTime
+                        .monthlySuggestedDonationYearRound}{' '}
+                      suggested monthly donation
                     </Typography>
                     <Typography
                       sx={{
@@ -628,7 +634,8 @@ export const FullTimeLanding = () => {
                         color: 'var(--text-secondary)',
                       }}
                     >
-                      Year round financing from September through August
+                      Year-round contribution schedule (
+                      {donationPolicy.programs.fullTime.yearRoundMonthsLabel})
                     </Typography>
                   </Box>
                 </CardContent>
@@ -769,7 +776,7 @@ export const FullTimeLanding = () => {
           </Grid>
         </Box>
 
-        {/* Registration Fees Section */}
+        {/* Enrollment Donation Section */}
         <Box component="div" sx={{ marginBottom: 'var(--spacing-3xl)' }}>
           <Card
             sx={{
@@ -790,7 +797,7 @@ export const FullTimeLanding = () => {
                 textAlign: 'center',
               }}
             >
-              📝 Registration Fees
+              📝 Enrollment Donation Guidelines
             </Typography>
             <Grid container spacing={3} justifyContent="center">
               <Grid item xs={12} md={6}>
@@ -812,7 +819,7 @@ export const FullTimeLanding = () => {
                       color: 'var(--primary-green)',
                     }}
                   >
-                    $400
+                    {donationPolicy.enrollment.earlyDonation}
                   </Typography>
                   <Typography
                     sx={{
@@ -820,7 +827,7 @@ export const FullTimeLanding = () => {
                       color: 'var(--text-secondary)',
                     }}
                   >
-                    Before August 31st
+                    {donationPolicy.enrollment.earlyDeadlineLabel}
                   </Typography>
                 </Box>
               </Grid>
@@ -843,7 +850,7 @@ export const FullTimeLanding = () => {
                       color: 'var(--primary-blue)',
                     }}
                   >
-                    $500
+                    {donationPolicy.enrollment.standardDonation}
                   </Typography>
                   <Typography
                     sx={{
@@ -851,7 +858,7 @@ export const FullTimeLanding = () => {
                       color: 'var(--text-secondary)',
                     }}
                   >
-                    After August 31st
+                    {donationPolicy.enrollment.standardDeadlineLabel}
                   </Typography>
                 </Box>
               </Grid>

@@ -4,25 +4,25 @@ import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 import {
-  ENROLLMENT_PERIODS,
-  EnrollmentPeriod,
+  ENROLLMENT_SLOTS,
+  EnrollmentSlot,
 } from '../i18n/entities/enrollments';
 import { enrollmentsPageContent } from '../i18n/pages/enrollments';
 
 export const Enrollments = () => {
-  const allEnrollments = ENROLLMENT_PERIODS;
+  const enrollmentSlots = ENROLLMENT_SLOTS;
 
-  const renderEnrollmentCard = (enrollment: EnrollmentPeriod) => (
+  const renderEnrollmentCard = (enrollment: EnrollmentSlot, index: number) => (
     <Card
-      key={enrollment.id}
+      key={enrollment?.id ?? `slot-${index + 1}`}
       sx={{
         borderRadius: 'var(--radius-lg)',
         boxShadow: 'var(--shadow-lg)',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-        border: enrollment.availableInEnrollment
+        border: enrollment?.availableInEnrollment
           ? '3px solid var(--primary-green)'
           : '2px solid var(--medium-gray)',
-        backgroundColor: enrollment.availableInEnrollment
+        backgroundColor: enrollment?.availableInEnrollment
           ? 'var(--white)'
           : 'var(--light-gray)',
         '&:hover': {
@@ -40,17 +40,17 @@ export const Enrollments = () => {
         <Typography
           variant="h4"
           sx={{
-            color: enrollment.availableInEnrollment
+            color: enrollment?.availableInEnrollment
               ? 'var(--primary-green)'
               : 'var(--text-light)',
             marginBottom: 'var(--spacing-lg)',
             fontWeight: 700,
           }}
         >
-          {enrollment.title}
+          {enrollment?.title ?? enrollmentsPageContent.emptySlotTitle}
         </Typography>
 
-        {enrollment.availableInEnrollment && (
+        {enrollment?.availableInEnrollment && (
           <Box
             component="div"
             style={{
@@ -68,13 +68,25 @@ export const Enrollments = () => {
           </Box>
         )}
 
+        {!enrollment && (
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'var(--text-light)',
+              marginBottom: 'var(--spacing-lg)',
+            }}
+          >
+            {enrollmentsPageContent.emptySlotDescription}
+          </Typography>
+        )}
+
         <Button
-          href={enrollment.href}
+          href={enrollment?.href}
           target="_blank"
           rel="noopener noreferrer"
-          disabled={!enrollment.availableInEnrollment}
+          disabled={!enrollment?.availableInEnrollment}
           sx={{
-            backgroundColor: enrollment.availableInEnrollment
+            backgroundColor: enrollment?.availableInEnrollment
               ? 'var(--primary-blue)'
               : 'var(--text-light)',
             color: 'var(--white)',
@@ -86,7 +98,7 @@ export const Enrollments = () => {
             minHeight: 44,
             minWidth: 44,
             textTransform: 'none',
-            '&:hover': enrollment.availableInEnrollment
+            '&:hover': enrollment?.availableInEnrollment
               ? {
                   backgroundColor: '#1D4ED8',
                   transform: 'translateY(-2px)',
@@ -104,7 +116,7 @@ export const Enrollments = () => {
             },
           }}
         >
-          {enrollment.availableInEnrollment
+          {enrollment?.availableInEnrollment
             ? enrollmentsPageContent.registerNowLabel
             : enrollmentsPageContent.notAvailableLabel}
         </Button>
@@ -164,9 +176,9 @@ export const Enrollments = () => {
         </Typography>
 
         <Grid container spacing={4}>
-          {allEnrollments.map(enrollment => (
-            <Grid item xs={12} md={6} lg={4} key={enrollment.id}>
-              {renderEnrollmentCard(enrollment)}
+          {enrollmentSlots.map((enrollment, index) => (
+            <Grid item xs={12} md={6} key={enrollment?.id ?? `slot-${index + 1}`}>
+              {renderEnrollmentCard(enrollment, index)}
             </Grid>
           ))}
         </Grid>
