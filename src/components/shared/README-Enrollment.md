@@ -5,19 +5,24 @@ The enrollment system has been consolidated into a centralized, easy-to-manage c
 
 ## Files
 
-### 1. `src/resources/enrollmentConfig.ts`
+### 1. `src/i18n/entities/enrollments.ts`
 **Main configuration file** - Update this file to change enrollment periods.
 
 ```typescript
-export const ENROLLMENT_PERIODS: IEnrollmentPeriod[] = [
-  {
-    id: 'fall-2025',
-    title: '2025 Fall registration',
-    href: 'https://docs.google.com/forms/d/19bOfuNiJR8HAGdgXSdWjJ8g8R7QgJ0o9hil6uiXYCvU/viewform',
-    isActive: true,
-  },
-  // Add new periods here
-];
+const slot1: EnrollmentSlot = {
+  id: 'slot-1',
+  title: 'Current enrollment',
+  href: 'YOUR_ENROLLMENT_FORM_LINK',
+  isActive: true,
+  availableInEnrollment: true,
+};
+
+const slot2: EnrollmentSlot = null;
+const slot3: EnrollmentSlot = null;
+const slot4: EnrollmentSlot = null;
+
+export const ENROLLMENT_SLOTS = [slot1, slot2, slot3, slot4];
+export const ENROLLMENT_PERIODS = ENROLLMENT_SLOTS.filter(Boolean);
 ```
 
 ### 2. `src/components/shared/EnrollmentButton.tsx`
@@ -30,13 +35,14 @@ Component that automatically renders all active enrollment buttons.
 
 ### Adding a New Enrollment Period
 
-1. **Edit `src/resources/enrollmentConfig.ts`**
+1. **Edit `src/i18n/entities/enrollments.ts`**
    ```typescript
    {
-     id: 'spring-2026',
-     title: '2026 Spring registration',
+     id: 'slot-2',
+     title: 'Next enrollment',
      href: 'YOUR_NEW_FORM_LINK',
      isActive: true,
+     availableInEnrollment: true,
    }
    ```
 
@@ -44,11 +50,11 @@ Component that automatically renders all active enrollment buttons.
 
 ### Deactivating an Enrollment Period
 
-1. **Edit `src/resources/enrollmentConfig.ts`**
+1. **Edit `src/i18n/entities/enrollments.ts`**
    ```typescript
    {
-     id: 'fall-2025',
-     title: '2025 Fall registration',
+     id: 'slot-1',
+     title: 'Current enrollment',
      href: '...',
      isActive: false, // Set to false to hide
    }
@@ -56,11 +62,11 @@ Component that automatically renders all active enrollment buttons.
 
 ### Changing Links
 
-1. **Edit `src/resources/enrollmentConfig.ts`**
+1. **Edit `src/i18n/entities/enrollments.ts`**
    ```typescript
    {
-     id: 'fall-2025',
-     title: '2025 Fall registration',
+     id: 'slot-1',
+     title: 'Current enrollment',
      href: 'NEW_LINK_HERE', // Update the href
      isActive: true,
    }
@@ -72,8 +78,8 @@ If you need different conversion tracking for different periods:
 
 ```typescript
 {
-  id: 'fall-2025',
-  title: '2025 Fall registration',
+  id: 'slot-1',
+  title: 'Current enrollment',
   href: '...',
   isActive: true,
   conversionId: 'AW-16665018583/CUSTOM_CONVERSION_ID', // Optional

@@ -81,10 +81,14 @@ export const Enrollments = () => {
         )}
 
         <Button
-          href={enrollment?.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          disabled={!enrollment?.availableInEnrollment}
+          {...(enrollment?.href
+            ? {
+                href: enrollment.href,
+                target: '_blank',
+                rel: 'noopener noreferrer',
+              }
+            : {})}
+          disabled={!enrollment?.availableInEnrollment || !enrollment?.href}
           sx={{
             backgroundColor: enrollment?.availableInEnrollment
               ? 'var(--primary-blue)'

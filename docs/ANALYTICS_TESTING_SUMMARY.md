@@ -40,7 +40,7 @@ I've created a comprehensive testing suite to ensure the existing analytics setu
 - **Email Contact**: `AW-16665018583/Z8tpCOHniPQaENeBwIo-`
 - **Phone Contact**: `AW-16665018583/mY27CN7niPQaENeBwIo-`
 - **Default Enrollment**: `AW-16665018583/vFD0CPHVzcgZENeBwIo-`
-- **Fall 2025 Enrollment**: `AW-16665018583/J6ldCMiWifQaENeBwIo-`
+- **Slot-Specific Enrollment**: `AW-16665018583/J6ldCMiWifQaENeBwIo-`
 
 ### 3. HTML Configuration
 - Google Analytics script tags with correct URLs

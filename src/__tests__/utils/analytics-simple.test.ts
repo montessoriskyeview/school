@@ -60,9 +60,9 @@ describe('Analytics Core Configuration Tests', () => {
       );
     });
 
-    it('should maintain correct fall 2025 enrollment conversion ID', () => {
-      const FALL_2025_CONVERSION_ID = 'AW-16665018583/J6ldCMiWifQaENeBwIo-';
-      expect(FALL_2025_CONVERSION_ID).toBe(
+    it('should maintain correct slot-specific enrollment conversion ID', () => {
+      const SLOT_SPECIFIC_CONVERSION_ID = 'AW-16665018583/J6ldCMiWifQaENeBwIo-';
+      expect(SLOT_SPECIFIC_CONVERSION_ID).toBe(
         'AW-16665018583/J6ldCMiWifQaENeBwIo-'
       );
     });
@@ -72,7 +72,7 @@ describe('Analytics Core Configuration Tests', () => {
         email: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         phone: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
         default: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
-        fall2025: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
+        slotSpecific: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
       };
 
       // All conversion IDs should follow the correct format

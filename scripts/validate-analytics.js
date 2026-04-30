@@ -33,7 +33,7 @@ const EXPECTED_CONFIG = {
     email: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
     phone: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
     default: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
-    fall2025: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
+    slotSpecific: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
   },
 };
 
@@ -273,11 +273,11 @@ function validateEnrollmentConfigFile(filePath) {
     console.log(`✅ Found default conversion ID: ${EXPECTED_CONFIG.conversionIds.default}`);
   }
 
-  // Check fall 2025 conversion ID
-  if (!content.includes(EXPECTED_CONFIG.conversionIds.fall2025)) {
-    errors.push(`❌ Missing fall 2025 conversion ID: ${EXPECTED_CONFIG.conversionIds.fall2025}`);
+  // Check slot-specific conversion ID
+  if (!content.includes(EXPECTED_CONFIG.conversionIds.slotSpecific)) {
+    errors.push(`❌ Missing slot-specific conversion ID: ${EXPECTED_CONFIG.conversionIds.slotSpecific}`);
   } else {
-    console.log(`✅ Found fall 2025 conversion ID: ${EXPECTED_CONFIG.conversionIds.fall2025}`);
+    console.log(`✅ Found slot-specific conversion ID: ${EXPECTED_CONFIG.conversionIds.slotSpecific}`);
   }
 
   // Check for critical functions

@@ -163,7 +163,7 @@ grep -n "Z8tpCOHniPQaENeBwIo-" src/components/shared/EmailContact.tsx
 - **Email**: `AW-16665018583/Z8tpCOHniPQaENeBwIo-`
 - **Phone**: `AW-16665018583/mY27CN7niPQaENeBwIo-`
 - **Default Enrollment**: `AW-16665018583/vFD0CPHVzcgZENeBwIo-`
-- **Fall 2025 Enrollment**: `AW-16665018583/J6ldCMiWifQaENeBwIo-`
+- **Slot-Specific Enrollment**: `AW-16665018583/J6ldCMiWifQaENeBwIo-`
 
 ### Script URLs
 - Analytics: `https://www.googletagmanager.com/gtag/js?id=G-0FTM2V6DK7`

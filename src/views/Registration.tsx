@@ -1,13 +1,15 @@
 import { Link } from '@mui/material';
 import { CanvasView } from '../components/shared/Canvas/CanvasView';
 import { SchoolList } from '../components/shared/ListText';
-import { FALL_2024_LINK } from '../i18n/site/links';
+import { getNextActiveEnrollmentPeriod } from '../i18n/entities/enrollments';
 import { CollapseContainer } from '../components/shared/CollapseContainer';
 import { ContentContainer } from '../components/shared/ContentContainer';
 import { Typography } from '../components/shared/Typography';
 import { registrationPageContent } from '../i18n/pages/registration';
 
 export const Registration = () => {
+  const currentEnrollmentPeriod = getNextActiveEnrollmentPeriod();
+
   return (
     <CanvasView>
       <ContentContainer
@@ -46,11 +48,11 @@ export const Registration = () => {
       </ContentContainer>
 
       <CollapseContainer
-        title={registrationPageContent.fallEnrollmentTitle}
+        title={`${registrationPageContent.currentEnrollmentTitlePrefix} ${currentEnrollmentPeriod.title}`}
         content={
           <SchoolList
             items={[
-              ...registrationPageContent.fallEnrollmentItems,
+              ...registrationPageContent.currentEnrollmentItems,
               <Link
                 variant="body1"
                 sx={{
@@ -69,7 +71,7 @@ export const Registration = () => {
                     transform: 'translateY(-2px) scale(1.02)',
                   },
                 }}
-                href={FALL_2024_LINK}
+                href={currentEnrollmentPeriod.href}
               >
                 {registrationPageContent.registerHereLabel}
               </Link>,

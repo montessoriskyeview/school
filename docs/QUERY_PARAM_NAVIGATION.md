@@ -69,6 +69,6 @@ You can test the functionality by:
 
 ## Future Enhancements
 
-- Support for additional query parameters (e.g., `?p=registration&tab=fall2025`)
+- Support for additional query parameters (e.g., `?p=registration&slot=current`)
 - Analytics tracking for query parameter usage
 - Custom redirect rules for specific use cases 

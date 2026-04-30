@@ -10,5 +10,4 @@ export * from './pages/review';
 export * from './pages/schedule';
 export * from './pages/teachers';
 export * from './seo/routes';
-export * from './site/links';
 export * from './site/navigation';

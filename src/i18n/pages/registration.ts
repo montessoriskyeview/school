@@ -4,8 +4,8 @@ export const registrationPageContent = {
   heroTitle: '📝 Registration & Enrollment',
   heroDescription:
     'Enrollment forms and suggested donation commitments are currently accepted through the individual forms found in the sections below. We make the registration process simple and straightforward for families.',
-  fallEnrollmentTitle: '🍂 Fall 2025 Enrollment',
-  fallEnrollmentItems: [
+  currentEnrollmentTitlePrefix: '📝',
+  currentEnrollmentItems: [
     'Starting September 3rd',
     `${donationPolicy.enrollment.earlyDonation} Early enrollment donation`,
     'Sibling discount and military discount available',

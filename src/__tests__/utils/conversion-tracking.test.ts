@@ -243,7 +243,7 @@ describe('Conversion Tracking Tests', () => {
         email: 'AW-16665018583/Z8tpCOHniPQaENeBwIo-',
         phone: 'AW-16665018583/mY27CN7niPQaENeBwIo-',
         default: 'AW-16665018583/vFD0CPHVzcgZENeBwIo-',
-        fall2025: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
+        slotSpecific: 'AW-16665018583/J6ldCMiWifQaENeBwIo-',
       };
 
       // All conversion IDs should follow the correct format
@@ -254,7 +254,7 @@ describe('Conversion Tracking Tests', () => {
       expect(conversionIds.email).toBe('AW-16665018583/Z8tpCOHniPQaENeBwIo-');
       expect(conversionIds.phone).toBe('AW-16665018583/mY27CN7niPQaENeBwIo-');
       expect(conversionIds.default).toBe('AW-16665018583/vFD0CPHVzcgZENeBwIo-');
-      expect(conversionIds.fall2025).toBe(
+      expect(conversionIds.slotSpecific).toBe(
         'AW-16665018583/J6ldCMiWifQaENeBwIo-'
       );
     });
