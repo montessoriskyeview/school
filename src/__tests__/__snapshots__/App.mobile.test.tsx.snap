@@ -11,57 +11,6 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
     >
       Skip to main content
     </a>
-    <header
-      aria-label="Main navigation"
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hngf2t-MuiPaper-root-MuiAppBar-root"
-      role="banner"
-    >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
-      >
-        <button
-          aria-controls="navigation-drawer"
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Open navigation menu"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-1j65een-MuiButtonBase-root-MuiIconButton-root"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-            data-testid="MenuIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-            />
-          </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
-        <div
-          class="MuiBox-root css-1kfaiov"
-        >
-          <h1
-            class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-a0ngzw-MuiTypography-root"
-          >
-            <a
-              href="/"
-              style="text-decoration: none; display: flex; align-items: center; justify-content: inherit; outline: none;"
-            >
-              Montessori Skye View
-            </a>
-          </h1>
-          <div
-            class="MuiBox-root css-13tqxrv"
-          />
-        </div>
-      </div>
-    </header>
     <main
       id="main-content"
       role="main"
@@ -78,142 +27,8 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
           />
         </div>
         <div
-          class="MuiContainer-root MuiContainer-maxWidthLg css-vjzqie-MuiContainer-root"
+          class="MuiContainer-root MuiContainer-maxWidthLg css-5epl8m-MuiContainer-root"
         >
-          <div
-            class="MuiBox-root css-tl7x22"
-          >
-            <div
-              class="MuiStack-root css-1fktiy7-MuiStack-root"
-            >
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Home
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/parent-involvement"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Parent Involvement
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/schedule"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Schedule
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/registration"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1m6blam-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Registration
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                href="/location"
-                tabindex="0"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    Location
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </a>
-            </div>
-            <div
-              class="MuiBox-root css-cpp62s"
-            >
-              <button
-                aria-controls="more-options-quick-nav"
-                aria-expanded="false"
-                aria-label="More options"
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-ttzscw-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-18d4nbo-MuiChip-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1jifppt-MuiSvgIcon-root"
-                    data-testid="ExpandMoreIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                    />
-                  </svg>
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
-                  >
-                    More Options
-                  </span>
-                </div>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
           <div
             style="display: flex; flex-direction: column; gap: var(--spacing-3xl); width: 100%;"
           >
@@ -674,6 +489,197 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
         </div>
       </div>
     </main>
+    <footer
+      class="MuiBox-root css-i2c16b"
+      role="contentinfo"
+    >
+      <div
+        class="MuiStack-root css-xxxtal-MuiStack-root"
+      >
+        <nav
+          aria-label="Primary navigation"
+          class="MuiBox-root css-0"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-f7he05-MuiTypography-root"
+          >
+            Explore
+          </h6>
+          <div
+            class="MuiStack-root css-pex525-MuiStack-root"
+          >
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+              href="/"
+              tabindex="0"
+            >
+              Home
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+              href="/schedule"
+              tabindex="0"
+            >
+              Schedule
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+              href="/registration"
+              tabindex="0"
+            >
+              Registration
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+              href="/parent-involvement"
+              tabindex="0"
+            >
+              Parent Involvement
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+              href="/faq"
+              tabindex="0"
+            >
+              FAQ
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+        </nav>
+        <nav
+          aria-label="More pages"
+          class="MuiBox-root css-0"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-f7he05-MuiTypography-root"
+          >
+            More
+          </h6>
+          <div
+            class="MuiStack-root css-pex525-MuiStack-root"
+          >
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/location"
+              tabindex="0"
+            >
+              Location
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/parents"
+              tabindex="0"
+            >
+              Parents Resources
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/enrollments"
+              tabindex="0"
+            >
+              Enrollments
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/teachers"
+              tabindex="0"
+            >
+              Teachers
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/philosophy"
+              tabindex="0"
+            >
+              Philosophy
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/accessibility"
+              tabindex="0"
+            >
+              Accessibility
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/blog"
+              tabindex="0"
+            >
+              Blog
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+            <a
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
+              href="/contact"
+              tabindex="0"
+            >
+              Contact
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+        </nav>
+        <div
+          class="MuiStack-root css-w7gobd-MuiStack-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-ce2pdu-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Contact Us
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1rmtn5e-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Location Info
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </footer>
     <div
       class="MuiBox-root css-i9tlv9"
     >

@@ -14,9 +14,9 @@ import {
   Navigate,
 } from 'react-router-dom';
 
-import { AppBar } from './components/appBar/AppBar';
 import { SEO } from './components/shared/SEO';
 import { ConsentBanner } from './components/shared/ConsentBanner';
+import { GlobalFooter } from './components/shared/GlobalFooter';
 import { ROUTE_SEO_CONFIGS } from './i18n/seo/routes';
 import { ErrorPage } from './views/ErrorView';
 import { useQueryParams } from './hooks/useQueryParams';
@@ -349,7 +349,6 @@ function App() {
         <BrowserRouter>
           <QueryParamHandler />
           <SEOUpdater />
-          <AppBar />
           <main id="main-content" role="main">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
@@ -385,6 +384,7 @@ function App() {
               </Routes>
             </Suspense>
           </main>
+          <GlobalFooter />
           <ConsentBanner />
           {/* <PerformanceDashboard /> */}
           {/* <CSSPerformanceMonitor /> */}

@@ -20,17 +20,16 @@ export interface NavigationItemContent {
   isInCollapseMenu?: boolean;
 }
 
-export const NAVIGATION_ITEMS: NavigationItemContent[] = [
+export const PRIMARY_NAVIGATION_ITEMS: NavigationItemContent[] = [
   {
     key: 'home',
     text: 'Home',
     path: '/',
   },
   {
-    key: 'parentsResources',
-    text: 'Parents Resources',
-    path: '/parents',
-    isInCollapseMenu: true,
+    key: 'schedule',
+    text: 'Schedule',
+    path: '/schedule',
   },
   {
     key: 'registration',
@@ -43,55 +42,59 @@ export const NAVIGATION_ITEMS: NavigationItemContent[] = [
     path: '/parent-involvement',
   },
   {
-    key: 'schedule',
-    text: 'Schedule',
-    path: '/schedule',
+    key: 'faq',
+    text: 'FAQ',
+    path: '/faq',
   },
+];
+
+export const FOOTER_SECONDARY_NAVIGATION_ITEMS: NavigationItemContent[] = [
   {
     key: 'location',
     text: 'Location',
     path: '/location',
   },
   {
+    key: 'parentsResources',
+    text: 'Parents Resources',
+    path: '/parents',
+  },
+  {
     key: 'enrollments',
     text: 'Enrollments',
     path: '/enrollments',
-    isInCollapseMenu: true,
   },
   {
     key: 'teachers',
     text: 'Teachers',
     path: '/teachers',
-    isInCollapseMenu: true,
-  },
-  {
-    key: 'faq',
-    text: 'FAQ',
-    path: '/faq',
-    isInCollapseMenu: true,
   },
   {
     key: 'philosophy',
     text: 'Philosophy',
     path: '/philosophy',
-    isInCollapseMenu: true,
   },
   {
     key: 'accessibility',
     text: 'Accessibility',
     path: '/accessibility',
-    isInCollapseMenu: true,
   },
   {
     key: 'blog',
     text: 'Blog',
     path: '/blog',
-    isInCollapseMenu: true,
   },
   {
     key: 'contact',
     text: 'Contact',
     path: '/contact',
-    isInCollapseMenu: true,
   },
+];
+
+export const NAVIGATION_ITEMS: NavigationItemContent[] = [
+  ...PRIMARY_NAVIGATION_ITEMS,
+  ...FOOTER_SECONDARY_NAVIGATION_ITEMS.map(item => ({
+    ...item,
+    isInCollapseMenu: true,
+  })),
 ];
