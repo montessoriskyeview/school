@@ -574,16 +574,6 @@ exports[`App Component - Mobile Experience Mobile Layout and Responsiveness snap
           >
             <a
               class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
-              href="/location"
-              tabindex="0"
-            >
-              Location
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </a>
-            <a
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-10l2un7-MuiButtonBase-root-MuiButton-root"
               href="/parents"
               tabindex="0"
             >

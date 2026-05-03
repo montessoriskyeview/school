@@ -50,11 +50,6 @@ export const PRIMARY_NAVIGATION_ITEMS: NavigationItemContent[] = [
 
 export const FOOTER_SECONDARY_NAVIGATION_ITEMS: NavigationItemContent[] = [
   {
-    key: 'location',
-    text: 'Location',
-    path: '/location',
-  },
-  {
     key: 'parentsResources',
     text: 'Parents Resources',
     path: '/parents',
